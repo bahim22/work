@@ -1,0 +1,4 @@
+/moon2/.venv/*
+.vscode/*
+*.env
+/moon2/DataExercise/*
