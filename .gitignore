@@ -1,4 +1,4 @@
-/moon2/.venv/*
+.venv/*
 .vscode/*
 *.env
 /moon2/DataExercise/*
