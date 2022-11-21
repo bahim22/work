@@ -2,6 +2,9 @@
 # Steps for ssh into git repo
 
 ```sh
+# edit git config f
+git config --global user.name <username>
+git config --global user.email <email@mail.com>
 ls -al ~/.ssh # list files in .ssh dir
 ssh-keygen -t ed25519 -C "email@google.com"
 # enter passphrase to use && this creates pub/priv key pair
