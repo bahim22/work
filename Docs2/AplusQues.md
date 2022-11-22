@@ -26,6 +26,38 @@
 7. ipconfig /all cmd can check if PCs are getting a correct DNS IP
 8. ifconfig cmd: checks a devices IP address and subnet mask on Linux OS's
 
+## Shell info
+
+- Available cmds for standard vs admin privilege
+  - elevate (run CLI as admin to change sys)
+
+### CMD
+
+- ipconfig: displays config of net adapters
+- ping: tests reachability of remote pc over net
+- tracert: shows what network devices packet goes thru to reach remote pc
+- netstat: show net stats on data transfers, ports, apps
+- nslookup: resolve name to IP address for DNS TShoot
+
+- shutdown: shut down or restart pc, w/ options/param
+- command_name /?: param brings up help w/ list of cmd options/param & descriptions
+- dism: Deployment image servicing & mngmnt tool => mount & service W image files
+- sfc: System File checker tool, checks status/version of system files
+- chkdsk: verifies FS of vol & fix logical FS corruption
+- dispart: tool that manages disk, parts, vols
+- taskkill: kills sys proc. given process ID # (PID)
+- gpupdate: manual refresh domain grp policies applied to pc or user
+- gpresult: display current group policies & status
+- format: create a FS on storage device
+
+| Cmd | desc. |
+| :---: | :---: |
+copy | copy >= 1 fi
+xcopy | adv w/ > options
+robocopy | replaces xcopy w/ > options
+net use | connect/map net share
+net user | manage users
+
 ## Memory
 
 - ECC: can continue to work even if it has corrupt data
@@ -73,14 +105,25 @@
   - 64 bit can use 16 exabytes (18,446,744,073,709,551,616)
   - max memory supported by W10 workstation OS is 2 TB
 
-- **Windows** is most used
-  - versions 7,8,8.1,10
-  - W7: file mngmt via Windows Explorer, libraries showed files of specific type, even if stored in diff locations, default libs[docs, pictures, videos, music] => default location for Windows Explorer on Windows 7, Aero provided visual enhancements to desktop/GUI exp & required video card
-  - W8: 
+- **Windows** is most used workstation OS for personal & corp.
+  - *W7*: file mngmt via Windows Explorer, libraries showed files of specific type, even if stored in diff locations, default libs[docs, pictures, videos, music] => default location for Windows Explorer on Windows 7, Aero provided visual enhancements to desktop/GUI exp & required video card
+  - *W8*: start screen (tiles for apps & sys menus) replaced start menu, Windows Store for download & purchasing software, sign-in w/ local & MS online accounts (enabled transfer appearance, sys settings btw pc's), Settings menu contained most-used user settings, Control Panel allowed more sys config, MS recommend. multi-touch display for advanced GUI interaction on tablets, [Docs, Pics, Vids, Music] become normal folders and libraries aren't enabled by default
+  - *W8.1*: more refined & enhanced user interface, esp. on non-touch display PC's
+  - *W10*: intro Cortana, Start menu is combo of W7 and panel similar to W8 start screen & doesn't obstruct entire screen & desktop.
+- **Corp vs Personal needs**
+  - Pro Editions: more efficient & secure use in corp. env. w/ add'l features.
+  - domain access: registers pc on the domain & allows users to login; for conn to network domain
+  - BitLocker: drive encryption utility. data on disk is encryptedd to prevent unauth access (useful for laptops that leave office env & can be lost/stolen)
+  - Media Ctr: (on W7 Home Premium) player for slideshows, videos, optical drives, local net, streaming, music from files
+  - BranchCache: useful in corp. env. w/ diff branch offices; creates local cache of files from file/web servers for quicker access
+  - EFS: Encrypting File System; fs feat. that's config. to encrypt vol, dir, f; protects data from phyiscal attacker
+  - all -v provide similar UX, w/ diff being Aero, Start menu vs. screen, Settings menu
+  - diff interfaces: keyboard/mouse entry, touch screen, Cortana voice recognition
+
 - **Mac** 2nd most used workstation OS
 - **Linux** is a kernel (core of OS) that interfaces/apps can be added to (pre-config as distributions) in order to create various flavors of sys. Dist differ depending on req tasks
 - f
-- f
+
 - Windows phones are discontinued, but some tablets run full W10
 - Android OS for phones/tablets, by Google, open source; most used mobile OS
 - iOS only for iPhones/Pads
@@ -133,31 +176,6 @@
 6. Incremental backup: only edited/new files since last bakup are backedup
 7. Differential backup: similar to incremental, except archive bit isn't set, which will cause the next diff backup to include files that were backed up during previous backups
 8. d
-
-## Shell info
-
-### CMD
-
-- ipconfig
-- ping
-- tracert
-- netstat
-- nslookup
-
-- dism
-- sfc
-- chkdsk
-- dispart
-- taskkill
-- gpupdate
-- gpresult
-- format
-
-- copy, xcopy, robocopy
-
-- net use, net user
-
-- standard vs admin privilege and available cmds
 
 ### Tools
 
