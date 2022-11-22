@@ -124,6 +124,64 @@ ___
   - PXE-capable network interface controller (NIC) required on client side
   - uses industry-standard network protocols such as _DHCP_ and _TFTP_
 
+## OS Install, Upgrade, Boot
+
+### _Boot methods_: user selects how to boot pc & w/ what media
+
+1. optical disc (CD-ROM, DVD, Blu-ray): pc will prob have built-in drive to read them; very common way to install OS on a pc
+2. external/flash drive (interfaces: USB, eSATA): ext optical/hard/flash drives, USB is common
+3. Network boot (PXE): preboot eXecution Env.; boot from network resources; net & remote server hosting the bootable image need config.
+   1. common in corp. env. where net & server resources are availalbe; allows setting up multiple pc's w/ similar images
+4. internal fixed disk (HDD/SSD) & internal Hard Drive (Partition)
+   1. disk can have OS install image or OS already installed. Most common way to boot PC after OS install completed
+   2. simple configs have one bootable par on a disk, but a disk can have > 1 par to multiboot diff OS. One logical par can span multiple physical hard disks
+
+| Install Types | |
+| :---: | --- |
+| _Type_ | _Description_ |
+| 💻 | 📕 |
+| unattended | pre-config., need special server w/ install image/script & good for many PC's w/ same config |
+| in-place upgrade | installs newer OS over older one; may preserve settings, fi, apps |
+| clean  | disregards previous data; used for PC w/o an OS or to intentionally delete old data |
+| repair  | boot w/ same -v OS & select repair; rewrites SF & settings, retains user fi; can repair OS that's unbootable or w/ issues unfixable by other methods  |
+| multiboot | uses boot mngr that maintains boot config; user sel OS to boot; recommend install OS's to diff HDD or separate logical pars |
+| remote net | PXE net boot using remote server; may require choosing install options or be unattended |
+| image deployment | used for PC's w/ == hardware that need == OS/settings/apps. Diff software tools can do this. Steps involve sel one PC => clean install, config, app install => create image from that PC & make available on network or portable media => copy image to other PC's |
+| recovery par | create rec par during install that is a bootable par for later or repair install; contains diagnostic/repair tools |
+| refresh/restore | pre-config. to restore OS to restore point; recom. before large config changes or software installs; settings can revert back to it |
+| |
+| **Partitioning**
+|   |
+| _Type_ | _Description_ |
+| --- | --- |
+| Dynamic | dfa |
+| Basic | dfa |
+| Primary  | dfa |
+| Extended  | dfa |
+| logical | dfa |
+| GPT | dfa |
+|   |
+| **File System Types/Formatting** |
+| |
+| _Type_ | _Description_ |
+| ExFAT | dfa |
+| FAT32 | dfa |
+| NTFS  | dfa |
+| CDFS  | dfa |
+| NFS | dfa |
+| ext3, ext4 | dfa |
+| HFS | dfa |
+| Swap par | dfa |
+| quick vs. full format | dfa |
+| --- | --- |
+
+### Misc
+
+1. Alternate 3rd party drivers
+2. workgroup vs. Domain setup
+3. Time, Date, Region, Lang
+4. Driver install, Software, W updates
+
 ___
 
 ## `Network`
