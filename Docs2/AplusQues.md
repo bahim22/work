@@ -66,6 +66,32 @@
 1. g
 2. g
 
+- CPU architecture were historically 8/16-bit & current 32/64-bit computers.
+  - bit length refers to # of bits used for memory addresses.
+  - 32 bit pc can use max memory size of 4 GB
+    - 1111 1111 1111 1111 1111 1111 1111 1111 = 4,294,967,295
+  - 64 bit can use 16 exabytes (18,446,744,073,709,551,616)
+  - max memory supported by W10 workstation OS is 2 TB
+
+- **Windows** is most used
+  - versions 7,8,8.1,10
+  - W7: file mngmt via Windows Explorer, libraries showed files of specific type, even if stored in diff locations, default libs[docs, pictures, videos, music] => default location for Windows Explorer on Windows 7, Aero provided visual enhancements to desktop/GUI exp & required video card
+  - W8: 
+- **Mac** 2nd most used workstation OS
+- **Linux** is a kernel (core of OS) that interfaces/apps can be added to (pre-config as distributions) in order to create various flavors of sys. Dist differ depending on req tasks
+- f
+- f
+- Windows phones are discontinued, but some tablets run full W10
+- Android OS for phones/tablets, by Google, open source; most used mobile OS
+- iOS only for iPhones/Pads
+- Chrome OS usually on netbooks (lightweight/thin laptop for using services over internet & web browsing)
+  - EOL don't get any updates, patches, tech support, app dev
+  - limits on updates once unsupported can increase vulnerabilities and security risks
+  - Compatibility across OS's and versions
+    - apps use diff install files for similar software
+    - new -v can cause issues w/ prev installed hardware & apps
+- 
+
 ## Virtualization
 
 1. PaaS is a complete cloud-based software dev. env.
@@ -87,7 +113,7 @@
 7. Remove USB drive correctly by clicking 'Safely Remove Hardware' icon in system tray, stopping the drive and then unplugging it.
 8. AT style systems use 2 power connectors (P8 & P9) to connect to mobo. ATX uses one P1 connector.
 9. inverter board: converts low volt DC power to high volt AC; lights up back-light bulb. If it's broken, LCD screen won't light up when laptop is powered, but you'll see a very dim image
-10. 
+10. l
 
 ### Troubleshoot
 
@@ -104,10 +130,9 @@
 4. SSDs are non-volatile memory with fast performance and lower power consumption than HDD
 
 5. Full backup: all chosen files are backed up and Archive bit is set to ON afterwards
-6. Incremental backup: only edited/new files since last bakup are backedup 
-7. Differential backup: similar to incremental, except archive bit isn't set, which will cause the next diff backup to include files that were backed up during previous backups 
+6. Incremental backup: only edited/new files since last bakup are backedup
+7. Differential backup: similar to incremental, except archive bit isn't set, which will cause the next diff backup to include files that were backed up during previous backups
 8. d
-
 
 ## Shell info
 
