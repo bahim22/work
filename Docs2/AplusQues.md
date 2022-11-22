@@ -4,32 +4,56 @@
 2. Consult manu docs before doing preventive maintenance, or cleaning ops to get proper methods and solvents
 3. SMTP protocol can send emails from a client device (only for outgoing messages)
 4. A multi-layer switch enables having both switching and routing functionality on the same device
+5. ST is a type of fiber connector
+6. port 443 used when using SSL encrypt. to access a website
+7. Light emitting diode and in-plane switching monitor tech have widest viewing angle w/ rich color & consistent backlighting
+8. enable device pairing to use hands-free for a smartphone to car
+9. Can connect a tone generator to an RJ-45 drop to locate the position of the cable on a patch panel
+10. check case for overheating and mobo for swollen capacitors if PC reboots at random intervals multiple times/day
+11. check fuser if printer is smudging toner on the paper after printing
+12. PC may have incorrect drivers installed if print jobs are printed as garbled text
+13. Startup tab in Task Mngr utility shows proc. init at startup (earlier W -v used MSConfig)
+14. disk cleanup utility deletes temp fi from HDD
+15. WinRE helps recover a sys that won't boot. It auto starts but manual start via Windows Recovery settings in Advanced startup menu
+16. **MacOS** X Time Machine requires external storage media (ext HDD or Time Capsule) & does incremental/historical backups & del oldest backups when storage fills
+    1. hourly for 24 hrs; daily for past month, weekly for all prev mo.
+17. Disk Utility lets you run first aid, partition, erase, unmount dsk, get dsk info
+18. manage updates in App Store & go to Sys Pref => Software Updates for OS Updates
+19. Force Quit (Cmd+Option+Ext) to individually halt running or hung apps
+20. Run terminal session by opening `Finder` then `/Apps/Utilities` dir.
 
 ## Network
 
 1. If PCs can't connect to wired network due to not rec IP addresses from DHCP server the cause may be the DHCP IP pool is exhausted
 2. IP addresses beginning w/ 169 are assigned auto if an IP address can't be received from a DHCP server
+   1. "system will assign itself an APIPA address in the range of 169.254.0.1 through 169.254.255.254, then sends a broadcast to ensure no other PC is currently using that add"
 3. Avoid low RF signal issues by using non-overlapping channels (1,6,11)
 4. CAT5 trasmits data >= 100 Mbps & distance of 100 meters
 5. Crossover cable can be used to make connection from 2 hubs, 2 swtiches, 2 routers, hub to switch, or computer to router
 6. Bluetooth: a discovery and authentication process that validates the communication link
-7. Po
+7. wake-on-LAN will allow sleeping PC to power on when job is sent
+8. DHCP(Dynamic Host Config Protocol) server can auto config param needed by NIC when PC first boots & enables central management of IP address allocation
+9. non-shining link integrity indicator when cable is plugged in means there's no connection to rest of the LAN
+   1. link status indicator is small LED next to RJ45 connector that will shine when there's proper electrical conn
+10. Default gateway being down won't affect LAN & it's devices; but user won't be able to access internet
+11. RDP uses port 3389, which has to be config on each firewall end to allow access thru that port. Remote that lets you use the GUI the user is using, not just CLI
+12. SSH needs port 22 opened to allow access
 
 ### Network Commands
 
 1. `nslookup` cmd is used to query the DNS server to obtain a domain name or IP address mapping
-2. ipconfig: checks the IP address of a system
-3. netstat: displays TCP and UDP connections
-4. traceert: tracks the pathway taken by a packet
-5. ping: tests the reachability of a host
-6. S/MIME protocol can encrypt and digitally sign e-mails
-7. ipconfig /all cmd can check if PCs are getting a correct DNS IP
-8. ifconfig cmd: checks a devices IP address and subnet mask on Linux OS's
+2. `ipconfig`: checks the IP address of a system
+3. `netstat`: displays TCP and UDP connections
+   1. displays current state of network connections (IP add, port #, conn state)
+4. `traceert`: tracks the pathway taken by a packet
+5. `ping`: tests the reachability of a host
+6. `ipconfig` /all cmd can check if PCs are getting a correct DNS IP
+7. `ifconfig` cmd: checks a devices IP address and subnet mask on Linux OS's
+8. `S/MIME` protocol can encrypt and digitally sign e-mails
 
 ## Shell info
 
-- Available cmds for standard vs admin privilege
-  - elevate (run CLI as admin to change sys)
+- Some cmds only available w/ admin priviledge enabled by elevating/Run as admin the CLI
 
 ### CMD
 
@@ -44,19 +68,30 @@
 - dism: Deployment image servicing & mngmnt tool => mount & service W image files
 - sfc: System File checker tool, checks status/version of system files
 - chkdsk: verifies FS of vol & fix logical FS corruption
+  - system tool for verifying disk integrity; run w/ no param shows dsk status, /r locates bad sectors & tries recover lost data
 - dispart: tool that manages disk, parts, vols
 - taskkill: kills sys proc. given process ID # (PID)
 - gpupdate: manual refresh domain grp policies applied to pc or user
 - gpresult: display current group policies & status
 - format: create a FS on storage device
 
-| Cmd | desc. |
+```bash
+ls -l # list dir w/ long list option for fi & dir attributes
+apt-get # install new software packs
+tar -czvf archive.tar.gzip /dir/path_to_files # -c creates archive, -z compress, -v display process (verbose mode), -f specify filename of archive
+ifconfig # interface config; displays IP info
+ip addr # iproute2 toolset that replaced ifconfig
+```
+
+| Cmd / Linux cmd | desc. |
 | :---: | :---: |
 copy | copy >= 1 fi
 xcopy | adv w/ > options
 robocopy | replaces xcopy w/ > options
 net use | connect/map net share
 net user | manage users
+MD / `MKDIR` | create new dir
+RD / `RMDIR` | delete dir
 
 ## Memory
 
@@ -133,7 +168,7 @@ net user | manage users
   - Compatibility across OS's and versions
     - apps use diff install files for similar software
     - new -v can cause issues w/ prev installed hardware & apps
-- 
+- d
 
 ## Virtualization
 
@@ -176,6 +211,15 @@ net user | manage users
 6. Incremental backup: only edited/new files since last bakup are backedup
 7. Differential backup: similar to incremental, except archive bit isn't set, which will cause the next diff backup to include files that were backed up during previous backups
 8. d
+
+9. Blu-ray discs can be single or multiple-use and split into categories based on 3 factors
+   1. functionality: BD-R single use, BD-RE/RW multi-use (RE-recordable erasable is newer)
+   2. Capacity: BD-SL(25gb), DL(50gb), BD-XL = TL(100gb) & QL(128gb)
+   3. content quality: regular(1080p high def vid) and ultra HD(4k ultra HD, better colour depth; region-free, but need 4k Blu-R player)
+10. d
+11. d
+12. d
+13. d
 
 ### Tools
 

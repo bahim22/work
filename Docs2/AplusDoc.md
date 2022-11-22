@@ -154,33 +154,38 @@ ___
 |   |
 | _Type_ | _Description_ |
 | --- | --- |
-| Dynamic | dfa |
-| Basic | dfa |
-| Primary  | dfa |
-| Extended  | dfa |
-| logical | dfa |
-| GPT | dfa |
+| _Info_ |creates >= 1 logical drives; can be formatted separately & have separate FS. W10 allows each par to have diff drive letter
+| Dynamic | more complex config & less limits than basic dsk. Can create pars spanning many physical HDD's (software RAID) |
+| Basic | most common; separated into logical pars |
+| Primary  | can have only one logical drive; W10 only boots from primary par |
+| Extended  | enables >= 1 logical drive |
+| logical | rep by a drive letter in W10; recomm. distinguishing btw dsk, par & logical drive; can be assigned 1:1 but aren't limited to 1 |
+| GPT | GUID Par Table: has info on how dsk is partitioned. supports larger drives & more pars/drive than MBR |
 |   |
 | **File System Types/Formatting** |
-| |
 | _Type_ | _Description_ |
-| ExFAT | dfa |
-| FAT32 | dfa |
-| NTFS  | dfa |
-| CDFS  | dfa |
-| NFS | dfa |
-| ext3, ext4 | dfa |
-| HFS | dfa |
-| Swap par | dfa |
-| quick vs. full format | dfa |
+| Info | Fs enables storing/managing/accessing fi on a par. OS's support diff FS & pars are formatted w/ specific FS before use
+| ExFAT | designed for small flash & SSD drives, good for perf & media fi storage |
+| FAT32 | supported by many OS & provides basic features. pars can be >= 2 TB |
+| NTFS  | more advanced & supported by modern W --v. user can set/manage permissions for fi/dir for users/groups. useful for secure net fi sharing. Has indexing, compress., encrypt. on FS level  |
+| CDFS  | FS for CD/DVD's |
+| NFS | Network File System. mostly in servers where you can have fi access on net btw sys. |
+| ext3, ext4 | used for Linux. 4 is updated -v that enables larger pars, fi & better perf |
+| HFS | used for MacOS |
+| Swap par | Linux par used when physical RAM is maxxed out. The Data flows to swap pars; reducing perf, in place of running more apps simultaneously. |
+| quick vs. full format | quick changes FS records making dsk appear empty. Full rewrites prev fi, detects surface errors on dsk and makes restoring fi harder. |
 | --- | --- |
 
 ### Misc
 
-1. Alternate 3rd party drivers
-2. workgroup vs. Domain setup
-3. Time, Date, Region, Lang
-4. Driver install, Software, W updates
+1. 3rd party (unsigned drivers) should have source verified to ensure validity.
+2. signed drivers: W install drivers are tested/approved by MS
+3. workgroup: Can setup printer & fi sharing w/ small group/fam
+   1. ex. a dept in a larger org. or a home user
+4. Domain setup: Companies can use a domain controller instead for more secure, centralized login for large groups, which allows an easier path for managing large net
+5. Time, Date, Region, Lang: config these settings during install (some OS require reinstall to change lang.)
+6. Driver install, Software, Updates: Keep system updated for secuirty reasons. Install proper drivers for the type of system (32-bit => x86 sys && 64-bit on x64 sys). Use 'check for updates' utility in W10 to update OS and other MS software. Other software needs checked separatley.
+7. Know differences in Hardware/Apps/OS compatability
 
 ___
 
