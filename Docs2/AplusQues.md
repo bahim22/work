@@ -15,12 +15,14 @@
 13. Startup tab in Task Mngr utility shows proc. init at startup (earlier W -v used MSConfig)
 14. disk cleanup utility deletes temp fi from HDD
 15. WinRE helps recover a sys that won't boot. It auto starts but manual start via Windows Recovery settings in Advanced startup menu
-16. **MacOS** X Time Machine requires external storage media (ext HDD or Time Capsule) & does incremental/historical backups & del oldest backups when storage fills
-    1. hourly for 24 hrs; daily for past month, weekly for all prev mo.
-17. Disk Utility lets you run first aid, partition, erase, unmount dsk, get dsk info
-18. manage updates in App Store & go to Sys Pref => Software Updates for OS Updates
-19. Force Quit (Cmd+Option+Ext) to individually halt running or hung apps
-20. Run terminal session by opening `Finder` then `/Apps/Utilities` dir.
+16. need to configure port forwaring on a SOHO router to host gaming server
+17. **MacOS** X Time Machine requires external storage media (ext HDD or Time Capsule) & does incremental/historical backups & del oldest backups when storage fills
+    1. Time Machine runs: hourly for 24 hrs; daily for past month, weekly for all prev mo.
+    2. Disk Utility lets you run first aid, partition, erase, unmount dsk, get dsk info
+    3. manage updates in App Store & go to Sys Pref => Software Updates for OS Updates
+    4. Force Quit (Cmd+Option+Ext) to individually halt running or hung apps
+    5. Run terminal session by opening `Finder` then `/Apps/Utilities` dir.
+    6. Keychain feature in MacOS stores passwords, private keys, certs, secure notes
 
 ## Network
 
@@ -38,6 +40,13 @@
 10. Default gateway being down won't affect LAN & it's devices; but user won't be able to access internet
 11. RDP uses port 3389, which has to be config on each firewall end to allow access thru that port. Remote that lets you use the GUI the user is using, not just CLI
 12. SSH needs port 22 opened to allow access
+13. The `MAC` (Media Access Control) address: 48-bit # (written as six 2-digit hexadecimal numbers) that uniquely ID's a device on a local area network
+    1. IP address is used to locate the proper network (layer 3)
+    2. MAC address is used to locate the device on the local area network (layer 2)
+14. `socket number` uniquely IDs one end of a communication session running on a network. A socket number shows the IP address & port number of one end of a session.
+    1. ex. 66.83.10.24:443 is a socket number that shows a connection est. over HTTPS to the IP address.
+15. HTTP uses port 80
+16. The subnet mask that defines a full class C network is 255.255.255.0, while a full class B subnet mask would be 255.255.0.0.
 
 ### Network Commands
 
@@ -77,10 +86,14 @@
 
 ```bash
 ls -l # list dir w/ long list option for fi & dir attributes
+pwd # print working dir
+passwd # changes password if followed by username or of current user
 apt-get # install new software packs
-tar -czvf archive.tar.gzip /dir/path_to_files # -c creates archive, -z compress, -v display process (verbose mode), -f specify filename of archive
+tar -czvf archive.tar.gzip /dir/path_to_files 
+# -c creates archive, -z compress, -v display process (verbose mode), -f specify filename of archive
 ifconfig # interface config; displays IP info
 ip addr # iproute2 toolset that replaced ifconfig
+kill <pid || name> # terminate process using name or PID
 ```
 
 | Cmd / Linux cmd | desc. |
