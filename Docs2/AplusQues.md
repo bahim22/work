@@ -9,9 +9,9 @@
 7. Light emitting diode and in-plane switching monitor tech have widest viewing angle w/ rich color & consistent backlighting
 8. enable device pairing to use hands-free for a smartphone to car
 9. Can connect a tone generator to an RJ-45 drop to locate the position of the cable on a patch panel
-10. check case for overheating and mobo for swollen capacitors if PC reboots at random intervals multiple times/day
+10. check case for overheating and mobo for swollen capacitors if computer reboots at random intervals multiple times/day
 11. check fuser if printer is smudging toner on the paper after printing
-12. PC may have incorrect drivers installed if print jobs are printed as garbled text
+12. computer may have incorrect drivers installed if print jobs are printed as garbled text
 13. Startup tab in Task Mngr utility shows proc. init at startup (earlier W -v used MSConfig)
 14. disk cleanup utility deletes temp fi from HDD
 15. WinRE helps recover a sys that won't boot. It auto starts but manual start via Windows Recovery settings in Advanced startup menu
@@ -26,15 +26,15 @@
 
 ## Network
 
-1. If PCs can't connect to wired network due to not rec IP addresses from DHCP server the cause may be the DHCP IP pool is exhausted
+1. If computer can't connect to wired network due to not rec IP addresses from DHCP server the cause may be the DHCP IP pool is exhausted
 2. IP addresses beginning w/ 169 are assigned auto if an IP address can't be received from a DHCP server
-   1. "system will assign itself an APIPA address in the range of 169.254.0.1 through 169.254.255.254, then sends a broadcast to ensure no other PC is currently using that add"
+   1. "system will assign itself an APIPA address in the range of 169.254.0.1 through 169.254.255.254, then sends a broadcast to ensure no other computer is currently using that add"
 3. Avoid low RF signal issues by using non-overlapping channels (1,6,11)
 4. CAT5 trasmits data >= 100 Mbps & distance of 100 meters
 5. Crossover cable can be used to make connection from 2 hubs, 2 swtiches, 2 routers, hub to switch, or computer to router
 6. Bluetooth: a discovery and authentication process that validates the communication link
-7. wake-on-LAN will allow sleeping PC to power on when job is sent
-8. DHCP(Dynamic Host Config Protocol) server can auto config param needed by NIC when PC first boots & enables central management of IP address allocation
+7. wake-on-LAN will allow sleeping computer to power on when job is sent
+8. DHCP(Dynamic Host Config Protocol) server can auto config param needed by NIC when computer first boots & enables central management of IP address allocation
 9. non-shining link integrity indicator when cable is plugged in means there's no connection to rest of the LAN
    1. link status indicator is small LED next to RJ45 connector that will shine when there's proper electrical conn
 10. Default gateway being down won't affect LAN & it's devices; but user won't be able to access internet
@@ -50,11 +50,21 @@
 17. enabling MAC filtering only allows devices listed in routers filtering table access
 18. RJ11/45 are common for phone lines & ethernet & use tristed pair cabling
 19. RFC1918 private address sets for IP addresses start w/ 192.168 (v4)
-20. default gateway add. is add that PC would send traffic to
+20. default gateway address is add that computer would send traffic to
     1. default gateway would be a router for SOHO net & sends traffic out to internet.
-21. Static add: manually assigning/entering IP address. recomm to reserve the add in DHCP pool to prevent from being leased again on diff device
-22. LDAP is successor to DAP and works w/ AD for user auth and mngmnt w/in a network
-23."NAT (Network Address Translation) allows our private local network IPv4 addresses to be translated into a public IP address capable of connecting over the Internet."
+21. Static address: manually assigning/entering IP address. recomm to reserve the add in DHCP pool to prevent from being leased again on diff device
+22. `LDAP` is successor to DAP and works w/ AD for user auth and mngmnt w/in a network
+23. "`NAT` (Network Address Translation) allows our private local network IPv4 addresses to be translated into a public IP address capable of connecting over the Internet."
+24. `DMZ` (demilitarized zone) sets up separate network that can be accessed from internet, making specific services reachable by external users, but not allowing access to remainder of network (ex. email/web/FTP servers)
+25. `DSL` makes use of phone lines that already exist & are limited by dist. from central office
+26. `ISDN`: integrated services digital network supports use of bearer (B) channels for sending data & D chan. for signal/control
+
+- a `repeater` re-sends wireless signal to areas that the access point can't cover.
+- A Layer 3 switch is config to participate in routing decisions
+  - routing decisions work on Layer 3 of OSI model (network layer)
+  - standard switches usually refferred at as Layer 2 devices, working as PnP w/o ability to adjust settings (aka unmanaged switch)
+- A crimper is used to crimp a connector (usually last step in making an ethernet cable) to tighten the wiring to right spots in connector so electrical signals pass thru properly.
+- Plug tone generator at jack end of cable and wave toner probe around suspected area to find other end of cable
 
 ### 802.11 wireless standard, ecryption info
 
@@ -69,7 +79,7 @@
    1. displays current state of network connections (IP add, port #, conn state)
 4. `traceert`: tracks the pathway taken by a packet
 5. `ping`: tests the reachability of a host
-6. `ipconfig` /all cmd can check if PCs are getting a correct DNS IP
+6. `ipconfig` /all cmd can check if computers are getting a correct DNS IP
 7. `ifconfig` cmd: checks a devices IP address and subnet mask on Linux OS's
 8. `S/MIME` protocol can encrypt and digitally sign e-mails
 
@@ -79,13 +89,21 @@
 
 ### CMD
 
+```ps1
+<# Displays protocol statistics and current TCP/IP connections using NBT
+(NetBIOS over TCP/IP). #>
+nbtstat
+
+
+```
+
 - ipconfig: displays config of net adapters
-- ping: tests reachability of remote pc over net
-- tracert: shows what network devices packet goes thru to reach remote pc
-- netstat: show net stats on data transfers, ports, apps
+- ping: tests reachability of remote computer over net
+- tracert: shows what network devices packet goes thru to reach remote computer
+- netstat: show network stats on data transfers, ports, apps
 - nslookup: resolve name to IP address for DNS TShoot
 
-- shutdown: shut down or restart pc, w/ options/param
+- shutdown: shut down or restart computer, w/ options/param
 - command_name /?: param brings up help w/ list of cmd options/param & descriptions
 - dism: Deployment image servicing & mngmnt tool => mount & service W image files
 - sfc: System File checker tool, checks status/version of system files
@@ -93,7 +111,7 @@
   - system tool for verifying disk integrity; run w/ no param shows dsk status, /r locates bad sectors & tries recover lost data
 - dispart: tool that manages disk, parts, vols
 - taskkill: kills sys proc. given process ID # (PID)
-- gpupdate: manual refresh domain grp policies applied to pc or user
+- gpupdate: manual refresh domain grp policies applied to computer or user
 - gpresult: display current group policies & status
 - format: create a FS on storage device
 
@@ -126,6 +144,8 @@ RD / `RMDIR` | delete dir
 - RAM: short-term memory used to store working data
 - Non-parity: doesn't maintain parity info and can't perform error checking.
 
+## Operating Systems
+
 ## **Windows**
 
 1. bootmgr prog is used to boot the OS in Windows
@@ -154,26 +174,23 @@ RD / `RMDIR` | delete dir
 8. Use Public Library to share files amongst multiple users of a single system
 9. Encrypting File System (EFS) enables you to encrypt files, rendering them unviewable by other accts.
 
-## OS maintainence and optimization
-
-1. g
-2. g
+## OS maintainence, optimization, general info
 
 - CPU architecture were historically 8/16-bit & current 32/64-bit computers.
   - bit length refers to # of bits used for memory addresses.
-  - 32 bit pc can use max memory size of 4 GB
+  - 32 bit computer can use max memory size of 4 GB
     - 1111 1111 1111 1111 1111 1111 1111 1111 = 4,294,967,295
   - 64 bit can use 16 exabytes (18,446,744,073,709,551,616)
   - max memory supported by W10 workstation OS is 2 TB
 
 - **Windows** is most used workstation OS for personal & corp.
   - *W7*: file mngmt via Windows Explorer, libraries showed files of specific type, even if stored in diff locations, default libs[docs, pictures, videos, music] => default location for Windows Explorer on Windows 7, Aero provided visual enhancements to desktop/GUI exp & required video card
-  - *W8*: start screen (tiles for apps & sys menus) replaced start menu, Windows Store for download & purchasing software, sign-in w/ local & MS online accounts (enabled transfer appearance, sys settings btw pc's), Settings menu contained most-used user settings, Control Panel allowed more sys config, MS recommend. multi-touch display for advanced GUI interaction on tablets, [Docs, Pics, Vids, Music] become normal folders and libraries aren't enabled by default
-  - *W8.1*: more refined & enhanced user interface, esp. on non-touch display PC's
+  - *W8*: start screen (tiles for apps & sys menus) replaced start menu, Windows Store for download & purchasing software, sign-in w/ local & MS online accounts (enabled transfer appearance, sys settings btw computer's), Settings menu contained most-used user settings, Control Panel allowed more sys config, MS recommend. multi-touch display for advanced GUI interaction on tablets, [Docs, Pics, Vids, Music] become normal folders and libraries aren't enabled by default
+  - *W8.1*: more refined & enhanced user interface, esp. on non-touch display computer's
   - *W10*: intro Cortana, Start menu is combo of W7 and panel similar to W8 start screen & doesn't obstruct entire screen & desktop.
 - **Corp vs Personal needs**
   - Pro Editions: more efficient & secure use in corp. env. w/ add'l features.
-  - domain access: registers pc on the domain & allows users to login; for conn to network domain
+  - domain access: registers computer on the domain & allows users to login; for conn to network domain
   - BitLocker: drive encryption utility. data on disk is encryptedd to prevent unauth access (useful for laptops that leave office env & can be lost/stolen)
   - Media Ctr: (on W7 Home Premium) player for slideshows, videos, optical drives, local net, streaming, music from files
   - BranchCache: useful in corp. env. w/ diff branch offices; creates local cache of files from file/web servers for quicker access
@@ -213,7 +230,7 @@ RD / `RMDIR` | delete dir
 4. d
 5. d
 
-6. USB hub allows multiple USB devices to be connected to a PC
+6. USB hub allows multiple USB devices to be connected to a computer
 7. Remove USB drive correctly by clicking 'Safely Remove Hardware' icon in system tray, stopping the drive and then unplugging it.
 8. AT style systems use 2 power connectors (P8 & P9) to connect to mobo. ATX uses one P1 connector.
 9. inverter board: converts low volt DC power to high volt AC; lights up back-light bulb. If it's broken, LCD screen won't light up when laptop is powered, but you'll see a very dim image
@@ -221,7 +238,7 @@ RD / `RMDIR` | delete dir
 
 ### Troubleshoot
 
-1. If pagination error is occuring and causing random **BSOD** crashes, but otherwise PC works then
+1. If pagination error is occuring and causing random **BSOD** crashes, but otherwise computer works then
    1. check for OS and hardware drivers; run CMDs to check HDD for errors and check system files; in advanced sys settings, disable auto manage paging files for all drives and set custom. Check RAM sticks and possible W10 reinstall.
 2. An unset date/time may be due to drained BIOS battery; resolved by CMOS batter replacement
 3. Startup repair can be used to prevent reinstalls and is designed to auto start if W10 detects issues.
@@ -232,12 +249,10 @@ RD / `RMDIR` | delete dir
 2. RAID 10 combines mirroring for data protection and striping for speed
 3. SATA drive uses 15-pin connector
 4. SSDs are non-volatile memory with fast performance and lower power consumption than HDD
-
 5. Full backup: all chosen files are backed up and Archive bit is set to ON afterwards
 6. Incremental backup: only edited/new files since last bakup are backedup
 7. Differential backup: similar to incremental, except archive bit isn't set, which will cause the next diff backup to include files that were backed up during previous backups
 8. d
-
 9. Blu-ray discs can be single or multiple-use and split into categories based on 3 factors
    1. functionality: BD-R single use, BD-RE/RW multi-use (RE-recordable erasable is newer)
    2. Capacity: BD-SL(25gb), DL(50gb), BD-XL = TL(100gb) & QL(128gb)
@@ -253,3 +268,9 @@ RD / `RMDIR` | delete dir
    1. used when you have access to both ends of cable at same time
 2. cable tester: check a cable to verify intended connections exist and there's no uninteded ones
    1. missing intended connection: 'open'; existing unintended conn. ('short'); conn goes to wrong place ('miswired) conn has 2 faults: open to correct contact & shorted to incorrect one
+
+### Operational Procedures
+
+- grounding diverts excess electrical charges from the device and can decrease chance of damage from electrical spike
+- ESD mats/straps lower risk of ESD by balancing the static electricity between the tech and device/component
+- 
