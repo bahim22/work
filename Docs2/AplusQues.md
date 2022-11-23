@@ -47,6 +47,19 @@
     1. ex. 66.83.10.24:443 is a socket number that shows a connection est. over HTTPS to the IP address.
 15. HTTP uses port 80
 16. The subnet mask that defines a full class C network is 255.255.255.0, while a full class B subnet mask would be 255.255.0.0.
+17. enabling MAC filtering only allows devices listed in routers filtering table access
+18. RJ11/45 are common for phone lines & ethernet & use tristed pair cabling
+19. RFC1918 private address sets for IP addresses start w/ 192.168 (v4)
+20. default gateway add. is add that PC would send traffic to
+    1. default gateway would be a router for SOHO net & sends traffic out to internet.
+21. Static add: manually assigning/entering IP address. recomm to reserve the add in DHCP pool to prevent from being leased again on diff device
+22. LDAP is successor to DAP and works w/ AD for user auth and mngmnt w/in a network
+23."NAT (Network Address Translation) allows our private local network IPv4 addresses to be translated into a public IP address capable of connecting over the Internet."
+
+### 802.11 wireless standard, ecryption info
+
+- b/g operate at 2.4 GHz
+- n operates at either 2.4 or 5 GHz with max speed of 600 Mbps
 
 ### Network Commands
 
