@@ -448,6 +448,17 @@ ___
 8. System Center Config Manager (SCCM)
 9. Component Services Admin of COM, Apps, distrubted apps thatre deployed in a server PC using MMC (Microsoft Management Console)
 
+### Windows naming
+
+- W10 naming is designed for LANs and when installed you give the PC a Windows name
+- all W10 systems will be members of a domain or workgroup
+- homegroups are more secure and automated organization (still a type of workgroup)
+  - workgroup is basic type of networking organiztion used as an organizational tool w/ no security or central admin
+  - domain is org group (type used today is Active Directory domain) that provides central admin and has ability to disperse security and net info to other PC's at one time
+- g
+- d
+- d
+
 ### Mobile Devices
 
 1. hard drives are usually 2.5" form factor (desktops use 3.5")
