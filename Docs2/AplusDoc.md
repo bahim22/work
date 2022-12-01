@@ -393,42 +393,43 @@ ___
 
 ### Storage and Peripherals
 
-1. Magnetic disk drives
-2. SSD
-3. SCSI (Small Computer System Interface)
-4. Boot order
+1. Form factors: 2.5”, 1.8”, or M.2
+2. Magnetic disk drives
+3. SSD
+4. SCSI (Small Computer System Interface)
+5. Boot order
 
-5. L1 is generally found in the processor chip and it's the smallest & fastest for the CPU to read. It ranges from 8-64KB.
+6. L1 is generally found in the processor chip and it's the smallest & fastest for the CPU to read. It ranges from 8-64KB.
    1. L2 and L3 are larger than L1 but take longer to access.
-6. f
+7. f
 
-7. RAID (Redundant Array of independent disk)
+8. RAID (Redundant Array of independent disk)
    1. hardware RAID
    2. troubleshooting
 
-8. `Optical media`
-9. `USB`
-   1. universal serial bus 1.1 cocmes in 1.5 MB/s and 12 Mbps; USB 2..0 runs at 480 Mbps
-   2. form factors: micro, USB-C, mini
-   3. USB 3.0 runs at 5 Gbps; USB 3.1 at 10 Gbps
-   4. USB ver. often use coors to show v.
-   5. USB connectors come in many types:
-      1. Type-A, B, C, standard, mini, micro
-   6. all USB devices connect to USB controllers built into the otherboard of the system; the USB controller is in charge of all connect USB devices
-   7. this creates n upstream/downstream concept
-   8. USB-A connectors connect downstream; B connectors connect upstream (with some exceptions)
-   9. must have a device driver; OS's come w/ thousands of built-in device drivers; may need to manually download from internet
-10. `Thunder and Lightning`
+9. `Optical media`
+10. `USB`
+       1. universal serial bus 1.1 cocmes in 1.5 MB/s and 12 Mbps; USB 2..0 runs at 480 Mbps
+       2. form factors: micro, USB-C, mini
+       3. USB 3.0 runs at 5 Gbps; USB 3.1 at 10 Gbps
+       4. USB ver. often use coors to show v.
+       5. USB connectors come in many types:
+          1. Type-A, B, C, standard, mini, micro
+       6. all USB devices connect to USB controllers built into the otherboard of the system; the USB controller is in charge of all connect USB devices
+       7. this creates n upstream/downstream concept
+       8. USB-A connectors connect downstream; B connectors connect upstream (with some exceptions)
+       9. must have a device driver; OS's come w/ thousands of built-in device drivers; may need to manually download from internet
+11. `Thunder and Lightning`
     1. general purpose I/O port that runs at 10 Gbs up to 40 Gbps
     2. uses a mini DisplayPort or USB C connector
     3. exclusive to Apple and uses proprietary lightning connector
-11. `Keyboards/Mice`
+12. `Keyboards/Mice`
     1. keyboards use ither USB or PS/2 connection; while mice almost exclusively USB; game controllers often have proprietary connection that requires a converter piece
     2. keyboard video mouse (KVM) switches give ability for a single keyboard, monitor, mouse to connect multiple PC's
-12. `Sight/Sound`
-13. `Readers/Scanners`
-14. `Expansion Cards`
-15. `RAM`
+13. `Sight/Sound`
+14. `Readers/Scanners`
+15. `Expansion Cards`
+16. `RAM`
     1. SODIMM:
         1. multiple configurations: 200, 204, 260, or 292-pin, & 32 | 64-bit configurations
 

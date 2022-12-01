@@ -1,5 +1,7 @@
 .venv/*
 .vscode/*
+work/Docs2/info.env
 .env
+Docs2/*.env
 *.deb
 /moon2/DataExercise/*

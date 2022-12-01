@@ -211,21 +211,33 @@ RD / `RMDIR` | delete dir
   - Compatibility across OS's and versions
     - apps use diff install files for similar software
     - new -v can cause issues w/ prev installed hardware & apps
-- d
+- GPS nav system that uses satellites to get pinpoint position has 3 primary compoonents
+  - satellite constellation, ground control network, and receiver
+- The reference guide is updated by the preferred roaming list (PRL) updates. These updates ensure mobile devices connect to the correct cell phone tower when roaming
 
 ## Mobile
 
 - OLED: structure provides flexibility for curved displays
 - LCD: liquid crystal displays: shines a backlight through liquid crystals, creating the image on the screen
+- IPS In plan switching, offers the widest viewing angle and the best color reproduction. ideal for vertical mounting and those needing high quality color (graphic/video artists)
+- twisted nematic: TN, oldest LCD tech, limited viewing angles and washed out/blended color reproduction. minimal lag time makes them ideal for gamers and are inexpensive options for office use
+- vertical alighnment (VA), offers best contrast ratio of the three technologies and is solid middle ground choice with decent color reproduction w/ slight lag
 - The inverter is located behind the LCD panel and converts DC current into AC current
   - flickering/dim screen may be due to faulty inverter
 - NFC: Near field Comms: tech used in mobile pay (Apple/Android Pay); short-range (2 in) tech wirelessly comm, allowing two portable deives to comm.
 - port replicator adds ports for connections to peripheral devices on laptops
+- 3G cellular standards: Global System for Mobile Communication (GSM) (AT&T & T-mobile) and Code-Division Multiple Access (CDMA) (Sprint & Verizon)
+- 4G
 - 5G cellular connections and it's classifications
   - eMBB: Enhanced mobile broadband  for cell phone and mobile communication
   - mMTC: massive machine-type communications for sensors supporting IoT devices
   - URLLC: ultra-reliable low-latency communications for autonomous vehicles and industrial apps
 - Nickel-cadmium (NiCd), lithium-ion (Li-ion), nickel-metal hydride (NiMH), and lithium-polymer (Li-poly) are all chemistry types used in batteries for laptop
+- Bluetooth connection 5 steps
+  - 1 enable Bluetooth, 2 enable pairing, 3 locate the pairing device, 4 enter  PIN, 5 check connection
+- Commonly synchronized data: bookmarks, contacts, documents, applications, location data, email, social media data, pictures, e-books, music, videos, and passwords.
+- mobile application management (MAM) and mobile device management (MDM) to ensure mobile device security.
+- Google Workspace (formerly G Suite) collection of applications, including Gmail, Hangouts, Docs, Sheet, etc.
 
 ## Virtualization
 
@@ -288,3 +300,28 @@ RD / `RMDIR` | delete dir
 - grounding diverts excess electrical charges from the device and can decrease chance of damage from electrical spike
 - ESD mats/straps lower risk of ESD by balancing the static electricity between the tech and device/component
 - f
+
+## Software Troubleshooting
+
+1. NIC allows for wireless comms between laptop and wireless access points. 
+2. physical privacy and sec comp are designed to prevent the loss of info thru physical means such as shoulder sufting/theft
+3. d
+4. d
+5. d
+6. d
+
+## Security
+
+1. Adware: malicious software that displays advertising banners when run
+2. Malware removal
+   1. identify and research malware symptoms
+   2. quarantine infected system
+   3. disable system restore
+   4. remediate infected ssytems
+   5. schedule scans and run updates
+   6. enable system restore
+   7. educate end-user
+3. d
+4. d
+5. d
+6. d
