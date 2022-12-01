@@ -213,6 +213,20 @@ RD / `RMDIR` | delete dir
     - new -v can cause issues w/ prev installed hardware & apps
 - d
 
+## Mobile
+
+- OLED: structure provides flexibility for curved displays
+- LCD: liquid crystal displays: shines a backlight through liquid crystals, creating the image on the screen
+- The inverter is located behind the LCD panel and converts DC current into AC current
+  - flickering/dim screen may be due to faulty inverter
+- NFC: Near field Comms: tech used in mobile pay (Apple/Android Pay); short-range (2 in) tech wirelessly comm, allowing two portable deives to comm.
+- port replicator adds ports for connections to peripheral devices on laptops
+- 5G cellular connections and it's classifications
+  - eMBB: Enhanced mobile broadband  for cell phone and mobile communication
+  - mMTC: massive machine-type communications for sensors supporting IoT devices
+  - URLLC: ultra-reliable low-latency communications for autonomous vehicles and industrial apps
+- Nickel-cadmium (NiCd), lithium-ion (Li-ion), nickel-metal hydride (NiMH), and lithium-polymer (Li-poly) are all chemistry types used in batteries for laptop
+
 ## Virtualization
 
 1. PaaS is a complete cloud-based software dev. env.
@@ -273,4 +287,4 @@ RD / `RMDIR` | delete dir
 
 - grounding diverts excess electrical charges from the device and can decrease chance of damage from electrical spike
 - ESD mats/straps lower risk of ESD by balancing the static electricity between the tech and device/component
-- 
+- f

@@ -376,6 +376,17 @@ ___
    4. The process continues until reaching the lowermost level, from which the data is transmitted to the receiving device.
    5. At the receiving device the data is passed from the lowest to the highest layer as a series of SDUs while being successively stripped from each layer's header or footer until reaching the topmost layer, where the last of the data is consumed."
 
+**LDAP**: Lightweight Directory Access Protocol
+
+- Standards-based protocol that sits on top of TCP/IP allowing clients to do  directory server operations:
+- storing and retrieving data, searching for data matching a given set of criteria, authenticating clients, etc.
+- Uses TCP port 389 for unencrypted communication & 636 for LDAP over a TLS-encrypted channel
+- d
+- d
+
+- IEEE 802.11 is a set of protocols within the IEEE 802 WLAN standards that specifies wireless protocols
+- d
+
 ___
 
 ### `Hardware`
@@ -398,14 +409,15 @@ ___
 8. `Optical media`
 9. `USB`
    1. universal serial bus 1.1 cocmes in 1.5 MB/s and 12 Mbps; USB 2..0 runs at 480 Mbps
-   2. USB 3.0 runs at 5 Gbps; USB 3.1 at 10 Gbps
-   3. USB ver. often use coors to show v.
-   4. USB connectors come in many types:
+   2. form factors: micro, USB-C, mini
+   3. USB 3.0 runs at 5 Gbps; USB 3.1 at 10 Gbps
+   4. USB ver. often use coors to show v.
+   5. USB connectors come in many types:
       1. Type-A, B, C, standard, mini, micro
-   5. all USB devices connect to USB controllers built into the otherboard of the system; the USB controller is in charge of all connect USB devices
-   6. this creates n upstream/downstream concept
-   7. USB-A connectors connect downstream; B connectors connect upstream (with some exceptions)
-   8. must have a device driver; OS's come w/ thousands of built-in device drivers; may need to manually download from internet
+   6. all USB devices connect to USB controllers built into the otherboard of the system; the USB controller is in charge of all connect USB devices
+   7. this creates n upstream/downstream concept
+   8. USB-A connectors connect downstream; B connectors connect upstream (with some exceptions)
+   9. must have a device driver; OS's come w/ thousands of built-in device drivers; may need to manually download from internet
 10. `Thunder and Lightning`
     1. general purpose I/O port that runs at 10 Gbs up to 40 Gbps
     2. uses a mini DisplayPort or USB C connector
@@ -416,6 +428,9 @@ ___
 12. `Sight/Sound`
 13. `Readers/Scanners`
 14. `Expansion Cards`
+15. `RAM`
+    1. SODIMM:
+        1. multiple configurations: 200, 204, 260, or 292-pin, & 32 | 64-bit configurations
 
 ___
 
