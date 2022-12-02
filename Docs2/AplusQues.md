@@ -1,4 +1,6 @@
-# Sample questions for Comptia A+
+# Comptia A+
+
+## Sample Ques
 
 1. QoS = quality of service. In SOHO env, QoS set at router level. If you want to enforce it's policies on your net, you need to use a router equipped w/ QoS software
 2. Consult manu docs before doing preventive maintenance, or cleaning ops to get proper methods and solvents
@@ -12,17 +14,21 @@
 10. check case for overheating and mobo for swollen capacitors if computer reboots at random intervals multiple times/day
 11. check fuser if printer is smudging toner on the paper after printing
 12. computer may have incorrect drivers installed if print jobs are printed as garbled text
-13. Startup tab in Task Mngr utility shows proc. init at startup (earlier W -v used MSConfig)
+13. Startup tab in Task Mngr utility shows proc. init at startup
+    1. (earlier Windows versions used MSConfig)
 14. disk cleanup utility deletes temp fi from HDD
-15. WinRE helps recover a sys that won't boot. It auto starts but manual start via Windows Recovery settings in Advanced startup menu
+15. `WinRE` helps recover a sys that won't boot. It auto starts and can be manually started via Windows Recovery settings in Advanced startup menu
 16. need to configure port forwaring on a SOHO router to host gaming server
-17. **MacOS** X Time Machine requires external storage media (ext HDD or Time Capsule) & does incremental/historical backups & del oldest backups when storage fills
-    1. Time Machine runs: hourly for 24 hrs; daily for past month, weekly for all prev mo.
-    2. Disk Utility lets you run first aid, partition, erase, unmount dsk, get dsk info
-    3. manage updates in App Store & go to Sys Pref => Software Updates for OS Updates
-    4. Force Quit (Cmd+Option+Ext) to individually halt running or hung apps
-    5. Run terminal session by opening `Finder` then `/Apps/Utilities` dir.
-    6. Keychain feature in MacOS stores passwords, private keys, certs, secure notes
+
+## MacOS X
+
+1. **MacOS** X Time Machine requires external storage media (ext HDD or Time Capsule) & does incremental/historical backups & del oldest backups when storage fills
+2. Time Machine runs: hourly for 24 hrs; daily for past month, weekly for all prev mo.
+3. Disk Utility lets you run first aid, partition, erase, unmount dsk, get dsk info
+4. manage updates in App Store & go to Sys Pref => Software Updates for OS Updates
+5. Force Quit (Cmd+Option+Ext) to individually halt running or hung apps
+6. Run terminal session by opening `Finder` then `/Apps/Utilities` dir.
+7. Keychain feature in MacOS stores passwords, private keys, certs, secure notes
 
 ## Network
 
@@ -218,6 +224,7 @@ RD / `RMDIR` | delete dir
 ## Mobile
 
 - OLED: structure provides flexibility for curved displays
+  - contain the image producing components and light source in one panel. organic light emitting compound is set between an anode and cathode producing a current. the current runs thru the electroluminescent compund producing light consumes less power than LCD, with higher contrast ratio resulting in sharper images. common in high end monitors and phones. 
 - LCD: liquid crystal displays: shines a backlight through liquid crystals, creating the image on the screen
 - IPS In plan switching, offers the widest viewing angle and the best color reproduction. ideal for vertical mounting and those needing high quality color (graphic/video artists)
 - twisted nematic: TN, oldest LCD tech, limited viewing angles and washed out/blended color reproduction. minimal lag time makes them ideal for gamers and are inexpensive options for office use
