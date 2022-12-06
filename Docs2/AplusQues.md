@@ -235,7 +235,7 @@ RD / `RMDIR` | delete dir
 ## Mobile
 
 - **OLED**: structure provides flexibility for curved displays
-  - contain the image producing components and light source in one panel. organic light emitting compound is set between an anode and cathode producing a current. the current runs thru the electroluminescent compund producing light consumes less power than LCD, with higher contrast ratio resulting in sharper images. common in high end monitors and phones. 
+  - contain the image producing components and light source in one panel. organic light emitting compound is set between an anode and cathode producing a current. the current runs thru the electroluminescent compund producing light consumes less power than LCD, with higher contrast ratio resulting in sharper images. common in high end monitors and phones.
 - **LCD**: liquid crystal displays: shines a backlight through liquid crystals, creating the image on the screen
 - **IPS** In plan switching, offers the widest viewing angle and the best color reproduction. ideal for vertical mounting and those needing high quality color (graphic/video artists)
 - **twisted nematic**: TN, oldest LCD tech, limited viewing angles and washed out/blended color reproduction. minimal lag time makes them ideal for gamers and are inexpensive options for office use
@@ -290,7 +290,7 @@ RD / `RMDIR` | delete dir
 1. **VGA**: video graphics array: legacy cable; only transmits analog signal; blue
 2. **DVI** digital visual interface: addressed analog video transmission issues. Able to transmit digital video signals to display units
    1. 3 standards: DVI-A analog only, D digital only, I: analog & digital; white
-3. **HDMI**: high-def multimedia interface: higher motion-picture fram rates and digital audio w/ single cable. 
+3. **HDMI**: high-def multimedia interface: higher motion-picture fram rates and digital audio w/ single cable.
    1. Common connector type: Standard A HDMI (19 pins)
 4. **DisplayPort**: DP: uses less power and is backward compatible w/ VGA & DVI. transmits video & audio signals.
    1. DP standard features 2 hooks to lock the cable in place
@@ -306,7 +306,7 @@ RD / `RMDIR` | delete dir
 - d
 
 1. SATA: serial advanced tech attachment
-   1. most common and features a flat, internal cable that has a terminating connector that only fits the mobo connection port in one way. 
+   1. most common and features a flat, internal cable that has a terminating connector that only fits the mobo connection port in one way.
    2. data cable: 7 pins, power cable: 15 pins
    3. revisions = [1.0, 2.0, 3.0, 3.2 = 1.5Gbps, 3Gbps, 6Gbps, 16Gbps]
 2. SCSI
@@ -332,14 +332,11 @@ RD / `RMDIR` | delete dir
 6. Incremental backup: only edited/new files since last bakup are backedup
 7. Differential backup: similar to incremental, except archive bit isn't set, which will cause the next diff backup to include files that were backed up during previous backups
 8. d
-9.  Blu-ray discs can be single or multiple-use and split into categories based on 3 factors
+9. Blu-ray discs can be single or multiple-use and split into categories based on 3 factors
    1. functionality: BD-R single use, BD-RE/RW multi-use (RE-recordable erasable is newer)
    2. Capacity: BD-SL(25gb), DL(50gb), BD-XL = TL(100gb) & QL(128gb)
    3. content quality: regular(1080p high def vid) and ultra HD(4k ultra HD, better colour depth; region-free, but need 4k Blu-R player)
 10. d
-11. d
-12. d
-13. d
 
 ### Tools
 
@@ -356,7 +353,7 @@ RD / `RMDIR` | delete dir
 
 ## Software Troubleshooting
 
-1. NIC allows for wireless comms between laptop and wireless access points. 
+1. NIC allows for wireless comms between laptop and wireless access points.
 2. physical privacy and sec comp are designed to prevent the loss of info thru physical means such as shoulder sufting/theft
 3. d
 4. d
