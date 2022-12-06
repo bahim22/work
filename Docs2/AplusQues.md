@@ -30,6 +30,12 @@
 6. Run terminal session by opening `Finder` then `/Apps/Utilities` dir.
 7. Keychain feature in MacOS stores passwords, private keys, certs, secure notes
 
+- **Thunderbolt cables**: 4 standards
+  - 1 & 2 terminate in Mini DisplayPort connector
+  - 3 & 4 termiante in USB-C connector
+- d
+- d
+
 ## Network
 
 1. If computer can't connect to wired network due to not rec IP addresses from DHCP server the cause may be the DHCP IP pool is exhausted
@@ -72,10 +78,15 @@
 - A crimper is used to crimp a connector (usually last step in making an ethernet cable) to tighten the wiring to right spots in connector so electrical signals pass thru properly.
 - Plug tone generator at jack end of cable and wave toner probe around suspected area to find other end of cable
 
-### 802.11 wireless standard, ecryption info
+### Ethernet, 802.11 wireless standards, ecryption info
 
 - b/g operate at 2.4 GHz
 - n operates at either 2.4 or 5 GHz with max speed of 600 Mbps
+
+- T568A & T568B
+- Plenum: shielding used for any network cabling. Usually used where cables are around high heats due to its non-stick material
+-  
+- d
 
 ### Network Commands
 
@@ -223,11 +234,11 @@ RD / `RMDIR` | delete dir
 
 ## Mobile
 
-- OLED: structure provides flexibility for curved displays
+- **OLED**: structure provides flexibility for curved displays
   - contain the image producing components and light source in one panel. organic light emitting compound is set between an anode and cathode producing a current. the current runs thru the electroluminescent compund producing light consumes less power than LCD, with higher contrast ratio resulting in sharper images. common in high end monitors and phones. 
-- LCD: liquid crystal displays: shines a backlight through liquid crystals, creating the image on the screen
-- IPS In plan switching, offers the widest viewing angle and the best color reproduction. ideal for vertical mounting and those needing high quality color (graphic/video artists)
-- twisted nematic: TN, oldest LCD tech, limited viewing angles and washed out/blended color reproduction. minimal lag time makes them ideal for gamers and are inexpensive options for office use
+- **LCD**: liquid crystal displays: shines a backlight through liquid crystals, creating the image on the screen
+- **IPS** In plan switching, offers the widest viewing angle and the best color reproduction. ideal for vertical mounting and those needing high quality color (graphic/video artists)
+- **twisted nematic**: TN, oldest LCD tech, limited viewing angles and washed out/blended color reproduction. minimal lag time makes them ideal for gamers and are inexpensive options for office use
 - vertical alighnment (VA), offers best contrast ratio of the three technologies and is solid middle ground choice with decent color reproduction w/ slight lag
 - The inverter is located behind the LCD panel and converts DC current into AC current
   - flickering/dim screen may be due to faulty inverter
@@ -269,6 +280,39 @@ RD / `RMDIR` | delete dir
 9. inverter board: converts low volt DC power to high volt AC; lights up back-light bulb. If it's broken, LCD screen won't light up when laptop is powered, but you'll see a very dim image
 10. l
 
+### Cable Types
+
+1. f
+2. d
+
+#### Display: Video Cables
+
+1. **VGA**: video graphics array: legacy cable; only transmits analog signal; blue
+2. **DVI** digital visual interface: addressed analog video transmission issues. Able to transmit digital video signals to display units
+   1. 3 standards: DVI-A analog only, D digital only, I: analog & digital; white
+3. **HDMI**: high-def multimedia interface: higher motion-picture fram rates and digital audio w/ single cable. 
+   1. Common connector type: Standard A HDMI (19 pins)
+4. **DisplayPort**: DP: uses less power and is backward compatible w/ VGA & DVI. transmits video & audio signals.
+   1. DP standard features 2 hooks to lock the cable in place
+   2. Can use adaptors to convert one type of connection/cable tech to a different one
+
+#### Connector types
+
+#### Hard Drive Cables
+
+- Connections (drive interfaces), can be on or off-board and are used to connect internal components to mobo
+- attachment standard depends on HDD requirements and features circuitry and a header (port)
+- d
+- d
+
+1. SATA: serial advanced tech attachment
+   1. most common and features a flat, internal cable that has a terminating connector that only fits the mobo connection port in one way. 
+   2. data cable: 7 pins, power cable: 15 pins
+   3. revisions = [1.0, 2.0, 3.0, 3.2 = 1.5Gbps, 3Gbps, 6Gbps, 16Gbps]
+2. SCSI
+3. eSATA
+4. IDE
+
 ### Troubleshoot
 
 1. If pagination error is occuring and causing random **BSOD** crashes, but otherwise computer works then
@@ -280,13 +324,15 @@ RD / `RMDIR` | delete dir
 
 1. RAID 0 striped across drives to improve performance but w/ no redundancy
 2. RAID 10 combines mirroring for data protection and striping for speed
+   1. provides full redundancy via mirroring and stripping all info stored w/in the drives
+   2. requires atleast 4 drives
 3. SATA drive uses 15-pin connector
 4. SSDs are non-volatile memory with fast performance and lower power consumption than HDD
 5. Full backup: all chosen files are backed up and Archive bit is set to ON afterwards
 6. Incremental backup: only edited/new files since last bakup are backedup
 7. Differential backup: similar to incremental, except archive bit isn't set, which will cause the next diff backup to include files that were backed up during previous backups
 8. d
-9. Blu-ray discs can be single or multiple-use and split into categories based on 3 factors
+9.  Blu-ray discs can be single or multiple-use and split into categories based on 3 factors
    1. functionality: BD-R single use, BD-RE/RW multi-use (RE-recordable erasable is newer)
    2. Capacity: BD-SL(25gb), DL(50gb), BD-XL = TL(100gb) & QL(128gb)
    3. content quality: regular(1080p high def vid) and ultra HD(4k ultra HD, better colour depth; region-free, but need 4k Blu-R player)
