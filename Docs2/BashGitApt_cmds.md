@@ -34,7 +34,6 @@ code .
 
 ## Cmd Info
 
-
 # Commands
 
 ## CMD, PowerShell, Bash, Git, AZ
