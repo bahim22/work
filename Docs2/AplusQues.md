@@ -20,6 +20,10 @@
 15. `WinRE` helps recover a sys that won't boot. It auto starts and can be manually started via Windows Recovery settings in Advanced startup menu
 16. need to configure port forwaring on a SOHO router to host gaming server
 
+## Laser, Thermal, Ink Printers
+
+process, clean, charge, expose, dev, tran, fuse
+
 ## MacOS X
 
 1. **MacOS** X Time Machine requires external storage media (ext HDD or Time Capsule) & does incremental/historical backups & del oldest backups when storage fills
