@@ -20,10 +20,6 @@
 15. `WinRE` helps recover a sys that won't boot. It auto starts and can be manually started via Windows Recovery settings in Advanced startup menu
 16. need to configure port forwaring on a SOHO router to host gaming server
 
-## Laser, Thermal, Ink Printers
-
-process, clean, charge, expose, dev, tran, fuse
-
 ## MacOS X
 
 1. **MacOS** X Time Machine requires external storage media (ext HDD or Time Capsule) & does incremental/historical backups & del oldest backups when storage fills
@@ -37,8 +33,6 @@ process, clean, charge, expose, dev, tran, fuse
 - **Thunderbolt cables**: 4 standards
   - 1 & 2 terminate in Mini DisplayPort connector
   - 3 & 4 termiante in USB-C connector
-- d
-- d
 
 ## Network
 
@@ -64,7 +58,7 @@ process, clean, charge, expose, dev, tran, fuse
 15. HTTP uses port 80
 16. The subnet mask that defines a full class C network is 255.255.255.0, while a full class B subnet mask would be 255.255.0.0.
 17. enabling MAC filtering only allows devices listed in routers filtering table access
-18. RJ11/45 are common for phone lines & ethernet & use tristed pair cabling
+18. `RJ11/45` are common for phone lines & ethernet & use tristed pair cabling
 19. RFC1918 private address sets for IP addresses start w/ 192.168 (v4)
 20. default gateway address is add that computer would send traffic to
     1. default gateway would be a router for SOHO net & sends traffic out to internet.
@@ -79,8 +73,8 @@ process, clean, charge, expose, dev, tran, fuse
 - A Layer 3 switch is config to participate in routing decisions
   - routing decisions work on Layer 3 of OSI model (network layer)
   - standard switches usually refferred at as Layer 2 devices, working as PnP w/o ability to adjust settings (aka unmanaged switch)
-- A crimper is used to crimp a connector (usually last step in making an ethernet cable) to tighten the wiring to right spots in connector so electrical signals pass thru properly.
-- Plug tone generator at jack end of cable and wave toner probe around suspected area to find other end of cable
+- A `crimper` is used to crimp a connector (usually last step in making an ethernet cable) to tighten the wiring to right spots in connector so electrical signals pass thru properly.
+- Plug `tone generator` at jack end of cable and wave toner probe around suspected area to find other end of cable
 
 ### Ethernet, 802.11 wireless standards, ecryption info
 
@@ -88,9 +82,7 @@ process, clean, charge, expose, dev, tran, fuse
 - n operates at either 2.4 or 5 GHz with max speed of 600 Mbps
 
 - T568A & T568B
-- Plenum: shielding used for any network cabling. Usually used where cables are around high heats due to its non-stick material
--  
-- d
+- **Plenum**: shielding used for any network cabling. Usually used where cables are around high heats due to its non-stick material
 
 ### Network Commands
 
@@ -106,37 +98,50 @@ process, clean, charge, expose, dev, tran, fuse
 
 ## Shell info
 
-- Some cmds only available w/ admin priviledge enabled by elevating/Run as admin the CLI
+> Some cmds are only available w/ admin priviledge enabled by elevating or running the CLI as admin
 
-### CMD
+### Cmd/Pwsh
 
 ```ps1
+nbtstat
 <# Displays protocol statistics and current TCP/IP connections using NBT
 (NetBIOS over TCP/IP). #>
-nbtstat
-
-
+ipconfig
+# displays config of net adapters
+ping: 
+# tests reachability of remote computer over net
+tracert
+# shows what network devices packet goes thru to reach remote computer
+netstat
+# show network stats on data transfers, ports, apps
+nslookup
+# resolve name to IP address for DNS TShoot
+shutdown
+# shut down or restart computer, w/ options/param
+command_name /?
+# param brings up help w/ list of cmd options/param & descriptions
+dism
+# Deployment image servicing & mngmnt tool => mount & service W image files
+sfc
+# System File checker tool, checks status/version of system files
+chkdsk
+<# verifies FS of vol & fix logical FS corruption
+  - system tool for verifying disk integrity; run w/ no param shows dsk status, /r locates bad sectors & tries recover lost data #>
+dispart
+# tool that manages disk, parts, vols
+taskkill
+# kills sys proc. given process ID # (PID)
+gpupdate
+# manual refresh domain grp policies applied to computer or user
+gpresult
+# display current group policies & status
+format
+# create a FS on storage device
 ```
 
-- ipconfig: displays config of net adapters
-- ping: tests reachability of remote computer over net
-- tracert: shows what network devices packet goes thru to reach remote computer
-- netstat: show network stats on data transfers, ports, apps
-- nslookup: resolve name to IP address for DNS TShoot
+#### Bash cmds
 
-- shutdown: shut down or restart computer, w/ options/param
-- command_name /?: param brings up help w/ list of cmd options/param & descriptions
-- dism: Deployment image servicing & mngmnt tool => mount & service W image files
-- sfc: System File checker tool, checks status/version of system files
-- chkdsk: verifies FS of vol & fix logical FS corruption
-  - system tool for verifying disk integrity; run w/ no param shows dsk status, /r locates bad sectors & tries recover lost data
-- dispart: tool that manages disk, parts, vols
-- taskkill: kills sys proc. given process ID # (PID)
-- gpupdate: manual refresh domain grp policies applied to computer or user
-- gpresult: display current group policies & status
-- format: create a FS on storage device
-
-```bash
+```sh
 ls -l # list dir w/ long list option for fi & dir attributes
 pwd # print working dir
 passwd # changes password if followed by username or of current user
@@ -271,6 +276,11 @@ RD / `RMDIR` | delete dir
 6. Hybrid cloud model: has benefits of both public and private clouds
 
 ## Hardware
+
+### Laser, Thermal, Ink Printers
+
+- Steps for laser printing:
+  - process, clean, charge, expose, dev, tran, fuse
 
 1. onboard GPU uses RAM as storage medium
 2. d
