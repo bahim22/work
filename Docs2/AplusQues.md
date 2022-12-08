@@ -108,7 +108,7 @@ nbtstat
 (NetBIOS over TCP/IP). #>
 ipconfig
 # displays config of net adapters
-ping: 
+ping:
 # tests reachability of remote computer over net
 tracert
 # shows what network devices packet goes thru to reach remote computer
@@ -146,7 +146,7 @@ ls -l # list dir w/ long list option for fi & dir attributes
 pwd # print working dir
 passwd # changes password if followed by username or of current user
 apt-get # install new software packs
-tar -czvf archive.tar.gzip /dir/path_to_files 
+tar -czvf archive.tar.gzip /dir/path_to_files
 # -c creates archive, -z compress, -v display process (verbose mode), -f specify filename of archive
 ifconfig # interface config; displays IP info
 ip addr # iproute2 toolset that replaced ifconfig
@@ -277,11 +277,6 @@ RD / `RMDIR` | delete dir
 
 ## Hardware
 
-### Laser, Thermal, Ink Printers
-
-- Steps for laser printing:
-  - process, clean, charge, expose, dev, tran, fuse
-
 1. onboard GPU uses RAM as storage medium
 2. d
 3. d
@@ -294,10 +289,19 @@ RD / `RMDIR` | delete dir
 9. inverter board: converts low volt DC power to high volt AC; lights up back-light bulb. If it's broken, LCD screen won't light up when laptop is powered, but you'll see a very dim image
 10. l
 
+### Laser, Thermal, Ink Printers
+
+- Steps for laser printing:
+  - process, clean, charge, expose, dev, tran, fuse
+
 ### Cable Types
 
 1. f
 2. d
+
+#### Peripheral Cables
+
+#### Network Cables
 
 #### Display: Video Cables
 
@@ -312,20 +316,41 @@ RD / `RMDIR` | delete dir
 
 #### Connector types
 
+- installed at terminating pt. of cable; allows components & peripherals to connect; type used depends on the cable and what receptable it needs connected to.
+
+1. RJ11: registered jack; telecomm net interface standard for voice/data equipment connection to service providers/carriers.
+   1. used w/ twisted pair cables & connects 4-6 wires to phone lines or modems
+2. RJ45: ethernet cable
+3. F-type: F connector; used w/ coaxial cables for cable/satellite data connections
+4. Fiber optic cable connectors
+   1. ST: straight tip; bayonet style
+   2. SC:subscriber connector; push/pull style
+   3. LC: lucent connector; push/pull; half the size of the SC; good fit for office/data center usage
+5. Punchdown block: elec connection device that inserts multiple copper wires into a slot for added insulation and electrical connection to attached wires.
+6. USB
+   1. `Micro` (smallest) & `Mini` (2nd smallest) direction dependent connectors containing 5 pins
+   2. `USB-C`: most recent connector type w/ 24 pins, an oval shape, and capable of reversible connection
+7. Molex: older interconnection type for drive connections that used a two-piece pin & socket
+8. Lightning Port: Apple proprietary connector featuring 8 pins and reversible orientation
+9. DB9: Used for serial connections to network device consoles & management ports. 9 pins (2 rows of 4 & 5 pins),trapezoid shaped connector
+
 #### Hard Drive Cables
 
 - Connections (drive interfaces), can be on or off-board and are used to connect internal components to mobo
 - attachment standard depends on HDD requirements and features circuitry and a header (port)
-- d
-- d
 
 1. SATA: serial advanced tech attachment
    1. most common and features a flat, internal cable that has a terminating connector that only fits the mobo connection port in one way.
    2. data cable: 7 pins, power cable: 15 pins
    3. revisions = [1.0, 2.0, 3.0, 3.2 = 1.5Gbps, 3Gbps, 6Gbps, 16Gbps]
-2. SCSI
-3. eSATA
-4. IDE
+2. SCSI: small computer system interface: hard drive connector (usually for storage device connection)
+   1. ribbon cables or round cables w/ 50, 68, or 80 wires
+   2. One SCSI cable is able to connect up to 16 devices (including MoBo & SCSI controller card)
+3. eSATA: external SATA cable, used for data transmission (doesn't provide power)
+   1. Power over eSATA, eSATA+, eSATAp, eSATA/USB versions provide power
+4. IDE: Integrated drive electronics cables (PATA, parallel advanced tech attachment)
+   1. 40-pin flat data cables w/ colored strip on one edge to show the location of pin 1
+   2. composed of 3 separate connectors, 2 for drives and 1 for power
 
 ### Troubleshoot
 
