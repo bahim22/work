@@ -102,18 +102,20 @@
             4. network
          3. hypervisor
    2. cloud models
-      1. I/S/PaaS
-      2. public/private/hybrid/community
-      3. shared resources
-      4. rapid elasticity
-      5. on-demand
-      6. resource pooling
-      7. measured service
-      8. metered
-      9. off-site email apps
-      10. cloud file storage servies
-      11. virtual app streaming/cloud-based apps
-      12. virtual desktop
+      1. IaaS
+      2. SaaS
+      3. PaaS
+      4. public/private/hybrid/community
+      5. shared resources
+      6. rapid elasticity
+      7. on-demand
+      8. resource pooling
+      9. measured service
+      10. metered
+      11. off-site email apps
+      12. cloud file storage servies
+      13. virtual app streaming/cloud-based apps
+      14. virtual desktop
 5. `Hardware` & `Network Troubleshooting`: 27%
    1. best practice methodology for resolving problems
    2. issues w/ mobos, RAM, CPU, power
@@ -311,7 +313,7 @@ _SPARE PARTS/HARDWARE_
 • Fans/cooling devices/heat sink
 • CPUs
 • Assorted connectors/cables
-  
+
 - USB; HDMI
 
 • Adapters

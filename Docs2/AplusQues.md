@@ -278,16 +278,11 @@ RD / `RMDIR` | delete dir
 ## Hardware
 
 1. onboard GPU uses RAM as storage medium
-2. d
-3. d
-4. d
-5. d
-
-6. USB hub allows multiple USB devices to be connected to a computer
-7. Remove USB drive correctly by clicking 'Safely Remove Hardware' icon in system tray, stopping the drive and then unplugging it.
-8. AT style systems use 2 power connectors (P8 & P9) to connect to mobo. ATX uses one P1 connector.
-9. inverter board: converts low volt DC power to high volt AC; lights up back-light bulb. If it's broken, LCD screen won't light up when laptop is powered, but you'll see a very dim image
-10. l
+2. USB hub allows multiple USB devices to be connected to a computer
+3. Remove USB drive correctly by clicking 'Safely Remove Hardware' icon in system tray, stopping the drive and then unplugging it.
+4. AT style systems use 2 power connectors (P8 & P9) to connect to mobo. ATX uses one P1 connector.
+5. inverter board: converts low volt DC power to high volt AC; lights up back-light bulb. If it's broken, LCD screen won't light up when laptop is powered, but you'll see a very dim image
+6. v
 
 ### Laser, Thermal, Ink Printers
 
@@ -296,12 +291,38 @@ RD / `RMDIR` | delete dir
 
 ### Cable Types
 
-1. f
-2. d
-
-#### Peripheral Cables
-
 #### Network Cables
+
+- 3 primary types: **coaxial**, **twisted pair**, **fiber**
+- used for connecting devices to networking equipment
+- cable: medium (usually copper) where the data is transferred from devices
+  - composed of four pairs of twisted-pairs (8 total) individual cables in one sheath
+
+| Cat Cables | | |
+| :---: | --- | --- |
+| Name | Speed | Distance |
+| 5 | 100 Mbps | 100 m |
+| 5e | 1000 Mbps (1Gbps) | 100 m |
+| 6 | 10 Gbps | 55 m |
+| 6a | 10 Gbps | 100 m |
+| --- | --- | --- |
+
+1. 5e has less interference due to separation of the four twisted pairs sets & increase in number of twists in each cable pairs
+2. **Coaxial cable**: single copper-cored cable contained in an inner insulation layer, which is contained in a wire mesh conductor, then placed w/in an outer insulation layer. Specification by the RG system (Radio Guide)
+   1. RG-6: solid copper core used for satellite/cable modems
+   2. RG-59: solid copper core used for cable TV
+3. **Twisted copper pair**: pairs of individual wires twisted into pairs and then twisted together, contained w/in an insulated jacket
+   1. unshielded twisted pair (UTP): 2-4 pairs of twisted wires, where the pairs are twisted in direct contact w/ each other and contained w/in an insulating layer so the copper doesn't directly touch the other copper wire
+   2. shielded twisted pair (STP): 2-4 twisted wires, and each pair is contained in a braided foil sheathing layer, prior to being twisted w/ the other cable pairs, which reduces electrical interference. (used in Cat 7-8 cables)
+   3. Color coded for reference:
+      1. T568A (green/white, green, orange/white, blue, blue/white, orange, brown/white, brown) & T568B (orange/white, orange, green/white, blue, blue/white, brown)
+         1. standards for RJ-45 wiring connectors
+4. Direct burial is where the cables are buried underground and should contain STP cables w/ add'l waterproof sheathing. Should be 6-8 inch underground in protective PVC piping and away from other lines that have electrical currents
+5. Plenum: teflon type covering used in cables exposed to heat or that may release gasses into vent system.
+6. Optical is a transmission method that uses light pulses to transfer data
+7. **Fiber optic cables**: fiber (small strings of flexible glass) is surrounded by rubberized coating w/ transmission speeds of 100 Mbps - 10 Gbps over several miles. (optical data transmission)
+   1. immune to electrical interference & wiretapping
+   2. Two types: *single-mode*: carries one light path, sourced from a laser (much longer distance than multi) and *multimode*: carries multiple light paths sourced by an LED.
 
 #### Display: Video Cables
 
@@ -327,12 +348,14 @@ RD / `RMDIR` | delete dir
    2. SC:subscriber connector; push/pull style
    3. LC: lucent connector; push/pull; half the size of the SC; good fit for office/data center usage
 5. Punchdown block: elec connection device that inserts multiple copper wires into a slot for added insulation and electrical connection to attached wires.
-6. USB
-   1. `Micro` (smallest) & `Mini` (2nd smallest) direction dependent connectors containing 5 pins
-   2. `USB-C`: most recent connector type w/ 24 pins, an oval shape, and capable of reversible connection
+6. USB: universal serial bus (attach peripheral devices to computing devices) (Peripheral cable)
+   1. 2.0 standard has max speed of 480 Mbps (hi-speed) & 3.0 has max speed of 5 Gbps (Supper Speed)
+   2. `Micro` (smallest) & `Mini` (2nd smallest) direction dependent connectors containing 5 pins
+   3. `USB-C`: most recent connector type w/ 24 pins, an oval shape, and capable of reversible connection
 7. Molex: older interconnection type for drive connections that used a two-piece pin & socket
 8. Lightning Port: Apple proprietary connector featuring 8 pins and reversible orientation
 9. DB9: Used for serial connections to network device consoles & management ports. 9 pins (2 rows of 4 & 5 pins),trapezoid shaped connector
+   1. serial cable used for serial comms w/ a matching serial connector at the end
 
 #### Hard Drive Cables
 
@@ -342,7 +365,7 @@ RD / `RMDIR` | delete dir
 1. SATA: serial advanced tech attachment
    1. most common and features a flat, internal cable that has a terminating connector that only fits the mobo connection port in one way.
    2. data cable: 7 pins, power cable: 15 pins
-   3. revisions = [1.0, 2.0, 3.0, 3.2 = 1.5Gbps, 3Gbps, 6Gbps, 16Gbps]
+   3. revisions = 1.0, 2.0, 3.0, 3.2 = 1.5Gbps, 3Gbps, 6Gbps, 16Gbps
 2. SCSI: small computer system interface: hard drive connector (usually for storage device connection)
    1. ribbon cables or round cables w/ 50, 68, or 80 wires
    2. One SCSI cable is able to connect up to 16 devices (including MoBo & SCSI controller card)
