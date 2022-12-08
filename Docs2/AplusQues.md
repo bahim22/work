@@ -210,8 +210,8 @@ RD / `RMDIR` | delete dir
   - max memory supported by W10 workstation OS is 2 TB
 
 - **Windows** is most used workstation OS for personal & corp.
-  - *W7*: file mngmt via Windows Explorer, libraries showed files of specific type, even if stored in diff locations, default libs[docs, pictures, videos, music] => default location for Windows Explorer on Windows 7, Aero provided visual enhancements to desktop/GUI exp & required video card
-  - *W8*: start screen (tiles for apps & sys menus) replaced start menu, Windows Store for download & purchasing software, sign-in w/ local & MS online accounts (enabled transfer appearance, sys settings btw computer's), Settings menu contained most-used user settings, Control Panel allowed more sys config, MS recommend. multi-touch display for advanced GUI interaction on tablets, [Docs, Pics, Vids, Music] become normal folders and libraries aren't enabled by default
+  - *W7*: file mngmt via Windows Explorer, libraries showed files of specific type, even if stored in diff locations, default libs(docs, pictures, videos, music) => default location for Windows Explorer on Windows 7, Aero provided visual enhancements to desktop/GUI exp & required video card
+  - *W8*: start screen (tiles for apps & sys menus) replaced start menu, Windows Store for download & purchasing software, sign-in w/ local & MS online accounts (enabled transfer appearance, sys settings btw computer's), Settings menu contained most-used user settings, Control Panel allowed more sys config, MS recommend. multi-touch display for advanced GUI interaction on tablets, (Docs, Pics, Vids, Music) become normal folders and libraries aren't enabled by default
   - *W8.1*: more refined & enhanced user interface, esp. on non-touch display computer's
   - *W10*: intro Cortana, Start menu is combo of W7 and panel similar to W8 start screen & doesn't obstruct entire screen & desktop.
 - **Corp vs Personal needs**
@@ -324,6 +324,10 @@ RD / `RMDIR` | delete dir
    1. immune to electrical interference & wiretapping
    2. Two types: *single-mode*: carries one light path, sourced from a laser (much longer distance than multi) and *multimode*: carries multiple light paths sourced by an LED.
 
+#### Peripheral Cables
+
+#### Network Cables2
+
 #### Display: Video Cables
 
 1. **VGA**: video graphics array: legacy cable; only transmits analog signal; blue
@@ -365,7 +369,7 @@ RD / `RMDIR` | delete dir
 1. SATA: serial advanced tech attachment
    1. most common and features a flat, internal cable that has a terminating connector that only fits the mobo connection port in one way.
    2. data cable: 7 pins, power cable: 15 pins
-   3. revisions = 1.0, 2.0, 3.0, 3.2 = 1.5Gbps, 3Gbps, 6Gbps, 16Gbps
+   3. revisions = {'1.0': '1.5Gbps', '2.0': '3Gbps','3.0': '6Gbps', '3.2': '16Gbps'}
 2. SCSI: small computer system interface: hard drive connector (usually for storage device connection)
    1. ribbon cables or round cables w/ 50, 68, or 80 wires
    2. One SCSI cable is able to connect up to 16 devices (including MoBo & SCSI controller card)
