@@ -30,6 +30,8 @@ cat ~/.ssh/id_ed25519.pub # display pub key then c/v to github acct
 ssh -T git@github.com # test connection & clone repo
 git clone git@github.com:<username>/<repo>.git
 code .
+git clone ssh://git@ssh.github.com:443/bahim22/work.git
+
 ```
 
 ## Cmd Info
