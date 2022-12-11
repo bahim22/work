@@ -1,3 +1,5 @@
+#! ./work/.venv/bin/python
+
 SUFFIXES = {
     1000: [
         'KB', 'MB', 'GB', 'TB', 'PB'

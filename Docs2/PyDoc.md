@@ -129,6 +129,46 @@ source "c:/Users/Ibalde/OneDrive - Point Park University/Ibrahima @ Point Park U
 - --upgrade-deps (upgrade cored deps & pip setuptools)
 - --prompt PROMPT (set an alt prompt prefix for the env)
 
+```sh
+pip install --upgrade-strategy eager --report ./PipRep.json --cache-dir ./.venv/PipCache -r ./requirements.txt
+
+pip install --upgrade-strategy eager --report ./PipRep.json --cache-dir ./.venv/PipCache -r ./requirements.txt
+
+pip install --require-virtualenv --python-version "3.10.0" --pre --upgrade
+# only install in venv, use py -v, use pre-release -v, upgrade packages (-u), isolated mode ignores env var and user config
+# --user Install to the Python user install dir Linux: ~/.local/, or W10:%APPDATA%\Python
+# --python "3.8" run w/ specified Py interpreter
+pip install --dry-run --ignore-installed
+# don't install and resolve the requirements
+pip install -r requirements.txt
+pip install --use-feature no-binary-enable-wheel-cache truststore fast-deps
+pip cache <dir, info, list, purge, remove>
+pip config
+(debug, edit, get, list, set, unset)
+```
+### Pip commands
+
+Commands:
+  install                     Install packages.
+  download                    Download packages.
+  uninstall                   Uninstall packages.
+  freeze                      Output installed packages in requirements format.
+  inspect                     Inspect the python environment.
+  list                        List installed packages.
+  show                        Show information about installed packages.
+  check                       Verify installed packages have compatible dependencies.
+  config                      Manage local and global configuration.
+  search                      Search PyPI for packages.
+  cache                       Inspect and manage pip's wheel cache.
+  index                       Inspect information available from package indexes.
+  wheel                       Build wheels from your requirements.
+  hash                        Compute hashes of package archives.
+  completion                  A helper command used for command completion.
+  debug                       Show information useful for debugging.
+  help                        Show help for commands.
+
+
+
 ### system
 
 ```py
