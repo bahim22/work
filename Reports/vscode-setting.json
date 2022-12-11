@@ -1,0 +1,83 @@
+{
+    "python.analysis.typeCheckingMode": "basic",
+    "terminal.integrated.profiles.windows": {
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Bash": {
+            "source": "Bash",
+            // "path": "C:\\Program Files\\Git\\bin\\bash.exe"
+            "path": "C:\\Program Files\\Git\bin\\bash.exe"
+        },
+        "Git Bash": {
+            "source": "Git Bash",
+            // "path": "C:\\Users\\ibald\\Git2\\Git\\git-bash.exe",
+            "path": "C:\\Program Files\\Git\\git-bash.exe"
+        },
+        "PowerShell7": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell",
+            "path": "C:\\ProgramFiles\\PowerShell\\7\\pwsh.exe"
+        }
+    },
+    "terminal.integrated.profiles.osx": {
+        "bash": {
+            "path": "bash",
+            "args": [
+                "-l"
+            ],
+            "icon": "terminal-bash"
+        },
+        "zsh": {
+            "path": "zsh",
+            "args": [
+                "-l"
+            ]
+        },
+        "fish": {
+            "path": "fish",
+            "args": [
+                "-l"
+            ]
+        },
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux"
+        },
+        "pwsh": {
+            "path": "pwsh",
+            "icon": "terminal-powershell"
+        },
+        "Bash": {
+            "source": "Bash",
+            "path": "/usr/local/bin/bash"
+        },
+        "PowerShell7": {
+            "source": "PowerShell",
+            "path": "/usr/local/bin/pwsh"
+        },
+        "Git Bash": {
+            "source": "Git Bash",
+            "path": "/usr/local/bin/git-shell"
+        },
+        "bash (2)": {
+            "path": "/usr/local/bin/bash"
+        }
+    },
+    "editor.fontFamily": "Fira Code, FiraCode, 'Fira Code Retina', FiraCodeRetina, Fira Code Retina, 'FiraCode', Fira Code, FiraCode, 'Fira Code', 'FiraCode'",
+    // "editor.fontLigatures": true,
+    "editor.fontLigatures": "'calt', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'zero', 'onum'",
+    "files.exclude": {
+        "**/.git": false,
+        "**/.DS_Store": true
+    },
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.wordWrap": "on",
+    "git-graph.graph.style": "angular",
+    "git-graph.integratedTerminalShell": "C:\\ProgramFiles\\Git\\bin\\bash.exe",
+}
