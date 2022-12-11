@@ -132,32 +132,15 @@ LS_COLORS='rs=0:di=1;35:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd
 export LS_COLORS
 PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[0;39m\]:\[\033[01;36m\]\W\[\033[0;39m\]\$ '
 
-31  = red 40  = black background  0   = default colour
-32  = green   41  = red background    1   = bold
-33  = orange  42  = green background  4   = underlined
-34  = blue    43  = orange background 5   = flashing text
-35  = purple  44  = blue background   7   = reverse field > (exchange foreground and background color)
-36  = cyan    45  = purple background 8   = concealed (invisible)
-37  = grey    46  = cyan background   0   = default colour
-90  = dark grey   47  = grey background   1   = bold
-91  = light red   100 = dark grey background  
-92  = light green 101 = light red background  
-93  = yellow  102 = light green background    
-94  = light blue  103 = yellow background 
-95  = light purple    104 = light blue background 
-96  = turquoise   105 = light purple background   
-97  = white   106 = turquoise background  
-107 = white background    
-
-no    Global default
-fi    Normal file
-di    Directory
-ln    Symbolic link.
-bd    Block device
-cd    Character device
-or    Symbolic link to a non-existent file
-ex    Executable file
-*.extension   Example, *.mp3
+# pip bash completion start
+_pip_completion()
+{
+    COMPREPLY=( $( COMP_WORDS="${COMP_WORDS[*]}" \
+                   COMP_CWORD=$COMP_CWORD \
+                   PIP_AUTO_COMPLETE=1 $1 2>/dev/null ) )
+}
+complete -o default -F _pip_completion pip
+# pip bash completion end
 
 # code (or vim) ~/.bashrc then 
 # source ~/.bashrc 
