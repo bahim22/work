@@ -1,4 +1,13 @@
-#! ./work/.venv/bin/python
+#! ./work/.venv/bin/python3
+
+"""
+"scripts installed into virtualenv have a “shebang” line which
+points to the env Python interpreter, i.e. #!/<path-to-venv>/bin/python"
+
+#! ~/flow/work/.venv/bin/python3
+#! work/.venv/bin/python3
+#! /home/ib-ub/flow/work/.venv/bin/python3
+"""
 
 SUFFIXES = {
     1000: [
@@ -9,7 +18,8 @@ SUFFIXES = {
     ]
 }
 
-def approx_size(size, kb_is_1024_bytes = True):
+
+def approx_size(size, kb_is_1024_bytes=True):
     '''convert file size to human-readable, decimal form
 
     Keyword arguments:
@@ -29,5 +39,5 @@ def approx_size(size, kb_is_1024_bytes = True):
         size /= multiple
         if size < multiple:
             return '{0:.1f} {1}'.format(size, suffix)
-            
+
     raise ValueError('int too large')
