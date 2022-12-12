@@ -40,9 +40,9 @@ staffTuples = [
 sorted(staffTuples, key=lambda staff: staff[2])
 
 # %% [markdown]
-# # Return a new list containing all items from the iterable in ascending order.
-#
-# # list.sort() method is only for lists, sorted() function accepts any iterable
+## Return a new list containing all items from the iterable in ascending order.
+
+## list.sort() method is only for lists, sorted() function accepts any iterable
 
 # %%
 sorted([5, 2, 3, 1, 4])
