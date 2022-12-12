@@ -324,10 +324,6 @@ RD / `RMDIR` | delete dir
    1. immune to electrical interference & wiretapping
    2. Two types: *single-mode*: carries one light path, sourced from a laser (much longer distance than multi) and *multimode*: carries multiple light paths sourced by an LED.
 
-#### Peripheral Cables
-
-#### Network Cables2
-
 #### Display: Video Cables
 
 1. **VGA**: video graphics array: legacy cable; only transmits analog signal; blue
