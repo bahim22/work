@@ -51,7 +51,14 @@ a_l.extend()
 ```
 
 - `list comprehension`
-A compact way to process all or part of the elements in a sequence and return a list with the results. result = ['{:#04x}'.format(x) for x in range(256) if x % 2 == 0] generates a list of strings containing even hex numbers (0x..) in the range from 0 to 255. The if clause is optional. If omitted, all elements in range(256) are processed.
+A compact way to process all or part of the elements in a sequence and return a list with the results.
+
+```py
+ result = ['{:#04x}'.format(x) for x in range(256) if x % 2 == 0]
+"""
+ generates a list of strings containing even hex numbers (0x..) in the range from 0 to 255. The if clause is optional. If omitted, all elements in range(256) are processed.
+"""
+```
 
 - `mapping`
 A container object that supports arbitrary key lookups and implements the methods specified in the Mapping or MutableMapping abstract base classes. Examples include dict, collections.defaultdict, collections.OrderedDict and collections.Counter.
@@ -137,7 +144,8 @@ pip install --upgrade-strategy eager --report ./PipRep.json --cache-dir ./.venv/
 pip install --require-virtualenv --python-version "3.10.0" --pre --upgrade
 # only install in venv, use py -v, use pre-release -v, upgrade packages (-u), isolated mode ignores env var and user config
 # --user Install to the Python user install dir Linux: ~/.local/, or W10:%APPDATA%\Python
-# --python "3.8" run w/ specified Py interpreter
+pip install --python "3.8"
+#  run w/ specified python interpreter
 pip install --dry-run --ignore-installed
 # don't install and resolve the requirements
 pip install -r requirements.txt
@@ -146,28 +154,28 @@ pip cache <dir, info, list, purge, remove>
 pip config
 (debug, edit, get, list, set, unset)
 ```
+
 ### Pip commands
 
-Commands:
-  install                     Install packages.
-  download                    Download packages.
-  uninstall                   Uninstall packages.
-  freeze                      Output installed packages in requirements format.
-  inspect                     Inspect the python environment.
-  list                        List installed packages.
-  show                        Show information about installed packages.
-  check                       Verify installed packages have compatible dependencies.
-  config                      Manage local and global configuration.
-  search                      Search PyPI for packages.
-  cache                       Inspect and manage pip's wheel cache.
-  index                       Inspect information available from package indexes.
-  wheel                       Build wheels from your requirements.
-  hash                        Compute hashes of package archives.
-  completion                  A helper command used for command completion.
-  debug                       Show information useful for debugging.
-  help                        Show help for commands.
-
-
+| Commands | info |
+| --- | --- |
+|  install  |               Install packages.|
+|  download   |                 Download packages.|
+|  uninstall  |                 Uninstall packages.|
+|  freeze     |                 Output installed packages in requirements format.|
+|  inspect    |                 Inspect the python environment.|
+|  list       |                 List installed packages.|
+|  show       |                 Show information about installed packages.|
+|  check      |                 Verify installed packages have compatible dependencies.|
+|  config     |                 Manage local and global configuration.|
+|  search     |                 Search PyPI for packages.|
+|  cache      |                 Inspect and manage pip's wheel cache.|
+|  index      |                 Inspect information available from package indexes.|
+|  wheel      |                 Build wheels from your requirements.|
+|  hash       |                 Compute hashes of package archives.|
+|  completion |                 A helper command used for command completion.|
+|  debug      |                 Show information useful for debugging.|
+|  help       |                 Show help for commands.|
 
 ### system
 
@@ -182,7 +190,9 @@ where python && which python
 
 ### Print
 
+```py
 print(value, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
+```
 
 Prints the values to a stream, or to sys.stdout by default. Optional keyword arguments:
 file: a file-like object (stream); defaults to the current sys.stdout.
@@ -192,8 +202,10 @@ flush: whether to forcibly flush the stream.
 
 ### Class
 
-- int([x]) -> integer int(x, base=10) -> integer
-Convert a number or string to an integer
+```py
+int([x]) -> integer int(x, base=10) -> integer
+# Convert a number or string to an integer
+```
 
 ## Sequence types: strings, lists, tuples, bytes sequences, bytes arrays, range() objects
 
