@@ -54,7 +54,7 @@ ___
 - Dir info is in Vol dir at root of local file sysstem
    1. /Volumes/Macintosh HD
    2. /Volumes/ macOS Base System
--  
+-
 
 ### Menu's
 
@@ -64,8 +64,6 @@ ___
 4. Security
    1. change which OS's can be downloaded and allow from external source
 5. startup disk settings
-
-## Troubleshooting options
 
 ___
 
@@ -77,7 +75,7 @@ init $PATH
 
 . # current working dir
 .. # parent dir
-~ $HOME # home dir of user 
+~ $HOME # home dir of user
 ls -a -@ -l
 ls -C -l
 
@@ -85,12 +83,40 @@ ls -C -l
 rm -r /folder/want-deleted # remove folders & content recursively
 rm -rp # ignore permissions & errors
 sudo rm -rf path/to/folder
-
+su - user -c 'ls' #switch user and run cmd
 mount -uw # mount with write permissions
 mount -o update /
 diskutil list
 df -h
 find / -size +50000 -print
+
+whereis [exe,cmd]
+whatis cmdname
+uname -a # show system info
+free -gh #show memory usage --lohi -l from /proc/meminfo
+service ssh status # check service status
+ssh -l username hostname
+top -u ib-ub
+ps -ef | more # view running processes
+ps -ef grep code
+kill -9 PID # killall, pkill, xkill to terminate unix process
+
+grep -i "word" file.txt # find str in fi
+find -iname "file.txt" # find fi
+find /home/ib-ub -name *.md -type f
+
+gzip file.md, gzip -d file.md # zip & unzip .gz fi
+unzip fi.zip && unzip -l fi.zip #extract or view w/o unzipping fi
+shutdown -h now #shutdown now or -r to restart now
+cat -n /home/ib-ub/flow/work/Docs2/requirements3.txt # print file to stdout
+chmod ug+rwx file.txt # change permissions of fi/dir [-R u-rwx ex. will remove access recursively]
+chown ib-ub:group_name file.txt # change owner
+passwd username # change password; use sudo to reset w/o old pass
+man 3 free # bring up section 3 of free cmd
+tail -n 10 file.txt # show last 10 lines of fi
+less large_file.txt # efficient view of log fi (CTRL+F/B forward/backward 1 window)
+diff -w file1.md file2.md # compare, ignore whitespace fi1 to fi2
+ps top vmstat brk mmap wget, systemctl, init
 ```
 
 ### Disk

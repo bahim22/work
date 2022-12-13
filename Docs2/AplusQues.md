@@ -108,6 +108,9 @@ nbtstat
 (NetBIOS over TCP/IP). #>
 ipconfig
 # displays config of net adapters
+ipconfig /all /release /renew # show full config, release or renew IPv4 addr for specified adapter
+ipconfig /flushdns /registerdns displaydns # purge DNS resolver cache, refresh DCHP leases and re-register DNS names, display DNS cache contents. add 6 at end of cmd to show IPv6 instead
+ipconfig /showclassid /setclassid # show/modify dhcp class IDs allowed for adapter
 ping:
 # tests reachability of remote computer over net
 tracert
