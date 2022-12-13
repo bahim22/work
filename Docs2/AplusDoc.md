@@ -176,7 +176,7 @@ ___
 | quick vs. full format | quick changes FS records making dsk appear empty. Full rewrites prev fi, detects surface errors on dsk and makes restoring fi harder. |
 | --- | --- |
 
-### Misc
+### Misc OS info
 
 1. 3rd party (unsigned drivers) should have source verified to ensure validity.
 2. signed drivers: W install drivers are tested/approved by MS
@@ -389,7 +389,7 @@ ___
 
 ___
 
-### `Hardware`
+## `Hardware`
 
 ### Storage and Peripherals
 
@@ -475,8 +475,6 @@ ___
 - d
 - d
 
-### Mobile Devices
-
 1. hard drives are usually 2.5" form factor (desktops use 3.5")
    1. 2.5: better perf due to larger cache and higher rotation speed
    2. more available/cheaper than 1.8" drives that weigh less, consume less power, but slower rotation speed & access time (usually in 10 inch or ultraportable laptops)
@@ -497,6 +495,8 @@ ___
       3. _OLED_: organic light emitting diode - thinner/lighter; made of a layer of organic compound between 2 light-emitting electrods
          1. common in handheld devices
       4. _CRT_: cathode ray tube
+
+## Mobile Devices
 
 ### Referenced info and quoted material from personal notes and online resources
 
