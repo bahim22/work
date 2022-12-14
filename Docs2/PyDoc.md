@@ -37,7 +37,7 @@ An object representing a stream of data. Repeated calls to the iterator’s __ne
 - `key function`
 A key function or collation function is a callable that returns a value used for sorting or ordering. For example, locale.strxfrm() is used to produce a sort key that is aware of locale specific sort conventions. A number of tools in Python accept key functions to control how elements are ordered or grouped. They include min(), max(), sorted(), list.sort(), heapq.merge(), heapq.nsmallest(), heapq.nlargest(), and itertools.groupby().
 
-a. `list`
+a.list
 
 - A built-in Python sequence. Despite its name it is more akin to an array in other languages than to a linked list since access to elements is O(1)
 - an ordered set of items
@@ -84,9 +84,7 @@ def f(arg):
 (int(3.15)) # converts floating pt # to integer 3
 ```
 
-## Classes
-
-### Argument passing
+## Argument passing
 
 - script name and add'l args are turned into a list of `str` then assigned to `argv` var. in `sys` module
 
@@ -102,7 +100,7 @@ def f(arg):
 #! /usr/bin/python || usr/bin/python -v || ./myvenv/Scripts/python.exe
 ```
 
-- virtual env creation
+## virtual env creation
 
 ```ps1
 python3 -m venv /path/to/new/virtual/environment
@@ -155,7 +153,7 @@ pip config
 (debug, edit, get, list, set, unset)
 ```
 
-### Pip commands
+## Pip commands
 
 | Commands | info |
 | --- | --- |
@@ -177,7 +175,7 @@ pip config
 |  debug      |                 Show information useful for debugging.|
 |  help       |                 Show help for commands.|
 
-### system
+## system
 
 ```py
 import sys
@@ -188,19 +186,20 @@ sys.path
 where python && which python
 ```
 
-### Print
+## Print
 
 ```py
 print(value, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
 ```
 
-Prints the values to a stream, or to sys.stdout by default. Optional keyword arguments:
-file: a file-like object (stream); defaults to the current sys.stdout.
-sep: string inserted between values, default a space.
-end: string appended after the last value, default a newline.
-flush: whether to forcibly flush the stream.
+- Prints the values to a stream, or to sys.stdout by default
+- Optional keyword arguments:
+  - file: a file-like object (stream); defaults to the current sys.stdout.
+  - sep: string inserted between values, default a space.
+  - end: string appended after the last value, default a newline
+  - flush: whether to forcibly flush the stream.
 
-### Class
+## Class
 
 ```py
 int([x]) -> integer int(x, base=10) -> integer
@@ -217,7 +216,9 @@ Concatenate any number of strings.
 
 The string whose method is called is inserted in between each given string. The result is returned as a new string.
 
+```py
 Example: '.'.join(['ab', 'pq', 'rs']) -> 'ab.pq.rs'
+```
 
 - `'str'.format()`
 S.format(*args, **kwargs) -> str
@@ -275,8 +276,9 @@ print(f.read())
 def ex_pr(file):
   return print(f.readline('file'))
 
-fa = open("D://Docs/welcome.txt", "r")
-print(f.read(5)) # open and read file from that location and view first 5 chars
+fa = open("D:/Docs/welcome.txt", "r")
+print(f.read(5))
+# open and read file => view first 5 chars
 
 fa.close()
 ```
