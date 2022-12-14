@@ -187,6 +187,7 @@ ___
 6. Driver install, Software, Updates: Keep system updated for secuirty reasons. Install proper drivers for the type of system (32-bit => x86 sys && 64-bit on x64 sys). Use 'check for updates' utility in W10 to update OS and other MS software. Other software needs checked separatley.
 7. Know differences in Hardware/Apps/OS compatability
 
+
 ___
 
 ## `Network`
@@ -344,7 +345,7 @@ ___
   - UDP can broadcase - sent packets can be addressed to be rec by all devices on the subnet
   - multicast mode of op where a single datagram packet can auto route w/o dupe to a group of subs
 
-> Although UDP provides integrity verification (via checksum) of the header and payload,[2] it provides no guarantees to the upper layer protocol for message delivery and the UDP layer retains no state of UDP messages once sent. For this reason, UDP sometimes is referred to as Unreliable Datagram Protocol.[3] If transmission reliability is desired, it must be implemented in the user's application.
+> Although UDP provides integrity verification (via checksum) of the header and payload, it provides no guarantees to the upper layer protocol for message delivery and the UDP layer retains no state of UDP messages once sent. For this reason, UDP sometimes is referred to as Unreliable Datagram Protocol. If transmission reliability is desired, it must be implemented in the user's application.
 
 ### OSI model (Open systems interconnection)
 
@@ -435,7 +436,7 @@ ___
 
 ___
 
-### `Software`
+## `Software`
 
 - SDK is a kit that offers tools, code samples, libraries, processes, and guides for creating software applications on specific platforms.
 - API is an interface that allows the software to interact with each other
@@ -471,9 +472,6 @@ ___
 - homegroups are more secure and automated organization (still a type of workgroup)
   - workgroup is basic type of networking organiztion used as an organizational tool w/ no security or central admin
   - domain is org group (type used today is Active Directory domain) that provides central admin and has ability to disperse security and net info to other PC's at one time
-- g
-- d
-- d
 
 1. hard drives are usually 2.5" form factor (desktops use 3.5")
    1. 2.5: better perf due to larger cache and higher rotation speed
@@ -481,7 +479,7 @@ ___
 2. dirve tech: serial and parallel ATA
 3. don't have separate power connectors
 
-#### Displays
+### Displays
 
    1. Types
       1. backlight systems
@@ -495,6 +493,54 @@ ___
       3. _OLED_: organic light emitting diode - thinner/lighter; made of a layer of organic compound between 2 light-emitting electrods
          1. common in handheld devices
       4. _CRT_: cathode ray tube
+
+## Shell(DOS)
+
+### Windows CMD
+
+`BCDEDIT`        Sets properties in boot database to control boot loading.
+`CACLS`          Displays or modifies access control lists (ACLs) of files.
+`CD`             Displays the name of or changes the current directory.
+`CHDIR`          Displays the name of or changes the current directory.
+`CHKDSK`         Checks a disk and displays a status report.
+`CLS`            Clears the screen.
+`CONVERT`        Converts FAT volumes to NTFS. Can't convert current drive
+`COPY`           Copies one or more files to another location.
+`DATE`           Displays or sets the date.
+`DEL`            Deletes one or more files.
+`DIR`            Displays a list of files and subdirectories in a directory.
+`DISKPART`       Displays or configures Disk Partition properties.
+`ECHO`           Displays messages, or turns command echoing on or off.
+`ERASE`          Deletes one or more files.
+`FIND`           Searches for a text string in a file or files.
+`FINDSTR`        Searches for strings in files.
+`FORMAT`         Formats a disk for use with Windows.
+`FSUTIL`         Displays or configures the file system properties.
+`FTYPE`          Displays/modifies file types used in file ext assoc.
+`GPRESULT`       Displays Group Policy information for machine or user.
+`HELP`           Provides Help information for Windows commands.
+`ICACLS`         Display, modify, backup, or restore ACLs for files and dir.
+`MD`             Creates a directory.
+`MKDIR`          Creates a directory.
+`MKLINK`         Creates Symbolic Links and Hard Links
+`MODE`           Configures a system device.
+`MOVE`           Moves one or more files from one directory to another dir.
+`PRINT`          Prints a text file.
+`RD`             Removes a directory.
+`RECOVER`        Recovers readable information from a bad or defective disk.
+`REN`            Renames a file or files.
+`RENAME`         Renames a file or files.
+`RMDIR`          Removes a directory.
+`ROBOCOPY`       Advanced utility to copy files and directory trees
+`SCHTASKS`       Schedules commands and programs to run on a computer.
+`SHUTDOWN`       Allows proper local or remote shutdown of machine.
+`SYSTEMINFO`     Displays machine specific properties and configuration.
+`TASKLIST`       Displays all currently running tasks including services.
+`TASKKILL`       Kill or stop a running process or application.
+`TREE`           Graphically displays the dir structure of a drive or path
+`VOL`            Displays a disk volume label and serial number.
+`XCOPY`          Copies files and directory trees.
+___
 
 ## Mobile Devices
 

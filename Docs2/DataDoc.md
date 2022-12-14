@@ -142,7 +142,7 @@ dtype: object
 
 ```py
 1) matplotlib.pyplot.subplots()
- 
+
 def plotim1(im):
     fig, ax = plt.subplots()
     ax.imshow(im)
@@ -150,14 +150,14 @@ def plotim1(im):
     plt.show()
 
 2) matplotlib.pyplot.subplots(arg1,arg2,figsize=)
- 
+
 def plot_structured_grid(sgr):
     _, ax = plt.subplots(1, 1, figsize=(8, 8))
     sgr.plot(ax=ax)
     return ax
 
 3) matplotlib.pyplot.subplots(figsize=)
- 
+
 def plot_discriminator_score(self, samples):
         fig, axes = plt.subplots(figsize=(10, 10))
         plot_discriminator_score(samples, axes)
@@ -181,7 +181,7 @@ def make_axes(self):
 ```py
 
 1) seaborn.pointplot(data=,dodge=,errwidth=,hue=,join=,markers=,palette=,scale=,x=,y=)
- 
+
 def downstream_plot_performance(df):
     print("Plotting...")
     sns.set_theme(style="whitegrid")
@@ -203,7 +203,7 @@ def downstream_plot_performance(df):
     print("Done.")
 
 3) seaborn.pointplot(aspect=,ax=,capsize=,color=,conf_lw=,data=,estimator=,x=,y=)
- 
+
 def plot_simulation(s_fname, s_log_to_filter):
     '''
     Plots the data from all trial of a simulation to help navigate between them
@@ -357,8 +357,7 @@ cats   0.3   1.0
 ```py
 For complex inputs, 1.2 + 1j, the absolute value is \sqrt{ a^2 + b^2 }.
 
-Examples
-Absolute numeric values in a Series.
+# Examples: Absolute numeric values in a Series.
 
 >>> s = pd.Series([-1.10, 2, -3.33, 4])
 >>> s.abs()
@@ -367,13 +366,13 @@ Absolute numeric values in a Series.
 2    3.33
 3    4.00
 dtype: float64
-Absolute numeric values in a Series with complex numbers.
+# Absolute numeric values in a Series with complex numbers.
 
 >>> s = pd.Series([1.2 + 1j])
 >>> s.abs()
 0    1.56205
 dtype: float64
-Absolute numeric values in a Series with a Timedelta element.
+# Absolute numeric values in a Series with a Timedelta element.
 
 >>> s = pd.Series([pd.Timedelta('1 days')])
 >>> s.abs()
@@ -415,7 +414,7 @@ StackOverflow <https://stackoverflow.com/a/17758115>__).
 
 #### Examples
 
-> Using res.sendFile() as an alt for static() middleware for dynamic situations [uses the same code underneath and supports HTTP cache, etc.]
+> Using res.sendFile() as an alt for static() middleware for dynamic situations (uses the same code underneath and supports HTTP cache, etc.)
 
 ```py
 app.get('/user/:uid/photos/:file', function(req, res){

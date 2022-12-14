@@ -93,7 +93,67 @@ git clone ssh://git@ssh.github.com:443/bahim22/work.git
 
 ___
 
-## Git
+```sh
+echo $BASH
+/usr/bin/bash
+
+init $PATH
+
+. # current working dir
+.. # parent dir
+~ $HOME # home dir of user
+ls -a -@ -l
+ls -C -l
+
+# remove dir & files
+rm -r /folder/want-deleted # remove folders & content recursively
+rm -rp # ignore permissions & errors
+sudo rm -rf path/to/folder
+su - user -c 'ls' #switch user and run cmd
+mount -uw # mount with write permissions
+mount -o update /
+diskutil list
+df -h
+find / -size +50000 -print
+
+whereis [exe,cmd]
+whatis cmdname
+uname -a # show system info
+free -gh #show memory usage --lohi -l from /proc/meminfo
+service ssh status # check service status
+ssh -l username hostname
+top -u ib-ub
+ps -ef | more # view running processes
+ps -ef grep code
+kill -9 PID # killall, pkill, xkill to terminate unix process
+
+grep -i "word" file.txt # find str in fi
+find -iname "file.txt" # find fi
+find /home/ib-ub -name *.md -type f
+
+gzip file.md, gzip -d file.md # zip & unzip .gz fi
+unzip fi.zip && unzip -l fi.zip #extract or view w/o unzipping fi
+shutdown -h now #shutdown now or -r to restart now
+cat -n /home/ib-ub/flow/work/Docs2/requirements3.txt # print file to stdout
+chmod ug+rwx file.txt # change permissions of fi/dir [-R u-rwx ex. will remove access recursively]
+chown ib-ub:group_name file.txt # change owner
+passwd username # change password; use sudo to reset w/o old pass
+man 3 free # bring up section 3 of free cmd
+tail -n 10 file.txt # show last 10 lines of fi
+less large_file.txt # efficient view of log fi (CTRL+F/B forward/backward 1 window)
+diff -w file1.md file2.md # compare, ignore whitespace fi1 to fi2
+ps top vmstat brk mmap wget, systemctl, init
+```
+
+### Shell command info
+
+- ctrl + \ = Quit (SIGQUIT)
+  - fquit a running instance
+- open path/to/app.app
+  - open an app from sh
+- escape special chars:
+  - prepending with \
+  - wrapping it in single quotes
 
 ## git colors for terminal
 
@@ -125,50 +185,3 @@ cd    Character device
 or    Symbolic link to a non-existent file
 ex    Executable file
 **.extension  (ex: *.mp3)
-
-## Cmd Info
-
-### Windows CMD
-
-`BCDEDIT`        Sets properties in boot database to control boot loading.
-`CACLS`          Displays or modifies access control lists (ACLs) of files.
-`CD`             Displays the name of or changes the current directory.
-`CHDIR`          Displays the name of or changes the current directory.
-`CHKDSK`         Checks a disk and displays a status report.
-`CLS`            Clears the screen.
-`CONVERT`        Converts FAT volumes to NTFS. Can't convert current drive
-`COPY`           Copies one or more files to another location.
-`DATE`           Displays or sets the date.
-`DEL`            Deletes one or more files.
-`DIR`            Displays a list of files and subdirectories in a directory.
-`DISKPART`       Displays or configures Disk Partition properties.
-`ECHO`           Displays messages, or turns command echoing on or off.
-`ERASE`          Deletes one or more files.
-`FIND`           Searches for a text string in a file or files.
-`FINDSTR`        Searches for strings in files.
-`FORMAT`         Formats a disk for use with Windows.
-`FSUTIL`         Displays or configures the file system properties.
-`FTYPE`          Displays/modifies file types used in file ext assoc.
-`GPRESULT`       Displays Group Policy information for machine or user.
-`HELP`           Provides Help information for Windows commands.
-`ICACLS`         Display, modify, backup, or restore ACLs for files and dir.
-`MD`             Creates a directory.
-`MKDIR`          Creates a directory.
-`MKLINK`         Creates Symbolic Links and Hard Links
-`MODE`           Configures a system device.
-`MOVE`           Moves one or more files from one directory to another dir.
-`PRINT`          Prints a text file.
-`RD`             Removes a directory.
-`RECOVER`        Recovers readable information from a bad or defective disk.
-`REN`            Renames a file or files.
-`RENAME`         Renames a file or files.
-`RMDIR`          Removes a directory.
-`ROBOCOPY`       Advanced utility to copy files and directory trees
-`SCHTASKS`       Schedules commands and programs to run on a computer.
-`SHUTDOWN`       Allows proper local or remote shutdown of machine.
-`SYSTEMINFO`     Displays machine specific properties and configuration.
-`TASKLIST`       Displays all currently running tasks including services.
-`TASKKILL`       Kill or stop a running process or application.
-`TREE`           Graphically displays the dir structure of a drive or path
-`VOL`            Displays a disk volume label and serial number.
-`XCOPY`          Copies files and directory trees.
