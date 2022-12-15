@@ -123,6 +123,9 @@ ___
   - forms part of the UEFI standard
   - PXE-capable network interface controller (NIC) required on client side
   - uses industry-standard network protocols such as _DHCP_ and _TFTP_
+- ACPI: advanced config and power management interface: defines working interfaces between the OS, BIOS, and hardware
+  - can allow the OS to control power management
+  -
 
 ## OS Install, Upgrade, Boot
 
@@ -186,7 +189,6 @@ ___
 5. Time, Date, Region, Lang: config these settings during install (some OS require reinstall to change lang.)
 6. Driver install, Software, Updates: Keep system updated for secuirty reasons. Install proper drivers for the type of system (32-bit => x86 sys && 64-bit on x64 sys). Use 'check for updates' utility in W10 to update OS and other MS software. Other software needs checked separatley.
 7. Know differences in Hardware/Apps/OS compatability
-
 
 ___
 
@@ -278,22 +280,24 @@ ___
       1. ex. Access resources of a company branch in a different state
 3. `Telnet`: 23, unencrypted remote device access
 4. E-mail
-   1. `SMTP` 25, simple mail transfer pro., sending email
+   1. `SMTP` 25, simple mail transfer protocol, sending email
    2. `POP3` 110, post office pro, receiving email
    3. `IMAP` 143, internet message access pro, receiving email
 5. `RDP`: 27, reliable data protocol, provides facilities for remote loading, debugging and bulk transfer of images and data
    1. Remote Desktop Pro: 3389, used for connecting remote PCs
-6. **DNS**: 54 domain name system, translates domain names to IP addresses
+6. **DNS**: 54 domain name system/service, translates domain names to IP addresses
 7. **HTTP**:hypertext transfer pro; standard for web comms; used for rendering pages in browser.
    1. **HTTPS**: secured comms. on web
 8. `NetBios`/NetBT: 137-139 network basic input output system: LAN comms
 9. `SMB`/CIFS:445 Server message block/Common internet file system; shared access on a network
-10. `SLP`: 427 service location pro.; local service discovery
-11. `AFP`: 548 Apple filling pro.; used for Apple file services
-12. `DHCP`: 67/68, dynamic host config pro.; assigns IP addys to network hosts
+10. `SLP`: 427 service location protocol; local service discovery
+11. `AFP`: 548 Apple filling protocol; used for Apple file services
+12. `DHCP`: 67/68, dynamic host config protocol; assigns IP addys to network hosts
 13. `LDAP`: 389 Lightweight directory access pro; access a directory on network objects
 14. `SNMP`: simple net mngmnt pro: send/rec net mngmnt messages
+    1. used for monitoring and managing other nodes in a TCP/IP network
 15. `Proxy Server`: features include access control, caching, URL filtering and privacy
+16. `WINS`: Windows Internet name service
 
 - _Network stack_: set of hardware/software that provides the infrastructure for a comp
 - _Router_: Layer 3 (network layer) device that connects diff devices and determines best route for traffic between networks (uses a set of rules)
@@ -392,6 +396,25 @@ ___
 
 ## `Hardware`
 
+### Memory
+
+- DRAM & SRAM are most widely used types of RAM
+
+1. SRAM  Static random access memory - Uses transistors to store information. Expensive and used for cache memory
+2. DRAM Dynamic random access memory - Need to be refreshed to retain data. Usually used for main memory
+3. SDRAM: new tech, supported by PC's that support 100MHz memory buses.
+4. EDO: extended data out memory: type of RAM chip that makes improvemnts on time to read from memory
+5. ECC: error checking and correcting memory: data that's read/transmitted is checked for errors and corrected
+6. ROM - Read only memory - Data in ROM can not be erased or changed
+7. PROM Programmable ROM - Once programmed, data can't be erased or change
+8. EPROM - Erasable PROM - Data can be removed from PC curcuit, erased by ultraviolet (UV) light and then reprogrammed
+9. EEPROM Electronically erasable PROM - Data can be erased with electrical signals.
+   1. Chip can then be reprogrammed. Transistor uses 5v.
+   2. EEPROMs are frequently used to store BIOS. Used to program dynamically
+10. SIMM (installed in pairs & come in 30 and 72 pin formats) & DIMM (can be installed 1 at a time and com in 168 pin config)
+11. Unbuffered
+12. Buffered
+
 ### Storage and Peripherals
 
 1. Form factors: 2.5”, 1.8”, or M.2
@@ -402,12 +425,31 @@ ___
 
 6. L1 is generally found in the processor chip and it's the smallest & fastest for the CPU to read. It ranges from 8-64KB.
    1. L2 and L3 are larger than L1 but take longer to access.
-7. f
+7. Sectors usually contain 512 bytes.
 
-8. RAID (Redundant Array of independent disk)
-   1. hardware RAID
-   2. troubleshooting
-
+8. `RAID` (Redundant Array of independent disk) Types: Hardware & Software RAID
+   1. RAID 0: Striping w/o parity and no fault tolerance
+      1. min. 2 disks needed and read/write performance increase
+   2. RAID 1: Mirroring and dubplexing.
+      1. mirroring requires 2 equal sized pars on diff drives.
+      2. disk duplexing req. 2 disk and 2 controllers.
+      3. provides fault tolerance, w/ slower disk access compared to striping
+   3. RAID 2 - striping w/ error correction
+   4. RAID 3 - striping w/ error correction code stored as parity
+      1. takes a striped array, then adds prity HDD to the array. The parity info is vital if a drive fails because it can restore blocks broken from data corruption. Parity written to 1 drive
+   5. RAID 4: striping w/ large blocks allocation
+   6. RAID 5: striping w/ parity. Requires 3 pars on diff drives.
+      1. fault tolerant & less expensive than disk mirroring.
+      2. data can't be recovered if >= 1 disk fails, so tape backups need to be used.
+      3. spreading the parity info across all drives allows all the drives to rebuild the array if another fails.
+      4. Mirroring has more overhead due to the entire drive being copied to another drive.
+   7. RAID 10: mirrored stripping. Mode 0 array + mode 1 array, striped.
+      1. ex. You striped data into 2 drives, then each drive is mirrored
+      2. requires a total of 4 drives
+   8. Disk swapping: Hot-swapping (Host plugging): ability to add/remove devices to PC while it's running & OS will auto recognize changes.
+      1. cold: device needs powered down prior to replacing parts
+      2. warm: The server can remain powered on, but I/O functions corresponding to the part that needs replaced need stopped by the appropriate command
+      3. hot: the faulty part can be replaced w/o interrupting the srver or exec any interruption commands in I/O procedures.
 9. `Optical media`
 10. `USB`
        1. universal serial bus 1.1 cocmes in 1.5 MB/s and 12 Mbps; USB 2..0 runs at 480 Mbps
