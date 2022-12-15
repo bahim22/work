@@ -8,7 +8,7 @@ import sys
 import getpass
 import os
 
-# getpass.getuser()
+getpass.getuser()
 os.uname()
 
 
@@ -71,7 +71,8 @@ print(statinfo, sep='next item: ')
 
 
 # %% [markdown]
-# os.stat_result class is an object that has attributes that correspond w/ stat structure
+# os.stat_result class is an object that has attributes
+#   that correspond w/ stat structure
 #
 # - st_mode = file mode, permissions
 # - st_uid<gid> = user id of file | group owner
@@ -167,7 +168,9 @@ output.close
 # %%
 os.cpu_count()  # 12 return n of CPUs in system
 len(os.sched_getaffinity(0))  # n of usable CPUs
-os.confstr_names  # dict mapping names accepted by confstr() to the int val defined for the names by the host OS
+os.confstr_names
+# dict mapping names accepted by confstr() to the int val
+#   def for the names by the host OS
 os.getloadavg(), os.sysconf('name'), os.sysconf_names
 
 
