@@ -8,6 +8,9 @@ ssh connects and logs into the specified destination in the form for user, hostn
 ```sh
 [user@]hostname
 ssh://[user@]hostname[:port]
+# different format for ssh
+ssh://[user@]host.xz[:port]/~[user]/path/to/repo.git/
+ssh://[user@]host.xz[:port]/path/to/repo.git/
 ssh -i ~/.ssh/id_ed25519 # identity file (private key)
 ssh -l login_name -p port
 ssh-keygen -l -f /etc/ssh/ssh_host_rsa_key # determine fingerprints
@@ -15,7 +18,6 @@ ssh-keygen -lv -f ~/.ssh/known_hosts #ls fingerpritns and random art for known h
 ssh-keygen -r host.example.com. # connect client to server and SSHFP resource records should be added to the zonefile for host first
 dig -t SSHFP host.example.com check that zone is answering fingerprint querires.
 ssh -o "VerifyHostKeyDNS ask" host.example.com # client connects
-
 ```
 
 ### Steps for keygen
@@ -93,7 +95,7 @@ ___
 
 ```sh
 echo $BASH
-/usr/bin/bash
+# /usr/bin/bash
 
 init $PATH
 
@@ -174,12 +176,14 @@ ps top vmstat brk mmap wget, systemctl, init
 
 ## symbolic rep of data
 
-no    Global default
-fi    Normal file
-di    Directory
-ln    Symbolic link.
-bd    Block device
-cd    Character device
-or    Symbolic link to a non-existent file
-ex    Executable file
-**.extension  (ex: *.mp3)
+| abbrev | value |
+| --- | --- |
+|**no**  |  Global default|
+|fi  |  Normal file|
+|di  |  Directory|
+|ln  |  Symbolic link.|
+|bd  |  Block device|
+|cd  |  Character device|
+|or  |  Symbolic link to a non-existent file|
+|ex  |  Executable file|
+|**.extension | (ex: *.mp3)|
