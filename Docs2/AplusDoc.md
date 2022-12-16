@@ -177,7 +177,6 @@ ___
 | HFS | used for MacOS |
 | Swap par | Linux par used when physical RAM is maxxed out. The Data flows to swap pars; reducing perf, in place of running more apps simultaneously. |
 | quick vs. full format | quick changes FS records making dsk appear empty. Full rewrites prev fi, detects surface errors on dsk and makes restoring fi harder. |
-| --- | --- |
 
 ### Misc OS info
 
@@ -196,9 +195,14 @@ ___
 
 - IEEE (Institute of Electrical and Electronics Engineers) handles wired and wireless networking
 - International Organization for Standardization (ISO) handles other types.
-- 2 types of comms protocols:
+- 2 types of communication protocols:
   - binary utilizes all values of a byte; intended for machine reading; more terse and faster
   - text-based/plain text - only uses values corresponding to human-readable characters in ASCII encoding
+- `SDN`: software-defined networking sets up the network through the cloud and replaces functionality of the router in a network via virutalization.
+- `Cable Modem`: device that connects to a cable line for connectivity
+  - newer versions don't modulate/demodulate analog signals, but are still called modems.
+- `ONT`: optical network terminal - modem that provides connectivity by using a fiber-optic line
+- `DSL`: digital subscriber line: modem that uses telephone line to provide connectivity
 
 ### Rules governing the transmission specified by the protocol
 
@@ -212,7 +216,7 @@ ___
 3. detection of transmission erros: CRC of data area added to end of packets, allows rec to reject packets on CRC diff and arrange for retransmission
 4. acknowledgement: recievers send acknowledgements of packets received correctly
 
-   1. required for connection-oriented comms
+   1. required for connection-oriented communication
    2. loss of info (timeouts and retries): packets can be lost on the net or delayed in transit
    3. the sender may expect an acknow. of correct reception from the rec w/in a certain amount of time.
    4. on timeouts: the sender may need to retransmit the information.
@@ -232,8 +236,8 @@ ___
 
 ### `TCP/IP`
 
-- IP is responsible for delivering packets to the right comp.
-- Transmission Control Protocol/Internet Protocol model: _standardized process_; data link protocol;Connection Oriented Communication
+- IP is responsible for delivering packets to the right computer
+- Transmission Control Protocol/Internet Protocol model: _standardized process_; data link protocol; Connection Oriented Communication
   - used to allow computers & devices connected to the internet to communicate w/ each other across networks
   - determines how PCs transfer data so that it's kept accurate.
   - assumes a connectionless net most suitable for LAN
@@ -241,63 +245,90 @@ ___
   - connection-oriented protocol and requires handshaking to set up end-to-end communications.
   - Once a connection is set up, user data may be sent bi-directionally over the connection
   - reliable; ordered; heavyweight; streaming
-    - manages acknow, retransm., timeouts
-    - attempts delivery of message multiple times and wil resend if data is lost (either no missing data or dropped conn)
+    - manages acknowledgement, retransmission, timeouts
+    - attempts delivery of message multiple times and will resend if data is lost (either no missing data or dropped connection)
     - will buffer the out of order data to proper order
-    - requires three packets to set up a socket conn before data can be sent
+    - requires three packets to set up a socket connection before data can be sent
     - handles reliability and congestion control
     - data read as a byte stream, no indications transmitted to signal message (segment) boundaries
 
-1. breaks down data into packets and reassembles packeets into complete message on other end
+1. breaks down data into packets and reassembles packets into complete message on other end
    1. smaller packets makes it easier to maintain accuracy
    2. packets can travel via diff routes depending on congestion.
    3. Data divided into packets based on 4-layer procedure, going thru each layer in 1 order and reassembled on receiving end
 
-### Abstraction Layers
+#### TCP/IP Abstraction Layers
 
-- **`Link`** (network access)
-  - operates w/in scope of local net conn. that a host is attached to. link includes all hosts accessible w/o traversing a router. link size is determined by the networking hardware design. TCP/IP designed to be hw indy and can be used on top any link-layer tech (ee.x. any hardware, virtual link layers like VPNS & tunnels)
+- **Network/Link** (network access)
+  - operates w/in scope of local network connection that a host is attached to.
+  - Link includes all hosts accessible w/o traversing a router.
+  - Link size is determined by the networking hardware design.
+  - TCP/IP designed to be hardware independent and can be used on top of any link-layer tech
+    - (ex. any hardware, virtual link layers(VPNS & tunnels))
   - includes protocols used for describing local net topology and interfaces needed to affect transmission of internet layer datagrams to other next-neighbor hosts.
-  - moves packets btw internet layer interfaces of 2 diff hosts on same link. the transmitting/reciving packets link processes are controlled in device driver for network card, firmware and/or chipsets. (performing functions like framing- which prepares the internet layer packets for transmissions, and then transmit the frames to the physical layer over a transmission medium). TCP/IP has specs for translating net addy methods used in IP to link-layer addys, like MAC addys. Other aspects below that level, are implicitly assumed to exist and aren't explicitly defined.
-  - corresponds w/ functions in Layer 2 of OSI model
-- **`Internet`**
-  - provides an unreliable datagram transmission facility between hosts located on diff IP nets by forwarding datagrams to appropriate next-hop router for further relaying to destination.
+  - moves packets between internet layer interfaces of 2 different hosts on same link.
+  - The transmitting/reciving packets link processes are controlled in device driver for network card, firmware and/or chipsets.
+    - `NIC`: network interface/adapter card: provides physical interface between a PC and the cabling used for connectivity
+    - (performing functions like framing- which prepares the internet layer packets for transmissions, and then transmit the frames to the physical layer over a transmission medium).
+  - TCP/IP has specifications for translating network address methods used in IP to link-layer addresses,(ex.MAC addresses).
+  - Other aspects below that level, are assumed to exist and aren't  defined.
+  - corresponds with functions in Layer 2 of OSI model
+  - Ethernet, PPP, ADSL
+- **Internet**
+  - provides an unreliable datagram transmission facility between hosts located on different IP networks by forwarding datagrams to appropriate next-hop router for further relaying to destination.
   - Essentially establishes the internet and is responsible for sending packets across multiple networks. Makes internetworking (the interworking of diff IP networks) possible
   - IP carries data for many upper layer protocols (each w/ unique protocol #s).
   - IP is principal component of internet layer and defines 2 addressing systems to ID network hosts and locate them on the network.
+  - protocols include: IP, ICMP, ARP, RARP, IGMP
+  - Transmits data to network access layer when sending
+  - Transmits data to transport layer when receiving
   - IPv4 uses 32-bit IP address and is capable
-- **`Transport`**
-- **`Application`**
+  - does logical addressing and data routing
+  - IP, ICMP, ARP, DHCP
+- **Transport**
+  - allows host-host communication.
+  - provides reliable, connection0oriented transport between two sockets on two PCS that communicate via IP.
+  - defines status of connection and level of service during data transportation
+  - transmits data to internet layer when sending
+  - transmits data to Application layer when receiving
+  - TCP, UDP protocols
+- **Application**
+  - UI for communication and how host programs interface with Transport Layer
+  - defines TCP/IP application protocols
+  - Transmits data to Transport Layer when sending and receiving
+  - Protocols: DNS, HTTP, FTP, Telnet, RDP, POP3, SSH, SNMP, SMTP, NNTP(network news transport protocol)
 
 ### **Ports** and **Protocols**
 
 1. `FTP`: 21 file-transfer oriented protocol that ensures data delivery; file transfer to/from server
    1. server that hosts files; allowing usrs to browse, transfer, upload files
-2. `ssh`: 22 remote administration protocol where user can control/modify their remote servers over the internet; replaced unsecure telnet protocol
-   1. uses cryptographic techniques to ensure communication to and from  as well as enrypting data
-   2. provides secure communication between 2 untrusted hosts over an unsecured network
-   3. Secure Shell: cryptographic net pro for operating network services securely over unsecured net
+2. `TFTP`: 69, trivial file transfer protocol - faster version of FTP that uses UDP
+3. `ssh`: 22, remote administration protocol where user can control/modify their remote servers over the internet; replaced unsecure telnet protocol
+   1. Secure Shell: cryptographic connection-oriented network protocol for operating network services securely over unsecured net
       1. ex. Access resources of a company branch in a diff area
-3. `Telnet`: 23, unencrypted remote device access
-4. **E-mail**
+   2. uses cryptographic techniques to ensure communication to and from  as well as enrypting data
+   3. provides secure communication between 2 untrusted hosts over an unsecured network
+4. `Telnet`: 23, unencrypted remote device access
+5. **E-mail**
    1. `SMTP` 25, simple mail transfer protocol, sending email
    2. `POP3` 110, post office pro, receiving email
    3. `IMAP` 143, internet message access pro, receiving email
-5. `RDP`: 27, reliable data protocol, provides facilities for remote loading, debugging and bulk transfer of images and data
+6. `RDP`: 27, reliable data protocol, provides facilities for remote loading, debugging and bulk transfer of images and data
    1. Remote Desktop Protocol: 3389, used for connecting remote PCs
-6. **DNS**: 54, domain name system/service, translates domain names to IP addresses
-7. **HTTP**: 400 hypertext transfer pro; standard for web comms; used for rendering pages in browser.
-   1. **HTTPS**: 443 secured comms. on web
-8. `NetBios`/NetBT: 137-139 network basic input output system: LAN comms
-9. `SMB`/CIFS:445 Server message block/Common internet file system; shared access on a network
-10. `SLP`: 427 service location protocol; local service discovery
-11. `AFP`: 548 Apple filling protocol; used for Apple file services
-12. `DHCP`: 67/68, dynamic host config protocol; assigns IP addys to network hosts
-13. `LDAP`: 389 Lightweight directory access pro; access a directory on network objects
-14. `SNMP`: simple net mngmnt pro: send/rec net mngmnt messages
+7. **DNS**: 54, domain name system/service, translates domain names to IP addresses
+8. **HTTP**: 400 hypertext transfer pro; standard for web communication; used for rendering pages in browser.
+   1. **HTTPS**: 443 secured communication. on web
+9. **DHCP**: 67/68, dynamic host configuration protocol; dynamically assigns IP addresses to network hosts through leases using UDP as its transport protocol
+10. `NetBios`/`NetBT`: 137-139 network basic input output system and NetBIOS over TCP/IP: LAN communication. Works over OSI layer 4 and needs to work w/ a layer 5 protocol (ex. TCP/IP) to work properly.
+11. `SMB`/`CIFS`:445 Server message block (primarily a Microsoft protocol) for shared file access
+    1. Common internet file system: enhanced version of SMB; shared access on a network
+12. `SLP`: 427 service location protocol; local service discovery
+13. `AFP`: 548 Apple filling protocol; used for Apple file services
+14. `LDAP`: 389 Lightweight directory access pro; access a directory on network objects
+15. `SNMP`: 161/162, simple net mngmnt pro: send/rec net mngmnt messages
     1. used for monitoring/managing other nodes in a TCP/IP network
-15. `Proxy Server`: features include access control, caching, URL filtering and privacy
-16. `WINS`: Windows Internet name service
+16. `Proxy Server`: features include access control, caching, URL filtering and privacy
+17. `WINS`: Windows Internet name service
 
 - _Network stack_: set of hardware/software that provides the infrastructure for a comp
 - _Router_: Layer 3 (network layer) device that connects diff devices and determines best route for traffic between networks (uses a set of rules)
@@ -324,7 +355,7 @@ ___
 - _DHCP_: Dynamic Host Configuration Protocol; is a network management protocol used on IP networks
   - employs connectionless service model, using UDP (UDP port 67 for server and 68 for client)
   - manages IP settings for devices on its local network, (ex. auto & dynamically assigns IP addys to those devices)
-  - auto assigns IP addresses and other comms param to devices connected to the net using a client–server architecture
+  - auto assigns IP addresses and other communication param to devices connected to the net using a client–server architecture
   - two network components: a centrally installed network DHCP server and client instances of the protocol stack on each device that periodically requests a set of param. from server
 
 - Physical connection info
@@ -342,8 +373,8 @@ ___
 - transaction oriented, provides datagrams, simple and stateless, suitable for large N of clients
 - lack of retransmission delays makes it good for real-time apps like VoIP, online games, supports multicast
 - unreliable; not ordered; lightweight; datagrams; no congestion control; broadcasts; multicast
-  - No concept of acknow., retransm, timeout
-  - no ordering of messages, no tracking conn
+  - No concept of acknowledgement, retransmission, timeout
+  - no ordering of messages, no tracking connections
   - packets sent indy and checked for integrity on arrival, packets w/ defined boundaries that're honored upon receipt
   - doesn't avoid congestion; control measures have to be setup at app level or in net
   - UDP can broadcase - sent packets can be addressed to be rec by all devices on the subnet
@@ -354,12 +385,12 @@ ___
 ### OSI model (Open systems interconnection)
 
 - connection-oriented network
-  - comms session or a semi-permanent connection is est. before any useful data can be transferred. The established connection ensures that data is delivered in the correct order to the upper communication layer.
+  - communication session or a semi-permanent connection is est. before any useful data can be transferred. The established connection ensures that data is delivered in the correct order to the upper communication layer.
 - most suitable for WAN
 - the layers comm. via an interface called service access point
   - protocol standards define how peer entities (corresponding layers at each sys.) comm
   - service standards define how one layer talks w/ the layer above it.
-- comms between a computing system are split into 7 different abstraction layers:
+- communication between a computing system are split into 7 different abstraction layers:
   - Physical, Data Link, Network, Transport, Session, Presentation, Application
 
   - The _Application_ layer may provide the following services to the application processes:

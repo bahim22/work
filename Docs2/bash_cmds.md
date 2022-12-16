@@ -57,6 +57,8 @@ tunnel="2",command="sh /etc/netstart tun2" ssh-rsa ... john
 
 ___
 
+### initial ssh example
+
 ```bash
 # edit git config f
 git config --global user.name <username>
@@ -218,6 +220,8 @@ machine into the master branch.
 
 ___
 
+## example commands
+
 ```sh
 echo $BASH
 # /usr/bin/bash
@@ -270,7 +274,7 @@ diff -w file1.md file2.md # compare, ignore whitespace fi1 to fi2
 ps top vmstat brk mmap wget, systemctl, init
 ```
 
-### Shell command info
+## Shell command info
 
 - ctrl + \ = Quit (SIGQUIT)
   - fquit a running instance
@@ -314,3 +318,22 @@ ps top vmstat brk mmap wget, systemctl, init
 |or  |  Symbolic link to a non-existent file|
 |ex  |  Executable file|
 |**.extension | (ex: *.mp3)|
+
+## linux permissions
+
+```py
+# permission terms
+r, w, x = read, write, execute | 4, 2, 1
+u, g, o = user, group, others | first, sec., third (chars.)
+```
+
+```sh
+chmod u+x file.txt
+chmod u+r,g+x file.txt
+chmod u-rx file.txt # remove permissions
+chmod -R 775 dir_name/ # change permissions of all fi in dir
+chmode -R,a-x,u+X *
+# recursively remove exec perm from all under dir & add exec for user
+  # other solution
+for f in 'ls -R'; do [! -d"$f"] && chmod a-x "$f"; done
+```
