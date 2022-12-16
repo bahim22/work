@@ -65,8 +65,9 @@ git config --global user.name <username>
 git config --global user.email <email@mail.com>
 ls -al ~/.ssh # list files in .ssh dir
 ssh-keygen -t ed25519 -C "email@google.com"
-# enter passphrase to use && this creates pub/priv key pair
-#  saves to .ssh/id_ed25519 & ''.pub; generates key fingerprint and randomart image
+# creates pub/priv key pair
+# saves to .ssh/id_ed25519 & .ssh/id_ed25519.pub
+  # generates key fingerprint & randomart image
 eval "$(ssh-agent -s)" #check if agent is running
 ssh-add ~/.ssh/id_ed25519 #add id to ~
 cat ~/.ssh/id_ed25519.pub # display pub key then c/v to github acct
@@ -75,9 +76,27 @@ git clone git@github.com:<username>/<repo>.git
 code .
 git clone ssh://git@ssh.github.com:443/bahim22/work.git
 ```
+- ssh-keygen supports two types of certificates: user and host.
+  - User certificates authenticate users to servers
+    - placed in /path/to/user_key-cert.pub. 
+  - Host certificates authenticate server hosts to users
+    - requires the -h option
+    - host certificate will be output to /path/to/host_key-cert.pub.
+
+>>
+  review: ssh(1), ssh-add(1), ssh-agent(1), sshd(8)
 
 ```sh
-# Examples from giteveryday help commands
+# generate a user certificate:
+ssh-keygen -s /path/to/ca_key -I key_id /path/to/user_key.pub
+
+# generate a host certificate:
+
+ssh-keygen -s /path/to/ca_key -I key_id -h /path/to/host_key.pub
+```
+
+```sh
+# Ex from giteveryday help commands
 
 # - Use a tarball as a starting point for a new repository.
 
