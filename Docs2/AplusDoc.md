@@ -1,7 +1,7 @@
 # CompTIA A+ Docs
 
 | Hima Balde | PPU | 06-10 of 2022 |
-|---|---|---|
+| ---------- | --- | ------------- |
 
 ## Troubleshooting Steps
 
@@ -56,7 +56,7 @@ ___
 
 ___
 
-## Parts
+## Computer Parts
 
 1. `CPU`(The Central Processing Unit) is the part of the computer that asks, "what's next"
 2. `Main Memory`: stores prog. & data that CPU uses quickly and isn't saved on power off
@@ -68,13 +68,19 @@ ___
 ### Motherboard
 
 - `Power connectors` – Any component cannot operate without power and the same goes for a motherboard. The power connector is a 20/24-pin connector that sits near to the processor socket on some hardware while is present beside the right edge in others. It’s the area where the main connector attaches and thus, supplies power to all components.
-- `Processor socket` – It is a central unit present on the motherboard located on the center and the main function of it is to hold the entire processor. In layman’s terms, it is called “the brain of a computer”.
-- `Video card slot` – It does not require much explanation as it remains one of the most common components. Just as the name suggests, a video card slot attaches a card. It is a PCI-Express slot. High-end gaming PCs have motherboards that comprise of multiple video card slots.
-- `Memory slots` – These slots are usually situated on the upper right area of the motherboard and carry a computer’s memory modules. Slots can differ in number and it usually depends on the motherboard. It starts at 2 and goes up to 8 slots. The latter number is usually present on gaming PCs’ motherboards. Users generally pay close attention to the memory of the motherboard when buying it. Modern motherboards have the DDR3 memory that is now industry standard. Basically, the number of slots determines the capacity of memory on a motherboard.
-- `IDE & SATA ports` – These ports are used to allow connectivity for optical drives and storage devices. IDE is rather outdated, so it is not much common anymore to be found on motherboards. IDE was replaced by SATA interface because it is smaller and faster. In fact, it can allow speeds up to 600 MB/s.
-- `Expansion slots` – Their primary function is to allow a user to attach additional hardware to optimize their PC’s performance. A user can install a high-performance sound card or a TV tuner.
-- `Northbridge & Southbridge` – Looking at the motherboard, anyone can easily spot a square and metallic component on the bottom right area. This area is for the evacuation of heat building up in the system. It provides thermal protection for the Northbridge that is an important component of the motherboard. Northbridge coordinates the flow of data between video card, memory, and the processor. The Southbridge has the same function, only that it coordinates data flow between soundcards and the processor.
-- `BIOS Chip & Battery` – The BIOS chip is a component which consists of a basic code required to carry out the boot process on a computer. The process goes on to the point where the operating system or OS takes over. BIOS is present on a memory chip, and this chip needs a constant supply of power in order to perform its function. However, the power supply can be cut if unplugged from the grid, which is why there is a battery that supplies adequate power to keep it running.
+- `Processor socket` – It is a central unit present on the motherboard located on the center and the main function of it is to hold the entire processor.
+  - CPU is the brain of a computer.
+- `Video card slot` – attaches video card, usually with a PCI-Express slot. Gaming PC's can have multiple slots for video cards.
+- `Memory slots` – Usually in upper right-hand side of MoBo and carry a computer’s memory modules. Slots differ depending on the Mobo and can range from 2 to 8+ slots (on gaming PC's). Industry standard is DDR3 memory. The memory capacity of the motherboard depends on the # of slots.
+- `IDE & SATA ports` – Ports used to allow connectivity for storage devices & optical drives. IDE is outdated and was replaced by SATA interface, which is smaller and faster(speeds up to 600 MB/s)
+- `Expansion slots` – Enables additional hardware to be installed in order to optimize computer performance.
+- `Northbridge & Southbridge` – the bottom right area of motherboard houses a square and metallic component, used for the evacuation of heat produced by the computer, providing thermal protection for the Northbridge.
+  - `Northbridge`: coordinates data flow between video card, memory, and the processor.
+  - `Southbridge`: coordinates data flow between soundcards and processor.
+- `BIOS Chip & Battery` – The BIOS chip is a component which consists of a basic code required to carry out the boot process on a computer.
+  - Chip component with code that's responsible for carrying out the computer's boot process, until the OS takes control.
+  - Housed on a memory chip that requires steady power supply to execute its function.
+  - Battery supplies power when the power supply is unplugged, to keep it running.
 - `Front Panel Connectors`, USB & Audio Headers – Front Panel connectors is a place where all the elements on the front are connected. It comprises of USB connectors, power button, power LED, audio connectors, and the reset buttons.
 - `Rear Panel Connectors` – Rear Panel Connectors act as a bridge between the inside and outside of a computer. These connectors are situated on the left edge of a motherboard, so it is pretty confusion what the name suggests. However, these connectors can be accessed from the outside, so their name simply tells where they can be accessed from. These connectors power all external hardware which include a mouse, keyboard, speakers, monitor, etc.
 - form factors: ATX, microATX, ITX
@@ -139,44 +145,44 @@ ___
    1. disk can have OS install image or OS already installed. Most common way to boot PC after OS install completed
    2. simple configs have one bootable par on a disk, but a disk can have > 1 par to multiboot diff OS. One logical par can span multiple physical hard disks
 
-| Install Types | |
-| :---: | --- |
-| _Type_ | _Description_ |
-| 💻 | 📕 |
-| unattended | pre-config., need special server w/ install image/script & good for many PC's w/ same config |
-| in-place upgrade | installs newer OS over older one; may preserve settings, fi, apps |
-| clean  | disregards previous data; used for PC w/o an OS or to intentionally delete old data |
-| repair  | boot w/ same -v OS & select repair; rewrites SF & settings, retains user fi; can repair OS that's unbootable or w/ issues unfixable by other methods  |
-| multiboot | uses boot mngr that maintains boot config; user sel OS to boot; recommend install OS's to diff HDD or separate logical pars |
-| remote net | PXE net boot using remote server; may require choosing install options or be unattended |
-| image deployment | used for PC's w/ == hardware that need == OS/settings/apps. Diff software tools can do this. Steps involve sel one PC => clean install, config, app install => create image from that PC & make available on network or portable media => copy image to other PC's |
-| recovery par | create rec par during install that is a bootable par for later or repair install; contains diagnostic/repair tools |
-| refresh/restore | pre-config. to restore OS to restore point; recom. before large config changes or software installs; settings can revert back to it |
-| |
-| **Partitioning**
-|   |
-| _Type_ | _Description_ |
-| --- | --- |
-| _Info_ |creates >= 1 logical drives; can be formatted separately & have separate FS. W10 allows each par to have diff drive letter
-| Dynamic | more complex config & less limits than basic dsk. Can create pars spanning many physical HDD's (software RAID) |
-| Basic | most common; separated into logical pars |
-| Primary  | can have only one logical drive; W10 only boots from primary par |
-| Extended  | enables >= 1 logical drive |
-| logical | rep by a drive letter in W10; recomm. distinguishing btw dsk, par & logical drive; can be assigned 1:1 but aren't limited to 1 |
-| GPT | GUID Par Table: has info on how dsk is partitioned. supports larger drives & more pars/drive than MBR |
-|   |
+|          Install Types           |                                                                                                                                                                                                                                                                    |
+| :------------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|              _Type_              | _Description_                                                                                                                                                                                                                                                      |
+|                💻                 | 📕                                                                                                                                                                                                                                                                  |
+|            unattended            | pre-config., need special server w/ install image/script & good for many PC's w/ same config                                                                                                                                                                       |
+|         in-place upgrade         | installs newer OS over older one; may preserve settings, fi, apps                                                                                                                                                                                                  |
+|              clean               | disregards previous data; used for PC w/o an OS or to intentionally delete old data                                                                                                                                                                                |
+|              repair              | boot w/ same -v OS & select repair; rewrites SF & settings, retains user fi; can repair OS that's unbootable or w/ issues unfixable by other methods                                                                                                               |
+|            multiboot             | uses boot mngr that maintains boot config; user sel OS to boot; recommend install OS's to diff HDD or separate logical pars                                                                                                                                        |
+|            remote net            | PXE net boot using remote server; may require choosing install options or be unattended                                                                                                                                                                            |
+|         image deployment         | used for PC's w/ == hardware that need == OS/settings/apps. Diff software tools can do this. Steps involve sel one PC => clean install, config, app install => create image from that PC & make available on network or portable media => copy image to other PC's |
+|           recovery par           | create rec par during install that is a bootable par for later or repair install; contains diagnostic/repair tools                                                                                                                                                 |
+|         refresh/restore          | pre-config. to restore OS to restore point; recom. before large config changes or software installs; settings can revert back to it                                                                                                                                |
+|                                  |
+|         **Partitioning**         |
+|                                  |
+|              _Type_              | _Description_                                                                                                                                                                                                                                                      |
+|               ---                | ---                                                                                                                                                                                                                                                                |
+|              _Info_              | creates >= 1 logical drives; can be formatted separately & have separate FS. W10 allows each par to have diff drive letter                                                                                                                                         |
+|             Dynamic              | more complex config & less limits than basic dsk. Can create pars spanning many physical HDD's (software RAID)                                                                                                                                                     |
+|              Basic               | most common; separated into logical pars                                                                                                                                                                                                                           |
+|             Primary              | can have only one logical drive; W10 only boots from primary par                                                                                                                                                                                                   |
+|             Extended             | enables >= 1 logical drive                                                                                                                                                                                                                                         |
+|             logical              | rep by a drive letter in W10; recomm. distinguishing btw dsk, par & logical drive; can be assigned 1:1 but aren't limited to 1                                                                                                                                     |
+|               GPT                | GUID Par Table: has info on how dsk is partitioned. supports larger drives & more pars/drive than MBR                                                                                                                                                              |
+|                                  |
 | **File System Types/Formatting** |
-| _Type_ | _Description_ |
-| Info | Fs enables storing/managing/accessing fi on a par. OS's support diff FS & pars are formatted w/ specific FS before use
-| ExFAT | designed for small flash & SSD drives, good for perf & media fi storage |
-| FAT32 | supported by many OS & provides basic features. pars can be >= 2 TB |
-| NTFS  | more advanced & supported by modern W --v. user can set/manage permissions for fi/dir for users/groups. useful for secure net fi sharing. Has indexing, compress., encrypt. on FS level  |
-| CDFS  | FS for CD/DVD's |
-| NFS | Network File System. mostly in servers where you can have fi access on net btw sys. |
-| ext3, ext4 | used for Linux. 4 is updated -v that enables larger pars, fi & better perf |
-| HFS | used for MacOS |
-| Swap par | Linux par used when physical RAM is maxxed out. The Data flows to swap pars; reducing perf, in place of running more apps simultaneously. |
-| quick vs. full format | quick changes FS records making dsk appear empty. Full rewrites prev fi, detects surface errors on dsk and makes restoring fi harder. |
+|              _Type_              | _Description_                                                                                                                                                                                                                                                      |
+|               Info               | Fs enables storing/managing/accessing fi on a par. OS's support diff FS & pars are formatted w/ specific FS before use                                                                                                                                             |
+|              ExFAT               | designed for small flash & SSD drives, good for perf & media fi storage                                                                                                                                                                                            |
+|              FAT32               | supported by many OS & provides basic features. pars can be >= 2 TB                                                                                                                                                                                                |
+|               NTFS               | more advanced & supported by modern W --v. user can set/manage permissions for fi/dir for users/groups. useful for secure net fi sharing. Has indexing, compress., encrypt. on FS level                                                                            |
+|               CDFS               | FS for CD/DVD's                                                                                                                                                                                                                                                    |
+|               NFS                | Network File System. mostly in servers where you can have fi access on net btw sys.                                                                                                                                                                                |
+|            ext3, ext4            | used for Linux. 4 is updated -v that enables larger pars, fi & better perf                                                                                                                                                                                         |
+|               HFS                | used for MacOS                                                                                                                                                                                                                                                     |
+|             Swap par             | Linux par used when physical RAM is maxxed out. The Data flows to swap pars; reducing perf, in place of running more apps simultaneously.                                                                                                                          |
+|      quick vs. full format       | quick changes FS records making dsk appear empty. Full rewrites prev fi, detects surface errors on dsk and makes restoring fi harder.                                                                                                                              |
 
 ### Misc OS info
 
@@ -257,7 +263,7 @@ ___
    2. packets can travel via diff routes depending on congestion.
    3. Data divided into packets based on 4-layer procedure, going thru each layer in 1 order and reassembled on receiving end
 
-#### TCP/IP Abstraction Layers
+### TCP/IP Abstraction Layers
 
 - **Network/Link** (network access)
   - operates w/in scope of local network connection that a host is attached to.
@@ -406,8 +412,7 @@ ___
   - The _data_ link layer does the setup, maintenance and release of data link connections. Errors occurring in the physical layer are detected and may be corrected. Errors are reported to the network layer. The exchange of data link units (including flow control) is defined by this layer.
   - The _physical_ layer describes details like the electrical characteristics of the physical connection, the transmission techniques used, and the setup, maintenance and clearing of physical connections
 
-   >
-    "Communication protocols enable an entity in one host to interact with a corresponding entity at the same layer in another host. Service definitions, like the OSI Model, abstractly describe the functionality provided to an (N)-layer by an (N-1) layer, where N is one of the seven layers of protocols operating in the local host.
+   >"Communication protocols enable an entity in one host to interact with a corresponding entity at the same layer in another host. Service definitions, like the OSI Model, abstractly describe the functionality provided to an (N)-layer by an (N-1) layer, where N is one of the seven layers of protocols operating in the local host.
    >>
       At each level N, two entities at the communicating devices (layer N peers) exchange protocol data units (PDUs) by means of a layer N protocol. Each PDU contains a payload, called the service data unit (SDU), along with protocol-related headers or footers. Data processing by two communicating OSI-compatible devices proceeds as follows:
 
@@ -422,11 +427,9 @@ ___
 - Standards-based protocol that sits on top of TCP/IP allowing clients to do  directory server operations:
 - storing and retrieving data, searching for data matching a given set of criteria, authenticating clients, etc.
 - Uses TCP port 389 for unencrypted communication & 636 for LDAP over a TLS-encrypted channel
-- d
-- d
 
-- IEEE 802.11 is a set of protocols within the IEEE 802 WLAN standards that specifies wireless protocols
-- d
+>>
+    IEEE 802.11 is a set of protocols within the IEEE 802 WLAN standards that specifies wireless protocols
 
 ___
 
@@ -436,58 +439,63 @@ ___
 
 - DRAM & SRAM are most widely used types of RAM
 
-1. SRAM  Static random access memory - Uses transistors to store information. Expensive and used for cache memory
-2. DRAM Dynamic random access memory - Need to be refreshed to retain data. Usually used for main memory
-3. SDRAM: new tech, supported by PC's that support 100MHz memory buses.
-4. EDO: extended data out memory: type of RAM chip that makes improvemnts on time to read from memory
-5. ECC: error checking and correcting memory: data that's read/transmitted is checked for errors and corrected
-6. ROM - Read only memory - Data in ROM can not be erased or changed
-7. PROM Programmable ROM - Once programmed, data can't be erased or change
-8. EPROM - Erasable PROM - Data can be removed from PC curcuit, erased by ultraviolet (UV) light and then reprogrammed
-9. EEPROM Electronically erasable PROM - Data can be erased with electrical signals.
+1. `SRAM`  Static random access memory - Uses transistors to store information. Expensive and used for cache memory
+2. `DRAM` Dynamic random access memory - Need to be refreshed to retain data. Usually used for main memory
+3. `SDRAM`: new tech, supported by PC's that support 100MHz memory buses.
+4. `EDO`: extended data out memory: type of RAM chip that makes improvemnts on time to read from memory
+5. `ECC`: error checking and correcting memory: data that's read/transmitted is checked for errors and corrected
+6. `ROM` - Read only memory - Data in ROM can not be erased or changed
+7. `PROM` Programmable ROM - Once programmed, data can't be erased or change
+8. `EPROM` - Erasable PROM - Data can be removed from PC curcuit, erased by ultraviolet (UV) light and then reprogrammed
+9. `EEPROM` Electronically erasable PROM - Data can be erased with electrical signals.
    1. Chip can then be reprogrammed. Transistor uses 5v.
    2. EEPROMs are frequently used to store BIOS. Used to program dynamically
-10. SIMM (installed in pairs & come in 30 and 72 pin formats) & DIMM (can be installed 1 at a time and com in 168 pin config)
-11. Unbuffered
-12. Buffered
+10. `SIMM` (installed in pairs & come in 30 and 72 pin formats) & DIMM (can be installed 1 at a time and com in 168 pin config)
+11. `Unbuffered`
+12. `Buffered`
 
 ### Storage and Peripherals
 
-1. Form factors: 2.5”, 1.8”, or M.2
-2. Magnetic disk drives
-3. SSD
-4. SCSI (Small Computer System Interface)
-5. Boot order
-
-6. L1 is generally found in the processor chip and it's the smallest & fastest for the CPU to read. It ranges from 8-64KB.
+1. Hard drives are usually 2.5" form factor (desktops use 3.5")
+   1. 2.5: better performance due to larger cache and higher rotation speed
+   2. more available/cheaper than 1.8" drives that weigh less, consume less power, but have slower rotation speed & access time
+      1. usually found in 10 inch or ultraportable laptops
+2. drive tech: serial and parallel ATA
+3. don't have separate power connectors
+4. Form factors: 2.5”, 1.8”, or M.2
+5. Magnetic disk drives
+6. SSD
+7. SCSI (Small Computer System Interface)
+8.  L1 is generally found in the processor chip and it's the smallest & fastest for the CPU to read. It ranges from 8-64KB.
    1. L2 and L3 are larger than L1 but take longer to access.
-7. Sectors usually contain 512 bytes.
+9.  Sectors usually contain 512 bytes.
 
-8. `RAID` (Redundant Array of independent disk) Types: Hardware & Software RAID
-   1. RAID 0: Striping w/o parity and no fault tolerance
-      1. min. 2 disks needed and read/write performance increase
-   2. RAID 1: Mirroring and dubplexing.
+#### RAID
+
+10. `RAID` (Redundant Array of independent disk) Types: Hardware & Software RAID
+    1. RAID 0: Striping w/o parity and no fault tolerance
+      1.  min. 2 disks needed and read/write performance increase
+    2. RAID 1: Mirroring and dubplexing.
       1. mirroring requires 2 equal sized pars on diff drives.
       2. disk duplexing req. 2 disk and 2 controllers.
       3. provides fault tolerance, w/ slower disk access compared to striping
-   3. RAID 2 - striping w/ error correction
-   4. RAID 3 - striping w/ error correction code stored as parity
-      1. takes a striped array, then adds prity HDD to the array. The parity info is vital if a drive fails because it can restore blocks broken from data corruption. Parity written to 1 drive
-   5. RAID 4: striping w/ large blocks allocation
-   6. RAID 5: striping w/ parity. Requires 3 pars on diff drives.
+    3. RAID 2 - striping w/ error correction
+    4. RAID 3 - striping w/ error correction code stored as parity
+      1.  takes a striped array, then adds prity HDD to the array. The parity info is vital if a drive fails because it can restore blocks broken from data corruption. Parity written to 1 drive
+    5. RAID 4: striping w/ large blocks allocation
+    6. RAID 5: striping w/ parity. Requires 3 pars on diff drives.
       1. fault tolerant & less expensive than disk mirroring.
       2. data can't be recovered if >= 1 disk fails, so tape backups need to be used.
       3. spreading the parity info across all drives allows all the drives to rebuild the array if another fails.
       4. Mirroring has more overhead due to the entire drive being copied to another drive.
-   7. RAID 10: mirrored stripping. Mode 0 array + mode 1 array, striped.
+    7. RAID 10: mirrored stripping. Mode 0 array + mode 1 array, striped.
       1. ex. You striped data into 2 drives, then each drive is mirrored
       2. requires a total of 4 drives
-   8. Disk swapping: Hot-swapping (Host plugging): ability to add/remove devices to PC while it's running & OS will auto recognize changes.
+    8. Disk swapping: Hot-swapping (Host plugging): ability to add/remove devices to PC while it's running & OS will auto recognize changes.
       1. cold: device needs powered down prior to replacing parts
       2. warm: The server can remain powered on, but I/O functions corresponding to the part that needs replaced need stopped by the appropriate command
       3. hot: the faulty part can be replaced w/o interrupting the srver or exec any interruption commands in I/O procedures.
-9. `Optical media`
-10. `USB`
+11. `USB`
        1. universal serial bus 1.1 cocmes in 1.5 MB/s and 12 Mbps; USB 2..0 runs at 480 Mbps
        2. form factors: micro, USB-C, mini
        3. USB 3.0 runs at 5 Gbps; USB 3.1 at 10 Gbps
@@ -498,32 +506,33 @@ ___
        7. this creates n upstream/downstream concept
        8. USB-A connectors connect downstream; B connectors connect upstream (with some exceptions)
        9. must have a device driver; OS's come w/ thousands of built-in device drivers; may need to manually download from internet
-11. `Thunder and Lightning`
+12. `Thunder and Lightning`
     1. general purpose I/O port that runs at 10 Gbs up to 40 Gbps
     2. uses a mini DisplayPort or USB C connector
     3. exclusive to Apple and uses proprietary lightning connector
-12. `Keyboards/Mice`
+13. `Keyboards/Mice`
     1. keyboards use ither USB or PS/2 connection; while mice almost exclusively USB; game controllers often have proprietary connection that requires a converter piece
     2. keyboard video mouse (KVM) switches give ability for a single keyboard, monitor, mouse to connect multiple PC's
-13. `Sight/Sound`
-14. `Readers/Scanners`
-15. `Expansion Cards`
-16. `RAM`
+14. `RAM`
     1. SODIMM:
-        1. multiple configurations: 200, 204, 260, or 292-pin, & 32 | 64-bit configurations
+        1. multiple configurations: 200, 204, 260, or 292-pin
+        2. 32 | 64-bit configurations
+15. `Sight/Sound`
+16. `Readers/Scanners`
+17. `Expansion Cards`
 
 ___
 
 ## `Software`
 
-- SDK is a kit that offers tools, code samples, libraries, processes, and guides for creating software applications on specific platforms.
-- API is an interface that allows the software to interact with each other
+- `SDK` is a kit that offers tools, code samples, libraries, processes, and guides for creating software applications on specific platforms.
+- `API` is an interface that allows the software to interact with each other
 
 ### Windows Admin Tools
 
 - Data usage - DusmSvc: net data use; limit and metered network; disable background data
 - DNScache - DnsClient
-- netman - network connections: manages objects in network foder for viewing LAN & remote connections
+- netman - network connections: manages objects in network folder for viewing LAN & remote connections
 - UAC virtualization
 - Event viewer/scheduler
 - Performance diagnostic logger
@@ -541,7 +550,7 @@ ___
 6. Windows Page Manager Service (can use WinGet via CLI)
 7. My analytics Dashboard
 8. System Center Config Manager (SCCM)
-9. Component Services Admin of COM, Apps, distrubted apps thatre deployed in a server PC using MMC (Microsoft Management Console)
+9. Component Services Admin of COM, Apps, distrubted apps that're deployed in a server PC using MMC (Microsoft Management Console)
 
 ### Windows naming
 
@@ -550,12 +559,7 @@ ___
 - homegroups are more secure and automated organization (still a type of workgroup)
   - workgroup is basic type of networking organiztion used as an organizational tool w/ no security or central admin
   - domain is org group (type used today is Active Directory domain) that provides central admin and has ability to disperse security and net info to other PC's at one time
-
-1. hard drives are usually 2.5" form factor (desktops use 3.5")
-   1. 2.5: better perf due to larger cache and higher rotation speed
-   2. more available/cheaper than 1.8" drives that weigh less, consume less power, but slower rotation speed & access time (usually in 10 inch or ultraportable laptops)
-2. dirve tech: serial and parallel ATA
-3. don't have separate power connectors
+___
 
 ### Displays
 
