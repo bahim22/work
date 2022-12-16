@@ -277,17 +277,17 @@ ___
    1. uses cryptographic techniques to ensure communication to and from  as well as enrypting data
    2. provides secure communication between 2 untrusted hosts over an unsecured network
    3. Secure Shell: cryptographic net pro for operating network services securely over unsecured net
-      1. ex. Access resources of a company branch in a different state
+      1. ex. Access resources of a company branch in a diff area
 3. `Telnet`: 23, unencrypted remote device access
-4. E-mail
+4. **E-mail**
    1. `SMTP` 25, simple mail transfer protocol, sending email
    2. `POP3` 110, post office pro, receiving email
    3. `IMAP` 143, internet message access pro, receiving email
 5. `RDP`: 27, reliable data protocol, provides facilities for remote loading, debugging and bulk transfer of images and data
-   1. Remote Desktop Pro: 3389, used for connecting remote PCs
-6. **DNS**: 54 domain name system/service, translates domain names to IP addresses
-7. **HTTP**:hypertext transfer pro; standard for web comms; used for rendering pages in browser.
-   1. **HTTPS**: secured comms. on web
+   1. Remote Desktop Protocol: 3389, used for connecting remote PCs
+6. **DNS**: 54, domain name system/service, translates domain names to IP addresses
+7. **HTTP**: 400 hypertext transfer pro; standard for web comms; used for rendering pages in browser.
+   1. **HTTPS**: 443 secured comms. on web
 8. `NetBios`/NetBT: 137-139 network basic input output system: LAN comms
 9. `SMB`/CIFS:445 Server message block/Common internet file system; shared access on a network
 10. `SLP`: 427 service location protocol; local service discovery
@@ -295,7 +295,7 @@ ___
 12. `DHCP`: 67/68, dynamic host config protocol; assigns IP addys to network hosts
 13. `LDAP`: 389 Lightweight directory access pro; access a directory on network objects
 14. `SNMP`: simple net mngmnt pro: send/rec net mngmnt messages
-    1. used for monitoring and managing other nodes in a TCP/IP network
+    1. used for monitoring/managing other nodes in a TCP/IP network
 15. `Proxy Server`: features include access control, caching, URL filtering and privacy
 16. `WINS`: Windows Internet name service
 
@@ -362,8 +362,13 @@ ___
 - comms between a computing system are split into 7 different abstraction layers:
   - Physical, Data Link, Network, Transport, Session, Presentation, Application
 
-  - The _Application_ layer may provide the following services to the application processes: identification of the intended communication partners, establishment of the necessary authority to communicate, determination of availability and authentication of the partners, agreement on privacy mechanisms for the communication, agreement on responsibility for error recovery and procedures for ensuring data integrity, synchronization between cooperating application processes, identification of any constraints on syntax (e.g. character sets and data structures), determination of cost and acceptable quality of service, selection of the dialogue discipline, including required logon and logoff procedures.
-  - The _presentation_ layer may provide the following services to the application layer: a request for the establishment of a session, data transfer, negotiation of the syntax to be used between the application layers, any necessary syntax transformations, formatting and special purpose transformations (e.g. data compression and data encryption).
+  - The _Application_ layer may provide the following services to the application processes:
+    - identification of the intended communication partners, establishment of the necessary authority to communicate, determination of availability and authentication of the partners, agreement on privacy mechanisms for the communication, agreement on responsibility for error recovery and procedures for ensuring data integrity, synchronization between cooperating application processes, identification of any constraints on syntax (e.g. character sets and data structures), determination of cost and acceptable quality of service, selection of the dialogue discipline, including required logon and logoff procedures
+      - app layer protocols: WWW, SMTP, FTP
+  - The _presentation_ layer: provides services to the application layer:
+    - responsible for presenting the data in standard formats, data compression/decompression & encryption/decryption
+    - presentation layer stadards: JPEG, MPEG, MIDI, PICT, TIFF
+    - a request for the establishment of a session, data transfer, negotiation of the syntax to be used between the application layers, any necessary syntax transformations, formatting and special purpose transformations (e.g. data compression and data encryption).
   - The _session_ layer may provide the following services to the presentation layer: establishment and release of session connections, normal and expedited data exchange, a quarantine service which allows the sending presentation entity to instruct the receiving session entity not to release data to its presentation entity without permission, interaction management so presentation entities can control whose turn it is to perform certain control functions, resynchronization of a session connection, reporting of unrecoverable exceptions to the presentation entity.
   - The _transport_ layer provides reliable and transparent data transfer in a cost-effective way as required by the selected quality of service. It may support the multiplexing of several transport connections on to one network connection or split one transport connection into several network connections.
   - The _network_ layer does the setup, maintenance and release of network paths between transport peer entities. When relays are needed, routing and relay functions are provided by this layer. The quality of service is negotiated between network and transport entities at the time the connection is set up. This layer is also responsible for network congestion control
