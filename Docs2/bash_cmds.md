@@ -211,6 +211,22 @@ mothership "fetched" from you (useful when access is one sided).
 1. on mothership machine, merge the work done on the satellite
 machine into the master branch.
 
+
+## GPG key
+
+>>
+  generate a gpg key and then c/v to GH. This allows commits to be verified via signature 
+
+```sh
+gpg --full-generate-key
+# choose: key type, size, expire, user id[name, pass, comment], passphrase
+gpg --list-keys --keyid-format LONG
+# list long form pub/priv keys & copy sec/pub key after encryption standard
+gpg --armor --export aaa123aaa123
+# print gpg key id in ASCII armor format
+
+```
+
 ## Apt DESCRIPTION
 
 ```sh
