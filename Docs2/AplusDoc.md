@@ -145,44 +145,43 @@ ___
    1. disk can have OS install image or OS already installed. Most common way to boot PC after OS install completed
    2. simple configs have one bootable par on a disk, but a disk can have > 1 par to multiboot diff OS. One logical par can span multiple physical hard disks
 
-|          Install Types           |                                                                                                                                                                                                                                                                    |
-| :------------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-|              _Type_              | _Description_                                                                                                                                                                                                                                                      |
-|                💻                 | 📕                                                                                                                                                                                                                                                                  |
-|            unattended            | pre-config., need special server w/ install image/script & good for many PC's w/ same config                                                                                                                                                                       |
-|         in-place upgrade         | installs newer OS over older one; may preserve settings, fi, apps                                                                                                                                                                                                  |
-|              clean               | disregards previous data; used for PC w/o an OS or to intentionally delete old data                                                                                                                                                                                |
-|              repair              | boot w/ same -v OS & select repair; rewrites SF & settings, retains user fi; can repair OS that's unbootable or w/ issues unfixable by other methods                                                                                                               |
-|            multiboot             | uses boot mngr that maintains boot config; user sel OS to boot; recommend install OS's to diff HDD or separate logical pars                                                                                                                                        |
-|            remote net            | PXE net boot using remote server; may require choosing install options or be unattended                                                                                                                                                                            |
+| Install Types           |   |
+| :------------------- | -------------- |
+|  _Type_     |  _Description_ |
+|   💻    | 📕 |
+|    unattended     | pre-config., need special server w/ install image/script & good for many PC's w/ same config |
+|   in-place upgrade  | installs newer OS over older one; may preserve settings, fi, apps  |
+|    clean| disregards previous data; used for PC w/o an OS or to intentionally delete old data |
+| repair | boot w/ same -v OS & select repair; rewrites SF & settings, retains user fi; can repair OS that's unbootable or w/ issues unfixable by other methods |
+|     multiboot             | uses boot mngr that maintains boot config; user sel OS to boot; recommend install OS's to diff HDD or separate logical pars  |
+|   remote net      | PXE net boot using remote server; may require choosing install options or be unattended |
 |         image deployment         | used for PC's w/ == hardware that need == OS/settings/apps. Diff software tools can do this. Steps involve sel one PC => clean install, config, app install => create image from that PC & make available on network or portable media => copy image to other PC's |
-|           recovery par           | create rec par during install that is a bootable par for later or repair install; contains diagnostic/repair tools                                                                                                                                                 |
-|         refresh/restore          | pre-config. to restore OS to restore point; recom. before large config changes or software installs; settings can revert back to it                                                                                                                                |
-|                                  |
-|         **Partitioning**         |
-|                                  |
-|              _Type_              | _Description_                                                                                                                                                                                                                                                      |
-|               ---                | ---                                                                                                                                                                                                                                                                |
-|              _Info_              | creates >= 1 logical drives; can be formatted separately & have separate FS. W10 allows each par to have diff drive letter                                                                                                                                         |
-|             Dynamic              | more complex config & less limits than basic dsk. Can create pars spanning many physical HDD's (software RAID)                                                                                                                                                     |
-|              Basic               | most common; separated into logical pars                                                                                                                                                                                                                           |
-|             Primary              | can have only one logical drive; W10 only boots from primary par                                                                                                                                                                                                   |
-|             Extended             | enables >= 1 logical drive                                                                                                                                                                                                                                         |
-|             logical              | rep by a drive letter in W10; recomm. distinguishing btw dsk, par & logical drive; can be assigned 1:1 but aren't limited to 1                                                                                                                                     |
-|               GPT                | GUID Par Table: has info on how dsk is partitioned. supports larger drives & more pars/drive than MBR                                                                                                                                                              |
-|                                  |
+|   recovery par  | create rec par during install that is a bootable par for later or repair install; contains diagnostic/repair tools | 
+| |
+| **Partitioning** |
+| |
+| _Type_ | _Description_ |
+|   ---     | --- |
+|  _Info_ | creates >= 1 logical drives; can be formatted separately & have separate FS. W10 allows each par to have diff drive letter |
+|    Dynamic  | more complex config & less limits than basic dsk. Can create pars spanning many physical HDD's (software RAID) |
+| Basic | most common; separated into logical pars  |
+| Primary | can have only one logical drive; W10 only boots from primary par |
+| Extended | enables >= 1 logical drive  |
+| logical | rep by a drive letter in W10; recomm. distinguishing btw dsk, par & logical drive; can be assigned 1:1 but aren't limited to 1   |
+| GPT | GUID Par Table: has info on how dsk is partitioned. supports larger drives & more pars/drive than MBR  |
+| |
 | **File System Types/Formatting** |
-|              _Type_              | _Description_                                                                                                                                                                                                                                                      |
-|               Info               | Fs enables storing/managing/accessing fi on a par. OS's support diff FS & pars are formatted w/ specific FS before use                                                                                                                                             |
-|              ExFAT               | designed for small flash & SSD drives, good for perf & media fi storage                                                                                                                                                                                            |
-|              FAT32               | supported by many OS & provides basic features. pars can be >= 2 TB                                                                                                                                                                                                |
-|               NTFS               | more advanced & supported by modern W --v. user can set/manage permissions for fi/dir for users/groups. useful for secure net fi sharing. Has indexing, compress., encrypt. on FS level                                                                            |
-|               CDFS               | FS for CD/DVD's                                                                                                                                                                                                                                                    |
-|               NFS                | Network File System. mostly in servers where you can have fi access on net btw sys.                                                                                                                                                                                |
-|            ext3, ext4            | used for Linux. 4 is updated -v that enables larger pars, fi & better perf                                                                                                                                                                                         |
-|               HFS                | used for MacOS                                                                                                                                                                                                                                                     |
-|             Swap par             | Linux par used when physical RAM is maxxed out. The Data flows to swap pars; reducing perf, in place of running more apps simultaneously.                                                                                                                          |
-|      quick vs. full format       | quick changes FS records making dsk appear empty. Full rewrites prev fi, detects surface errors on dsk and makes restoring fi harder.                                                                                                                              |
+| _Type_ | _Description_ |
+| Info | Fs enables storing/managing/accessing fi on a par. OS's support diff FS & pars are formatted w/ specific FS before use |
+| ExFAT | designed for small flash & SSD drives, good for perf & media fi storage |
+| FAT32 | supported by many OS & provides basic features. pars can be >= 2 TB |
+| NTFS | more advanced & supported by modern W --v. user can set/manage permissions for fi/dir for users/groups. useful for secure net fi sharing. Has indexing, compress., encrypt. on FS level |
+| CDFS | FS for CD/DVD's | 
+| NFS | Network File System. mostly in servers where you can have fi access on net btw sys. |
+| ext3, ext4 | used for Linux. 4 is updated -v that enables larger pars, fi & better perf |
+| HFS | used for MacOS |
+| Swap par | Linux par used when physical RAM is maxxed out. The Data flows to swap pars; reducing perf, in place of running more apps simultaneously. |
+| quick vs. full format | quick changes FS records making dsk appear empty. Full rewrites prev fi, detects surface errors on dsk and makes restoring fi harder. |
 
 ### Misc OS info
 
@@ -580,48 +579,51 @@ ___
 
 ### Windows CMD
 
-`BCDEDIT`        Sets properties in boot database to control boot loading.
-`CACLS`          Displays or modifies access control lists (ACLs) of files.
-`CD`             Displays the name of or changes the current directory.
-`CHDIR`          Displays the name of or changes the current directory.
-`CHKDSK`         Checks a disk and displays a status report.
-`CLS`            Clears the screen.
-`CONVERT`        Converts FAT volumes to NTFS. Can't convert current drive
-`COPY`           Copies one or more files to another location.
-`DATE`           Displays or sets the date.
-`DEL`            Deletes one or more files.
-`DIR`            Displays a list of files and subdirectories in a directory.
-`DISKPART`       Displays or configures Disk Partition properties.
-`ECHO`           Displays messages, or turns command echoing on or off.
-`ERASE`          Deletes one or more files.
-`FIND`           Searches for a text string in a file or files.
-`FINDSTR`        Searches for strings in files.
-`FORMAT`         Formats a disk for use with Windows.
-`FSUTIL`         Displays or configures the file system properties.
-`FTYPE`          Displays/modifies file types used in file ext assoc.
-`GPRESULT`       Displays Group Policy information for machine or user.
-`HELP`           Provides Help information for Windows commands.
-`ICACLS`         Display, modify, backup, or restore ACLs for files and dir.
-`MD`             Creates a directory.
-`MKDIR`          Creates a directory.
-`MKLINK`         Creates Symbolic Links and Hard Links
-`MODE`           Configures a system device.
-`MOVE`           Moves one or more files from one directory to another dir.
-`PRINT`          Prints a text file.
-`RD`             Removes a directory.
-`RECOVER`        Recovers readable information from a bad or defective disk.
-`REN`            Renames a file or files.
-`RENAME`         Renames a file or files.
-`RMDIR`          Removes a directory.
-`ROBOCOPY`       Advanced utility to copy files and directory trees
-`SCHTASKS`       Schedules commands and programs to run on a computer.
-`SHUTDOWN`       Allows proper local or remote shutdown of machine.
-`SYSTEMINFO`     Displays machine specific properties and configuration.
-`TASKLIST`       Displays all currently running tasks including services.
-`TASKKILL`       Kill or stop a running process or application.
-`TREE`           Graphically displays the dir structure of a drive or path
-`VOL`            Displays a disk volume label and serial number.
-`XCOPY`          Copies files and directory trees.
+| command | description |
+| :---: | :---: |
+| `BCDEDIT`| Sets properties in boot database to control boot loading.|
+| `CACLS`     |     Displays or modifies access control lists (ACLs) of files|
+| `CD`        |     Displays the name of or changes the current directory.|
+| `CHDIR`     |     Displays the name of or changes the current directory.|
+| `CHKDSK`    |     Checks a disk and displays a status report.|
+| `CLS`       |     Clears the screen.|
+| `CONVERT`   |     Converts FAT volumes to NTFS. Can't convert current drive|
+| `COPY`      |     Copies one or more files to another location.|
+| `DATE`      |     Displays or sets the date.|
+| `DEL`       |     Deletes one or more files.|
+| `DIR`       |     Displays a list of files and subdirectories in a directory.|
+| `DISKPART`  |     Displays or configures Disk Partition properties.|
+| `ECHO`      |     Displays messages, or turns command echoing on or off.|
+| `ERASE`     |     Deletes one or more files.|
+| `FIND`      |     Searches for a text string in a file or files.|
+| `FINDSTR`   |     Searches for strings in files.|
+| `FORMAT`    |     Formats a disk for use with Windows.|
+| `FSUTIL`    |     Displays or configures the file system properties.|
+| `FTYPE`     |     Displays/modifies file types used in file ext assoc.|
+| `GPRESULT`  |     Displays Group Policy information for machine or user.|
+| `HELP`      |     Provides Help information for Windows commands.|
+| `ICACLS`    |     Display, modify, backup, or restore ACLs for files and dir.|
+| `MD`        |   Creates a directory.|
+| `MKDIR`     |   Creates a directory.|
+| `MKLINK` | Creates Symbolic Links & Hard Links|
+| `MODE` |Configures a system device.|
+| `MOVE` |     Moves one or more files from one directory to another dir.|
+| `PRINT`     |     Prints a text file.|
+| `RD`        |     Removes a directory.|
+| `RECOVER`   |     Recovers readable info from a bad or defective disk.|
+| `REN`       |     Renames a file or files.|
+| `RENAME`    |     Renames a file or files.|
+| `RMDIR`     |     Removes a directory.|
+| `ROBOCOPY`  |     Advanced utility to copy files and directory trees|
+| `SCHTASKS`  |     Schedules commands & programs to run on a computer.|
+| `SHUTDOWN`  |     Allows proper local or remote shutdown of machine.|
+| `SYSTEMINFO`|     Displays machine specific properties and configuration.|
+| `TASKLIST`  |     Displays all currently running tasks including services.|
+| `TASKKILL`  |     Kill or stop a running process or application.|
+| `TREE`      |     Graphically displays the dir structure of a drive or path|
+| `VOL`       |     Displays a disk volume label and serial number.|
+| `XCOPY`     |   Copies files and directory trees.|
+
 ___
 
 ## Mobile Devices
