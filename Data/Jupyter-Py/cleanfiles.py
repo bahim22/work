@@ -1,11 +1,12 @@
-from datetime import date
+# from datetime import date
 import os
 import time
 
 """
-path = "C:\Users\Ibalde\deleteTest\PracMain/"
+path = "C:\\Users\\Ibalde\\deleteTest\\PracMain/"
 {
-    "path": "C:\/Users\/Ibalde\/OneDrive-PointParkUniversity\/Ibrahima@PointParkUniversity\/OneNote_RecycleBin",
+    "path": "C:/Users/Ibalde/OneDrive-PointParkUniversity/Ibrahima/
+    @PointParkUniversity/OneNote_RecycleBin",
     "pcName": "ITS-TH220-02"
 }
 """
@@ -16,10 +17,13 @@ files = os.listdir(path)
 
 now = time.time()
 # n = input(int)
-n_days = input(int) * 86400
+# original var; n_days = input(int()) * 86400
+# n_days *= 86400
+n_days = now * 86400
 for f in files:
     filepath = os.path.join(path, f)
-    if not os.path.isfile(path): continue
+    if not os.path.isfile(path):
+        continue
     if os.stat(filepath).st_mtime < now - n_days:
         os.remove(filepath)
 
@@ -29,13 +33,14 @@ for item in items:
     if item == 2:
         continue
     print(item)
-    
+
 items = [1,2,3,4]
 for item in items:
     if item == 2:
         break
     print(item)
 """
+
 
 def create(self, env_dir):
     """

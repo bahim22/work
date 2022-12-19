@@ -32,7 +32,7 @@ def lister4(r1, r2):
     return list(range(r1, r2+1))
 
 
-def lister2(r1, r2):
+def lister22(r1, r2):
     return [item for item in range(r1, r2+1)]
 
 
