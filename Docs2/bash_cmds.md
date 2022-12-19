@@ -1,7 +1,7 @@
 
-# General cmds for apt in Ubu
+# Info for encryption, security, git, apt, and linux
 
-## Steps for ssh git repo
+## Steps for ssh into git repo
 
 > ssh connects and logs into the specified destination in the form: user, hostname and port:
 
@@ -76,9 +76,10 @@ git clone git@github.com:<username>/<repo>.git
 code .
 git clone ssh://git@ssh.github.com:443/bahim22/work.git
 ```
+
 - ssh-keygen supports two types of certificates: user and host.
   - User certificates authenticate users to servers
-    - placed in /path/to/user_key-cert.pub. 
+    - placed in /path/to/user_key-cert.pub.
   - Host certificates authenticate server hosts to users
     - requires the -h option
     - host certificate will be output to /path/to/host_key-cert.pub.
@@ -93,6 +94,8 @@ ssh-keygen -s /path/to/ca_key -I key_id /path/to/user_key.pub
 # generate a host certificate:
 
 ssh-keygen -s /path/to/ca_key -I key_id -h /path/to/host_key.pub
+ssh-copy-id
+# copies the local-host’s pub key to the remote-host’s authorized_keys fi
 ```
 
 ```sh
@@ -211,11 +214,10 @@ mothership "fetched" from you (useful when access is one sided).
 1. on mothership machine, merge the work done on the satellite
 machine into the master branch.
 
-
 ## GPG key
 
 >>
-  generate a gpg key and then c/v to GH. This allows commits to be verified via signature 
+  generate a gpg key and then c/v to GH. This allows commits to be verified via signature
 
 ```sh
 gpg --full-generate-key
@@ -255,7 +257,7 @@ gpg --armor --export aaa123aaa123
 
 ___
 
-## example commands
+## bash commands
 
 ```sh
 echo $BASH
@@ -279,7 +281,9 @@ mount -o update /
 diskutil list
 df -h
 find / -size +50000 -print
-
+sudo lshw # lists hardware specs
+# can also use dmidecode
+gcreate, lvcreate, and lvextend lvm2, fdisk # create/manage logical pars spanning >= 1 HDD with logical volume manager
 whereis [exe,cmd]
 whatis <cmdname>
 uname -a # show system info
@@ -291,6 +295,13 @@ ps -ef | more # view running processes
 ps -ef grep code
 kill -9 PID # killall, pkill, xkill to terminate unix process
 
+ifconfig <interface_name> # (eth0)
+# -a (show all details), etho1 up | down (enable/disable), muto 1500
+ifconfig eth0 192.168.2.2 netmask 255.255.255.0 broadcast 192.168.2.255
+# ex. assign IP, netmask and broadcast to interface eth0
+
+netstat -a | more # list all ports, -at all tcp ports, -au all udp ports, -s stats, -l show listening only
+netstat -ap | grep ssh && -an | grep ':80' # which port a prog is running on | which process is using a specific port
 grep -i "word" file.txt # find str in fi
 find -iname "file.txt" # find fi
 find /home/ib-ub -name *.md -type f
@@ -302,11 +313,24 @@ cat -n /home/ib-ub/flow/work/Docs2/requirements3.txt # print file to stdout
 chmod ug+rwx file.txt # change permissions of fi/dir [-R u-rwx ex. will remove access recursively]
 chown ib-ub:group_name file.txt # change owner
 passwd username # change password; use sudo to reset w/o old pass
+
+useradd -D && useradd login_name # show default options and add user
+adduser user_name  # for interactive user creation
+newusers file_name # bulk creation w/ fi temp pre-configured by adding the relevant info
+    # ex. cat homer-family.txt
+        # homer:HcZ600a9:1008:1000:Homer Simpson:/home/homer:/bin/bash
+        # marge:1enz733N:1009:1000:Marge Simpson:/home/marge:/bin/csh
 man 3 free # bring up section 3 of free cmd
 tail -n 10 file.txt # show last 10 lines of fi
 less large_file.txt # efficient view of log fi (CTRL+F/B forward/backward 1 window)
 diff -w file1.md file2.md # compare, ignore whitespace fi1 to fi2
 ps top vmstat brk mmap wget, systemctl, init
+
+rsync # sync fi & dir between source & destination dirs
+rsnapshot # uses the combo of rsync and hard links to maintain full-backup and incremental backups
+dd # make boot images and copy/backup entire HDDs and create image
+makeswap swapon # add/manage swap space
+dpkg # install/remove deb packages
 ```
 
 ## Shell command info
