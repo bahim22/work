@@ -205,8 +205,6 @@ ___
    2. Topic 4B: Compare Networking Hardware
    3. Topic 4C: Explain Network Cable Types
    4. Topic 4D: Compare Wireless Networking Types
-      > Hubs vs Swtiches: Hubs are outdated and connect each pc that's plugged into the repeater, it takes the signal that pc A sends to PC B (a frame: made up of 1500 bits) and repeats it by sending it to every pc connected and then those PC's read their MAC address and the address of the signals MAC and either reads it if it's for them or deletes it if not. Hubs just repeat back on all the ports, whatever's coming out.
-      >> Switches: when the box collects the MAC of every PC connected to it and when it receives a frame  it makes a direct, physical connection between the two PC's. A switch is still a repeater, but it's a smart repeater and only sends the data out to the proper destination based on the MAC address
 5. LESSON 5: CONFIGURING `NETWORK` `ADDRESSING` AND `INTERNET` `CONNECTIONS`
    1. Topic 5A: Compare Internet Connection Types
    2. Topic 5B: Use Basic TCP/IP Concepts
@@ -272,7 +270,6 @@ ___
     2. Topic 20B: Use Proper Communication Techniques
     3. Topic 20C: Use Common Safety and Environmental Procedures
 
-[Info from Comptia A+ and Mike Meyers]
 ___
 
 ### Hardware/Software List
@@ -314,7 +311,7 @@ _SPARE PARTS/HARDWARE_
 • CPUs
 • Assorted connectors/cables
 
-- USB; HDMI
+- **USB**; **HDMI**
 
 • Adapters
 • Network cables
@@ -359,3 +356,7 @@ _SOFTWARE_
 • Virtualization software
 • Anti-malware
 • Driver software
+
+> [Meyes Comptia Exam Guide. McGrawHill](https://www.mheducation.com/highered/product/comptia-certification-all-one-exam-guide-tenth-edition-exams-220-1001-220-1002-meyers/M9781260454031.html) | [Comptia A+](https://www.comptia.org/certifications/a) |
+>>
+    Referenced information from Comptia A+ and Mike Meyers Exam Guide

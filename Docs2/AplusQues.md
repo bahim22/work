@@ -2,78 +2,69 @@
 
 ## Sample Ques
 
-1. QoS = quality of service. In SOHO env, QoS set at router level. If you want to enforce it's policies on your net, you need to use a router equipped w/ QoS software
-2. Consult manu docs before doing preventive maintenance, or cleaning ops to get proper methods and solvents
+1. QoS = quality of service. In a SOHO env, QoS set at router level. If you want to enforce it's policies on your network, you need to use a router equipped w/ QoS software
+2. Consult manual docs before doing preventive maintenance, or cleaning operations to get proper methods and solvents
 3. SMTP protocol can send emails from a client device (only for outgoing messages)
 4. A multi-layer switch enables having both switching and routing functionality on the same device
 5. ST is a type of fiber connector
-6. port 443 used when using SSL encrypt. to access a website
-7. Light emitting diode and in-plane switching monitor tech have widest viewing angle w/ rich color & consistent backlighting
-8. enable device pairing to use hands-free for a smartphone to car
+6. Port 443 (HTTPS) used when using SSL encryption to access a website
+7. Light emitting diode and in-plane switching monitor technology have widest viewing angle w/ rich color & consistent backlighting
+8. Enable device pairing to use hands-free for a smartphone to car
 9. Can connect a tone generator to an RJ-45 drop to locate the position of the cable on a patch panel
-10. check case for overheating and mobo for swollen capacitors if computer reboots at random intervals multiple times/day
+10. Check case for overheating and mobo for swollen capacitors if computer reboots at random intervals multiple times/day
 11. check fuser if printer is smudging toner on the paper after printing
 12. computer may have incorrect drivers installed if print jobs are printed as garbled text
-13. Startup tab in Task Mngr utility shows proc. init at startup
-    1. (earlier Windows versions used MSConfig)
-14. disk cleanup utility deletes temp fi from HDD
+13. Startup tab in Task Manager utility shows proccesses. initialized at startup
+    1. earlier Windows versions used MSConfig
+14. Disk cleanup utility deletes temp fi from HDD
 15. `WinRE` helps recover a sys that won't boot. It auto starts and can be manually started via Windows Recovery settings in Advanced startup menu
-16. need to configure port forwaring on a SOHO router to host gaming server
-
-## MacOS X
-
-1. **MacOS** X Time Machine requires external storage media (ext HDD or Time Capsule) & does incremental/historical backups & del oldest backups when storage fills
-2. Time Machine runs: hourly for 24 hrs; daily for past month, weekly for all prev mo.
-3. Disk Utility lets you run first aid, partition, erase, unmount dsk, get dsk info
-4. manage updates in App Store & go to Sys Pref => Software Updates for OS Updates
-5. Force Quit (Cmd+Option+Ext) to individually halt running or hung apps
-6. Run terminal session by opening `Finder` then `/Apps/Utilities` dir.
-7. Keychain feature in MacOS stores passwords, private keys, certs, secure notes
-
-- **Thunderbolt cables**: 4 standards
-  - 1 & 2 terminate in Mini DisplayPort connector
-  - 3 & 4 termiante in USB-C connector
 
 ## Network
 
-1. If computer can't connect to wired network due to not rec IP addresses from DHCP server the cause may be the DHCP IP pool is exhausted
-2. IP addresses beginning w/ 169 are assigned auto if an IP address can't be received from a DHCP server
-   1. "system will assign itself an APIPA address in the range of 169.254.0.1 through 169.254.255.254, then sends a broadcast to ensure no other computer is currently using that add"
-3. Avoid low RF signal issues by using non-overlapping channels (1,6,11)
-4. CAT5 trasmits data >= 100 Mbps & distance of 100 meters
-5. Crossover cable can be used to make connection from 2 hubs, 2 swtiches, 2 routers, hub to switch, or computer to router
-6. Bluetooth: a discovery and authentication process that validates the communication link
-7. wake-on-LAN will allow sleeping computer to power on when job is sent
-8. DHCP(Dynamic Host Config Protocol) server can auto config param needed by NIC when computer first boots & enables central management of IP address allocation
-9. non-shining link integrity indicator when cable is plugged in means there's no connection to rest of the LAN
-   1. link status indicator is small LED next to RJ45 connector that will shine when there's proper electrical conn
-10. Default gateway being down won't affect LAN & it's devices; but user won't be able to access internet
-11. RDP uses port 3389, which has to be config on each firewall end to allow access thru that port. Remote that lets you use the GUI the user is using, not just CLI
-12. SSH needs port 22 opened to allow access
-13. The `MAC` (Media Access Control) address: 48-bit # (written as six 2-digit hexadecimal numbers) that uniquely ID's a device on a local area network
+### Sample Questions
+
+1. You need to configure port forwaring on a SOHO router to host gaming server
+2. If a computer can't connect to a wired network due to not receiving IP addresses from DHCP server the cause may be the DHCP IP pool is exhausted
+3. IP addresses beginning w/ 169 are assigned automatically if an IP address can't be received from a DHCP server
+   1. The DHCP client auto self-configures IP address & subnet mask if DHCP server isn't available by using APIPA (automatic private IP Addressing).
+      1. Range from 169.254.0.1 - 169.254.255.254 & default class B subnet mask of 255.255.0.0. It then sends a broadcast to ensure that other PC's aren't using the address it chose.
+4. Avoid low RF signal issues by using non-overlapping channels (1,6,11)
+5. CAT5 trasmits data >= 100 Mbps at distances of 100 meters
+6. Crossover cable can be used to make connection from 2 hubs, 2 swtiches, 2 routers, hub to switch, or computer to router
+7. Bluetooth: a discovery and authentication process that validates the communication link
+8. wake-on-LAN will allow sleeping computer to power on when job is sent
+9. DHCP (Dynamic Host Config Protocol) server can auto configure parameters needed by NIC when computer first boots & enables central management of IP address allocation
+10. non-shining link integrity indicator when cable is plugged in means there's no connection to rest of the LAN
+11. link status indicator is small LED next to RJ45 connector that will shine when there's proper electrical conn
+12. Default gateway being down won't affect LAN & it's devices; but user won't be able to access internet
+13. RDP uses port 3389, which has to be pre-configured on each firewall end to allow access thru that port
+    1. Remote that lets you use the GUI the user is using, not just CLI
+14. SSH needs port 22 opened to allow access
+15. The `MAC` (Media Access Control) address: 48-bit # (written as six 2-digit hexadecimal numbers) that uniquely ID's a device on a local area network
     1. IP address is used to locate the proper network (layer 3)
     2. MAC address is used to locate the device on the local area network (layer 2)
-14. `socket number` uniquely IDs one end of a communication session running on a network. A socket number shows the IP address & port number of one end of a session.
+16. `socket number` uniquely IDs one end of a communication session running on a network. A socket number shows the IP address & port number of one end of a session.
     1. ex. 66.83.10.24:443 is a socket number that shows a connection est. over HTTPS to the IP address.
-15. HTTP uses port 80
-16. The subnet mask that defines a full class C network is 255.255.255.0, while a full class B subnet mask would be 255.255.0.0.
-17. enabling MAC filtering only allows devices listed in routers filtering table access
-18. `RJ11/45` are common for phone lines & ethernet & use tristed pair cabling
-19. RFC1918 private address sets for IP addresses start w/ 192.168 (v4)
-20. default gateway address is add that computer would send traffic to
-    1. default gateway would be a router for SOHO net & sends traffic out to internet.
-21. Static address: manually assigning/entering IP address. recomm to reserve the add in DHCP pool to prevent from being leased again on diff device
-22. `LDAP` is successor to DAP and works w/ AD for user auth and mngmnt w/in a network
-23. "`NAT` (Network Address Translation) allows our private local network IPv4 addresses to be translated into a public IP address capable of connecting over the Internet."
-24. `DMZ` (demilitarized zone) sets up separate network that can be accessed from internet, making specific services reachable by external users, but not allowing access to remainder of network (ex. email/web/FTP servers)
-25. `DSL` makes use of phone lines that already exist & are limited by dist. from central office
-26. `ISDN`: integrated services digital network supports use of bearer (B) channels for sending data & D chan. for signal/control
+17. HTTP uses port 80
+18. The subnet mask that defines a full class C network is 255.255.255.0, while a full class B subnet mask would be 255.255.0.0.
+19. enabling MAC filtering only allows devices listed in routers filtering table access
+20. `RJ11/45` are common for phone lines & ethernet & use tristed pair cabling
+21. `RFC1918` private address sets for IP addresses start with 192.168 (v4)
+22. default gateway address is address that computer would send traffic to
+    1. default gateway would be a router for SOHO network & sends traffic out to internet
+23. Static address: manually assigning/entering IP address
+    1. sometimes recommended in order to reserve the addresses in DHCP pool to prevent other devices from leasing the address
+24. `LDAP` is successor to DAP and works w/ AD for user authentication and management within a network
+25. `NAT` (Network Address Translation) enables the translation of private local network IPv4 addresses into a public addresses in order for them to connect over the Internet.
+26. `DMZ` (demilitarized zone) sets up separate network that can be accessed from internet, making specific services reachable by external users, but not allowing access to remainder of network (ex. email/web/FTP servers)
+27. `DSL` makes use of phone lines that already exist & are limited by dist. from central office
+28. `ISDN`: integrated services digital network supports use of bearer (B) channels for sending data & D chan. for signal/control
 
-- a `repeater` re-sends wireless signal to areas that the access point can't cover.
-- A Layer 3 switch is config to participate in routing decisions
+- `repeater` re-sends wireless signal to areas that the access point can't cover.
+- `Layer 3 switch` is config to participate in routing decisions
   - routing decisions work on Layer 3 of OSI model (network layer)
   - standard switches usually refferred at as Layer 2 devices, working as PnP w/o ability to adjust settings (aka unmanaged switch)
-- A `crimper` is used to crimp a connector (usually last step in making an ethernet cable) to tighten the wiring to right spots in connector so electrical signals pass thru properly.
+- `crimper` is used to crimp a connector (usually last step in making an ethernet cable) to tighten the wiring to right spots in connector so electrical signals pass thru properly.
 - Plug `tone generator` at jack end of cable and wave toner probe around suspected area to find other end of cable
 
 ### Ethernet, 802.11 wireless standards, ecryption info
@@ -96,7 +87,7 @@
 7. `ifconfig` cmd: checks a devices IP address and subnet mask on Linux OS's
 8. `S/MIME` protocol can encrypt and digitally sign e-mails
 
-## Shell info
+## Shell
 
 > Some cmds are only available w/ admin priviledge enabled by elevating or running the CLI as admin
 
@@ -142,7 +133,7 @@ format
 # create a FS on storage device
 ```
 
-#### Bash cmds
+### Bash cmds
 
 ```sh
 ls -l # list dir w/ long list option for fi & dir attributes
@@ -166,16 +157,23 @@ net user | manage users
 MD / `MKDIR` | create new dir
 RD / `RMDIR` | delete dir
 
-## Memory
-
-- ECC: can continue to work even if it has corrupt data
-- Paging: a file that's used as virtual mmemory on the system
-- RAM: short-term memory used to store working data
-- Non-parity: doesn't maintain parity info and can't perform error checking.
-
 ## Operating Systems
 
-## **Windows**
+### MacOS X
+
+1. **MacOS** X Time Machine requires external storage media (ext HDD or Time Capsule) & does incremental/historical backups & del oldest backups when storage fills
+2. Time Machine runs: hourly for 24 hrs; daily for past month, weekly for all prev mo.
+3. Disk Utility lets you run first aid, partition, erase, unmount dsk, get dsk info
+4. manage updates in App Store & go to Sys Pref => Software Updates for OS Updates
+5. Force Quit (Cmd+Option+Ext) to individually halt running or hung apps
+6. Run terminal session by opening `Finder` then `/Apps/Utilities` dir.
+7. Keychain feature in MacOS stores passwords, private keys, certs, secure notes
+
+- **Thunderbolt cables**: 4 standards
+  - 1 & 2 terminate in Mini DisplayPort connector
+  - 3 & 4 termiante in USB-C connector
+
+### **Windows**
 
 1. bootmgr prog is used to boot the OS in Windows
 2. Tasklist cmd opens CLI v of task mngr
@@ -191,7 +189,7 @@ RD / `RMDIR` | delete dir
 12. NTFS_FILE_SYSTEM error means that the HDD is corrupt. (may cause BSOD)
 13. Win uses SMB to transfer files from one system to another
 
-## **Users, Groups, Permissions**
+### **Users, Groups, Permissions**
 
 1. auth thru NTFS defines res a user can access and what they're able to do
 2. BitLocker Drive Encryption allows you to encrypt entire drive (files, other users dir's)
@@ -203,7 +201,7 @@ RD / `RMDIR` | delete dir
 8. Use Public Library to share files amongst multiple users of a single system
 9. Encrypting File System (EFS) enables you to encrypt files, rendering them unviewable by other accts.
 
-## OS maintainence, optimization, general info
+### OS maintainence, optimization, general info
 
 - CPU architecture were historically 8/16-bit & current 32/64-bit computers.
   - bit length refers to # of bits used for memory addresses.
@@ -223,13 +221,13 @@ RD / `RMDIR` | delete dir
   - BitLocker: drive encryption utility. data on disk is encryptedd to prevent unauth access (useful for laptops that leave office env & can be lost/stolen)
   - Media Ctr: (on W7 Home Premium) player for slideshows, videos, optical drives, local net, streaming, music from files
   - BranchCache: useful in corp. env. w/ diff branch offices; creates local cache of files from file/web servers for quicker access
-  - EFS: Encrypting File System; fs feat. that's config. to encrypt vol, dir, f; protects data from phyiscal attacker
+  - EFS: Encrypting File System; fs feat. that's config. to encrypt vol, dir, fi
+    - protects data from phyiscal attacker
   - all -v provide similar UX, w/ diff being Aero, Start menu vs. screen, Settings menu
   - diff interfaces: keyboard/mouse entry, touch screen, Cortana voice recognition
 
 - **Mac** 2nd most used workstation OS
 - **Linux** is a kernel (core of OS) that interfaces/apps can be added to (pre-config as distributions) in order to create various flavors of sys. Dist differ depending on req tasks
-- f
 
 - Windows phones are discontinued, but some tablets run full W10
 - Android OS for phones/tablets, by Google, open source; most used mobile OS
@@ -244,7 +242,7 @@ RD / `RMDIR` | delete dir
   - satellite constellation, ground control network, and receiver
 - The reference guide is updated by the preferred roaming list (PRL) updates. These updates ensure mobile devices connect to the correct cell phone tower when roaming
 
-## Mobile
+### Mobile
 
 - **OLED**: structure provides flexibility for curved displays
   - contain the image producing components and light source in one panel. organic light emitting compound is set between an anode and cathode producing a current. the current runs thru the electroluminescent compund producing light consumes less power than LCD, with higher contrast ratio resulting in sharper images. common in high end monitors and phones.
@@ -271,8 +269,8 @@ RD / `RMDIR` | delete dir
 
 ## Virtualization
 
-1. PaaS is a complete cloud-based software dev. env.
-2. SaaS is a cloud service that handles manage software, deployment and includes the platform and infrastructure
+1. **PaaS** is a complete cloud-based software dev. env.
+2. **SaaS** is a cloud service that handles manage software, deployment and includes the platform and infrastructure
 3. Measured service based on monitored use of resources like storage, netowrk bandwidth, CPU utilization.
 4. Rapid elasticity allows computing resources to be auto allocated in response to demand
 5. Resource pooling: cloud service provider provides all resources in a resource pool and gives you the option to select speciic resources
@@ -285,9 +283,15 @@ RD / `RMDIR` | delete dir
 3. Remove USB drive correctly by clicking 'Safely Remove Hardware' icon in system tray, stopping the drive and then unplugging it.
 4. AT style systems use 2 power connectors (P8 & P9) to connect to mobo. ATX uses one P1 connector.
 5. inverter board: converts low volt DC power to high volt AC; lights up back-light bulb. If it's broken, LCD screen won't light up when laptop is powered, but you'll see a very dim image
-6. v
 
-### Laser, Thermal, Ink Printers
+### Memory
+
+- ECC: can continue to work even if it has corrupt data
+- Paging: a file that's used as virtual mmemory on the system
+- RAM: short-term memory used to store working data
+- Non-parity: doesn't maintain parity info and can't perform error checking.
+
+### Printers: Laser, Thermal, Ink
 
 - Steps for laser printing:
   - process, clean, charge, expose, dev, tran, fuse
@@ -385,7 +389,7 @@ RD / `RMDIR` | delete dir
 2. An unset date/time may be due to drained BIOS battery; resolved by CMOS batter replacement
 3. Startup repair can be used to prevent reinstalls and is designed to auto start if W10 detects issues.
 
-## Disks
+### Disks
 
 1. RAID 0 striped across drives to improve performance but w/ no redundancy
 2. RAID 10 combines mirroring for data protection and striping for speed
@@ -393,37 +397,42 @@ RD / `RMDIR` | delete dir
    2. requires atleast 4 drives
 3. SATA drive uses 15-pin connector
 4. SSDs are non-volatile memory with fast performance and lower power consumption than HDD
-5. Full backup: all chosen files are backed up and Archive bit is set to ON afterwards
-6. Incremental backup: only edited/new files since last bakup are backedup
-7. Differential backup: similar to incremental, except archive bit isn't set, which will cause the next diff backup to include files that were backed up during previous backups
-8. d
-9. Blu-ray discs can be single or multiple-use and split into categories based on 3 factors
-   1. functionality: BD-R single use, BD-RE/RW multi-use (RE-recordable erasable is newer)
+5. `Backup Types`
+   1. Full backup: all chosen files are backed up and Archive bit is set to ON afterwards
+   2. Incremental backup: only edited/new files since last bakup are backed up
+   3. Differential backup: similar to incremental, except archive bit isn't set, which will cause the next diff backup to include files that were backed up during previous backups
+6. `Blu-ray discs` can be single or multiple-use and split into categories based on 3 factors
+   1. Functionality: BD-R single use, BD-RE/RW multi-use (RE-recordable erasable is newer)
    2. Capacity: BD-SL(25gb), DL(50gb), BD-XL = TL(100gb) & QL(128gb)
-   3. content quality: regular(1080p high def vid) and ultra HD(4k ultra HD, better colour depth; region-free, but need 4k Blu-R player)
-10. d
+   3. Content quality: regular(1080p high def vid) and ultra HD(4k ultra HD, better colour depth; region-free, but need 4k Blu-R player)
 
 ### Tools
 
-1. toner probe: 2-in-1 elec test tool that traces wires thru walls to determine which pair carried the signal induced by the tone generator
+1. Toner probe: 2-in-1 elec test tool that traces wires thru walls to determine which pair carried the signal induced by the tone generator
    1. used when you have access to both ends of cable at same time
-2. cable tester: check a cable to verify intended connections exist and there's no uninteded ones
-   1. missing intended connection: 'open'; existing unintended conn. ('short'); conn goes to wrong place ('miswired) conn has 2 faults: open to correct contact & shorted to incorrect one
+2. Cable tester: check a cable to verify intended connections exist and there's no uninteded ones
+   1. missing intended connection: 'open'
+   2. existing unintended connection: ('short')
+   3. connection goes to wrong place: ('miswired)
+   4. connection has 2 faults: open to correct contact & shorted to incorrect one
 
-### Operational Procedures
+> Hubs vs Swtiches:
+
+```md
+    Hubs are outdated and connect each pc that's plugged into the repeater, it takes the signal that pc A sends to PC B (a frame: made up of 1500 bits) and repeats it by sending it to every pc connected and then those PC's read their MAC address and the address of the signals MAC and either reads it if it's for them or deletes it if not. Hubs just repeat back on all the ports, whatever's coming out.
+
+    Switches: when the box collects the MAC of every PC connected to it and when it receives a frame  it makes a direct, physical connection between the two PC's. A switch is still a repeater, but it's a smart repeater and only sends the data out to the proper destination based on the MAC address
+```
+
+## Operational Procedures
 
 - grounding diverts excess electrical charges from the device and can decrease chance of damage from electrical spike
 - ESD mats/straps lower risk of ESD by balancing the static electricity between the tech and device/component
-- f
 
 ## Software Troubleshooting
 
 1. NIC allows for wireless comms between laptop and wireless access points.
 2. physical privacy and sec comp are designed to prevent the loss of info thru physical means such as shoulder sufting/theft
-3. d
-4. d
-5. d
-6. d
 
 ## Security
 
@@ -436,7 +445,3 @@ RD / `RMDIR` | delete dir
    5. schedule scans and run updates
    6. enable system restore
    7. educate end-user
-3. d
-4. d
-5. d
-6. d

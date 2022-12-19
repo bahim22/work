@@ -156,7 +156,7 @@ ___
 |     multiboot             | uses boot mngr that maintains boot config; user sel OS to boot; recommend install OS's to diff HDD or separate logical pars  |
 |   remote net      | PXE net boot using remote server; may require choosing install options or be unattended |
 |         image deployment         | used for PC's w/ == hardware that need == OS/settings/apps. Diff software tools can do this. Steps involve sel one PC => clean install, config, app install => create image from that PC & make available on network or portable media => copy image to other PC's |
-|   recovery par  | create rec par during install that is a bootable par for later or repair install; contains diagnostic/repair tools | 
+|   recovery par  | create rec par during install that is a bootable par for later or repair install; contains diagnostic/repair tools |
 | |
 | **Partitioning** |
 | |
@@ -176,7 +176,7 @@ ___
 | ExFAT | designed for small flash & SSD drives, good for perf & media fi storage |
 | FAT32 | supported by many OS & provides basic features. pars can be >= 2 TB |
 | NTFS | more advanced & supported by modern W --v. user can set/manage permissions for fi/dir for users/groups. useful for secure net fi sharing. Has indexing, compress., encrypt. on FS level |
-| CDFS | FS for CD/DVD's | 
+| CDFS | FS for CD/DVD's |
 | NFS | Network File System. mostly in servers where you can have fi access on net btw sys. |
 | ext3, ext4 | used for Linux. 4 is updated -v that enables larger pars, fi & better perf |
 | HFS | used for MacOS |
@@ -465,36 +465,36 @@ ___
 5. Magnetic disk drives
 6. SSD
 7. SCSI (Small Computer System Interface)
-8.  L1 is generally found in the processor chip and it's the smallest & fastest for the CPU to read. It ranges from 8-64KB.
+8. Sectors usually contain 512 bytes.
+9. L1 is generally found in the processor chip and it's the smallest & fastest for the CPU to read. It ranges from 8-64KB.
    1. L2 and L3 are larger than L1 but take longer to access.
-9.  Sectors usually contain 512 bytes.
 
 #### RAID
 
-10. `RAID` (Redundant Array of independent disk) Types: Hardware & Software RAID
+1. `RAID` (Redundant Array of independent disk) Types: Hardware & Software RAID
     1. RAID 0: Striping w/o parity and no fault tolerance
-      1.  min. 2 disks needed and read/write performance increase
+       1. min. 2 disks needed and read/write performance increase
     2. RAID 1: Mirroring and dubplexing.
-      1. mirroring requires 2 equal sized pars on diff drives.
-      2. disk duplexing req. 2 disk and 2 controllers.
-      3. provides fault tolerance, w/ slower disk access compared to striping
+       1. mirroring requires 2 equal sized pars on diff drives.
+       2. disk duplexing req. 2 disk and 2 controllers.
+       3. provides fault tolerance, w/ slower disk access compared to striping
     3. RAID 2 - striping w/ error correction
     4. RAID 3 - striping w/ error correction code stored as parity
-      1.  takes a striped array, then adds prity HDD to the array. The parity info is vital if a drive fails because it can restore blocks broken from data corruption. Parity written to 1 drive
+       1. takes a striped array, then adds prity HDD to the array. The parity info is vital if a drive fails because it can restore blocks broken from data corruption. Parity written to 1 drive
     5. RAID 4: striping w/ large blocks allocation
     6. RAID 5: striping w/ parity. Requires 3 pars on diff drives.
-      1. fault tolerant & less expensive than disk mirroring.
-      2. data can't be recovered if >= 1 disk fails, so tape backups need to be used.
-      3. spreading the parity info across all drives allows all the drives to rebuild the array if another fails.
-      4. Mirroring has more overhead due to the entire drive being copied to another drive.
-    7. RAID 10: mirrored stripping. Mode 0 array + mode 1 array, striped.
-      1. ex. You striped data into 2 drives, then each drive is mirrored
-      2. requires a total of 4 drives
-    8. Disk swapping: Hot-swapping (Host plugging): ability to add/remove devices to PC while it's running & OS will auto recognize changes.
-      1. cold: device needs powered down prior to replacing parts
-      2. warm: The server can remain powered on, but I/O functions corresponding to the part that needs replaced need stopped by the appropriate command
-      3. hot: the faulty part can be replaced w/o interrupting the srver or exec any interruption commands in I/O procedures.
-11. `USB`
+       1. fault tolerant & less expensive than disk mirroring.
+       2. data can't be recovered if >= 1 disk fails, so tape backups need to be used.
+       3. spreading the parity info across all drives allows all the drives to rebuild the array if another fails.
+    7. Mirroring has more overhead due to the entire drive being copied to another drive.
+    8. RAID 10: mirrored stripping. Mode 0 array + mode 1 array, striped.
+       1. ex. You striped data into 2 drives, then each drive is mirrored
+       2. requires a total of 4 drives
+    9. Disk swapping: Hot-swapping (Host plugging): ability to add/remove devices to PC while it's running & OS will auto recognize changes.
+       1. cold: device needs powered down prior to replacing parts
+       2. warm: The server can remain powered on, but I/O functions corresponding to the part that needs replaced need stopped by the appropriate command
+       3. hot: the faulty part can be replaced w/o interrupting the srver or exec any interruption commands in I/O procedures.
+2. `USB`
        1. universal serial bus 1.1 cocmes in 1.5 MB/s and 12 Mbps; USB 2..0 runs at 480 Mbps
        2. form factors: micro, USB-C, mini
        3. USB 3.0 runs at 5 Gbps; USB 3.1 at 10 Gbps
@@ -505,20 +505,20 @@ ___
        7. this creates n upstream/downstream concept
        8. USB-A connectors connect downstream; B connectors connect upstream (with some exceptions)
        9. must have a device driver; OS's come w/ thousands of built-in device drivers; may need to manually download from internet
-12. `Thunder and Lightning`
+3. `Thunder and Lightning`
     1. general purpose I/O port that runs at 10 Gbs up to 40 Gbps
     2. uses a mini DisplayPort or USB C connector
     3. exclusive to Apple and uses proprietary lightning connector
-13. `Keyboards/Mice`
+4. `Keyboards/Mice`
     1. keyboards use ither USB or PS/2 connection; while mice almost exclusively USB; game controllers often have proprietary connection that requires a converter piece
     2. keyboard video mouse (KVM) switches give ability for a single keyboard, monitor, mouse to connect multiple PC's
-14. `RAM`
+5. `RAM`
     1. SODIMM:
         1. multiple configurations: 200, 204, 260, or 292-pin
         2. 32 | 64-bit configurations
-15. `Sight/Sound`
-16. `Readers/Scanners`
-17. `Expansion Cards`
+6. `Sight/Sound`
+7. `Readers/Scanners`
+8. `Expansion Cards`
 
 ___
 
@@ -553,27 +553,28 @@ ___
 
 ### Windows naming
 
-- W10 naming is designed for LANs and when installed you give the PC a Windows name
-- all W10 systems will be members of a domain or workgroup
-- homegroups are more secure and automated organization (still a type of workgroup)
-  - workgroup is basic type of networking organiztion used as an organizational tool w/ no security or central admin
-  - domain is org group (type used today is Active Directory domain) that provides central admin and has ability to disperse security and net info to other PC's at one time
+- Windows naming is designed for LANs and when installed you give the PC a Windows name
+- all Windows systems will be members of a domain or workgroup
+- `homegroups` are more secure and automated organization (still a type of workgroup)
+  - `workgroup` is basic type of networking organiztion used as an organizational tool w/ no security or central admin
+  - `domain` is an organizational group (type used today is Active Directory domain) that provides central admin and has ability to disperse security and network info to other PC's at one time
+
 ___
 
 ### Displays
 
-   1. Types
-      1. backlight systems
-         1. _CCFL_: cold cathode flourescent light - older, uses daylight specter flourescent tube and inverter for power
-         2. _LED_: light emitting diodes - doesn't use inverter and uses strips of LEDs
-            1. LCD blocks areas of backlight to create images
-            2. LEDs generate light themselves and consumes less power
-            3. Plasma: made of small cells of ionized gas (good contrast ratio)
-      2. _LCD_: requires backlight sys; uses liquid crystal displays
-         1. frequent in laptops
-      3. _OLED_: organic light emitting diode - thinner/lighter; made of a layer of organic compound between 2 light-emitting electrods
-         1. common in handheld devices
-      4. _CRT_: cathode ray tube
+ 1. Types
+    1. backlight systems
+       1. _CCFL_: cold cathode flourescent light - older, uses daylight specter flourescent tube and inverter for power
+       2. _LED_: light emitting diodes - doesn't use inverter and uses strips of LEDs
+          1. LCD blocks areas of backlight to create images
+          2. LEDs generate light themselves and consumes less power
+          3. Plasma: made of small cells of ionized gas (good contrast ratio)
+    2. _CRT_: cathode ray tube
+    3. _LCD_: requires backlight sys; uses liquid crystal displays
+       1. frequent in laptops
+    4. _OLED_: organic light emitting diode - thinner/lighter; made of a layer of organic compound between 2 light-emitting electrods
+       1. common in handheld devices
 
 ## Shell(DOS)
 
@@ -628,8 +629,13 @@ ___
 
 ## Mobile Devices
 
-### Referenced info and quoted material from personal notes and online resources
+### References
+
+>>
+    Quoted & paraphrased information from personal notes and online resources
 
 > [Quickstart](https://www.quickstart.com/blog/comptia-prep-identifying-motherboard-components-understanding-their-functions/) |
 > [Wikipedia](https://en.wikipedia.org/wiki/User_Datagram_Protocol) |
-> [LinkedInLearning](https://www.linkedin.com/learning/comptia-a-plus-220-1001-cert-prep-6-physical-networking/introduction-to-networking?autoplay=true&contextUrn=urn%3Ali%3AlearningCollection%3A6949411704820695040&resume=false&u=41913436)
+> [LinkedIn Learning](https://www.linkedin.com/learning/comptia-a-plus-220-1001-cert-prep-6-physical-networking/introduction-to-networking) |
+> [Become/ UnionTestPrep](https://uniontestprep.com/comptia-a-core-series-exam/study-guide/220-1101-networking/pages/1) |
+> [Meyes Comptia Exam Guide/ McGrawHill](https://www.mheducation.com/highered/product/comptia-certification-all-one-exam-guide-tenth-edition-exams-220-1001-220-1002-meyers/M9781260454031.html) |
