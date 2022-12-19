@@ -67,13 +67,109 @@
 - `crimper` is used to crimp a connector (usually last step in making an ethernet cable) to tighten the wiring to right spots in connector so electrical signals pass thru properly.
 - Plug `tone generator` at jack end of cable and wave toner probe around suspected area to find other end of cable
 
-### Ethernet, 802.11 wireless standards, ecryption info
+### Networked Host Services
 
-- b/g operate at 2.4 GHz
-- n operates at either 2.4 or 5 GHz with max speed of 600 Mbps
+- client apps request services from server apps
+
+#### Server Roles
+
+- Usually a process running in memory on networked system which sends out responses to requests made from a remote client system
+  - can also be stand-alone hardware
+- DNS: server that resolves hostnames to IP addresses.
+  - 2 are needed for a company to host a website (1 for redundancy).
+  - Hostname IP address set records are saved in zone files, and if not, they are requested from the root server (higher-level DNS server)
+- DHCP: provides IP configuration information (address, subnet mast, default gateway, DNS server address) to clients, automatically. The scope determines what info is allowed to be shared with a client.
+- Fileshare: (File Server) - central repo for storage, access and management of entwork files
+  - NAS (network attached storage) can also be used for a file server
+- Print Server: manages print requests and connects to network printers
+- Mail: responsible for sending, receiving, managing emails.
+  - Must run a specialized server package (Microsoft Exchange, Sendmail, Postfix, Exim) to be an actual mail server.
+- Syslog: Collects info compiled through system monitoring when in a client-server model. (login events, errors, etc.)
+  - messages include: facility code, severity level, logged event descriptions.
+  - Made up of 3 main components: listener, database, management & filtering software.
+- Web Server: listens for incoming requests, which it executes by responding w/ the requested content (text, images, video, running scripts)
+  - examples: Microsoft Internet Information Services (IIS), Apache
+- Authentication, Authorization & Accounting (Triple A or AAA)
+
+#### Internet Appliances
+
+- SPAM gateways
+- unified threat management (UTM)
+- load balancers
+- proxy servers
+-
+
+
+- Legacy system: systems that haven't been updated, usually due to an important app that can't run on an updated platform
+- Supervisory Control and Data Acquisition (SCADA): high-level management system that controls manufacturing machines, processes, infrastructure settings, and building components.
+  - type of critical legacy system category
+- Embedded systems: non-computer devices that use computer technology, which can also become unable to update.
+- IOT devices: internet of things device that connects to network via a central controller/coordinating device (smart devices: security devices, smart thermostats, home automation)
+
+___
+
+#### Ports
+
+| Protocol | IP protocol | Port Used |
+| :--- | :---: | --- |
+| FTP  (File Transfer Protocol) | TCP | 21 |
+| SFTP  (Secure FTP) | SCTP,TCP | 22 |
+| FTPS  (FTP Secure) | FTP | 443 |
+| TFTP  (Trivial FTP)| UDP | 69 |
+| Telnet |TCP | 23 |
+| HTTP (Hyper Text Transfer Protocol) | TCP | 80 |
+| HTTPS (HTTP Secure) |TCP | 443 |
+| SCP (Secure Copy) SCTP, |TCP | 22 |
+| SSH (Secure SHell) SCTP, |TCP| 22 |
+| SMTP (Simple Mail Transfer Protocol) | TCP | 25 |
+| DNS (Domain Name Service) | UDP | 53 |
+| SNMP (Simple Network Management Protocol) | TCP, UDP | 161 |
+| SNMP Trap (Simple Network Management Protocol Trap) | TCP, UDP| 162 |
+| ISAKMP (VPN) – Internet Security Association & Key Management Protocol | UDP | 500 |
+| TACACS (Terminal Access Controller Access-Control System)| TCP,UDP | 49 |
+| POP3 ( Post Office Protocol version 3) | TCP | 110 |
+| NNTP (Network News Transfer Protocol)| TCP | 119 |
+| Kerberos | UDP | 88 |
+| Syslog | TCP, UDP | 514 |
+| L2TP (layer 2 tunneling protocol) | TCP | 1701 |
+| PPTP (Point to point tunneling protocol) | TCP | 1723 |
+| RDP (Remote Desktop Protocol) | TCP, UDP | 3389|
+
+### Ethernet, 802.11 wireless standards
 
 - T568A & T568B
 - **Plenum**: shielding used for any network cabling. Usually used where cables are around high heats due to its non-stick material
+- IEEE 802.15.1 standard:
+- Wi-Fi spec 802.11 is part of the IEEE 802 wireless networking standards, used for Wi-Fi communications. They use the ethernet protocol and carrier sense multiple access with collision avoidance (CSMA/CA) media access method. The differences in operating frequencies, theoretical maximum data speed, and throughput.
+- `NFC`: near-field communication: very short range, used for contactless comms between devices (ex. contactless pay)
+- `RFID`: radio-frequency identification - sends info from an RFID tag w/ identifying info by using radio signals. (ex. streamlines the inventory of tracking apps)
+
+| `802.11 spec` | `data speed` | `throughput` |
+| :---: | :---: | :---: |
+| a -  5 GHz  | 54 Mbps | 120 meters |
+| b -  2.4 GHz | 11 Mbps | 140 m |
+| g -  2.4 GHz | 54 Mbps  | 140 m |
+| n -  2.4/5 GHz|  600 Mbps | 250 m |
+| ac (Wi-Fi 5) -  5 GHz |  6.5 Gbps | 140 m |
+| ax (Wi-Fi 6) -  2.4/5 GHz|  9.6 Gbps | 140 m |
+
+- Long-Range fixed wireless: point to point wireless tech which uses directional antennas to send/receive network signals (10-20 km)
+  - `licensed`: use is granted by the FCC
+  - `unlicensed`: anyone can use these frequencies (ex. 2.4/5 GHz), but this causes interference and is susceptible to eavesdropping.
+  - `power`: wireless power transfer - (WPT) transmitted via long-range fixed wireless and is generated by the transmitting station, sent via microwave or laser light to a receiver, that turns it back into electricity.
+    - FCC regulates WPT tech in US.
+
+___
+
+#### Wi-Fi
+
+- frequency of protocol refers to audio range that the tech broadcasts.
+  - 2.4 GHz: relatively low, compared to 5, with greater transmission range (able to pass through objects), but has slower throughput and other devices use its open frequency range (ex. microwaves, cordless phones)
+    - FCC identified 14 unique 22 MHz channels (11 in US): different freq that're used for communications between the WAP & end-user device, which are auto selected by devices, but can be manually configured.
+  - 5 GHz: higher frequency with faster throughput, but shorter transmission range (signal is attenuated by objects)
+    - also uses channels, but don't have to set due to the increased room in RF spectrum at this range
+    - 25 defined 20 MHz channels (24 that can be used for Wi-Fi)
+- Bluetooth connects devices in a short(10 m) PAN to enable communication, usually connecting peripherals (ex. headphones => laptop | phone)
 
 ### Network Commands
 

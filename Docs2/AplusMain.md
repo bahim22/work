@@ -116,7 +116,7 @@
       12. cloud file storage servies
       13. virtual app streaming/cloud-based apps
       14. virtual desktop
-5. `Hardware` & `Network Troubleshooting`: 27%
+5. `Hardware` & `Network` `Troubleshooting`: 27%
    1. best practice methodology for resolving problems
    2. issues w/ mobos, RAM, CPU, power
    3. HDD and RAID arrays
@@ -125,7 +125,7 @@
    6. printers
    7. wired/wireless network
 
-## _CORE 2_ (220-1002)
+## **CORE 2** (220-1002)
 
 1. `Operating Systems`: 27%
    - 32-bit vs. 64-bit
@@ -184,7 +184,7 @@
 
 ___
 
-### Overall Lessons for Core 1-2
+### Overall: Core 1-2
 
 1. LESSON 1: INSTALLING `MOTHERBOARDS` AND `CONNECTORS`
    1. Topic 1A: Explain Cable Types and Connectors
@@ -311,7 +311,8 @@ _SPARE PARTS/HARDWARE_
 • CPUs
 • Assorted connectors/cables
 
-- **USB**; **HDMI**
+- **USB**
+- **HDMI**
 
 • Adapters
 • Network cables

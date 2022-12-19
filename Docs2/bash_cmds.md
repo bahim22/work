@@ -17,7 +17,7 @@ ssh-keygen -l -f /etc/ssh/ssh_host_rsa_key # determine fingerprints
 ssh-keygen -lv -f ~/.ssh/known_hosts # ls fingerpritns and random art for known hosts
 ssh-keygen -r host.example.com.
 # connect client to server; SSHFP resource records should be + to the zonefile for host 1st
-dig -t SSHFP host.example.com check that zone is answering fingerprint querires.
+dig -t SSHFP host.example.com check that zone is answering fingerprint queries.
 ssh -o "VerifyHostKeyDNS ask" host.example.com # client connects
 ```
 
@@ -229,32 +229,6 @@ gpg --armor --export aaa123aaa123
 
 ```
 
-## Apt DESCRIPTION
-
-```sh
-    apt [-h] [-o=config_string] [-c=config_file] [-t=target_release] [-a=architecture]
-        {list | search | show | update | install pkg[{=pkg_ver_number | /target_release}]... | remove pkg... | upgrade | full-upgrade | edit-sources | {-v --version} |{-h--help}}
-```
-
-> apt provides a high-level commandline interface for the package management  system.
->> can also use more advanced apt-get(8) and apt-cache(8)
-
-- `update` (apt-get(8)) update is used to download package information from all configured sources. Other commands operate on this data to e.g. perform package upgrades or search in and display details about all packages available for installation
-- `upgrade` (apt-get(8)) upgrade is used to install available upgrades of all packages   currently installed on the system from the sources configured via  sources.list(5). New packages will be installed if required to satisfy dependencies, but existing packages will never be removed. If an upgrade for a package requires the removal of an installed package the upgrade for this package isn\'t performed.
-- `full-upgrade`: performs the function of upgrade but will remove currently installed packages if this is needed to upgrade the system as a whole.
-- `install, reinstall, remove, purge`: Performs the requested action on one or more packages specified via regex(7), glob(7) or exact match. The requested action can be overridden for specific packages by appending a plus (+) to the package name to install this package or a minus (-) to remove it.
-  - A specific version of a package can be selected for installation by following the package name with an equals (=) and the version of the package to select. Alternatively the version from a specific release can be selected by following the package name with a forward slash (/) and codename (buster, bullseye, sid ...) or suite name (stable,testing, unstable). This will also select versions from this release for dependencies of this package if needed to satisfy the request.
-  - Removing a package removes all packaged data, but leaves usually small (modified) user configuration files behind, in case the remove was an accident. Just issuing an installation request for the accidentally removed package will restore its function as before in that case.
-  - On the other hand you can get rid of these leftovers by calling purge even on already removed packages. Note that this does not affect any data or configuration stored in your home directory.
-- `autoremove` is used to remove packages that were automatically installed to satisfy dependencies for other packages and are now no longer needed as dependencies changed or the package(s) needing them were removed in the meantime.
-  - You should check that the list does not include applications you have grown to like even though they were once installed just as a dependency of another package. You can mark such a package as manually installed by using apt-mark(8). Packages which you have installed explicitly via install are also never proposed for automatic removal.
-- `satisfy`: satisfies dependency strings, as used in Build-Depends. It also handles conflicts, by prefixing an argument with "Conflicts: <(value)>".
-- `search`: can be used to search for the given regex(7) term(s) in the list of available packages and display matches. This can e.g. be useful if you are looking for packages having a specific feature. If you are looking for a package including a specific file try apt-file.
-- `show`: information about the given package(s) including its dependencies, installation and download size, sources the package is available from, the description of the packages content and much more
-- `list`: is somewhat similar to dpkg-query --list in that it can display a list of packages satisfying certain criteria. It supports glob patterns for matching package names as well as options to list installed (--installed), upgradeable (--upgradeable) or all available (--all-versions) versions.
-- `edit-sources`: lets you edit your sources.list(5) files in your preferred text editor while also providing basic sanity checks.
-- Also view apt-get, apt-cache, sources.list, apt.conf, apt-config
-
 ___
 
 ## bash commands
@@ -332,6 +306,31 @@ dd # make boot images and copy/backup entire HDDs and create image
 makeswap swapon # add/manage swap space
 dpkg # install/remove deb packages
 ```
+## Apt DESCRIPTION
+
+```sh
+    apt [-h] [-o=config_string] [-c=config_file] [-t=target_release] [-a=architecture]
+        {list | search | show | update | install pkg[{=pkg_ver_number | /target_release}]... | remove pkg... | upgrade | full-upgrade | edit-sources | {-v --version} |{-h--help}}
+```
+
+> apt provides a high-level commandline interface for the package management  system.
+>> can also use more advanced apt-get(8) and apt-cache(8)
+
+- `update` (apt-get(8)) update is used to download package information from all configured sources. Other commands operate on this data to e.g. perform package upgrades or search in and display details about all packages available for installation
+- `upgrade` (apt-get(8)) upgrade is used to install available upgrades of all packages   currently installed on the system from the sources configured via  sources.list(5). New packages will be installed if required to satisfy dependencies, but existing packages will never be removed. If an upgrade for a package requires the removal of an installed package the upgrade for this package isn\'t performed.
+- `full-upgrade`: performs the function of upgrade but will remove currently installed packages if this is needed to upgrade the system as a whole.
+- `install, reinstall, remove, purge`: Performs the requested action on one or more packages specified via regex(7), glob(7) or exact match. The requested action can be overridden for specific packages by appending a plus (+) to the package name to install this package or a minus (-) to remove it.
+  - A specific version of a package can be selected for installation by following the package name with an equals (=) and the version of the package to select. Alternatively the version from a specific release can be selected by following the package name with a forward slash (/) and codename (buster, bullseye, sid ...) or suite name (stable,testing, unstable). This will also select versions from this release for dependencies of this package if needed to satisfy the request.
+  - Removing a package removes all packaged data, but leaves usually small (modified) user configuration files behind, in case the remove was an accident. Just issuing an installation request for the accidentally removed package will restore its function as before in that case.
+  - On the other hand you can get rid of these leftovers by calling purge even on already removed packages. Note that this does not affect any data or configuration stored in your home directory.
+- `autoremove` is used to remove packages that were automatically installed to satisfy dependencies for other packages and are now no longer needed as dependencies changed or the package(s) needing them were removed in the meantime.
+  - You should check that the list does not include applications you have grown to like even though they were once installed just as a dependency of another package. You can mark such a package as manually installed by using apt-mark(8). Packages which you have installed explicitly via install are also never proposed for automatic removal.
+- `satisfy`: satisfies dependency strings, as used in Build-Depends. It also handles conflicts, by prefixing an argument with "Conflicts: <(value)>".
+- `search`: can be used to search for the given regex(7) term(s) in the list of available packages and display matches. This can e.g. be useful if you are looking for packages having a specific feature. If you are looking for a package including a specific file try apt-file.
+- `show`: information about the given package(s) including its dependencies, installation and download size, sources the package is available from, the description of the packages content and much more
+- `list`: is somewhat similar to dpkg-query --list in that it can display a list of packages satisfying certain criteria. It supports glob patterns for matching package names as well as options to list installed (--installed), upgradeable (--upgradeable) or all available (--all-versions) versions.
+- `edit-sources`: lets you edit your sources.list(5) files in your preferred text editor while also providing basic sanity checks.
+- Also view apt-get, apt-cache, sources.list, apt.conf, apt-config
 
 ## Shell command info
 
@@ -342,27 +341,6 @@ dpkg # install/remove deb packages
 - escape special chars:
   - prepending with \
   - wrapping it in single quotes
-
-## git colors for terminal
-
-| foreground('') k => int = v => str | background(bg) {k:'v'}| style |
-| --- | :--- | ---  |
-| 31  = red |40  = black bg | 0   = default colour|
-| 32  = green  | 41  = red bg   | 1   = bold|
-| 33  = orange | 42  = green bg | 4   = underlined|
-| 34  = blue   | 43  = orange bg| 5   = flashing text|
-| 35  = purple | 44  = blue bg  | 7   = reverse field > (flip fore/bg color)|
-| 36  = cyan  |  45  = purple bg |8   = concealed (invisible)|
-| 37  = grey| 46  = cyan bg | 0 = default colour|
-| 90  = dark grey  | 47  = grey bg  | 1   = bold|
-| 91  = light red  | 100 = dark grey bg|
-| 92  = light green| 101 = light red bg|
-| 93  = yellow | 102 = light green bg|
-| 94  = light blue | 103 = yellow bg|
-| 95  = light purple  |104 = light blue bg|
-| 96  = turquoise |  105 = light purple bg|
-| 97  = white |  106 = turquoise bg | |
-| | 107 = white bg| |
 
 ## symbolic rep of data
 
@@ -396,3 +374,23 @@ chmode -R,a-x,u+X *
   # other solution
 for f in 'ls -R'; do [! -d"$f"] && chmod a-x "$f"; done
 ```
+
+## git colors for terminal
+
+| foreground('') k => int = v => str | background(bg) {k:'v'}| style |
+| --- | :--- | ---  |
+| 31  = red |40  = black bg | 0   = default colour |
+| 32  = green  | 41  = red bg   | 1   = bold |
+| 33  = orange | 42  = green bg | 4   = underlined |
+| 34  = blue   | 43  = orange bg| 5   = flashing text |
+| 35  = purple | 44  = blue bg  | 7   = reverse field => (flip fore/bg color) |
+| 36  = cyan  |  45  = purple bg |8   = concealed (invisible)|
+| 37  = grey| 46  = cyan bg |
+| 90  = dark grey  | 47  = grey bg  |
+| 91  = light red  | 100 = dark grey bg|
+| 92  = light green| 101 = light red bg|
+| 93  = yellow | 102 = light green bg|
+| 94  = light blue | 103 = yellow bg|
+| 95  = light purple  |104 = light blue bg|
+| 96  = turquoise |  105 = light purple bg|
+| 97  = white |  106, 107 = turquoise, white bg |
