@@ -1,6 +1,19 @@
 
 # Info for encryption, security, git, apt, and linux
 
+- [Info for encryption, security, git, apt, and linux](#info-for-encryption-security-git-apt-and-linux)
+  - [Steps for ssh into git repo](#steps-for-ssh-into-git-repo)
+    - [Steps for keygen](#steps-for-keygen)
+    - [Example ssh connect](#example-ssh-connect)
+    - [initial ssh example](#initial-ssh-example)
+  - [GPG key](#gpg-key)
+  - [bash commands](#bash-commands)
+  - [Apt DESCRIPTION](#apt-description)
+  - [Shell command info](#shell-command-info)
+  - [symbolic rep of data](#symbolic-rep-of-data)
+  - [linux permissions](#linux-permissions)
+  - [git colors for terminal](#git-colors-for-terminal)
+
 ## Steps for ssh into git repo
 
 > ssh connects and logs into the specified destination in the form: user, hostname and port:
@@ -34,8 +47,11 @@ key per line, though the lines can be very long.  After this, the user can log i
 
 ### Example ssh connect
 
-> the following example would connect client network 10.0.99.0/24 using a point-to-point connection from 10.1.1.1 to 10.1.1.2
->> provided that the SSH server running on the gateway to the remote network, at 192.168.1.15, allows it
+>
+    - The following example would connect client network
+      - 10.0.99.0/24 using a point-to-point connection
+        - from 10.1.1.1 to 10.1.1.2
+    - Provided that the SSH server running on the gateway to the remote network, at 192.168.1.15, allows it
 
 ```bash
 # On the client:
@@ -314,8 +330,9 @@ dpkg # install/remove deb packages
         {list | search | show | update | install pkg[{=pkg_ver_number | /target_release}]... | remove pkg... | upgrade | full-upgrade | edit-sources | {-v --version} |{-h--help}}
 ```
 
-> apt provides a high-level commandline interface for the package management  system.
->> can also use more advanced apt-get(8) and apt-cache(8)
+>
+interface for package management system.
+(apt-get & apt-cache can be used as well)
 
 - `update` (apt-get(8)) update is used to download package information from all configured sources. Other commands operate on this data to e.g. perform package upgrades or search in and display details about all packages available for installation
 - `upgrade` (apt-get(8)) upgrade is used to install available upgrades of all packages   currently installed on the system from the sources configured via  sources.list(5). New packages will be installed if required to satisfy dependencies, but existing packages will never be removed. If an upgrade for a package requires the removal of an installed package the upgrade for this package isn\'t performed.
