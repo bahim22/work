@@ -94,11 +94,13 @@ alias l='ls -CF'
 
 # User defined aliases
 alias update2='sudo apt update -y'
-alias upgrade2='sudo apt upgrade -y && sudo apt autoremove'
-alias startvenv='cd work && source .venv/bin/activate'
+alias upgrade2='sudo apt upgrade -y'
+alias fullupgrade='sudo apt full-upgrade && sudo apt autoremove'
 alias startflow='code ~/flow'
+alias startvenv='cd work && source .venv/bin/activate'
 alias startbashrc='code ~/.bashrc'
 alias sourcebashrc='source ~/.bashrc'
+alias gitpushssh='git push ssh://git@ssh.github.com:443/bahim22/work.git'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
