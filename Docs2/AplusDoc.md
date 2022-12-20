@@ -3,6 +3,39 @@
 | Hima Balde | PPU | 06-10 of 2022 |
 | ---------- | --- | ------------- |
 
+- [CompTIA A+ Docs](#comptia-a-docs)
+  - [Troubleshooting Steps](#troubleshooting-steps)
+  - [Seconday Skills](#seconday-skills)
+  - [Tools and Safety](#tools-and-safety)
+  - [Computer Parts](#computer-parts)
+    - [Motherboard](#motherboard)
+    - [Processor, CPU](#processor-cpu)
+    - [Power supplies](#power-supplies)
+    - [Adapter Cards](#adapter-cards)
+    - [BIOS/CMOS/UEFI](#bioscmosuefi)
+  - [OS Install, Upgrade, Boot](#os-install-upgrade-boot)
+    - [_Boot methods_: user selects how to boot pc \& w/ what media](#boot-methods-user-selects-how-to-boot-pc--w-what-media)
+    - [Misc OS info](#misc-os-info)
+  - [`Network`](#network)
+    - [Rules governing the transmission specified by the protocol](#rules-governing-the-transmission-specified-by-the-protocol)
+    - [Common Internet Protocols, Data and File Sharing](#common-internet-protocols-data-and-file-sharing)
+    - [`TCP/IP`](#tcpip)
+    - [TCP/IP Abstraction Layers](#tcpip-abstraction-layers)
+    - [**Ports** and **Protocols**](#ports-and-protocols)
+    - [`UDP`: user datagram protocol - datagram oriented protocol](#udp-user-datagram-protocol---datagram-oriented-protocol)
+    - [OSI model (Open systems interconnection)](#osi-model-open-systems-interconnection)
+  - [`Hardware`](#hardware)
+    - [Memory](#memory)
+    - [Storage and Peripherals](#storage-and-peripherals)
+      - [RAID](#raid)
+  - [`Software`](#software)
+    - [Windows Admin Tools](#windows-admin-tools)
+    - [Windows Management Framework](#windows-management-framework)
+    - [Windows naming](#windows-naming)
+    - [Displays](#displays)
+  - [Mobile Devices](#mobile-devices)
+    - [References](#references)
+
 ## Troubleshooting Steps
 
 1. Identify the problem
@@ -575,55 +608,6 @@ ___
        1. frequent in laptops
     4. _OLED_: organic light emitting diode - thinner/lighter; made of a layer of organic compound between 2 light-emitting electrods
        1. common in handheld devices
-
-## Shell(DOS)
-
-### Windows CMD
-
-| command | description |
-| :---: | :---: |
-| `BCDEDIT`| Sets properties in boot database to control boot loading.|
-| `CACLS`     |     Displays or modifies access control lists (ACLs) of files|
-| `CD`        |     Displays the name of or changes the current directory.|
-| `CHDIR`     |     Displays the name of or changes the current directory.|
-| `CHKDSK`    |     Checks a disk and displays a status report.|
-| `CLS`       |     Clears the screen.|
-| `CONVERT`   |     Converts FAT volumes to NTFS. Can't convert current drive|
-| `COPY`      |     Copies one or more files to another location.|
-| `DATE`      |     Displays or sets the date.|
-| `DEL`       |     Deletes one or more files.|
-| `DIR`       |     Displays a list of files and subdirectories in a directory.|
-| `DISKPART`  |     Displays or configures Disk Partition properties.|
-| `ECHO`      |     Displays messages, or turns command echoing on or off.|
-| `ERASE`     |     Deletes one or more files.|
-| `FIND`      |     Searches for a text string in a file or files.|
-| `FINDSTR`   |     Searches for strings in files.|
-| `FORMAT`    |     Formats a disk for use with Windows.|
-| `FSUTIL`    |     Displays or configures the file system properties.|
-| `FTYPE`     |     Displays/modifies file types used in file ext assoc.|
-| `GPRESULT`  |     Displays Group Policy information for machine or user.|
-| `HELP`      |     Provides Help information for Windows commands.|
-| `ICACLS`    |     Display, modify, backup, or restore ACLs for files and dir.|
-| `MD`        |   Creates a directory.|
-| `MKDIR`     |   Creates a directory.|
-| `MKLINK` | Creates Symbolic Links & Hard Links|
-| `MODE` |Configures a system device.|
-| `MOVE` |     Moves one or more files from one directory to another dir.|
-| `PRINT`     |     Prints a text file.|
-| `RD`        |     Removes a directory.|
-| `RECOVER`   |     Recovers readable info from a bad or defective disk.|
-| `REN`       |     Renames a file or files.|
-| `RENAME`    |     Renames a file or files.|
-| `RMDIR`     |     Removes a directory.|
-| `ROBOCOPY`  |     Advanced utility to copy files and directory trees|
-| `SCHTASKS`  |     Schedules commands & programs to run on a computer.|
-| `SHUTDOWN`  |     Allows proper local or remote shutdown of machine.|
-| `SYSTEMINFO`|     Displays machine specific properties and configuration.|
-| `TASKLIST`  |     Displays all currently running tasks including services.|
-| `TASKKILL`  |     Kill or stop a running process or application.|
-| `TREE`      |     Graphically displays the dir structure of a drive or path|
-| `VOL`       |     Displays a disk volume label and serial number.|
-| `XCOPY`     |   Copies files and directory trees.|
 
 ___
 

@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Comptia A&plus;</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+/* From extension ms-toolsai.jupyter */
+/* These classnames are inherited from bootstrap, but are present in most notebook renderers */
+
+.alert {
+    width: auto;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.alert > *:last-child {
+    margin-bottom: 0;
+}
+#preview > .alert:last-child {
+    /* Prevent this being set to zero by the default notebook stylesheet */
+    padding-bottom: 1em;
+}
+
+.alert-success {
+    /* Note there is no suitable color available, so we just copy "info" */
+    background-color: var(--theme-info-background);
+    color: var(--theme-info-foreground);
+}
+.alert-info {
+    background-color: var(--theme-info-background);
+    color: var(--theme-info-foreground);
+}
+.alert-warning {
+    background-color: var(--theme-warning-background);
+    color: var(--theme-warning-foreground);
+}
+.alert-danger {
+    background-color: var(--theme-error-background);
+    color: var(--theme-error-foreground);
+}
+
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: Fira Code Retina, Fira Code, -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="comptia-a">Comptia A+</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#network">Network</a></li>
+<li><a href="#shell">Shell</a></li>
+<li><a href="#operating-systems">Operating Systems</a></li>
+</ol>
+<ul>
+<li><a href="#comptia-a">Comptia A+</a>
+<ul>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#network">Network</a>
+<ul>
+<li><a href="#networked-host-services">Networked Host Services</a>
+<ul>
+<li><a href="#server-roles">Server Roles</a></li>
+<li><a href="#internet-appliances">Internet Appliances</a></li>
+<li><a href="#ports">Ports</a></li>
+</ul>
+</li>
+<li><a href="#ethernet-80211-wireless-standards">Ethernet, 802.11 wireless standards</a>
+<ul>
+<li><a href="#wi-fi">Wi-Fi</a></li>
+</ul>
+</li>
+<li><a href="#tools">Tools</a></li>
+<li><a href="#network-questions">Network Questions</a></li>
+<li><a href="#network-commands">Network Commands</a></li>
+</ul>
+</li>
+<li><a href="#shell">Shell</a>
+<ul>
+<li><a href="#cmdpwsh">Cmd/Pwsh</a></li>
+<li><a href="#bash-cmds">Bash cmds</a></li>
+<li><a href="#windows-cmd">Windows CMD</a></li>
+</ul>
+</li>
+<li><a href="#operating-systems">Operating Systems</a>
+<ul>
+<li><a href="#macos-x">MacOS X</a></li>
+<li><a href="#windows"><strong>Windows</strong></a></li>
+<li><a href="#users-groups-permissions"><strong>Users, Groups, Permissions</strong></a></li>
+<li><a href="#os-maintainence-optimization-general-info">OS maintainence, optimization, general info</a></li>
+<li><a href="#mobile">Mobile</a></li>
+</ul>
+</li>
+<li><a href="#virtualization">Virtualization</a></li>
+<li><a href="#hardware">Hardware</a>
+<ul>
+<li><a href="#memory">Memory</a></li>
+<li><a href="#printers-laser-thermal-ink">Printers: Laser, Thermal, Ink</a></li>
+<li><a href="#cable-types">Cable Types</a>
+<ul>
+<li><a href="#network-cables">Network Cables</a></li>
+<li><a href="#display-video-cables">Display: Video Cables</a></li>
+<li><a href="#connector-types">Connector types</a></li>
+<li><a href="#hard-drive-cables">Hard Drive Cables</a></li>
+</ul>
+</li>
+<li><a href="#troubleshoot">Troubleshoot</a></li>
+<li><a href="#disks">Disks</a></li>
+</ul>
+</li>
+<li><a href="#operational-procedures">Operational Procedures</a></li>
+<li><a href="#software-troubleshooting">Software Troubleshooting</a></li>
+<li><a href="#security">Security</a></li>
+<li><a href="#sample-ques">Sample Ques</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="network">Network</h2>
+<h3 id="networked-host-services">Networked Host Services</h3>
+<ul>
+<li>client apps request services from server apps</li>
+</ul>
+<h4 id="server-roles">Server Roles</h4>
+<ul>
+<li>Usually a process running in memory on networked system which sends out responses to requests made from a remote client system
+<ul>
+<li>can also be stand-alone hardware</li>
+</ul>
+</li>
+<li>DNS: server that resolves hostnames to IP addresses.
+<ul>
+<li>2 are needed for a company to host a website (1 for redundancy).</li>
+<li>Hostname IP address set records are saved in zone files, and if not, they are requested from the root server (higher-level DNS server)</li>
+</ul>
+</li>
+<li>DHCP: provides IP configuration information (address, subnet mast, default gateway, DNS server address) to clients, automatically. The scope determines what info is allowed to be shared with a client.</li>
+<li>Fileshare: (File Server) - central repo for storage, access and management of entwork files
+<ul>
+<li>NAS (network attached storage) can also be used for a file server</li>
+</ul>
+</li>
+<li>Print Server: manages print requests and connects to network printers</li>
+<li>Mail: responsible for sending, receiving, managing emails.
+<ul>
+<li>Must run a specialized server package (Microsoft Exchange, Sendmail, Postfix, Exim) to be an actual mail server.</li>
+</ul>
+</li>
+<li>Syslog: Collects info compiled through system monitoring when in a client-server model. (login events, errors, etc.)
+<ul>
+<li>messages include: facility code, severity level, logged event descriptions.</li>
+<li>Made up of 3 main components: listener, database, management &amp; filtering software.</li>
+</ul>
+</li>
+<li>Web Server: listens for incoming requests, which it executes by responding w/ the requested content (text, images, video, running scripts)
+<ul>
+<li>examples: Microsoft Internet Information Services (IIS), Apache</li>
+</ul>
+</li>
+<li>Authentication, Authorization &amp; Accounting (Triple A or AAA)</li>
+</ul>
+<h4 id="internet-appliances">Internet Appliances</h4>
+<ul>
+<li>
+<p>SPAM gateways</p>
+</li>
+<li>
+<p>unified threat management (UTM)</p>
+</li>
+<li>
+<p>load balancers</p>
+</li>
+<li>
+<p>proxy servers</p>
+</li>
+<li></li>
+<li>
+<p>Legacy system: systems that haven't been updated, usually due to an important app that can't run on an updated platform</p>
+</li>
+<li>
+<p>Supervisory Control and Data Acquisition (SCADA): high-level management system that controls manufacturing machines, processes, infrastructure settings, and building components.</p>
+<ul>
+<li>type of critical legacy system category</li>
+</ul>
+</li>
+<li>
+<p>Embedded systems: non-computer devices that use computer technology, which can also become unable to update.</p>
+</li>
+<li>
+<p>IOT devices: internet of things device that connects to network via a central controller/coordinating device (smart devices: security devices, smart thermostats, home automation)</p>
+</li>
+</ul>
+<hr>
+<h4 id="ports">Ports</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Protocol</th>
+<th style="text-align:center">IP protocol</th>
+<th>Port Used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">FTP  (File Transfer Protocol)</td>
+<td style="text-align:center">TCP</td>
+<td>21</td>
+</tr>
+<tr>
+<td style="text-align:left">SFTP  (Secure FTP)</td>
+<td style="text-align:center">SCTP,TCP</td>
+<td>22</td>
+</tr>
+<tr>
+<td style="text-align:left">FTPS  (FTP Secure)</td>
+<td style="text-align:center">FTP</td>
+<td>443</td>
+</tr>
+<tr>
+<td style="text-align:left">TFTP  (Trivial FTP)</td>
+<td style="text-align:center">UDP</td>
+<td>69</td>
+</tr>
+<tr>
+<td style="text-align:left">Telnet</td>
+<td style="text-align:center">TCP</td>
+<td>23</td>
+</tr>
+<tr>
+<td style="text-align:left">HTTP (Hyper Text Transfer Protocol)</td>
+<td style="text-align:center">TCP</td>
+<td>80</td>
+</tr>
+<tr>
+<td style="text-align:left">HTTPS (HTTP Secure)</td>
+<td style="text-align:center">TCP</td>
+<td>443</td>
+</tr>
+<tr>
+<td style="text-align:left">SCP (Secure Copy) SCTP,</td>
+<td style="text-align:center">TCP</td>
+<td>22</td>
+</tr>
+<tr>
+<td style="text-align:left">SSH (Secure SHell) SCTP,</td>
+<td style="text-align:center">TCP</td>
+<td>22</td>
+</tr>
+<tr>
+<td style="text-align:left">SMTP (Simple Mail Transfer Protocol)</td>
+<td style="text-align:center">TCP</td>
+<td>25</td>
+</tr>
+<tr>
+<td style="text-align:left">DNS (Domain Name Service)</td>
+<td style="text-align:center">UDP</td>
+<td>53</td>
+</tr>
+<tr>
+<td style="text-align:left">SNMP (Simple Network Management Protocol)</td>
+<td style="text-align:center">TCP, UDP</td>
+<td>161</td>
+</tr>
+<tr>
+<td style="text-align:left">SNMP Trap (Simple Network Management Protocol Trap)</td>
+<td style="text-align:center">TCP, UDP</td>
+<td>162</td>
+</tr>
+<tr>
+<td style="text-align:left">ISAKMP (VPN) – Internet Security Association &amp; Key Management Protocol</td>
+<td style="text-align:center">UDP</td>
+<td>500</td>
+</tr>
+<tr>
+<td style="text-align:left">TACACS (Terminal Access Controller Access-Control System)</td>
+<td style="text-align:center">TCP,UDP</td>
+<td>49</td>
+</tr>
+<tr>
+<td style="text-align:left">POP3 ( Post Office Protocol version 3)</td>
+<td style="text-align:center">TCP</td>
+<td>110</td>
+</tr>
+<tr>
+<td style="text-align:left">NNTP (Network News Transfer Protocol)</td>
+<td style="text-align:center">TCP</td>
+<td>119</td>
+</tr>
+<tr>
+<td style="text-align:left">Kerberos</td>
+<td style="text-align:center">UDP</td>
+<td>88</td>
+</tr>
+<tr>
+<td style="text-align:left">Syslog</td>
+<td style="text-align:center">TCP, UDP</td>
+<td>514</td>
+</tr>
+<tr>
+<td style="text-align:left">L2TP (layer 2 tunneling protocol)</td>
+<td style="text-align:center">TCP</td>
+<td>1701</td>
+</tr>
+<tr>
+<td style="text-align:left">PPTP (Point to point tunneling protocol)</td>
+<td style="text-align:center">TCP</td>
+<td>1723</td>
+</tr>
+<tr>
+<td style="text-align:left">RDP (Remote Desktop Protocol)</td>
+<td style="text-align:center">TCP, UDP</td>
+<td>3389</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ethernet-80211-wireless-standards">Ethernet, 802.11 wireless standards</h3>
+<ul>
+<li>T568A &amp; T568B</li>
+<li><strong>Plenum</strong>: shielding used for any network cabling. Usually used where cables are around high heats due to its non-stick material</li>
+<li>IEEE 802.15.1 standard:</li>
+<li>Wi-Fi spec 802.11 is part of the IEEE 802 wireless networking standards, used for Wi-Fi communications. They use the ethernet protocol and carrier sense multiple access with collision avoidance (CSMA/CA) media access method. The differences in operating frequencies, theoretical maximum data speed, and throughput.</li>
+<li><code>NFC</code>: near-field communication: very short range, used for contactless comms between devices (ex. contactless pay)</li>
+<li><code>RFID</code>: radio-frequency identification - sends info from an RFID tag w/ identifying info by using radio signals. (ex. streamlines the inventory of tracking apps)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><code>802.11 spec</code></th>
+<th style="text-align:center"><code>data speed</code></th>
+<th style="text-align:center"><code>throughput</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">a -  5 GHz</td>
+<td style="text-align:center">54 Mbps</td>
+<td style="text-align:center">120 meters</td>
+</tr>
+<tr>
+<td style="text-align:center">b -  2.4 GHz</td>
+<td style="text-align:center">11 Mbps</td>
+<td style="text-align:center">140 m</td>
+</tr>
+<tr>
+<td style="text-align:center">g -  2.4 GHz</td>
+<td style="text-align:center">54 Mbps</td>
+<td style="text-align:center">140 m</td>
+</tr>
+<tr>
+<td style="text-align:center">n -  2.4/5 GHz</td>
+<td style="text-align:center">600 Mbps</td>
+<td style="text-align:center">250 m</td>
+</tr>
+<tr>
+<td style="text-align:center">ac (Wi-Fi 5) -  5 GHz</td>
+<td style="text-align:center">6.5 Gbps</td>
+<td style="text-align:center">140 m</td>
+</tr>
+<tr>
+<td style="text-align:center">ax (Wi-Fi 6) -  2.4/5 GHz</td>
+<td style="text-align:center">9.6 Gbps</td>
+<td style="text-align:center">140 m</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Long-Range fixed wireless: point to point wireless tech which uses directional antennas to send/receive network signals (10-20 km)
+<ul>
+<li><code>licensed</code>: use is granted by the FCC</li>
+<li><code>unlicensed</code>: anyone can use these frequencies (ex. 2.4/5 GHz), but this causes interference and is susceptible to eavesdropping.</li>
+<li><code>power</code>: wireless power transfer - (WPT) transmitted via long-range fixed wireless and is generated by the transmitting station, sent via microwave or laser light to a receiver, that turns it back into electricity.
+<ul>
+<li>FCC regulates WPT tech in US.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="wi-fi">Wi-Fi</h4>
+<ul>
+<li>frequency of protocol refers to audio range that the tech broadcasts.
+<ul>
+<li>2.4 GHz: relatively low, compared to 5, with greater transmission range (able to pass through objects), but has slower throughput and other devices use its open frequency range (ex. microwaves, cordless phones)
+<ul>
+<li>FCC identified 14 unique 22 MHz channels (11 in US): different freq that're used for communications between the WAP &amp; end-user device, which are auto selected by devices, but can be manually configured.</li>
+</ul>
+</li>
+<li>5 GHz: higher frequency with faster throughput, but shorter transmission range (signal is attenuated by objects)
+<ul>
+<li>also uses channels, but don't have to set due to the increased room in RF spectrum at this range</li>
+<li>25 defined 20 MHz channels (24 that can be used for Wi-Fi)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Bluetooth connects devices in a short(10 m) PAN to enable communication, usually connecting peripherals (ex. headphones =&gt; laptop | phone)</li>
+</ul>
+<h3 id="tools">Tools</h3>
+<ol>
+<li><strong>Toner probe</strong>: 2-in-1 elec test tool that traces wires thru walls to determine which pair carried the signal induced by the tone generator
+<ol>
+<li>used when you have access to both ends of cable at same time</li>
+<li>Plug <code>tone generator</code> at jack end of cable and wave toner probe around suspected area to find other end of cable</li>
+</ol>
+</li>
+<li><strong>Cable tester</strong>: check a cable to verify intended connections exist and there's no uninteded ones
+<ol>
+<li>missing intended connection: 'open'</li>
+<li>existing unintended connection: ('short')</li>
+<li>connection goes to wrong place: ('miswired)</li>
+<li>connection has 2 faults: open to correct contact &amp; shorted to incorrect one</li>
+</ol>
+</li>
+<li><strong>repeater</strong> re-sends wireless signal to areas that the access point can't cover.</li>
+<li><strong>crimper</strong> is used to crimp a connector (usually last step in making an ethernet cable) to tighten the wiring to right spots in connector so electrical signals pass thru properly.</li>
+<li><strong>Layer 3 switch</strong> is config to participate in routing decisions
+<ol>
+<li>routing decisions work on Layer 3 of OSI model (network layer)</li>
+<li>standard switches usually refferred at as Layer 2 devices, working as PnP w/o ability to adjust settings (aka unmanaged switch)</li>
+</ol>
+</li>
+</ol>
+<blockquote></blockquote>
+<p><code>Hubs vs Swtiches</code>:</p>
+<pre><code class="language-md"><span class="hljs-code">    Hubs are outdated and connect each pc that&#x27;s plugged into the repeater, it takes the signal that pc A sends to PC B (a frame: made up of 1500 bits) and repeats it by sending it to every pc connected and then those PC&#x27;s read their MAC address and the address of the signals MAC and either reads it if it&#x27;s for them or deletes it if not. Hubs just repeat back on all the ports, whatever&#x27;s coming out.
+</span>
+<span class="hljs-code">    Switches: when the box collects the MAC of every PC connected to it and when it receives a frame  it makes a direct, physical connection between the two PC&#x27;s. A switch is still a repeater, but it&#x27;s a smart repeater and only sends the data out to the proper destination based on the MAC address
+</span></code></pre>
+<h3 id="network-questions">Network Questions</h3>
+<ol>
+<li>You need to configure port forwaring on a SOHO router to host gaming server</li>
+<li>If a computer can't connect to a wired network due to not receiving IP addresses from DHCP server the cause may be the DHCP IP pool is exhausted</li>
+<li>IP addresses beginning w/ 169 are assigned automatically if an IP address can't be received from a DHCP server
+<ol>
+<li>The DHCP client auto self-configures IP address &amp; subnet mask if DHCP server isn't available by using APIPA (automatic private IP Addressing).
+<ol>
+<li>Range from 169.254.0.1 - 169.254.255.254 &amp; default class B subnet mask of 255.255.0.0. It then sends a broadcast to ensure that other PC's aren't using the address it chose.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Avoid low RF signal issues by using non-overlapping channels (1,6,11)</li>
+<li>CAT5 trasmits data &gt;= 100 Mbps at distances of 100 meters</li>
+<li>Crossover cable can be used to make connection from 2 hubs, 2 swtiches, 2 routers, hub to switch, or computer to router</li>
+<li>Bluetooth: a discovery and authentication process that validates the communication link</li>
+<li>wake-on-LAN will allow sleeping computer to power on when job is sent</li>
+<li>DHCP (Dynamic Host Config Protocol) server can auto configure parameters needed by NIC when computer first boots &amp; enables central management of IP address allocation</li>
+<li>non-shining link integrity indicator when cable is plugged in means there's no connection to rest of the LAN</li>
+<li>link status indicator is small LED next to RJ45 connector that will shine when there's proper electrical conn</li>
+<li>Default gateway being down won't affect LAN &amp; it's devices; but user won't be able to access internet</li>
+<li>RDP uses port 3389, which has to be pre-configured on each firewall end to allow access thru that port
+<ol>
+<li>Remote that lets you use the GUI the user is using, not just CLI</li>
+</ol>
+</li>
+<li>SSH needs port 22 opened to allow access</li>
+<li>The <code>MAC</code> (Media Access Control) address: 48-bit # (written as six 2-digit hexadecimal numbers) that uniquely ID's a device on a local area network
+<ol>
+<li>IP address is used to locate the proper network (layer 3)</li>
+<li>MAC address is used to locate the device on the local area network (layer 2)</li>
+</ol>
+</li>
+<li><code>socket number</code> uniquely IDs one end of a communication session running on a network. A socket number shows the IP address &amp; port number of one end of a session.
+<ol>
+<li>ex. 66.83.10.24:443 is a socket number that shows a connection est. over HTTPS to the IP address.</li>
+</ol>
+</li>
+<li>HTTP uses port 80</li>
+<li>The subnet mask that defines a full class C network is 255.255.255.0, while a full class B subnet mask would be 255.255.0.0.</li>
+<li>enabling MAC filtering only allows devices listed in routers filtering table access</li>
+<li><code>RJ11/45</code> are common for phone lines &amp; ethernet &amp; use tristed pair cabling</li>
+<li><code>RFC1918</code> private address sets for IP addresses start with 192.168 (v4)</li>
+<li>default gateway address is address that computer would send traffic to
+<ol>
+<li>default gateway would be a router for SOHO network &amp; sends traffic out to internet</li>
+</ol>
+</li>
+<li>Static address: manually assigning/entering IP address
+<ol>
+<li>sometimes recommended in order to reserve the addresses in DHCP pool to prevent other devices from leasing the address</li>
+</ol>
+</li>
+<li><code>LDAP</code> is successor to DAP and works w/ AD for user authentication and management within a network</li>
+<li><code>NAT</code> (Network Address Translation) enables the translation of private local network IPv4 addresses into a public addresses in order for them to connect over the Internet.</li>
+<li><code>DMZ</code> (demilitarized zone) sets up separate network that can be accessed from internet, making specific services reachable by external users, but not allowing access to remainder of network (ex. email/web/FTP servers)</li>
+<li><code>DSL</code> makes use of phone lines that already exist &amp; are limited by dist. from central office</li>
+<li><code>ISDN</code>: integrated services digital network supports use of bearer (B) channels for sending data &amp; D chan. for signal/control</li>
+</ol>
+<h3 id="network-commands">Network Commands</h3>
+<ol>
+<li><code>nslookup</code> cmd is used to query the DNS server to obtain a domain name or IP address mapping</li>
+<li><code>ipconfig</code>: checks the IP address of a system</li>
+<li><code>netstat</code>: displays TCP and UDP connections
+<ol>
+<li>displays current state of network connections (IP add, port #, conn state)</li>
+</ol>
+</li>
+<li><code>traceert</code>: tracks the pathway taken by a packet</li>
+<li><code>ping</code>: tests the reachability of a host</li>
+<li><code>ipconfig</code> /all cmd can check if computers are getting a correct DNS IP</li>
+<li><code>ifconfig</code> cmd: checks a devices IP address and subnet mask on Linux OS's</li>
+<li><code>S/MIME</code> protocol can encrypt and digitally sign e-mails</li>
+</ol>
+<h2 id="shell">Shell</h2>
+<blockquote>
+<p>Some cmds are only available w/ admin priviledge enabled by elevating or running the CLI as admin</p>
+</blockquote>
+<h3 id="cmdpwsh">Cmd/Pwsh</h3>
+<pre><code class="language-ps1">nbtstat
+<span class="hljs-comment">&lt;# Displays protocol statistics and current TCP/IP connections using NBT
+(NetBIOS over TCP/IP). #&gt;</span>
+ipconfig
+<span class="hljs-comment"># displays config of net adapters</span>
+ipconfig /all /release /renew <span class="hljs-comment"># show full config, release or renew IPv4 addr for specified adapter</span>
+ipconfig /flushdns /registerdns displaydns <span class="hljs-comment"># purge DNS resolver cache, refresh DCHP leases and re-register DNS names, display DNS cache contents. add 6 at end of cmd to show IPv6 instead</span>
+ipconfig /showclassid /setclassid <span class="hljs-comment"># show/modify dhcp class IDs allowed for adapter</span>
+ping:
+<span class="hljs-comment"># tests reachability of remote computer over net</span>
+tracert
+<span class="hljs-comment"># shows what network devices packet goes thru to reach remote computer</span>
+netstat
+<span class="hljs-comment"># show network stats on data transfers, ports, apps</span>
+nslookup
+<span class="hljs-comment"># resolve name to IP address for DNS TShoot</span>
+shutdown
+<span class="hljs-comment"># shut down or restart computer, w/ options/param</span>
+command_name /?
+<span class="hljs-comment"># param brings up help w/ list of cmd options/param &amp; descriptions</span>
+dism
+<span class="hljs-comment"># Deployment image servicing &amp; mngmnt tool =&gt; mount &amp; service W image files</span>
+sfc
+<span class="hljs-comment"># System File checker tool, checks status/version of system files</span>
+chkdsk
+<span class="hljs-comment">&lt;# verifies FS of vol &amp; fix logical FS corruption
+  - system tool for verifying disk integrity; run w/ no param shows dsk status, /r locates bad sectors &amp; tries recover lost data #&gt;</span>
+dispart
+<span class="hljs-comment"># tool that manages disk, parts, vols</span>
+taskkill
+<span class="hljs-comment"># kills sys proc. given process ID # (PID)</span>
+gpupdate
+<span class="hljs-comment"># manual refresh domain grp policies applied to computer or user</span>
+gpresult
+<span class="hljs-comment"># display current group policies &amp; status</span>
+format
+<span class="hljs-comment"># create a FS on storage device</span>
+</code></pre>
+<h3 id="bash-cmds">Bash cmds</h3>
+<pre><code class="language-sh"><span class="hljs-built_in">ls</span> -l <span class="hljs-comment"># list dir w/ long list option for fi &amp; dir attributes</span>
+<span class="hljs-built_in">pwd</span> <span class="hljs-comment"># print working dir</span>
+passwd <span class="hljs-comment"># changes password if followed by username or of current user</span>
+apt-get <span class="hljs-comment"># install new software packs</span>
+tar -czvf archive.tar.gzip /dir/path_to_files
+<span class="hljs-comment"># -c creates archive, -z compress, -v display process (verbose mode), -f specify filename of archive</span>
+ifconfig <span class="hljs-comment"># interface config; displays IP info</span>
+ip addr <span class="hljs-comment"># iproute2 toolset that replaced ifconfig</span>
+<span class="hljs-built_in">kill</span> &lt;pid || name&gt; <span class="hljs-comment"># terminate process using name or PID</span>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Cmd / Linux cmd</th>
+<th style="text-align:center">desc.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">copy</td>
+<td style="text-align:center">copy &gt;= 1 fi</td>
+</tr>
+<tr>
+<td style="text-align:center">xcopy</td>
+<td style="text-align:center">adv w/ &gt; options</td>
+</tr>
+<tr>
+<td style="text-align:center">robocopy</td>
+<td style="text-align:center">replaces xcopy w/ &gt; options</td>
+</tr>
+<tr>
+<td style="text-align:center">net use</td>
+<td style="text-align:center">connect/map net share</td>
+</tr>
+<tr>
+<td style="text-align:center">net user</td>
+<td style="text-align:center">manage users</td>
+</tr>
+<tr>
+<td style="text-align:center">MD / <code>MKDIR</code></td>
+<td style="text-align:center">create new dir</td>
+</tr>
+<tr>
+<td style="text-align:center">RD / <code>RMDIR</code></td>
+<td style="text-align:center">delete dir</td>
+</tr>
+</tbody>
+</table>
+<h3 id="windows-cmd">Windows CMD</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Command</th>
+<th style="text-align:center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>BCDEDIT</code></td>
+<td style="text-align:center">Sets properties in boot database to control boot loading.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>CACLS</code></td>
+<td style="text-align:center">Displays or modifies access control lists (ACLs) of files</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>CD</code></td>
+<td style="text-align:center">Displays the name of or changes the current directory.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>CHDIR</code></td>
+<td style="text-align:center">Displays the name of or changes the current directory.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>CHKDSK</code></td>
+<td style="text-align:center">Checks a disk and displays a status report.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>CLS</code></td>
+<td style="text-align:center">Clears the screen.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>CONVERT</code></td>
+<td style="text-align:center">Converts FAT volumes to NTFS. Can't convert current drive</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>COPY</code></td>
+<td style="text-align:center">Copies one or more files to another location.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>DATE</code></td>
+<td style="text-align:center">Displays or sets the date.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>DEL</code></td>
+<td style="text-align:center">Deletes one or more files.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>DIR</code></td>
+<td style="text-align:center">Displays a list of files and subdirectories in a directory.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>DISKPART</code></td>
+<td style="text-align:center">Displays or configures Disk Partition properties.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ECHO</code></td>
+<td style="text-align:center">Displays messages, or turns command echoing on or off.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ERASE</code></td>
+<td style="text-align:center">Deletes one or more files.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>FIND</code></td>
+<td style="text-align:center">Searches for a text string in a file or files.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>FINDSTR</code></td>
+<td style="text-align:center">Searches for strings in files.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>FORMAT</code></td>
+<td style="text-align:center">Formats a disk for use with Windows.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>FSUTIL</code></td>
+<td style="text-align:center">Displays or configures the file system properties.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>FTYPE</code></td>
+<td style="text-align:center">Displays/modifies file types used in file ext assoc.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>GPRESULT</code></td>
+<td style="text-align:center">Displays Group Policy information for machine or user.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>HELP</code></td>
+<td style="text-align:center">Provides Help information for Windows commands.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ICACLS</code></td>
+<td style="text-align:center">Display, modify, backup, or restore ACLs for files and dir.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>MD</code></td>
+<td style="text-align:center">Creates a directory.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>MKDIR</code></td>
+<td style="text-align:center">Creates a directory.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>MKLINK</code></td>
+<td style="text-align:center">Creates Symbolic Links &amp; Hard Links</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>MODE</code></td>
+<td style="text-align:center">Configures a system device.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>MOVE</code></td>
+<td style="text-align:center">Moves one or more files from one directory to another dir.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>PRINT</code></td>
+<td style="text-align:center">Prints a text file.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>RD</code></td>
+<td style="text-align:center">Removes a directory.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>RECOVER</code></td>
+<td style="text-align:center">Recovers readable info from a bad or defective disk.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>REN</code></td>
+<td style="text-align:center">Renames a file or files.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>RENAME</code></td>
+<td style="text-align:center">Renames a file or files.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>RMDIR</code></td>
+<td style="text-align:center">Removes a directory.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ROBOCOPY</code></td>
+<td style="text-align:center">Advanced utility to copy files and directory trees</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>SCHTASKS</code></td>
+<td style="text-align:center">Schedules commands &amp; programs to run on a computer.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>SHUTDOWN</code></td>
+<td style="text-align:center">Allows proper local or remote shutdown of machine.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>SYSTEMINFO</code></td>
+<td style="text-align:center">Displays machine specific properties and configuration.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>TASKLIST</code></td>
+<td style="text-align:center">Displays all currently running tasks including services.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>TASKKILL</code></td>
+<td style="text-align:center">Kill or stop a running process or application.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>TREE</code></td>
+<td style="text-align:center">Graphically displays the dir structure of a drive or path</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>VOL</code></td>
+<td style="text-align:center">Displays a disk volume label and serial number.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>XCOPY</code></td>
+<td style="text-align:center">Copies files and directory trees.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="operating-systems">Operating Systems</h2>
+<h3 id="macos-x">MacOS X</h3>
+<ol>
+<li><strong>MacOS</strong> X Time Machine requires external storage media (ext HDD or Time Capsule) &amp; does incremental/historical backups &amp; del oldest backups when storage fills</li>
+<li>Time Machine runs: hourly for 24 hrs; daily for past month, weekly for all prev mo.</li>
+<li>Disk Utility lets you run first aid, partition, erase, unmount dsk, get dsk info</li>
+<li>manage updates in App Store &amp; go to Sys Pref =&gt; Software Updates for OS Updates</li>
+<li>Force Quit (Cmd+Option+Ext) to individually halt running or hung apps</li>
+<li>Run terminal session by opening <code>Finder</code> then <code>/Apps/Utilities</code> dir.</li>
+<li>Keychain feature in MacOS stores passwords, private keys, certs, secure notes</li>
+</ol>
+<ul>
+<li><strong>Thunderbolt cables</strong>: 4 standards
+<ul>
+<li>1 &amp; 2 terminate in Mini DisplayPort connector</li>
+<li>3 &amp; 4 termiante in USB-C connector</li>
+</ul>
+</li>
+</ul>
+<h3 id="windows"><strong>Windows</strong></h3>
+<ol>
+<li>bootmgr prog is used to boot the OS in Windows</li>
+<li>Tasklist cmd opens CLI v of task mngr</li>
+<li>regsvr32 cmd used to register dynamic link library (DLL) files as cmd compos in Registry</li>
+<li>Need to config objects and counters to track resource usage in Perf Monitor</li>
+<li>Registry root keys are org. into subkeys &amp; values</li>
+<li>system's non-user-specific configs stored in HKEY_LOCAL_MACHINE root key of Registry</li>
+<li>Component Services enables programmers to share objects between apps and computers</li>
+<li>BIOS looks for the MBR, which finds the boot code to launch the OS, when booting Windows</li>
+<li>open Registry Editor from cmd prompt w/ either regedit or regedt32</li>
+<li>Task Manager tool used to force program closed in W10. Access via CTRL-SHIFT-ESC.</li>
+<li>Task Scheduler (W mngmnt utility) allows config an app to run auto or at regular intervals</li>
+<li>NTFS_FILE_SYSTEM error means that the HDD is corrupt. (may cause BSOD)</li>
+<li>Win uses SMB to transfer files from one system to another</li>
+</ol>
+<h3 id="users-groups-permissions"><strong>Users, Groups, Permissions</strong></h3>
+<ol>
+<li>auth thru NTFS defines res a user can access and what they're able to do</li>
+<li>BitLocker Drive Encryption allows you to encrypt entire drive (files, other users dir's)</li>
+<li>User Account Control (UAC) uses a consent prompt so standard users can input admin creds to complete various tasks</li>
+<li>Take Ownership permission lets an admin change ownership of a file w/o knowing the user's creds</li>
+<li>Copying files from an NTFS HDD to a FAT or FAT32 based partition on a USB drive creates 2 copies of the object, and the copy has no effective permissions at all</li>
+<li>chmod cmd lets you change file permissions in Linux</li>
+<li>In W8.1 the Settings charm lets you create a new user account based on a global MS account</li>
+<li>Use Public Library to share files amongst multiple users of a single system</li>
+<li>Encrypting File System (EFS) enables you to encrypt files, rendering them unviewable by other accts.</li>
+</ol>
+<h3 id="os-maintainence-optimization-general-info">OS maintainence, optimization, general info</h3>
+<ul>
+<li>
+<p>CPU architecture were historically 8/16-bit &amp; current 32/64-bit computers.</p>
+<ul>
+<li>bit length refers to # of bits used for memory addresses.</li>
+<li>32 bit computer can use max memory size of 4 GB
+<ul>
+<li>1111 1111 1111 1111 1111 1111 1111 1111 = 4,294,967,295</li>
+</ul>
+</li>
+<li>64 bit can use 16 exabytes (18,446,744,073,709,551,616)</li>
+<li>max memory supported by W10 workstation OS is 2 TB</li>
+</ul>
+</li>
+<li>
+<p><strong>Windows</strong> is most used workstation OS for personal &amp; corp.</p>
+<ul>
+<li><em>W7</em>: file mngmt via Windows Explorer, libraries showed files of specific type, even if stored in diff locations, default libs(docs, pictures, videos, music) =&gt; default location for Windows Explorer on Windows 7, Aero provided visual enhancements to desktop/GUI exp &amp; required video card</li>
+<li><em>W8</em>: start screen (tiles for apps &amp; sys menus) replaced start menu, Windows Store for download &amp; purchasing software, sign-in w/ local &amp; MS online accounts (enabled transfer appearance, sys settings btw computer's), Settings menu contained most-used user settings, Control Panel allowed more sys config, MS recommend. multi-touch display for advanced GUI interaction on tablets, (Docs, Pics, Vids, Music) become normal folders and libraries aren't enabled by default</li>
+<li><em>W8.1</em>: more refined &amp; enhanced user interface, esp. on non-touch display computer's</li>
+<li><em>W10</em>: intro Cortana, Start menu is combo of W7 and panel similar to W8 start screen &amp; doesn't obstruct entire screen &amp; desktop.</li>
+</ul>
+</li>
+<li>
+<p><strong>Corp vs Personal needs</strong></p>
+<ul>
+<li>Pro Editions: more efficient &amp; secure use in corp. env. w/ add'l features.</li>
+<li>domain access: registers computer on the domain &amp; allows users to login; for conn to network domain</li>
+<li>BitLocker: drive encryption utility. data on disk is encryptedd to prevent unauth access (useful for laptops that leave office env &amp; can be lost/stolen)</li>
+<li>Media Ctr: (on W7 Home Premium) player for slideshows, videos, optical drives, local net, streaming, music from files</li>
+<li>BranchCache: useful in corp. env. w/ diff branch offices; creates local cache of files from file/web servers for quicker access</li>
+<li>EFS: Encrypting File System; fs feat. that's config. to encrypt vol, dir, fi
+<ul>
+<li>protects data from phyiscal attacker</li>
+</ul>
+</li>
+<li>all -v provide similar UX, w/ diff being Aero, Start menu vs. screen, Settings menu</li>
+<li>diff interfaces: keyboard/mouse entry, touch screen, Cortana voice recognition</li>
+</ul>
+</li>
+<li>
+<p><strong>Mac</strong> 2nd most used workstation OS</p>
+</li>
+<li>
+<p><strong>Linux</strong> is a kernel (core of OS) that interfaces/apps can be added to (pre-config as distributions) in order to create various flavors of sys. Dist differ depending on req tasks</p>
+</li>
+<li>
+<p>Windows phones are discontinued, but some tablets run full W10</p>
+</li>
+<li>
+<p>Android OS for phones/tablets, by Google, open source; most used mobile OS</p>
+</li>
+<li>
+<p>iOS only for iPhones/Pads</p>
+</li>
+<li>
+<p>Chrome OS usually on netbooks (lightweight/thin laptop for using services over internet &amp; web browsing)</p>
+<ul>
+<li>EOL don't get any updates, patches, tech support, app dev</li>
+<li>limits on updates once unsupported can increase vulnerabilities and security risks</li>
+<li>Compatibility across OS's and versions
+<ul>
+<li>apps use diff install files for similar software</li>
+<li>new -v can cause issues w/ prev installed hardware &amp; apps</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>GPS nav system that uses satellites to get pinpoint position has 3 primary compoonents</p>
+<ul>
+<li>satellite constellation, ground control network, and receiver</li>
+</ul>
+</li>
+<li>
+<p>The reference guide is updated by the preferred roaming list (PRL) updates. These updates ensure mobile devices connect to the correct cell phone tower when roaming</p>
+</li>
+</ul>
+<h3 id="mobile">Mobile</h3>
+<ul>
+<li><strong>OLED</strong>: structure provides flexibility for curved displays
+<ul>
+<li>contain the image producing components and light source in one panel. organic light emitting compound is set between an anode and cathode producing a current. the current runs thru the electroluminescent compund producing light consumes less power than LCD, with higher contrast ratio resulting in sharper images. common in high end monitors and phones.</li>
+</ul>
+</li>
+<li><strong>LCD</strong>: liquid crystal displays: shines a backlight through liquid crystals, creating the image on the screen</li>
+<li><strong>IPS</strong> In plan switching, offers the widest viewing angle and the best color reproduction. ideal for vertical mounting and those needing high quality color (graphic/video artists)</li>
+<li><strong>twisted nematic</strong>: TN, oldest LCD tech, limited viewing angles and washed out/blended color reproduction. minimal lag time makes them ideal for gamers and are inexpensive options for office use</li>
+<li>vertical alighnment (VA), offers best contrast ratio of the three technologies and is solid middle ground choice with decent color reproduction w/ slight lag</li>
+<li>The inverter is located behind the LCD panel and converts DC current into AC current
+<ul>
+<li>flickering/dim screen may be due to faulty inverter</li>
+</ul>
+</li>
+<li>NFC: Near field Comms: tech used in mobile pay (Apple/Android Pay); short-range (2 in) tech wirelessly comm, allowing two portable deives to comm.</li>
+<li>port replicator adds ports for connections to peripheral devices on laptops</li>
+<li>3G cellular standards: Global System for Mobile Communication (GSM) (AT&amp;T &amp; T-mobile) and Code-Division Multiple Access (CDMA) (Sprint &amp; Verizon)</li>
+<li>4G</li>
+<li>5G cellular connections and it's classifications
+<ul>
+<li>eMBB: Enhanced mobile broadband  for cell phone and mobile communication</li>
+<li>mMTC: massive machine-type communications for sensors supporting IoT devices</li>
+<li>URLLC: ultra-reliable low-latency communications for autonomous vehicles and industrial apps</li>
+</ul>
+</li>
+<li>Nickel-cadmium (NiCd), lithium-ion (Li-ion), nickel-metal hydride (NiMH), and lithium-polymer (Li-poly) are all chemistry types used in batteries for laptop</li>
+<li>Bluetooth connection 5 steps
+<ul>
+<li>1 enable Bluetooth, 2 enable pairing, 3 locate the pairing device, 4 enter  PIN, 5 check connection</li>
+</ul>
+</li>
+<li>Commonly synchronized data: bookmarks, contacts, documents, applications, location data, email, social media data, pictures, e-books, music, videos, and passwords.</li>
+<li>mobile application management (MAM) and mobile device management (MDM) to ensure mobile device security.</li>
+<li>Google Workspace (formerly G Suite) collection of applications, including Gmail, Hangouts, Docs, Sheet, etc.</li>
+</ul>
+<h2 id="virtualization">Virtualization</h2>
+<ol>
+<li><strong>PaaS</strong> is a complete cloud-based software dev. env.</li>
+<li><strong>SaaS</strong> is a cloud service that handles manage software, deployment and includes the platform and infrastructure</li>
+<li>Measured service based on monitored use of resources like storage, netowrk bandwidth, CPU utilization.</li>
+<li>Rapid elasticity allows computing resources to be auto allocated in response to demand</li>
+<li>Resource pooling: cloud service provider provides all resources in a resource pool and gives you the option to select speciic resources</li>
+<li>Hybrid cloud model: has benefits of both public and private clouds</li>
+</ol>
+<h2 id="hardware">Hardware</h2>
+<ol>
+<li>onboard GPU uses RAM as storage medium</li>
+<li>USB hub allows multiple USB devices to be connected to a computer</li>
+<li>Remove USB drive correctly by clicking 'Safely Remove Hardware' icon in system tray, stopping the drive and then unplugging it.</li>
+<li>AT style systems use 2 power connectors (P8 &amp; P9) to connect to mobo. ATX uses one P1 connector.</li>
+<li>inverter board: converts low volt DC power to high volt AC; lights up back-light bulb. If it's broken, LCD screen won't light up when laptop is powered, but you'll see a very dim image</li>
+</ol>
+<h3 id="memory">Memory</h3>
+<ul>
+<li>ECC: can continue to work even if it has corrupt data</li>
+<li>Paging: a file that's used as virtual mmemory on the system</li>
+<li>RAM: short-term memory used to store working data</li>
+<li>Non-parity: doesn't maintain parity info and can't perform error checking.</li>
+</ul>
+<h3 id="printers-laser-thermal-ink">Printers: Laser, Thermal, Ink</h3>
+<ul>
+<li>Steps for laser printing:
+<ul>
+<li>process, clean, charge, expose, dev, tran, fuse</li>
+</ul>
+</li>
+</ul>
+<h3 id="cable-types">Cable Types</h3>
+<h4 id="network-cables">Network Cables</h4>
+<ul>
+<li>3 primary types: <strong>coaxial</strong>, <strong>twisted pair</strong>, <strong>fiber</strong></li>
+<li>used for connecting devices to networking equipment</li>
+<li>cable: medium (usually copper) where the data is transferred from devices
+<ul>
+<li>composed of four pairs of twisted-pairs (8 total) individual cables in one sheath</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Cat Cables</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Name</td>
+<td>Speed</td>
+<td>Distance</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td>100 Mbps</td>
+<td>100 m</td>
+</tr>
+<tr>
+<td style="text-align:center">5e</td>
+<td>1000 Mbps (1Gbps)</td>
+<td>100 m</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td>10 Gbps</td>
+<td>55 m</td>
+</tr>
+<tr>
+<td style="text-align:center">6a</td>
+<td>10 Gbps</td>
+<td>100 m</td>
+</tr>
+<tr>
+<td style="text-align:center">---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>5e has less interference due to separation of the four twisted pairs sets &amp; increase in number of twists in each cable pairs</li>
+<li><strong>Coaxial cable</strong>: single copper-cored cable contained in an inner insulation layer, which is contained in a wire mesh conductor, then placed w/in an outer insulation layer. Specification by the RG system (Radio Guide)
+<ol>
+<li>RG-6: solid copper core used for satellite/cable modems</li>
+<li>RG-59: solid copper core used for cable TV</li>
+</ol>
+</li>
+<li><strong>Twisted copper pair</strong>: pairs of individual wires twisted into pairs and then twisted together, contained w/in an insulated jacket
+<ol>
+<li>unshielded twisted pair (UTP): 2-4 pairs of twisted wires, where the pairs are twisted in direct contact w/ each other and contained w/in an insulating layer so the copper doesn't directly touch the other copper wire</li>
+<li>shielded twisted pair (STP): 2-4 twisted wires, and each pair is contained in a braided foil sheathing layer, prior to being twisted w/ the other cable pairs, which reduces electrical interference. (used in Cat 7-8 cables)</li>
+<li>Color coded for reference:
+<ol>
+<li>T568A (green/white, green, orange/white, blue, blue/white, orange, brown/white, brown) &amp; T568B (orange/white, orange, green/white, blue, blue/white, brown)
+<ol>
+<li>standards for RJ-45 wiring connectors</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Direct burial is where the cables are buried underground and should contain STP cables w/ add'l waterproof sheathing. Should be 6-8 inch underground in protective PVC piping and away from other lines that have electrical currents</li>
+<li>Plenum: teflon type covering used in cables exposed to heat or that may release gasses into vent system.</li>
+<li>Optical is a transmission method that uses light pulses to transfer data</li>
+<li><strong>Fiber optic cables</strong>: fiber (small strings of flexible glass) is surrounded by rubberized coating w/ transmission speeds of 100 Mbps - 10 Gbps over several miles. (optical data transmission)
+<ol>
+<li>immune to electrical interference &amp; wiretapping</li>
+<li>Two types: <em>single-mode</em>: carries one light path, sourced from a laser (much longer distance than multi) and <em>multimode</em>: carries multiple light paths sourced by an LED.</li>
+</ol>
+</li>
+</ol>
+<h4 id="display-video-cables">Display: Video Cables</h4>
+<ol>
+<li><strong>VGA</strong>: video graphics array: legacy cable; only transmits analog signal; blue</li>
+<li><strong>DVI</strong> digital visual interface: addressed analog video transmission issues. Able to transmit digital video signals to display units
+<ol>
+<li>3 standards: DVI-A analog only, D digital only, I: analog &amp; digital; white</li>
+</ol>
+</li>
+<li><strong>HDMI</strong>: high-def multimedia interface: higher motion-picture fram rates and digital audio w/ single cable.
+<ol>
+<li>Common connector type: Standard A HDMI (19 pins)</li>
+</ol>
+</li>
+<li><strong>DisplayPort</strong>: DP: uses less power and is backward compatible w/ VGA &amp; DVI. transmits video &amp; audio signals.
+<ol>
+<li>DP standard features 2 hooks to lock the cable in place</li>
+<li>Can use adaptors to convert one type of connection/cable tech to a different one</li>
+</ol>
+</li>
+</ol>
+<h4 id="connector-types">Connector types</h4>
+<ul>
+<li>installed at terminating pt. of cable; allows components &amp; peripherals to connect; type used depends on the cable and what receptable it needs connected to.</li>
+</ul>
+<ol>
+<li>RJ11: registered jack; telecomm net interface standard for voice/data equipment connection to service providers/carriers.
+<ol>
+<li>used w/ twisted pair cables &amp; connects 4-6 wires to phone lines or modems</li>
+</ol>
+</li>
+<li>RJ45: ethernet cable</li>
+<li>F-type: F connector; used w/ coaxial cables for cable/satellite data connections</li>
+<li>Fiber optic cable connectors
+<ol>
+<li>ST: straight tip; bayonet style</li>
+<li>SC:subscriber connector; push/pull style</li>
+<li>LC: lucent connector; push/pull; half the size of the SC; good fit for office/data center usage</li>
+</ol>
+</li>
+<li>Punchdown block: elec connection device that inserts multiple copper wires into a slot for added insulation and electrical connection to attached wires.</li>
+<li>USB: universal serial bus (attach peripheral devices to computing devices) (Peripheral cable)
+<ol>
+<li>2.0 standard has max speed of 480 Mbps (hi-speed) &amp; 3.0 has max speed of 5 Gbps (Supper Speed)</li>
+<li><code>Micro</code> (smallest) &amp; <code>Mini</code> (2nd smallest) direction dependent connectors containing 5 pins</li>
+<li><code>USB-C</code>: most recent connector type w/ 24 pins, an oval shape, and capable of reversible connection</li>
+</ol>
+</li>
+<li>Molex: older interconnection type for drive connections that used a two-piece pin &amp; socket</li>
+<li>Lightning Port: Apple proprietary connector featuring 8 pins and reversible orientation</li>
+<li>DB9: Used for serial connections to network device consoles &amp; management ports. 9 pins (2 rows of 4 &amp; 5 pins),trapezoid shaped connector
+<ol>
+<li>serial cable used for serial comms w/ a matching serial connector at the end</li>
+</ol>
+</li>
+</ol>
+<h4 id="hard-drive-cables">Hard Drive Cables</h4>
+<ul>
+<li>Connections (drive interfaces), can be on or off-board and are used to connect internal components to mobo</li>
+<li>attachment standard depends on HDD requirements and features circuitry and a header (port)</li>
+</ul>
+<ol>
+<li>SATA: serial advanced tech attachment
+<ol>
+<li>most common and features a flat, internal cable that has a terminating connector that only fits the mobo connection port in one way.</li>
+<li>data cable: 7 pins, power cable: 15 pins</li>
+<li>revisions = {'1.0': '1.5Gbps', '2.0': '3Gbps','3.0': '6Gbps', '3.2': '16Gbps'}</li>
+</ol>
+</li>
+<li>SCSI: small computer system interface: hard drive connector (usually for storage device connection)
+<ol>
+<li>ribbon cables or round cables w/ 50, 68, or 80 wires</li>
+<li>One SCSI cable is able to connect up to 16 devices (including MoBo &amp; SCSI controller card)</li>
+</ol>
+</li>
+<li>eSATA: external SATA cable, used for data transmission (doesn't provide power)
+<ol>
+<li>Power over eSATA, eSATA+, eSATAp, eSATA/USB versions provide power</li>
+</ol>
+</li>
+<li>IDE: Integrated drive electronics cables (PATA, parallel advanced tech attachment)
+<ol>
+<li>40-pin flat data cables w/ colored strip on one edge to show the location of pin 1</li>
+<li>composed of 3 separate connectors, 2 for drives and 1 for power</li>
+</ol>
+</li>
+</ol>
+<h3 id="troubleshoot">Troubleshoot</h3>
+<ol>
+<li>If pagination error is occuring and causing random <strong>BSOD</strong> crashes, but otherwise computer works then
+<ol>
+<li>check for OS and hardware drivers; run CMDs to check HDD for errors and check system files; in advanced sys settings, disable auto manage paging files for all drives and set custom. Check RAM sticks and possible W10 reinstall.</li>
+</ol>
+</li>
+<li>An unset date/time may be due to drained BIOS battery; resolved by CMOS batter replacement</li>
+<li>Startup repair can be used to prevent reinstalls and is designed to auto start if W10 detects issues.</li>
+</ol>
+<h3 id="disks">Disks</h3>
+<ol>
+<li>RAID 0 striped across drives to improve performance but w/ no redundancy</li>
+<li>RAID 10 combines mirroring for data protection and striping for speed
+<ol>
+<li>provides full redundancy via mirroring and stripping all info stored w/in the drives</li>
+<li>requires atleast 4 drives</li>
+</ol>
+</li>
+<li>SATA drive uses 15-pin connector</li>
+<li>SSDs are non-volatile memory with fast performance and lower power consumption than HDD</li>
+<li><code>Backup Types</code>
+<ol>
+<li>Full backup: all chosen files are backed up and Archive bit is set to ON afterwards</li>
+<li>Incremental backup: only edited/new files since last bakup are backed up</li>
+<li>Differential backup: similar to incremental, except archive bit isn't set, which will cause the next diff backup to include files that were backed up during previous backups</li>
+</ol>
+</li>
+<li><code>Blu-ray discs</code> can be single or multiple-use and split into categories based on 3 factors
+<ol>
+<li>Functionality: BD-R single use, BD-RE/RW multi-use (RE-recordable erasable is newer)</li>
+<li>Capacity: BD-SL(25gb), DL(50gb), BD-XL = TL(100gb) &amp; QL(128gb)</li>
+<li>Content quality: regular(1080p high def vid) and ultra HD(4k ultra HD, better colour depth; region-free, but need 4k Blu-R player)</li>
+</ol>
+</li>
+</ol>
+<h2 id="operational-procedures">Operational Procedures</h2>
+<ul>
+<li>grounding diverts excess electrical charges from the device and can decrease chance of damage from electrical spike</li>
+<li>ESD mats/straps lower risk of ESD by balancing the static electricity between the tech and device/component</li>
+</ul>
+<h2 id="software-troubleshooting">Software Troubleshooting</h2>
+<ol>
+<li>NIC allows for wireless comms between laptop and wireless access points.</li>
+<li>physical privacy and sec comp are designed to prevent the loss of info thru physical means such as shoulder sufting/theft</li>
+</ol>
+<h2 id="security">Security</h2>
+<ol>
+<li>Adware: malicious software that displays advertising banners when run</li>
+<li>Malware removal
+<ol>
+<li>identify and research malware symptoms</li>
+<li>quarantine infected system</li>
+<li>disable system restore</li>
+<li>remediate infected ssytems</li>
+<li>schedule scans and run updates</li>
+<li>enable system restore</li>
+<li>educate end-user</li>
+</ol>
+</li>
+</ol>
+<h2 id="sample-ques">Sample Ques</h2>
+<ol>
+<li>QoS = quality of service. In a SOHO env, QoS set at router level. If you want to enforce it's policies on your network, you need to use a router equipped w/ QoS software</li>
+<li>Consult manual docs before doing preventive maintenance, or cleaning operations to get proper methods and solvents</li>
+<li>SMTP protocol can send emails from a client device (only for outgoing messages)</li>
+<li>A multi-layer switch enables having both switching and routing functionality on the same device</li>
+<li>ST is a type of fiber connector</li>
+<li>Port 443 (HTTPS) used when using SSL encryption to access a website</li>
+<li>Light emitting diode and in-plane switching monitor technology have widest viewing angle w/ rich color &amp; consistent backlighting</li>
+<li>Enable device pairing to use hands-free for a smartphone to car</li>
+<li>Can connect a tone generator to an RJ-45 drop to locate the position of the cable on a patch panel</li>
+<li>Check case for overheating and mobo for swollen capacitors if computer reboots at random intervals multiple times/day</li>
+<li>check fuser if printer is smudging toner on the paper after printing</li>
+<li>computer may have incorrect drivers installed if print jobs are printed as garbled text</li>
+<li>Startup tab in Task Manager utility shows proccesses. initialized at startup
+<ol>
+<li>earlier Windows versions used MSConfig</li>
+</ol>
+</li>
+<li>Disk cleanup utility deletes temp fi from HDD</li>
+<li><code>WinRE</code> helps recover a sys that won't boot. It auto starts and can be manually started via Windows Recovery settings in Advanced startup menu</li>
+</ol>
+
+        
+        
+    </body>
+    </html>

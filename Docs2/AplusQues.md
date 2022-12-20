@@ -1,71 +1,52 @@
 # Comptia A+
 
-## Sample Ques
+## Table of Contents
 
-1. QoS = quality of service. In a SOHO env, QoS set at router level. If you want to enforce it's policies on your network, you need to use a router equipped w/ QoS software
-2. Consult manual docs before doing preventive maintenance, or cleaning operations to get proper methods and solvents
-3. SMTP protocol can send emails from a client device (only for outgoing messages)
-4. A multi-layer switch enables having both switching and routing functionality on the same device
-5. ST is a type of fiber connector
-6. Port 443 (HTTPS) used when using SSL encryption to access a website
-7. Light emitting diode and in-plane switching monitor technology have widest viewing angle w/ rich color & consistent backlighting
-8. Enable device pairing to use hands-free for a smartphone to car
-9. Can connect a tone generator to an RJ-45 drop to locate the position of the cable on a patch panel
-10. Check case for overheating and mobo for swollen capacitors if computer reboots at random intervals multiple times/day
-11. check fuser if printer is smudging toner on the paper after printing
-12. computer may have incorrect drivers installed if print jobs are printed as garbled text
-13. Startup tab in Task Manager utility shows proccesses. initialized at startup
-    1. earlier Windows versions used MSConfig
-14. Disk cleanup utility deletes temp fi from HDD
-15. `WinRE` helps recover a sys that won't boot. It auto starts and can be manually started via Windows Recovery settings in Advanced startup menu
+1. [Network](#network)
+2. [Shell](#shell)
+3. [Operating Systems](#operating-systems)
+
+- [Comptia A+](#comptia-a)
+  - [Table of Contents](#table-of-contents)
+  - [Network](#network)
+    - [Networked Host Services](#networked-host-services)
+      - [Server Roles](#server-roles)
+      - [Internet Appliances](#internet-appliances)
+      - [Ports](#ports)
+    - [Ethernet, 802.11 wireless standards](#ethernet-80211-wireless-standards)
+      - [Wi-Fi](#wi-fi)
+    - [Tools](#tools)
+    - [Network Questions](#network-questions)
+    - [Network Commands](#network-commands)
+  - [Shell](#shell)
+    - [Cmd/Pwsh](#cmdpwsh)
+    - [Bash cmds](#bash-cmds)
+    - [Windows CMD](#windows-cmd)
+  - [Operating Systems](#operating-systems)
+    - [MacOS X](#macos-x)
+    - [**Windows**](#windows)
+    - [**Users, Groups, Permissions**](#users-groups-permissions)
+    - [OS maintainence, optimization, general info](#os-maintainence-optimization-general-info)
+    - [Mobile](#mobile)
+  - [Virtualization](#virtualization)
+  - [Hardware](#hardware)
+    - [Memory](#memory)
+    - [Printers: Laser, Thermal, Ink](#printers-laser-thermal-ink)
+    - [Cable Types](#cable-types)
+      - [Network Cables](#network-cables)
+      - [Display: Video Cables](#display-video-cables)
+      - [Connector types](#connector-types)
+      - [Hard Drive Cables](#hard-drive-cables)
+    - [Troubleshoot](#troubleshoot)
+    - [Disks](#disks)
+  - [Operational Procedures](#operational-procedures)
+  - [Software Troubleshooting](#software-troubleshooting)
+  - [Security](#security)
+  - [Sample Ques](#sample-ques)
+
+___
 
 ## Network
-
-### Sample Questions
-
-1. You need to configure port forwaring on a SOHO router to host gaming server
-2. If a computer can't connect to a wired network due to not receiving IP addresses from DHCP server the cause may be the DHCP IP pool is exhausted
-3. IP addresses beginning w/ 169 are assigned automatically if an IP address can't be received from a DHCP server
-   1. The DHCP client auto self-configures IP address & subnet mask if DHCP server isn't available by using APIPA (automatic private IP Addressing).
-      1. Range from 169.254.0.1 - 169.254.255.254 & default class B subnet mask of 255.255.0.0. It then sends a broadcast to ensure that other PC's aren't using the address it chose.
-4. Avoid low RF signal issues by using non-overlapping channels (1,6,11)
-5. CAT5 trasmits data >= 100 Mbps at distances of 100 meters
-6. Crossover cable can be used to make connection from 2 hubs, 2 swtiches, 2 routers, hub to switch, or computer to router
-7. Bluetooth: a discovery and authentication process that validates the communication link
-8. wake-on-LAN will allow sleeping computer to power on when job is sent
-9. DHCP (Dynamic Host Config Protocol) server can auto configure parameters needed by NIC when computer first boots & enables central management of IP address allocation
-10. non-shining link integrity indicator when cable is plugged in means there's no connection to rest of the LAN
-11. link status indicator is small LED next to RJ45 connector that will shine when there's proper electrical conn
-12. Default gateway being down won't affect LAN & it's devices; but user won't be able to access internet
-13. RDP uses port 3389, which has to be pre-configured on each firewall end to allow access thru that port
-    1. Remote that lets you use the GUI the user is using, not just CLI
-14. SSH needs port 22 opened to allow access
-15. The `MAC` (Media Access Control) address: 48-bit # (written as six 2-digit hexadecimal numbers) that uniquely ID's a device on a local area network
-    1. IP address is used to locate the proper network (layer 3)
-    2. MAC address is used to locate the device on the local area network (layer 2)
-16. `socket number` uniquely IDs one end of a communication session running on a network. A socket number shows the IP address & port number of one end of a session.
-    1. ex. 66.83.10.24:443 is a socket number that shows a connection est. over HTTPS to the IP address.
-17. HTTP uses port 80
-18. The subnet mask that defines a full class C network is 255.255.255.0, while a full class B subnet mask would be 255.255.0.0.
-19. enabling MAC filtering only allows devices listed in routers filtering table access
-20. `RJ11/45` are common for phone lines & ethernet & use tristed pair cabling
-21. `RFC1918` private address sets for IP addresses start with 192.168 (v4)
-22. default gateway address is address that computer would send traffic to
-    1. default gateway would be a router for SOHO network & sends traffic out to internet
-23. Static address: manually assigning/entering IP address
-    1. sometimes recommended in order to reserve the addresses in DHCP pool to prevent other devices from leasing the address
-24. `LDAP` is successor to DAP and works w/ AD for user authentication and management within a network
-25. `NAT` (Network Address Translation) enables the translation of private local network IPv4 addresses into a public addresses in order for them to connect over the Internet.
-26. `DMZ` (demilitarized zone) sets up separate network that can be accessed from internet, making specific services reachable by external users, but not allowing access to remainder of network (ex. email/web/FTP servers)
-27. `DSL` makes use of phone lines that already exist & are limited by dist. from central office
-28. `ISDN`: integrated services digital network supports use of bearer (B) channels for sending data & D chan. for signal/control
-
-- `repeater` re-sends wireless signal to areas that the access point can't cover.
-- `Layer 3 switch` is config to participate in routing decisions
-  - routing decisions work on Layer 3 of OSI model (network layer)
-  - standard switches usually refferred at as Layer 2 devices, working as PnP w/o ability to adjust settings (aka unmanaged switch)
-- `crimper` is used to crimp a connector (usually last step in making an ethernet cable) to tighten the wiring to right spots in connector so electrical signals pass thru properly.
-- Plug `tone generator` at jack end of cable and wave toner probe around suspected area to find other end of cable
 
 ### Networked Host Services
 
@@ -98,7 +79,6 @@
 - load balancers
 - proxy servers
 -
-
 
 - Legacy system: systems that haven't been updated, usually due to an important app that can't run on an updated platform
 - Supervisory Control and Data Acquisition (SCADA): high-level management system that controls manufacturing machines, processes, infrastructure settings, and building components.
@@ -170,6 +150,70 @@ ___
     - also uses channels, but don't have to set due to the increased room in RF spectrum at this range
     - 25 defined 20 MHz channels (24 that can be used for Wi-Fi)
 - Bluetooth connects devices in a short(10 m) PAN to enable communication, usually connecting peripherals (ex. headphones => laptop | phone)
+
+### Tools
+
+1. **Toner probe**: 2-in-1 elec test tool that traces wires thru walls to determine which pair carried the signal induced by the tone generator
+   1. used when you have access to both ends of cable at same time
+   2. Plug `tone generator` at jack end of cable and wave toner probe around suspected area to find other end of cable
+2. **Cable tester**: check a cable to verify intended connections exist and there's no uninteded ones
+   1. missing intended connection: 'open'
+   2. existing unintended connection: ('short')
+   3. connection goes to wrong place: ('miswired)
+   4. connection has 2 faults: open to correct contact & shorted to incorrect one
+3. **repeater** re-sends wireless signal to areas that the access point can't cover.
+4. **crimper** is used to crimp a connector (usually last step in making an ethernet cable) to tighten the wiring to right spots in connector so electrical signals pass thru properly.
+5. **Layer 3 switch** is config to participate in routing decisions
+   1. routing decisions work on Layer 3 of OSI model (network layer)
+   2. standard switches usually refferred at as Layer 2 devices, working as PnP w/o ability to adjust settings (aka unmanaged switch)
+
+>
+`Hubs vs Swtiches`:
+
+```md
+    Hubs are outdated and connect each pc that's plugged into the repeater, it takes the signal that pc A sends to PC B (a frame: made up of 1500 bits) and repeats it by sending it to every pc connected and then those PC's read their MAC address and the address of the signals MAC and either reads it if it's for them or deletes it if not. Hubs just repeat back on all the ports, whatever's coming out.
+
+    Switches: when the box collects the MAC of every PC connected to it and when it receives a frame  it makes a direct, physical connection between the two PC's. A switch is still a repeater, but it's a smart repeater and only sends the data out to the proper destination based on the MAC address
+```
+
+### Network Questions
+
+1. You need to configure port forwaring on a SOHO router to host gaming server
+2. If a computer can't connect to a wired network due to not receiving IP addresses from DHCP server the cause may be the DHCP IP pool is exhausted
+3. IP addresses beginning w/ 169 are assigned automatically if an IP address can't be received from a DHCP server
+   1. The DHCP client auto self-configures IP address & subnet mask if DHCP server isn't available by using APIPA (automatic private IP Addressing).
+      1. Range from 169.254.0.1 - 169.254.255.254 & default class B subnet mask of 255.255.0.0. It then sends a broadcast to ensure that other PC's aren't using the address it chose.
+4. Avoid low RF signal issues by using non-overlapping channels (1,6,11)
+5. CAT5 trasmits data >= 100 Mbps at distances of 100 meters
+6. Crossover cable can be used to make connection from 2 hubs, 2 swtiches, 2 routers, hub to switch, or computer to router
+7. Bluetooth: a discovery and authentication process that validates the communication link
+8. wake-on-LAN will allow sleeping computer to power on when job is sent
+9. DHCP (Dynamic Host Config Protocol) server can auto configure parameters needed by NIC when computer first boots & enables central management of IP address allocation
+10. non-shining link integrity indicator when cable is plugged in means there's no connection to rest of the LAN
+11. link status indicator is small LED next to RJ45 connector that will shine when there's proper electrical conn
+12. Default gateway being down won't affect LAN & it's devices; but user won't be able to access internet
+13. RDP uses port 3389, which has to be pre-configured on each firewall end to allow access thru that port
+    1. Remote that lets you use the GUI the user is using, not just CLI
+14. SSH needs port 22 opened to allow access
+15. The `MAC` (Media Access Control) address: 48-bit # (written as six 2-digit hexadecimal numbers) that uniquely ID's a device on a local area network
+    1. IP address is used to locate the proper network (layer 3)
+    2. MAC address is used to locate the device on the local area network (layer 2)
+16. `socket number` uniquely IDs one end of a communication session running on a network. A socket number shows the IP address & port number of one end of a session.
+    1. ex. 66.83.10.24:443 is a socket number that shows a connection est. over HTTPS to the IP address.
+17. HTTP uses port 80
+18. The subnet mask that defines a full class C network is 255.255.255.0, while a full class B subnet mask would be 255.255.0.0.
+19. enabling MAC filtering only allows devices listed in routers filtering table access
+20. `RJ11/45` are common for phone lines & ethernet & use tristed pair cabling
+21. `RFC1918` private address sets for IP addresses start with 192.168 (v4)
+22. default gateway address is address that computer would send traffic to
+    1. default gateway would be a router for SOHO network & sends traffic out to internet
+23. Static address: manually assigning/entering IP address
+    1. sometimes recommended in order to reserve the addresses in DHCP pool to prevent other devices from leasing the address
+24. `LDAP` is successor to DAP and works w/ AD for user authentication and management within a network
+25. `NAT` (Network Address Translation) enables the translation of private local network IPv4 addresses into a public addresses in order for them to connect over the Internet.
+26. `DMZ` (demilitarized zone) sets up separate network that can be accessed from internet, making specific services reachable by external users, but not allowing access to remainder of network (ex. email/web/FTP servers)
+27. `DSL` makes use of phone lines that already exist & are limited by dist. from central office
+28. `ISDN`: integrated services digital network supports use of bearer (B) channels for sending data & D chan. for signal/control
 
 ### Network Commands
 
@@ -252,6 +296,53 @@ net use | connect/map net share
 net user | manage users
 MD / `MKDIR` | create new dir
 RD / `RMDIR` | delete dir
+
+### Windows CMD
+
+| Command | Description |
+| :---: | :---: |
+| `BCDEDIT`| Sets properties in boot database to control boot loading.|
+| `CACLS` | Displays or modifies access control lists (ACLs) of files |
+| `CD` | Displays the name of or changes the current directory.|
+| `CHDIR`  | Displays the name of or changes the current directory.|
+| `CHKDSK` | Checks a disk and displays a status report.|
+| `CLS` | Clears the screen.|
+| `CONVERT` | Converts FAT volumes to NTFS. Can't convert current drive |
+| `COPY` | Copies one or more files to another location. |
+| `DATE` | Displays or sets the date.|
+| `DEL` | Deletes one or more files.|
+| `DIR` | Displays a list of files and subdirectories in a directory.|
+| `DISKPART`  | Displays or configures Disk Partition properties.|
+| `ECHO` | Displays messages, or turns command echoing on or off.|
+| `ERASE` | Deletes one or more files.|
+| `FIND` | Searches for a text string in a file or files.|
+| `FINDSTR`   | Searches for strings in files.|
+| `FORMAT`    | Formats a disk for use with Windows.|
+| `FSUTIL` | Displays or configures the file system properties.|
+| `FTYPE` | Displays/modifies file types used in file ext assoc.|
+| `GPRESULT`  | Displays Group Policy information for machine or user. |
+| `HELP` | Provides Help information for Windows commands.|
+| `ICACLS` | Display, modify, backup, or restore ACLs for files and dir.|
+| `MD` | Creates a directory.|
+| `MKDIR` |   Creates a directory.|
+| `MKLINK` | Creates Symbolic Links & Hard Links|
+| `MODE` |Configures a system device.|
+| `MOVE` |     Moves one or more files from one directory to another dir.|
+| `PRINT` | Prints a text file.|
+| `RD` | Removes a directory.|
+| `RECOVER` | Recovers readable info from a bad or defective disk.|
+| `REN` | Renames a file or files.|
+| `RENAME` | Renames a file or files.|
+| `RMDIR` | Removes a directory.|
+| `ROBOCOPY`  | Advanced utility to copy files and directory trees|
+| `SCHTASKS` | Schedules commands & programs to run on a computer.|
+| `SHUTDOWN`  | Allows proper local or remote shutdown of machine.|
+| `SYSTEMINFO`| Displays machine specific properties and configuration.|
+| `TASKLIST`  | Displays all currently running tasks including services.|
+| `TASKKILL`  | Kill or stop a running process or application.|
+| `TREE` | Graphically displays the dir structure of a drive or path |
+| `VOL` | Displays a disk volume label and serial number.|
+| `XCOPY` |   Copies files and directory trees.|
 
 ## Operating Systems
 
@@ -502,24 +593,6 @@ RD / `RMDIR` | delete dir
    2. Capacity: BD-SL(25gb), DL(50gb), BD-XL = TL(100gb) & QL(128gb)
    3. Content quality: regular(1080p high def vid) and ultra HD(4k ultra HD, better colour depth; region-free, but need 4k Blu-R player)
 
-### Tools
-
-1. Toner probe: 2-in-1 elec test tool that traces wires thru walls to determine which pair carried the signal induced by the tone generator
-   1. used when you have access to both ends of cable at same time
-2. Cable tester: check a cable to verify intended connections exist and there's no uninteded ones
-   1. missing intended connection: 'open'
-   2. existing unintended connection: ('short')
-   3. connection goes to wrong place: ('miswired)
-   4. connection has 2 faults: open to correct contact & shorted to incorrect one
-
-> Hubs vs Swtiches:
-
-```md
-    Hubs are outdated and connect each pc that's plugged into the repeater, it takes the signal that pc A sends to PC B (a frame: made up of 1500 bits) and repeats it by sending it to every pc connected and then those PC's read their MAC address and the address of the signals MAC and either reads it if it's for them or deletes it if not. Hubs just repeat back on all the ports, whatever's coming out.
-
-    Switches: when the box collects the MAC of every PC connected to it and when it receives a frame  it makes a direct, physical connection between the two PC's. A switch is still a repeater, but it's a smart repeater and only sends the data out to the proper destination based on the MAC address
-```
-
 ## Operational Procedures
 
 - grounding diverts excess electrical charges from the device and can decrease chance of damage from electrical spike
@@ -541,3 +614,22 @@ RD / `RMDIR` | delete dir
    5. schedule scans and run updates
    6. enable system restore
    7. educate end-user
+
+## Sample Ques
+
+1. QoS = quality of service. In a SOHO env, QoS set at router level. If you want to enforce it's policies on your network, you need to use a router equipped w/ QoS software
+2. Consult manual docs before doing preventive maintenance, or cleaning operations to get proper methods and solvents
+3. SMTP protocol can send emails from a client device (only for outgoing messages)
+4. A multi-layer switch enables having both switching and routing functionality on the same device
+5. ST is a type of fiber connector
+6. Port 443 (HTTPS) used when using SSL encryption to access a website
+7. Light emitting diode and in-plane switching monitor technology have widest viewing angle w/ rich color & consistent backlighting
+8. Enable device pairing to use hands-free for a smartphone to car
+9. Can connect a tone generator to an RJ-45 drop to locate the position of the cable on a patch panel
+10. Check case for overheating and mobo for swollen capacitors if computer reboots at random intervals multiple times/day
+11. check fuser if printer is smudging toner on the paper after printing
+12. computer may have incorrect drivers installed if print jobs are printed as garbled text
+13. Startup tab in Task Manager utility shows proccesses. initialized at startup
+    1. earlier Windows versions used MSConfig
+14. Disk cleanup utility deletes temp fi from HDD
+15. `WinRE` helps recover a sys that won't boot. It auto starts and can be manually started via Windows Recovery settings in Advanced startup menu
