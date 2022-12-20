@@ -1,57 +1,75 @@
 
-# Info for encryption, security, git, apt, and linux
+# Encryption, Security, Linux
 
-- [Info for encryption, security, git, apt, and linux](#info-for-encryption-security-git-apt-and-linux)
-  - [Steps for ssh into git repo](#steps-for-ssh-into-git-repo)
-    - [Steps for keygen](#steps-for-keygen)
+| SSH | GPG | Git | Commands | permissions |
+|--- | ---| ---|--- | ---|
+| | | | | |
+
+- [Encryption, Security, Linux](#encryption-security-linux)
+  - [SSH to GitHub](#ssh-to-github)
+    - [ssh-keygen cmds](#ssh-keygen-cmds)
     - [Example ssh connect](#example-ssh-connect)
     - [initial ssh example](#initial-ssh-example)
+    - [Git Commands \& examples](#git-commands--examples)
   - [GPG key](#gpg-key)
-  - [bash commands](#bash-commands)
-  - [Apt DESCRIPTION](#apt-description)
+  - [Bash commands](#bash-commands)
+  - [Apt Info](#apt-info)
   - [Shell command info](#shell-command-info)
-  - [symbolic rep of data](#symbolic-rep-of-data)
-  - [linux permissions](#linux-permissions)
-  - [git colors for terminal](#git-colors-for-terminal)
+  - [Symbolic rep of data](#symbolic-rep-of-data)
+  - [Linux permissions](#linux-permissions)
+  - [Git Config terminal colors](#git-config-terminal-colors)
 
-## Steps for ssh into git repo
+## SSH to GitHub
 
-> ssh connects and logs into the specified destination in the form: user, hostname and port:
+> ssh connects and logs into the specified destination by setting the user, hostname and port
 
 ```sh
-[user@]hostname
-ssh://[user@]hostname[:port]
-# different format for ssh
+# formats for ssh
+[user@]hostname | ssh://[user@]hostname[:port]
 ssh://[user@]host.xz[:port]/~[user]/path/to/repo.git/
 ssh://[user@]host.xz[:port]/path/to/repo.git/
 ssh -i ~/.ssh/id_ed25519 # identity file (private key)
 ssh -l login_name -p port
-ssh-keygen -l -f /etc/ssh/ssh_host_rsa_key # determine fingerprints
-ssh-keygen -lv -f ~/.ssh/known_hosts # ls fingerpritns and random art for known hosts
+ssh-keygen -l -f /etc/ssh/ssh_host_rsa_key
+# determine fingerprints
+ssh-keygen -lv -f ~/.ssh/known_hosts
+# ls fingerpritns and random art for known hosts
 ssh-keygen -r host.example.com.
-# connect client to server; SSHFP resource records should be + to the zonefile for host 1st
-dig -t SSHFP host.example.com check that zone is answering fingerprint queries.
-ssh -o "VerifyHostKeyDNS ask" host.example.com # client connects
+# connect client to server
+# Add SSHFP resource records to the zonefile for host 1st
+dig -t SSHFP host.example.com
+# check that zone is answering fingerprint queries.
+ssh -o "VerifyHostKeyDNS ask" host.example.com
+# client connects
 ```
 
-### Steps for keygen
+### ssh-keygen cmds
 
-- The user creates his/her key pair by running ssh-keygen(1).
-  - stores the `private` key in:
-    - ~/.ssh/id_dsa (DSA), ~/.ssh/id_ecdsa (ECDSA), ~/.ssh/id_ecdsa_sk (authenticator-hosted ECDSA), ~/.ssh/id_ed25519 (Ed25519), ~/.ssh/id_ed25519_sk (authenticator-hosted Ed25519), or ~/.ssh/id_rsa (RSA)
-  - stores the `public` key in the user's home directory w/in subdir of:
-    - ~/.ssh/id_dsa.pub (DSA), ~/.ssh/id_ecdsa.pub (ECDSA), ~/.ssh/id_ecdsa_sk.pub (authenticator-hosted ECDSA), ~/.ssh/id_ed25519.pub (Ed25519), ~/.ssh/id_ed25519_sk.pub (authenticator-hosted Ed25519), or ~/.ssh/id_rsa.pub (RSA)
-- The user should then copy the public key to ~/.ssh/authorized_keys in his/her home directory on the remote machine.
-- The authorized_keys file corresponds to the conventional ~/.rhosts file, and has one
-key per line, though the lines can be very long.  After this, the user can log in without giving the password.
+- run ssh-keygen to create key pair
+  - `private` key stored in:
+    - ~/.ssh/id_dsa (DSA), ~/.ssh/id_ecdsa (ECDSA)
+    - ~/.ssh/id_ecdsa_sk (authenticator-hosted ECDSA)
+    - ~/.ssh/id_ed25519 (Ed25519)
+    - ~/.ssh/id_ed25519_sk (authenticator-hosted Ed25519)
+    - ~/.ssh/id_rsa (RSA)
+  - `public` key stored in user's home dir w/in subdir of:
+    - ~/.ssh/id_dsa.pub (DSA), ~/.ssh/id_ecdsa.pub (ECDSA)
+    - ~/.ssh/id_ecdsa_sk.pub (authenticator-hosted ECDSA)
+    - ~/.ssh/id_ed25519.pub (Ed25519)
+    - ~/.ssh/id_ed25519_sk.pub (authenticator-hosted Ed25519)
+    - ~/.ssh/id_rsa.pub (RSA)
+- Then copy public key to ~/.ssh/authorized_keys in home dir on the remote machine
+- The authorized_keys file == ~/.rhosts file
+- one key per line
+- enables user to login w/o passwd
 
 ### Example ssh connect
 
 >
-    - The following example would connect client network
-      - 10.0.99.0/24 using a point-to-point connection
-        - from 10.1.1.1 to 10.1.1.2
-    - Provided that the SSH server running on the gateway to the remote network, at 192.168.1.15, allows it
+- This example connects client network: 10.0.99.0/24
+  - via a point-to-point connection
+    - from 10.1.1.1 to 10.1.1.2
+- SSH server running on the gateway to the remote network must allow connection 192.168.1.15
 
 ```bash
 # On the client:
@@ -62,13 +80,16 @@ route add 10.0.99.0/24 10.1.1.2
 # On the server:
 ifconfig tun1 10.1.1.2 10.1.1.1 netmask 255.255.255.252
 route add 10.0.50.0/24 10.1.1.1
-
-# Client access may be more finely tuned via the /root/.ssh/authorized_keys file and the PermitRootLogin server option.
-# the following entry would permit connections on:
-# tun(4) device 1 from user “jane” and on tun device 2 from user “john”, if PermitRootLogin is set to “forced-commands-only”:
+# Client access can be adjusted by editing:
+    # /root/.ssh/authorized_keys fi
+    # PermitRootLogin server option.
 
 tunnel="1",command="sh /etc/netstart tun1" ssh-rsa ... jane
 tunnel="2",command="sh /etc/netstart tun2" ssh-rsa ... john
+# above cmds permits connections on:
+# tun device 1 from user “jane”
+# tun device 2 from user “john”
+    # if PermitRootLogin == “forced-commands-only”
 ```
 
 ___
@@ -114,11 +135,10 @@ ssh-copy-id
 # copies the local-host’s pub key to the remote-host’s authorized_keys fi
 ```
 
+### Git Commands & examples
+
 ```sh
-# Ex from giteveryday help commands
-
-# - Use a tarball as a starting point for a new repository.
-
+#  giteveryday --help
 tar zxf frotz.tar.gz
 cd frotz
 git init
@@ -126,6 +146,7 @@ git add . (1)
 git commit -m "import of frotz source tree."
 git tag v2.43 (2)
 
+# Use a tarball as a starting point for a new repository.
 # 1. add all fi under the cwd.
 # 2. make a lightweight, unannotated tag.
 
@@ -230,14 +251,18 @@ mothership "fetched" from you (useful when access is one sided).
 1. on mothership machine, merge the work done on the satellite
 machine into the master branch.
 
+___
+
 ## GPG key
 
 >>
-  generate a gpg key and then c/v to GH. This allows commits to be verified via signature
+  generate a gpg key and then c/v to GitHub
+  This allows commits to be verified via signature
 
 ```sh
 gpg --full-generate-key
-# choose: key type, size, expire, user id[name, pass, comment], passphrase
+# choose: key type, size, expire
+#   user id[name, pass, comment], passphrase
 gpg --list-keys --keyid-format LONG
 # list long form pub/priv keys & copy sec/pub key after encryption standard
 gpg --armor --export aaa123aaa123
@@ -247,12 +272,10 @@ gpg --armor --export aaa123aaa123
 
 ___
 
-## bash commands
+## Bash commands
 
 ```sh
-echo $BASH
-# /usr/bin/bash
-
+echo $BASH # => /usr/bin/bash
 init $PATH
 
 . # current working dir
@@ -265,16 +288,16 @@ ls -C -l
 rm -r /folder/want-deleted # remove dir & content recursively
 rm -rp # ignore permissions & errors
 sudo rm -rf path/to/folder
-su - user -c 'ls' #switch user and run cmd
+su - user -c 'ls' # switch user and run cmd
 mount -uw # mount with write permissions
 mount -o update /
 diskutil list
 df -h
 find / -size +50000 -print
-sudo lshw # lists hardware specs
-# can also use dmidecode
-gcreate, lvcreate, and lvextend lvm2, fdisk # create/manage logical pars spanning >= 1 HDD with logical volume manager
-whereis [exe,cmd]
+sudo lshw (dmidecode) # lists hardware specs
+gcreate (lvcreate | lvextend lvm2 | fdisk)
+# create/manage logical pars spanning >= 1 HDD with logical volume manager
+whereis (exe | cmd)
 whatis <cmdname>
 uname -a # show system info
 free -gh #show memory usage --lohi -l from /proc/meminfo
@@ -283,21 +306,31 @@ ssh -l username hostname
 top -u ib-ub
 ps -ef | more # view running processes
 ps -ef grep code
-kill -9 PID # killall, pkill, xkill to terminate unix process
+kill -9 PID
+# killall, pkill, xkill to terminate unix process
 
 ifconfig <interface_name> # (eth0)
-# -a (show all details), etho1 up | down (enable/disable), muto 1500
-ifconfig eth0 192.168.2.2 netmask 255.255.255.0 broadcast 192.168.2.255
+# -a (show all details)
+ifconfig etho1 (up | down) (enable/disable), muto 1500
+ifconfig eth0 192.168.2.2 netmask 255.255.255.0 \
+    broadcast 192.168.2.255
 # ex. assign IP, netmask and broadcast to interface eth0
 
-netstat -a | more # list all ports, -at all tcp ports, -au all udp ports, -s stats, -l show listening only
-netstat -ap | grep ssh && -an | grep ':80' # which port a prog is running on | which process is using a specific port
+netstat -a | more # list all ports
+# -at all tcp ports, -au all udp ports
+# -s stats, -l (show listening only)
+netstat -ap | grep ssh
+# info on which port a prog is running on
+netstat -an | grep ':80'
+# which process is using a specific port
+
 grep -i "word" file.txt # find str in fi
 find -iname "file.txt" # find fi
 find /home/ib-ub -name *.md -type f
 
-gzip file.md, gzip -d file.md # zip & unzip .gz fi
-unzip fi.zip && unzip -l fi.zip #extract or view w/o unzipping fi
+gzip file.md && gzip -d file.md # (zip | unzip) .gz fi
+unzip fi.zip && unzip -l fi.zip
+# (extract | view) w/o unzipping fi
 shutdown -h now #shutdown now or -r to restart now
 cat -n /home/ib-ub/flow/work/Docs2/requirements3.txt # print file to stdout
 chmod ug+rwx file.txt # change permissions of fi/dir [-R u-rwx ex. will remove access recursively]
@@ -306,33 +339,39 @@ passwd username # change password; use sudo to reset w/o old pass
 
 useradd -D && useradd login_name # show default options and add user
 adduser user_name  # for interactive user creation
-newusers file_name # bulk creation w/ fi temp pre-configured by adding the relevant info
-    # ex. cat homer-family.txt
-        # homer:HcZ600a9:1008:1000:Homer Simpson:/home/homer:/bin/bash
-        # marge:1enz733N:1009:1000:Marge Simpson:/home/marge:/bin/csh
+newusers file_name
+# bulk creation using pre-config template fi
+# example
+cat homer-family.txt
+# homer:HcZ600a9:1008:1000:Homer Simpson:/home/homer:/bin/bash
+# marge:1enz733N:1009:1000:Marge Simpson:/home/marge:/bin/csh
 man 3 free # bring up section 3 of free cmd
 tail -n 10 file.txt # show last 10 lines of fi
 less large_file.txt # efficient view of log fi (CTRL+F/B forward/backward 1 window)
-diff -w file1.md file2.md # compare, ignore whitespace fi1 to fi2
-ps top vmstat brk mmap wget, systemctl, init
+diff -w file1.md file2.md # compare fi, ignore whitespace
 
 rsync # sync fi & dir between source & destination dirs
-rsnapshot # uses the combo of rsync and hard links to maintain full-backup and incremental backups
-dd # make boot images and copy/backup entire HDDs and create image
-makeswap swapon # add/manage swap space
+rsnapshot # combo of rsync & hard links to maintain
+#   full | incremental backups
+dd # make boot images & copy/backup HDDs
+    # Copy fi, converting & formatting depending on operands
+makeswap && swapon # (add | manage) swap space
 dpkg # install/remove deb packages
+
+# To-Do:
+ps, top, vmstat, brk, mmap, wget, systemctl, init
 ```
 
-## Apt DESCRIPTION
+## Apt Info
 
 ```sh
-    apt [-h] [-o=config_string] [-c=config_file] [-t=target_release] [-a=architecture]
-        {list | search | show | update | install pkg[{=pkg_ver_number | /target_release}]... | remove pkg... | upgrade | full-upgrade | edit-sources | {-v --version} |{-h--help}}
+apt [-h] [-o=config_string] [-c=config_file] [-t=target_release] [-a=architecture] {list | search | show | update | install pkg
+[{=pkg_ver_num | /target_release}]... | remove pkg... | upgrade | full-upgrade | edit-sources | {-v --version} |{-h--help}}
 ```
 
 >
 interface for package management system.
-(apt-get & apt-cache can be used as well)
+To-Do: apt-get, apt-cache, sources.list, apt.conf, apt-config
 
 - `update` (apt-get(8)) update is used to download package information from all configured sources. Other commands operate on this data to e.g. perform package upgrades or search in and display details about all packages available for installation
 - `upgrade` (apt-get(8)) upgrade is used to install available upgrades of all packages   currently installed on the system from the sources configured via  sources.list(5). New packages will be installed if required to satisfy dependencies, but existing packages will never be removed. If an upgrade for a package requires the removal of an installed package the upgrade for this package isn\'t performed.
@@ -348,7 +387,6 @@ interface for package management system.
 - `show`: information about the given package(s) including its dependencies, installation and download size, sources the package is available from, the description of the packages content and much more
 - `list`: is somewhat similar to dpkg-query --list in that it can display a list of packages satisfying certain criteria. It supports glob patterns for matching package names as well as options to list installed (--installed), upgradeable (--upgradeable) or all available (--all-versions) versions.
 - `edit-sources`: lets you edit your sources.list(5) files in your preferred text editor while also providing basic sanity checks.
-- Also view apt-get, apt-cache, sources.list, apt.conf, apt-config
 
 ## Shell command info
 
@@ -360,21 +398,21 @@ interface for package management system.
   - prepending with \
   - wrapping it in single quotes
 
-## symbolic rep of data
+## Symbolic rep of data
 
 | abbrev | value |
 | --- | --- |
-|**no**  |  Global default|
-|fi  |  Normal file|
+| no |  Global default |
+|fi  |  Normal file |
 |di  |  Directory|
-|ln  |  Symbolic link.|
+|ln  |  Symbolic link |
 |bd  |  Block device|
 |cd  |  Character device|
-|or  |  Symbolic link to a non-existent file|
-|ex  |  Executable file|
-|**.extension | (ex: *.mp3)|
+|or  |  Symlink to non-existent fi |
+|ex  |  Executable fi |
+|*.extension | (ex: *.mp3)|
 
-## linux permissions
+## Linux permissions
 
 ```py
 # permission terms
@@ -386,29 +424,30 @@ u, g, o = user, group, others | first, sec., third (chars.)
 chmod u+x file.txt
 chmod u+r,g+x file.txt
 chmod u-rx file.txt # remove permissions
-chmod -R 775 dir_name/ # change permissions of all fi in dir
+chmod -R 775 dir_name/ # change perm of all fi in dir
 chmode -R,a-x,u+X *
-# recursively remove exec perm from all under dir & add exec for user
-  # other solution
+# recursively remove exec perm from all fi under
+    # dir, then add exec for user
 for f in 'ls -R'; do [! -d"$f"] && chmod a-x "$f"; done
+# other solution
 ```
 
-## git colors for terminal
+## Git Config terminal colors
 
-| foreground('') k => int = v => str | background(bg) {k:'v'}| style |
-| --- | :--- | ---  |
-| 31  = red |40  = black bg | 0   = default colour |
-| 32  = green  | 41  = red bg   | 1   = bold |
-| 33  = orange | 42  = green bg | 4   = underlined |
-| 34  = blue   | 43  = orange bg| 5   = flashing text |
-| 35  = purple | 44  = blue bg  | 7   = reverse field => (flip fore/bg color) |
-| 36  = cyan  |  45  = purple bg |8   = concealed (invisible)|
-| 37  = grey| 46  = cyan bg |
-| 90  = dark grey  | 47  = grey bg  |
-| 91  = light red  | 100 = dark grey bg|
-| 92  = light green| 101 = light red bg|
-| 93  = yellow | 102 = light green bg|
-| 94  = light blue | 103 = yellow bg|
-| 95  = light purple  |104 = light blue bg|
-| 96  = turquoise |  105 = light purple bg|
-| 97  = white |  106, 107 = turquoise, white bg |
+| foreground('') k:int == v:str | background(bg) | style |
+| --- | :--- | --- |
+| 31 = red |40 = black bg | 0 = default color |
+| 32 = green | 41  = red bg | 1 = bold |
+| 33 = orange | 42  = green bg | 4 = underlined |
+| 34 = blue | 43  = orange bg | 5 = flashing text |
+| 35 = purple | 44  = blue bg | 7 = reverse field => (flip color) |
+| 36 = cyan |  45  = purple bg |8 = concealed (invisible)|
+| 37 = grey| 46  = cyan bg |
+| 90 = dark grey | 47  = grey bg  |
+| 91 = light red | 100 = dark grey bg|
+| 92 = light green| 101 = light red bg|
+| 93 = yellow | 102 = light green bg|
+| 94 = light blue | 103 = yellow bg|
+| 95 = light purple  |104 = light blue bg|
+| 96 = turquoise |  105 = light purple bg|
+| 97 = white | 106, 107 = turquoise, white bg |
