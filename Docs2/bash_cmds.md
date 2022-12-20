@@ -306,6 +306,7 @@ dd # make boot images and copy/backup entire HDDs and create image
 makeswap swapon # add/manage swap space
 dpkg # install/remove deb packages
 ```
+
 ## Apt DESCRIPTION
 
 ```sh
