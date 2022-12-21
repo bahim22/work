@@ -1,11 +1,15 @@
 import os.path
+import os
 import pkgutil
 import shutil
 import tempfile
-import importlib
+# import importlib
+import importlib.util
 from base64 import b85decode
 import sys
 import argparse
+
+# parser example
 
 parser = argparse.ArgumentParser(
     description='sum the integers at the command line')
@@ -21,8 +25,7 @@ args.log.close()
 
 
 # %%
-# If you're wondering how this is created, it is generated using
-# `scripts/generate.py` in https://github.com/pypa/get-pip.
+# Created/generated - `scripts/generate.py`: https://github.com/pypa/get-pip
 
 
 this_python = sys.version_info[:2]
@@ -31,8 +34,8 @@ if this_python < min_version:
     message_parts = [
         "This script does not work on Python {}.{}".format(*this_python),
         "The minimum supported Python version is {}.{}.".format(*min_version),
-        "Please use https://bootstrap.pypa.io/pip/{}.{}/get-pip.py instead.".format(
-            *this_python),
+        "Use https://bootstrap.pypa.io/pip/{}.{}/get-pip.py instead.".
+        format(*this_python),
     ]
     print("ERROR: " + " ".join(message_parts))
     sys.exit(1)
@@ -76,12 +79,14 @@ def determine_pip_install_arguments():
 
 
 def monkeypatch_for_cert(tmpdir):
-    """Patches `pip install` to provide default certificate with the lowest priority.
+    """Patches `pip install` to provide default cert \
+    with the lowest priority.
 
-    This ensures that the bundled certificates are used unless the user specifies a
-    custom cert via any of pip's option passing mechanisms (config, env-var, CLI).
+    This ensures that the bundled certificates are used unless the user \
+    specifies a custom cert via any of pip's option passing \
+    mechanisms (config, env-var, CLI).
 
-    A monkeypatch is the easiest way to achieve this, without messing too much with
+    A monkeypatch is the easiest way to achieve this, w/o messing too much w
     the rest of pip's internals.
     """
     from pip._internal.commands.install import InstallCommand
@@ -105,7 +110,7 @@ def monkeypatch_for_cert(tmpdir):
 def bootstrap(tmpdir):
     monkeypatch_for_cert(tmpdir)
 
-    # Execute the included pip and use it to install the latest pip and
+    # Execute the included pip => use it to install latest pip &
     # setuptools from PyPI
     from pip._internal.cli.main import main as pip_entry_point
     args = determine_pip_install_arguments()

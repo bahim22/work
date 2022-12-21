@@ -28,17 +28,16 @@ access a web servers resources
 """
 
 # %%
-import os
+
 import urllib.error
 import urllib.parse
-from urllib import request
-import dotenv
 import time
 import socket
 import urllib.request
 import urllib.request as areq
 import socket as sk
 import requests
+# import urllib.request
 
 
 # %%
@@ -184,15 +183,21 @@ print(counts)
 # which accepts a string containing a URL or a Request object
 #
 # %%
-import urllib.request
+# import urllib.request
 
 # set up authentication info
-authinfo = urllib.request.HTTPBasicAuthHandler() authinfo.add_password(realm='PDQ Application', uri='https://mahler:8092/site-updates.py', user='klem', passwd='geheim$parole')
+authinfo = urllib.request.HTTPBasicAuthHandler()
+authinfo.add_password(
+        realm='PDQ-Application', uri='https://mahler:8092/site-updates.py',
+        user='klem', passwd='geheim$parole'
+    )
 
-proxy_support = urllib.request.ProxyHandler({"http" : "http://ahad-haam:3128"})
+proxy_support = urllib.request.ProxyHandler({"http": "http://ahad-haam:3128"})
 
 # build a new opener that adds authentication and caching FTP handlers
-opener = urllib.request.build_opener(proxy_support, authinfo, urllib.request.CacheFTPHandler)
+opener = urllib.request.build_opener(
+        proxy_support, authinfo, urllib.request.CacheFTPHandler
+    )
 
 # install it
 urllib.request.install_opener(opener)
@@ -202,23 +207,37 @@ f = urllib.request.urlopen('https://www.python.org/')
 # %% [markdown]
 
 # `urlcleanup`: Clean up temporary files from urlretrieve calls.
-# `urlopen`: Open the URL url, which can be either a string or a Request object.
+# `urlopen`: Open the URL url, which can be == string | Request object.
 
-#     - *data* must be an object specifying additional data to be sent to the server, or None if no such data is needed. See Request for details.
-#     - urllib.request module uses HTTP/1.1 and includes a "Connection:close" header in its HTTP requests.
-#     - The optional *timeout* parameter specifies a timeout in seconds for blocking operations like the connection attempt (if not specified, the global default timeout setting will be used). This only works for HTTP, HTTPS and FTP connections.
-#     - If *context* is specified, it must be a ssl.SSLContext instance describing the various SSL options. See HTTPSConnection for more details.
-#     - The optional *cafile* and *capath* parameters specify a set of trusted CA certificates for HTTPS requests. cafile should point to a single file containing a bundle of CA certificates, whereas capath should point to a directory of hashed certificate files. More information can be found in ssl.SSLContext.load_verify_locations().
-#     - The *cadefault* parameter is ignored.
-#     - This function always returns an object which can work as a context manager and has the properties url, headers, and status
-# `urlretrieve`
-#
-# >
-#     - Retrieve a URL into a temporary location on disk.
-#     - Requires a URL argument. If a filename is passed, it is used as the temporary file location. The reporthook argument should be a callable that accepts a block number, a read size, and the total file size of the URL target. The data argument should be valid URL encoded data.
-#     - If a filename is passed and the URL points to a local resource, the result is a copy from local file to new file.
-#     - Returns a tuple containing the path to the newly created data file as well as the resulting HTTPMessage object.
-#
+# - *data* must be an object specifying additional data to be sent to\
+# the server, or None if no such data is needed. See Request for details.
+# - urllib.request module uses HTTP/1.1 and includes a "Connection:close"\
+# header in its HTTP requests.
+# - The optional *timeout* parameter specifies a timeout in seconds for\
+# blocking operations like the connection attempt (if not specified, the\
+# global default timeout setting will be used).\
+# This only works for HTTP, HTTPS and FTP connections.
+# - If *context* is specified, it must be a ssl.SSLContext instance \
+# describing the various SSL options. See HTTPSConnection for more details.
+# - The optional *cafile* and *capath* parameters specify a set of trusted \
+# CA certificates for HTTPS requests. cafile should point to a single file \
+# containing a bundle of CA certificates, whereas capath should point to a \
+# directory of hashed certificate files. More information can be found in \
+# ssl.SSLContext.load_verify_locations().
+# - The *cadefault* parameter is ignored.
+# - This function always returns an object which can work as a \
+# context manager and has the properties \
+# url, headers, and status `urlretrieve`
+
+# - Retrieve a URL into a temporary location on disk.
+# - Requires a URL argument. If a filename is passed, it is used as \
+# the temporary file location. The reporthook argument should be a \
+# callable that accepts a block number, a read size, and the total file size \
+# of the URL target. The data argument should be valid URL encoded data.
+# - If a filename is passed and the URL points to a local resource,\
+# the result is a copy from local file to new file.
+# - Returns a tuple containing the path to the newly created data file\
+# as well as the resulting HTTPMessage object.
 
 # %%
 
@@ -273,7 +292,7 @@ print(r.raw.read(10))
 # ## GET usage:
 #
 # %%
-import requests
+# import requests
 
 
 r = requests.get('https://www.python.org')
@@ -338,82 +357,3 @@ picture = picture[pos+4:]
 fhand = open("stuff.jpg", "wb")
 fhand.write(picture)
 fhand.close()
-
-
-# %%
-from dotenv import load_dotenv
-
-
-def store_in_mongodb(self, news):
-    """
-    - MongoDB cluster needs to be created first - https://www.mongodb.com/cloud/atlas/register
-    - Connect to the MongoDB cluster
-    - Create a new collection
-    - Insert the news into the collection
-     :param news: the news object that we created in the previous function
-    """
-
-    load_dotenv()
-
-    db_user = os.getenv("DB_USER")
-    db_pw = os.getenv("DB_PW")
-    db_name = os.getenv("DB_NAME")
-    collection_name = os.getenv("COLLECTION_NAME")
-
-    collection = connect_database(db_user, db_pw, db_name, collection_name)
-    post_database(collection, news)
-
-
-# %%
-
-
-def main():
-
-    model_name, dataset_name = getRuntimeArgs()
-    dotenv.load_dotenv()
-
-    run = Run.get_context()
-
-    if run._run_id.startswith("_OfflineRun"):
-        run = None
-
-    credit_data_df = None
-
-    # Load data from Dataset or from local file(for offline runs)
-    if run is None:
-        dataset_filename = os.environ.get("DATASET_FILE_NAME", )
-        credit_data_df = pd.read_csv("dataset/" + dataset_filename)
-    else:
-        dataset = Dataset.get_by_name(
-            workspace=run.experiment.workspace, name=dataset_name)
-        #dataset = run.input_datasets[dataset_name]
-        credit_data_df = dataset.to_pandas_dataframe()
-
-    clf = model_train(credit_data_df, run)
-
-    # copying to "outputs" directory, automatically uploads it to azure ml
-    output_dir = './outputs/'
-    os.makedirs(output_dir, exist_ok=True)
-    joblib.dump(value=clf, filename=output_dir+model_name)
-
-    #run.upload_file(name="./outputs/" + model_file_name, path_or_stream=model_file_name)
-
-
-# %%
-import requests
-
-
-def get_city_weather(city_name):
-    """
-    Uses Open Weather Map API to fetch Current Weather Details of a Given City
-    """
-    load_dotenv()
-    # Not Setting Up API Key will respond with a 401 Error Code and Invalid
-    # API Key message
-    OPEN_WEATHER_API_KEY = os.getenv("OPEN_WEATHER_API_KEY")
-    URL = (
-        f'http://api.openweathermap.org/data/2.5/weather?'
-        f'q={city_name}&appid={OPEN_WEATHER_API_KEY}'
-    )
-    response = request.get(URL).json()
-    return response
