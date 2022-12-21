@@ -1,18 +1,20 @@
 # CompTIA A+ Certification
 
-## Exam: Core 2 Objectives: EXAM NUMBER: CORE 2 (220-1002)
+## Table of Contents
 
-### Objectives 1
-
-- Assemble components based on customer requirements
-- Install, configure, and maintain PCs, mobile devices, and software for end users
-- Understand the basics of networking and security forensics
-- Properly and safely diagnose, resolve, and document common hardware and software issues
-- Apply troubleshooting skills
-- Provide appropriate customer support
-- Understand the basics of scripting, virtualization, desktop imaging, and deployment
+- [CompTIA A+ Certification](#comptia-a-certification)
+  - [Table of Contents](#table-of-contents)
+  - [_CORE 1_ (220-1001)](#core-1-220-1001)
+    - [Exam: Core 1 Objectives](#exam-core-1-objectives)
+  - [**CORE 2** (220-1002)](#core-2-220-1002)
+    - [Exam: Core 2 Objectives: EXAM NUMBER: CORE 2 (220-1002)](#exam-core-2-objectives-exam-number-core-2-220-1002)
+  - [Overall: Core 1-2](#overall-core-1-2)
+  - [Hardware/Software List](#hardwaresoftware-list)
+  - [References](#references)
 
 ## _CORE 1_ (220-1001)
+
+### Exam: Core 1 Objectives
 
 1. `Mobile Devices`:14%
    1. install/config laptop hardware/components
@@ -127,6 +129,16 @@
 
 ## **CORE 2** (220-1002)
 
+### Exam: Core 2 Objectives: EXAM NUMBER: CORE 2 (220-1002)
+
+- Assemble components based on customer requirements
+- Install, configure, and maintain PCs, mobile devices, and software for end users
+- Understand the basics of networking and security forensics
+- Properly and safely diagnose, resolve, and document common hardware and software issues
+- Apply troubleshooting skills
+- Provide appropriate customer support
+- Understand the basics of scripting, virtualization, desktop imaging, and deployment
+
 1. `Operating Systems`: 27%
    - 32-bit vs. 64-bit
      - RAM limitations
@@ -184,7 +196,7 @@
 
 ___
 
-### Overall: Core 1-2
+## Overall: Core 1-2
 
 1. LESSON 1: INSTALLING `MOTHERBOARDS` AND `CONNECTORS`
    1. Topic 1A: Explain Cable Types and Connectors
@@ -272,7 +284,7 @@ ___
 
 ___
 
-### Hardware/Software List
+## Hardware/Software List
 
 _EQUIPMENT_
 • Apple tablet/smartphone
@@ -358,6 +370,9 @@ _SOFTWARE_
 • Anti-malware
 • Driver software
 
-> [Meyes Comptia Exam Guide. McGrawHill](https://www.mheducation.com/highered/product/comptia-certification-all-one-exam-guide-tenth-edition-exams-220-1001-220-1002-meyers/M9781260454031.html) | [Comptia A+](https://www.comptia.org/certifications/a) |
+## References
+
+>
+[Meyes Comptia Exam Guide. McGrawHill](https://www.mheducation.com/highered/product/comptia-certification-all-one-exam-guide-tenth-edition-exams-220-1001-220-1002-meyers/M9781260454031.html) | [Comptia A+](https://www.comptia.org/certifications/a) |
 >>
     Referenced information from Comptia A+ and Mike Meyers Exam Guide

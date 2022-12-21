@@ -3,6 +3,42 @@
 | Hima Balde | PPU | 06-10 of 2022 |
 | ---------- | --- | ------------- |
 
+## Table of Contents
+
+- [CompTIA A+ Docs](#comptia-a-docs)
+  - [Table of Contents](#table-of-contents)
+  - [Troubleshooting Steps](#troubleshooting-steps)
+  - [Seconday Skills](#seconday-skills)
+  - [Tools and Safety](#tools-and-safety)
+  - [Computer Parts](#computer-parts)
+    - [Motherboard](#motherboard)
+    - [Processor, CPU](#processor-cpu)
+    - [Power supplies](#power-supplies)
+    - [Adapter Cards](#adapter-cards)
+    - [BIOS/CMOS/UEFI](#bioscmosuefi)
+  - [OS Install, Upgrade, Boot](#os-install-upgrade-boot)
+    - [_Boot methods_: user selects how to boot pc \& w/ what media](#boot-methods-user-selects-how-to-boot-pc--w-what-media)
+    - [Misc OS info](#misc-os-info)
+  - [`Network`](#network)
+    - [Rules governing the transmission specified by the protocol](#rules-governing-the-transmission-specified-by-the-protocol)
+    - [Common Internet Protocols, Data and File Sharing](#common-internet-protocols-data-and-file-sharing)
+    - [`TCP/IP`](#tcpip)
+    - [TCP/IP Abstraction Layers](#tcpip-abstraction-layers)
+    - [**Ports** and **Protocols**](#ports-and-protocols)
+    - [`UDP`: user datagram protocol - datagram oriented protocol](#udp-user-datagram-protocol---datagram-oriented-protocol)
+    - [OSI model (Open systems interconnection)](#osi-model-open-systems-interconnection)
+  - [`Hardware`](#hardware)
+    - [Memory](#memory)
+    - [Storage and Peripherals](#storage-and-peripherals)
+      - [RAID](#raid)
+  - [`Software`](#software)
+    - [Windows Admin Tools](#windows-admin-tools)
+    - [Windows Management Framework](#windows-management-framework)
+    - [Windows naming](#windows-naming)
+    - [Displays](#displays)
+  - [Mobile Devices](#mobile-devices)
+  - [References](#references)
+
 ## Troubleshooting Steps
 
 1. Identify the problem
@@ -198,44 +234,49 @@ ___
 
 ## `Network`
 
-- IEEE (Institute of Electrical and Electronics Engineers) handles wired and wireless networking
-- International Organization for Standardization (ISO) handles other types.
+- IEEE (Institute of Electrical & Electronics Engineers) handles wired and wireless networking
+- ISO (International Organization for Standardization) handles other types of networks
 - 2 types of communication protocols:
   - binary utilizes all values of a byte; intended for machine reading; more terse and faster
   - text-based/plain text - only uses values corresponding to human-readable characters in ASCII encoding
-- `SDN`: software-defined networking sets up the network through the cloud and replaces functionality of the router in a network via virutalization.
+- `SDN`: software-defined networking sets up the network through the cloud and uses virutalization to replace functionality of the router in a network
 - `Cable Modem`: device that connects to a cable line for connectivity
   - newer versions don't modulate/demodulate analog signals, but are still called modems.
 - `ONT`: optical network terminal - modem that provides connectivity by using a fiber-optic line
-- `DSL`: digital subscriber line: modem that uses telephone line to provide connectivity
+- `DSL`: digital subscriber line - modem that uses telephone line to provide connectivity
 
 ### Rules governing the transmission specified by the protocol
 
-1. Data and address formats for data exchange (and address mapping)
-   1. exchange of digital message bitstrings (dividied in fields; header: fields w/ relevance to the op of the protocol and payload: where actual message is carried)
-   2. addresses used to ID send and intedned receiver/s; carried in header of bitstrings; ID'd using an addy pair
-   3. addy mapping: map addys of one scheme on addys of another scheme (ex. translate logical IP specified by app to an ethernet MAC addy)
-2. routing: systems that aren't directly connected, using intermediary systems along the route to intended rec to forward data on behalf of sender, connected via routers
-   1. internetworking: interconnection of networks via routers.
-   2. Routing: sending data from source net to destination net. It's supported by host addressing and identification using hierarchical IP addy system.
+1. Data and address formats for data exchange & address mapping
+   1. exchange of digital message bitstrings
+      1. `header`: fields w/ relevance to the operation of the protocol
+      2. `payload`: where actual message is carried
+   2. addresses are used to identify & send to intended receiver
+      1. carried in header of bitstrings & identified using an address pair
+   3. address mapping: map addresss of one scheme on addresss of another scheme
+      1. ex. translate logical IP specified by app to an ethernet MAC address
+2. Routing: systems that aren't directly connected, using intermediary systems along the route to intended receiver to forward data on behalf of sender, which are connected via routers
+   1. Internetworking: interconnection of networks via routers
+   2. Routing: sending data from source => destination network
+      1. It's supported by host addressing & identification using hierarchical IP address system
 3. detection of transmission erros: CRC of data area added to end of packets, allows rec to reject packets on CRC diff and arrange for retransmission
 4. acknowledgement: recievers send acknowledgements of packets received correctly
-
    1. required for connection-oriented communication
-   2. loss of info (timeouts and retries): packets can be lost on the net or delayed in transit
-   3. the sender may expect an acknow. of correct reception from the rec w/in a certain amount of time.
-   4. on timeouts: the sender may need to retransmit the information.
-   5. retransmission has no effect when link is permanently broken, so the n of retransmissions is limited and if the limit is exceeded it's an error
-   6. direction of info flow
-   7. _media access control_
-   8. half-duplex links: transmission via one direction at a t
-   9. shared medium: transmission via 1 sender at a t
-   10. sequence and flow control
-   11. bitstrings are divided into pieces and sent on net indy; they can get lost, delayed, take diff routes and can result in pieces arriving out of seq. or retransm. creating duplicate pieces
-   12. The data is marked w/ seq. info at the sender, so rec can figure out any issues to reassemble message or ask for retrans.
-   13. flow control is needed when sender transmits faster than reciever & intermediate net equip can process the trans.
-   14. queueing (buffers): ususally FIFO queues
-   15. used to deal w/ message in order it was sent; can use multiple queues w/ diff priorities
+   2. loss of info (timeouts and retries): packets can be lost on the network or delayed in transit
+   3. Sender may expect an acknow. of correct reception from the rec w/in a certain amount of time
+   4. sender may need to retransmit the info on timeouts
+   5. retransmission has no effect when link is permanently broken, so the n of retransmissions is limited
+      1. if the limit is exceeded it's an error
+   6. `Information flow`, `Sequence` and `Flow control`
+   7. `MAC`: media access control - sublayer within Data Link (0SI) (Link layer in TCP/IP)
+   8. half-duplex links: transmission via one direction at a time
+   9. shared medium: transmission via 1 sender at a time
+   10. bitstrings are divided into pieces and sent on network individually
+       1. Can get lost, delayed, or take different routes, resulting in pieces arriving out of sequence or retransmitted, which creates duplicate pieces
+   11. The data is marked w/ sequence info at the sender, so receiver can figure out any issues to reassemble message or ask for retransmission
+   12. flow control is needed when sender transmits faster than reciever so intermediate network equipment can process the transmission
+   13. Queueing (buffers) - usually FIFO queues that are used to deal with messages in the order it was sent
+       1. can use multiple queues with diff priorities
 
 ### Common Internet Protocols, Data and File Sharing
 
@@ -347,7 +388,7 @@ ___
 - _NIC_: network interface card, adapter card used to connect a host to the network
 - _repeater_: used to extend a signal being sent to provide add'l coverage
 - _hub_: older tech layer 1 (physical layer) device that connects hosts together.
-  - Don't recognize MAC addys; Only send traffic coming in on one port out on every other port
+  - Don't recognize MAC addresss; Only send traffic coming in on one port out on every other port
 - _cable/DSL modem_: used to connect to an ISP
 - _Bridge_: layer 2 (data link) device that connects 2 net segments and controls traffic moving between them
 -_patch panel_: physical panel w/ multiple connection points used as a central location to interconnect devies and ports on a net. Allows for an organized cabling strucutrre to manage 10s-100s of interconnections
@@ -359,7 +400,7 @@ ___
 - 1
 - _DHCP_: Dynamic Host Configuration Protocol; is a network management protocol used on IP networks
   - employs connectionless service model, using UDP (UDP port 67 for server and 68 for client)
-  - manages IP settings for devices on its local network, (ex. auto & dynamically assigns IP addys to those devices)
+  - manages IP settings for devices on its local network, (ex. auto & dynamically assigns IP addresss to those devices)
   - auto assigns IP addresses and other communication param to devices connected to the net using a client–server architecture
   - two network components: a centrally installed network DHCP server and client instances of the protocol stack on each device that periodically requests a set of param. from server
 
@@ -576,60 +617,11 @@ ___
     4. _OLED_: organic light emitting diode - thinner/lighter; made of a layer of organic compound between 2 light-emitting electrods
        1. common in handheld devices
 
-## Shell(DOS)
-
-### Windows CMD
-
-| command | description |
-| :---: | :---: |
-| `BCDEDIT`| Sets properties in boot database to control boot loading.|
-| `CACLS`     |     Displays or modifies access control lists (ACLs) of files|
-| `CD`        |     Displays the name of or changes the current directory.|
-| `CHDIR`     |     Displays the name of or changes the current directory.|
-| `CHKDSK`    |     Checks a disk and displays a status report.|
-| `CLS`       |     Clears the screen.|
-| `CONVERT`   |     Converts FAT volumes to NTFS. Can't convert current drive|
-| `COPY`      |     Copies one or more files to another location.|
-| `DATE`      |     Displays or sets the date.|
-| `DEL`       |     Deletes one or more files.|
-| `DIR`       |     Displays a list of files and subdirectories in a directory.|
-| `DISKPART`  |     Displays or configures Disk Partition properties.|
-| `ECHO`      |     Displays messages, or turns command echoing on or off.|
-| `ERASE`     |     Deletes one or more files.|
-| `FIND`      |     Searches for a text string in a file or files.|
-| `FINDSTR`   |     Searches for strings in files.|
-| `FORMAT`    |     Formats a disk for use with Windows.|
-| `FSUTIL`    |     Displays or configures the file system properties.|
-| `FTYPE`     |     Displays/modifies file types used in file ext assoc.|
-| `GPRESULT`  |     Displays Group Policy information for machine or user.|
-| `HELP`      |     Provides Help information for Windows commands.|
-| `ICACLS`    |     Display, modify, backup, or restore ACLs for files and dir.|
-| `MD`        |   Creates a directory.|
-| `MKDIR`     |   Creates a directory.|
-| `MKLINK` | Creates Symbolic Links & Hard Links|
-| `MODE` |Configures a system device.|
-| `MOVE` |     Moves one or more files from one directory to another dir.|
-| `PRINT`     |     Prints a text file.|
-| `RD`        |     Removes a directory.|
-| `RECOVER`   |     Recovers readable info from a bad or defective disk.|
-| `REN`       |     Renames a file or files.|
-| `RENAME`    |     Renames a file or files.|
-| `RMDIR`     |     Removes a directory.|
-| `ROBOCOPY`  |     Advanced utility to copy files and directory trees|
-| `SCHTASKS`  |     Schedules commands & programs to run on a computer.|
-| `SHUTDOWN`  |     Allows proper local or remote shutdown of machine.|
-| `SYSTEMINFO`|     Displays machine specific properties and configuration.|
-| `TASKLIST`  |     Displays all currently running tasks including services.|
-| `TASKKILL`  |     Kill or stop a running process or application.|
-| `TREE`      |     Graphically displays the dir structure of a drive or path|
-| `VOL`       |     Displays a disk volume label and serial number.|
-| `XCOPY`     |   Copies files and directory trees.|
-
 ___
 
 ## Mobile Devices
 
-### References
+## References
 
 >>
     Quoted & paraphrased information from personal notes and online resources

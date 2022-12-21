@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Info for encryption&comma; security&comma; git&comma; apt&comma; and linux</title>
+    <style>
+        /* From extension vscode.github */
+        /*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+        .vscode-dark img[src$=\#gh-light-mode-only],
+        .vscode-light img[src$=\#gh-dark-mode-only] {
+            display: none;
+        }
+
+        /* From extension ms-toolsai.jupyter */
+        /* These classnames are inherited from bootstrap, but are present in most notebook renderers */
+
+        .alert {
+            width: auto;
+            padding: 1em;
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+
+        .alert>*:last-child {
+            margin-bottom: 0;
+        }
+
+        #preview>.alert:last-child {
+            /* Prevent this being set to zero by the default notebook stylesheet */
+            padding-bottom: 1em;
+        }
+
+        .alert-success {
+            /* Note there is no suitable color available, so we just copy "info" */
+            background-color: var(--theme-info-background);
+            color: var(--theme-info-foreground);
+        }
+
+        .alert-info {
+            background-color: var(--theme-info-background);
+            color: var(--theme-info-foreground);
+        }
+
+        .alert-warning {
+            background-color: var(--theme-warning-background);
+            color: var(--theme-warning-foreground);
+        }
+
+        .alert-danger {
+            background-color: var(--theme-error-background);
+            color: var(--theme-error-foreground);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet"
+        type="text/css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+    <style>
+        body {
+            font-family: Fira Code Retina, Fira Code, -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+    </style>
+    <style>
+        .task-list-item {
+            list-style-type: none;
+        }
+
+        .task-list-item-checkbox {
+            margin-left: -20px;
+            vertical-align: middle;
+            pointer-events: none;
+        }
+    </style>
+
+</head>
+
+<body class="vscode-body vscode-light">
+    <h1 id="info-for-encryption-security-git-apt-and-linux">Info for encryption, security, git, apt, and linux</h1>
+    <ul>
+        <li><a href="#info-for-encryption-security-git-apt-and-linux">Info for encryption, security, git, apt, and
+                linux</a>
+            <ul>
+                <li><a href="#steps-for-ssh-into-git-repo">Steps for ssh into git repo</a>
+                    <ul>
+                        <li><a href="#steps-for-keygen">Steps for keygen</a></li>
+                        <li><a href="#example-ssh-connect">Example ssh connect</a></li>
+                        <li><a href="#initial-ssh-example">initial ssh example</a></li>
+                    </ul>
+                </li>
+                <li><a href="#gpg-key">GPG key</a></li>
+                <li><a href="#bash-commands">bash commands</a></li>
+                <li><a href="#apt-description">Apt DESCRIPTION</a></li>
+                <li><a href="#shell-command-info">Shell command info</a></li>
+                <li><a href="#symbolic-rep-of-data">symbolic rep of data</a></li>
+                <li><a href="#linux-permissions">linux permissions</a></li>
+                <li><a href="#git-colors-for-terminal">git colors for terminal</a></li>
+            </ul>
+        </li>
+    </ul>
+    <h2 id="steps-for-ssh-into-git-repo">Steps for ssh into git repo</h2>
+    <blockquote>
+        <p>ssh connects and logs into the specified destination in the form: user, hostname and port:</p>
+    </blockquote>
+    <pre><code class="language-sh">[user@]hostname
+ssh://[user@]hostname[:port]
+<span class="hljs-comment"># different format for ssh</span>
+ssh://[user@]host.xz[:port]/~[user]/path/to/repo.git/
+ssh://[user@]host.xz[:port]/path/to/repo.git/
+ssh -i ~/.ssh/id_ed25519 <span class="hljs-comment"># identity file (private key)</span>
+ssh -l login_name -p port
+ssh-keygen -l -f /etc/ssh/ssh_host_rsa_key <span class="hljs-comment"># determine fingerprints</span>
+ssh-keygen -lv -f ~/.ssh/known_hosts <span class="hljs-comment"># ls fingerpritns and random art for known hosts</span>
+ssh-keygen -r host.example.com.
+<span class="hljs-comment"># connect client to server; SSHFP resource records should be + to the zonefile for host 1st</span>
+dig -t SSHFP host.example.com check that zone is answering fingerprint queries.
+ssh -o <span class="hljs-string">&quot;VerifyHostKeyDNS ask&quot;</span> host.example.com <span class="hljs-comment"># client connects</span>
+</code></pre>
+    <h3 id="steps-for-keygen">Steps for keygen</h3>
+    <ul>
+        <li>The user creates his/her key pair by running ssh-keygen(1).
+            <ul>
+                <li>stores the <code>private</code> key in:
+                    <ul>
+                        <li>~/.ssh/id_dsa (DSA), ~/.ssh/id_ecdsa (ECDSA), ~/.ssh/id_ecdsa_sk (authenticator-hosted
+                            ECDSA), ~/.ssh/id_ed25519 (Ed25519), ~/.ssh/id_ed25519_sk (authenticator-hosted Ed25519), or
+                            ~/.ssh/id_rsa (RSA)</li>
+                    </ul>
+                </li>
+                <li>stores the <code>public</code> key in the user's home directory w/in subdir of:
+                    <ul>
+                        <li>~/.ssh/id_dsa.pub (DSA), ~/.ssh/id_ecdsa.pub (ECDSA), ~/.ssh/id_ecdsa_sk.pub
+                            (authenticator-hosted ECDSA), ~/.ssh/id_ed25519.pub (Ed25519), ~/.ssh/id_ed25519_sk.pub
+                            (authenticator-hosted Ed25519), or ~/.ssh/id_rsa.pub (RSA)</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>The user should then copy the public key to ~/.ssh/authorized_keys in his/her home directory on the remote
+            machine.</li>
+        <li>The authorized_keys file corresponds to the conventional ~/.rhosts file, and has one<br>
+            key per line, though the lines can be very long. After this, the user can log in without giving the
+            password.</li>
+    </ul>
+    <h3 id="example-ssh-connect">Example ssh connect</h3>
+    <blockquote></blockquote>
+    <pre><code>- The following example would connect client network
+  - 10.0.99.0/24 using a point-to-point connection
+    - from 10.1.1.1 to 10.1.1.2
+- Provided that the SSH server running on the gateway to the remote network, at 192.168.1.15, allows it
+</code></pre>
+    <pre><code class="language-bash"><span class="hljs-comment"># On the client:</span>
+ssh -f -w 0:1 192.168.1.15 <span class="hljs-literal">true</span>
+ifconfig tun0 10.1.1.1 10.1.1.2 netmask 255.255.255.252
+route add 10.0.99.0/24 10.1.1.2
+
+<span class="hljs-comment"># On the server:</span>
+ifconfig tun1 10.1.1.2 10.1.1.1 netmask 255.255.255.252
+route add 10.0.50.0/24 10.1.1.1
+
+<span class="hljs-comment"># Client access may be more finely tuned via the /root/.ssh/authorized_keys file and the PermitRootLogin server option.</span>
+<span class="hljs-comment"># the following entry would permit connections on:</span>
+<span class="hljs-comment"># tun(4) device 1 from user “jane” and on tun device 2 from user “john”, if PermitRootLogin is set to “forced-commands-only”:</span>
+
+tunnel=<span class="hljs-string">&quot;1&quot;</span>,<span class="hljs-built_in">command</span>=<span class="hljs-string">&quot;sh /etc/netstart tun1&quot;</span> ssh-rsa ... jane
+tunnel=<span class="hljs-string">&quot;2&quot;</span>,<span class="hljs-built_in">command</span>=<span class="hljs-string">&quot;sh /etc/netstart tun2&quot;</span> ssh-rsa ... john
+</code></pre>
+    <hr>
+    <h3 id="initial-ssh-example">initial ssh example</h3>
+    <pre><code class="language-bash"><span class="hljs-comment"># edit git config f</span>
+git config --global user.name &lt;username&gt;
+git config --global user.email &lt;email@mail.com&gt;
+<span class="hljs-built_in">ls</span> -al ~/.ssh <span class="hljs-comment"># list files in .ssh dir</span>
+ssh-keygen -t ed25519 -C <span class="hljs-string">&quot;email@google.com&quot;</span>
+<span class="hljs-comment"># creates pub/priv key pair</span>
+<span class="hljs-comment"># saves to .ssh/id_ed25519 &amp; .ssh/id_ed25519.pub</span>
+  <span class="hljs-comment"># generates key fingerprint &amp; randomart image</span>
+<span class="hljs-built_in">eval</span> <span class="hljs-string">&quot;<span class="hljs-subst">$(ssh-agent -s)</span>&quot;</span> <span class="hljs-comment">#check if agent is running</span>
+ssh-add ~/.ssh/id_ed25519 <span class="hljs-comment">#add id to ~</span>
+<span class="hljs-built_in">cat</span> ~/.ssh/id_ed25519.pub <span class="hljs-comment"># display pub key then c/v to github acct</span>
+ssh -T git@github.com <span class="hljs-comment"># test connection &amp; clone repo</span>
+git <span class="hljs-built_in">clone</span> git@github.com:&lt;username&gt;/&lt;repo&gt;.git
+code .
+git <span class="hljs-built_in">clone</span> ssh://git@ssh.github.com:443/&lt;username&gt;/&lt;repo&gt;.git
+</code></pre>
+    <ul>
+        <li>ssh-keygen supports two types of certificates: user and host.
+            <ul>
+                <li>User certificates authenticate users to servers
+                    <ul>
+                        <li>placed in /path/to/user_key-cert.pub.</li>
+                    </ul>
+                </li>
+                <li>Host certificates authenticate server hosts to users
+                    <ul>
+                        <li>requires the -h option</li>
+                        <li>host certificate will be output to /path/to/host_key-cert.pub.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <blockquote>
+        <blockquote></blockquote>
+    </blockquote>
+    <p>review: ssh(1), ssh-add(1), ssh-agent(1), sshd(8)</p>
+    <pre><code class="language-sh"><span class="hljs-comment"># generate a user certificate:</span>
+ssh-keygen -s /path/to/ca_key -I key_id /path/to/user_key.pub
+
+<span class="hljs-comment"># generate a host certificate:</span>
+
+ssh-keygen -s /path/to/ca_key -I key_id -h /path/to/host_key.pub
+ssh-copy-id
+<span class="hljs-comment"># copies the local-host’s pub key to the remote-host’s authorized_keys fi</span>
+</code></pre>
+    <pre><code class="language-sh"><span class="hljs-comment"># Ex from giteveryday help commands</span>
+
+<span class="hljs-comment"># - Use a tarball as a starting point for a new repository.</span>
+
+tar zxf frotz.tar.gz
+<span class="hljs-built_in">cd</span> frotz
+git init
+git add . (1)
+git commit -m <span class="hljs-string">&quot;import of frotz source tree.&quot;</span>
+git tag v2.43 (2)
+
+<span class="hljs-comment"># 1. add all fi under the cwd.</span>
+<span class="hljs-comment"># 2. make a lightweight, unannotated tag.</span>
+
+<span class="hljs-comment"># Create a topic branch and develop.</span>
+
+git switch -c alsa-audio (1)
+edit/compile/test
+git restore curses/ux_audio_oss.c (2)
+git add curses/ux_audio_alsa.c (3)
+edit/compile/test
+git diff HEAD (4)
+git commit -a -s (5)
+edit/compile/test
+git diff HEAD^ (6)
+git commit -a --amend (7)
+git switch master (8)
+git merge alsa-audio (9)
+git <span class="hljs-built_in">log</span> --since=<span class="hljs-string">&#x27;3 days ago&#x27;</span> (10)
+git <span class="hljs-built_in">log</span> v2.43.. curses/ (11)
+</code></pre>
+    <ol>
+        <li>create a new topic branch.</li>
+        <li>revert your botched changes in curses/ux_audio_oss.c.</li>
+        <li>you need to tell Git if you added a new file; removal and modification will be caught if you do git commit
+            -a later</li>
+        <li>to see what changes you are committing.</li>
+        <li>commit everything, as you have tested, with your sign-off.</li>
+        <li>look at all your changes including the previous commit.</li>
+        <li>amend the previous commit, adding all your new changes, using original message</li>
+        <li>switch to the master branch.</li>
+        <li>merge a topic branch into your master branch.</li>
+        <li>review commit logs; other forms to limit output can be combined and include -10 (to show up to 10 commits),
+            --until=2005-12-10, etc</li>
+        <li>view only the changes that touch what’s in curses/ directory,<br>
+            since v2.43 tag.</li>
+    </ol>
+    <pre><code class="language-sh"><span class="hljs-comment"># Clone the upstream and work on it. Feed changes to upstream.</span>
+
+git <span class="hljs-built_in">clone</span> git://git.kernel.org/pub/scm/.../torvalds/linux-2.6
+my2.6
+<span class="hljs-built_in">cd</span> my2.6
+git switch -c mine master (1)
+edit/compile/test; git commit -a -s (2)
+git format-patch master (3)
+git send-email --to=<span class="hljs-string">&quot;person &lt;email@example.com&gt;&quot;</span> 00*.patch (4)
+git switch master (5)
+git pull (6)
+git <span class="hljs-built_in">log</span> -p ORIG_HEAD.. <span class="hljs-built_in">arch</span>/i386 include/asm-i386 (7)
+git ls-remote --heads http://git.kernel.org/.../jgarzik/libata
+-dev.git (8)
+git pull git://git.kernel.org/pub/.../jgarzik/libata-dev.git A
+LL (9)
+git reset --hard ORIG_HEAD (10)
+git gc (11)
+</code></pre>
+    <ol>
+        <li>checkout a new branch mine from master.</li>
+        <li>repeat as needed.</li>
+        <li>extract patches from your branch, relative to master,</li>
+        <li>and email them.</li>
+        <li>return to master, ready to see what’s new</li>
+        <li>git pull fetches from origin by default and merges into the current branch.</li>
+        <li>immediately after pulling, look at the changes done upstream since last time we checked, only in the area we
+            are interested in.</li>
+        <li>check the branch names in an external repository (if not known).</li>
+        <li>fetch from a specific branch ALL from a specific repo &amp; merge</li>
+        <li>revert the pull.</li>
+        <li>garbage collect leftover objects from reverted pull.</li>
+    </ol>
+    <pre><code class="language-sh"><span class="hljs-comment"># Push into another repository.</span>
+
+<span class="hljs-comment"># from satellite machine</span>
+git <span class="hljs-built_in">clone</span> mothership:frotz frotz (1)
+<span class="hljs-built_in">cd</span> frotz
+git config --get-regexp <span class="hljs-string">&#x27;^(remote|branch)\.&#x27;</span> (2)
+remote.origin.url mothership:frotz
+remote.origin.fetch refs/heads/*:refs/remotes/origin/*
+branch.master.remote origin
+branch.master.merge refs/heads/master
+git config remote.origin.push \
+  +refs/heads/*:refs/remotes/satellite/* (3)
+edit/compile/test/commit
+git push origin (4)
+
+<span class="hljs-comment"># from mothership machine</span>
+<span class="hljs-built_in">cd</span> frotz
+git switch master
+git merge satellite/master (5)
+</code></pre>
+    <ol>
+        <li>mothership machine has a frotz repository under your home<br>
+            directory; clone from it to start a repository on the satellite<br>
+            machine.</li>
+        <li>clone sets these configuration variables by default. It<br>
+            arranges git pull to fetch and store the branches of mothership<br>
+            machine to local remotes/origin/* remote-tracking branches.</li>
+        <li>arrange git push to push all local branches to their<br>
+            corresponding branch of the mothership machine.</li>
+        <li>push will stash all our work away on remotes/satellite/*<br>
+            remote-tracking branches on the mothership machine. You could use<br>
+            this as a back-up method. Likewise, you can pretend that<br>
+            mothership &quot;fetched&quot; from you (useful when access is one sided).</li>
+        <li>on mothership machine, merge the work done on the satellite<br>
+            machine into the master branch.</li>
+    </ol>
+    <h2 id="gpg-key">GPG key</h2>
+    <blockquote>
+        <blockquote></blockquote>
+    </blockquote>
+    <p>generate a gpg key and then c/v to GH. This allows commits to be verified via signature</p>
+    <pre><code class="language-sh">gpg --full-generate-key
+<span class="hljs-comment"># choose: key type, size, expire, user id[name, pass, comment], passphrase</span>
+gpg --list-keys --keyid-format LONG
+<span class="hljs-comment"># list long form pub/priv keys &amp; copy sec/pub key after encryption standard</span>
+gpg --armor --<span class="hljs-built_in">export</span> aaa123aaa123
+<span class="hljs-comment"># print gpg key id in ASCII armor format</span>
+
+</code></pre>
+    <hr>
+    <h2 id="bash-commands">bash commands</h2>
+    <pre><code class="language-sh"><span class="hljs-built_in">echo</span> <span class="hljs-variable">$BASH</span>
+<span class="hljs-comment"># /usr/bin/bash</span>
+
+init <span class="hljs-variable">$PATH</span>
+
+. <span class="hljs-comment"># current working dir</span>
+.. <span class="hljs-comment"># parent dir</span>
+~ <span class="hljs-variable">$HOME</span> <span class="hljs-comment"># home dir of user</span>
+<span class="hljs-built_in">ls</span> -a -@ -l
+<span class="hljs-built_in">ls</span> -C -l
+
+<span class="hljs-comment"># remove dir &amp; files</span>
+<span class="hljs-built_in">rm</span> -r /folder/want-deleted <span class="hljs-comment"># remove dir &amp; content recursively</span>
+<span class="hljs-built_in">rm</span> -rp <span class="hljs-comment"># ignore permissions &amp; errors</span>
+sudo <span class="hljs-built_in">rm</span> -rf path/to/folder
+su - user -c <span class="hljs-string">&#x27;ls&#x27;</span> <span class="hljs-comment">#switch user and run cmd</span>
+mount -uw <span class="hljs-comment"># mount with write permissions</span>
+mount -o update /
+diskutil list
+<span class="hljs-built_in">df</span> -h
+find / -size +50000 -<span class="hljs-built_in">print</span>
+sudo lshw <span class="hljs-comment"># lists hardware specs</span>
+<span class="hljs-comment"># can also use dmidecode</span>
+gcreate, lvcreate, and lvextend lvm2, fdisk <span class="hljs-comment"># create/manage logical pars spanning &gt;= 1 HDD with logical volume manager</span>
+whereis [exe,cmd]
+whatis &lt;cmdname&gt;
+<span class="hljs-built_in">uname</span> -a <span class="hljs-comment"># show system info</span>
+free -gh <span class="hljs-comment">#show memory usage --lohi -l from /proc/meminfo</span>
+service ssh status <span class="hljs-comment"># check service status</span>
+ssh -l username hostname
+top -u ib-ub
+ps -ef | more <span class="hljs-comment"># view running processes</span>
+ps -ef grep code
+<span class="hljs-built_in">kill</span> -9 PID <span class="hljs-comment"># killall, pkill, xkill to terminate unix process</span>
+
+ifconfig &lt;interface_name&gt; <span class="hljs-comment"># (eth0)</span>
+<span class="hljs-comment"># -a (show all details), etho1 up | down (enable/disable), muto 1500</span>
+ifconfig eth0 192.168.2.2 netmask 255.255.255.0 broadcast 192.168.2.255
+<span class="hljs-comment"># ex. assign IP, netmask and broadcast to interface eth0</span>
+
+netstat -a | more <span class="hljs-comment"># list all ports, -at all tcp ports, -au all udp ports, -s stats, -l show listening only</span>
+netstat -ap | grep ssh &amp;&amp; -an | grep <span class="hljs-string">&#x27;:80&#x27;</span> <span class="hljs-comment"># which port a prog is running on | which process is using a specific port</span>
+grep -i <span class="hljs-string">&quot;word&quot;</span> file.txt <span class="hljs-comment"># find str in fi</span>
+find -iname <span class="hljs-string">&quot;file.txt&quot;</span> <span class="hljs-comment"># find fi</span>
+find /home/ib-ub -name *.md -<span class="hljs-built_in">type</span> f
+
+gzip file.md, gzip -d file.md <span class="hljs-comment"># zip &amp; unzip .gz fi</span>
+unzip fi.zip &amp;&amp; unzip -l fi.zip <span class="hljs-comment">#extract or view w/o unzipping fi</span>
+shutdown -h now <span class="hljs-comment">#shutdown now or -r to restart now</span>
+<span class="hljs-built_in">cat</span> -n /home/ib-ub/flow/work/Docs2/requirements3.txt <span class="hljs-comment"># print file to stdout</span>
+<span class="hljs-built_in">chmod</span> ug+rwx file.txt <span class="hljs-comment"># change permissions of fi/dir [-R u-rwx ex. will remove access recursively]</span>
+<span class="hljs-built_in">chown</span> ib-ub:group_name file.txt <span class="hljs-comment"># change owner</span>
+passwd username <span class="hljs-comment"># change password; use sudo to reset w/o old pass</span>
+
+useradd -D &amp;&amp; useradd login_name <span class="hljs-comment"># show default options and add user</span>
+adduser user_name  <span class="hljs-comment"># for interactive user creation</span>
+newusers file_name <span class="hljs-comment"># bulk creation w/ fi temp pre-configured by adding the relevant info</span>
+    <span class="hljs-comment"># ex. cat homer-family.txt</span>
+        <span class="hljs-comment"># homer:HcZ600a9:1008:1000:Homer Simpson:/home/homer:/bin/bash</span>
+        <span class="hljs-comment"># marge:1enz733N:1009:1000:Marge Simpson:/home/marge:/bin/csh</span>
+man 3 free <span class="hljs-comment"># bring up section 3 of free cmd</span>
+<span class="hljs-built_in">tail</span> -n 10 file.txt <span class="hljs-comment"># show last 10 lines of fi</span>
+less large_file.txt <span class="hljs-comment"># efficient view of log fi (CTRL+F/B forward/backward 1 window)</span>
+diff -w file1.md file2.md <span class="hljs-comment"># compare, ignore whitespace fi1 to fi2</span>
+ps top vmstat brk mmap wget, systemctl, init
+
+rsync <span class="hljs-comment"># sync fi &amp; dir between source &amp; destination dirs</span>
+rsnapshot <span class="hljs-comment"># uses the combo of rsync and hard links to maintain full-backup and incremental backups</span>
+<span class="hljs-built_in">dd</span> <span class="hljs-comment"># make boot images and copy/backup entire HDDs and create image</span>
+makeswap swapon <span class="hljs-comment"># add/manage swap space</span>
+dpkg <span class="hljs-comment"># install/remove deb packages</span>
+</code></pre>
+    <h2 id="apt-description">Apt DESCRIPTION</h2>
+    <pre><code class="language-sh">    apt [-h] [-o=config_string] [-c=config_file] [-t=target_release] [-a=architecture]
+        {list | search | show | update | install pkg[{=pkg_ver_number | /target_release}]... | remove pkg... | upgrade | full-upgrade | edit-sources | {-v --version} |{-h--help}}
+</code></pre>
+    <blockquote></blockquote>
+    <p>interface for package management system.<br>
+        (apt-get &amp; apt-cache can be used as well)</p>
+    <ul>
+        <li><code>update</code> (apt-get(8)) update is used to download package information from all configured sources.
+            Other commands operate on this data to e.g. perform package upgrades or search in and display details about
+            all packages available for installation</li>
+        <li><code>upgrade</code> (apt-get(8)) upgrade is used to install available upgrades of all packages currently
+            installed on the system from the sources configured via sources.list(5). New packages will be installed if
+            required to satisfy dependencies, but existing packages will never be removed. If an upgrade for a package
+            requires the removal of an installed package the upgrade for this package isn't performed.</li>
+        <li><code>full-upgrade</code>: performs the function of upgrade but will remove currently installed packages if
+            this is needed to upgrade the system as a whole.</li>
+        <li><code>install, reinstall, remove, purge</code>: Performs the requested action on one or more packages
+            specified via regex(7), glob(7) or exact match. The requested action can be overridden for specific packages
+            by appending a plus (+) to the package name to install this package or a minus (-) to remove it.
+            <ul>
+                <li>A specific version of a package can be selected for installation by following the package name with
+                    an equals (=) and the version of the package to select. Alternatively the version from a specific
+                    release can be selected by following the package name with a forward slash (/) and codename (buster,
+                    bullseye, sid ...) or suite name (stable,testing, unstable). This will also select versions from
+                    this release for dependencies of this package if needed to satisfy the request.</li>
+                <li>Removing a package removes all packaged data, but leaves usually small (modified) user configuration
+                    files behind, in case the remove was an accident. Just issuing an installation request for the
+                    accidentally removed package will restore its function as before in that case.</li>
+                <li>On the other hand you can get rid of these leftovers by calling purge even on already removed
+                    packages. Note that this does not affect any data or configuration stored in your home directory.
+                </li>
+            </ul>
+        </li>
+        <li><code>autoremove</code> is used to remove packages that were automatically installed to satisfy dependencies
+            for other packages and are now no longer needed as dependencies changed or the package(s) needing them were
+            removed in the meantime.
+            <ul>
+                <li>You should check that the list does not include applications you have grown to like even though they
+                    were once installed just as a dependency of another package. You can mark such a package as manually
+                    installed by using apt-mark(8). Packages which you have installed explicitly via install are also
+                    never proposed for automatic removal.</li>
+            </ul>
+        </li>
+        <li><code>satisfy</code>: satisfies dependency strings, as used in Build-Depends. It also handles conflicts, by
+            prefixing an argument with &quot;Conflicts: &lt;(value)&gt;&quot;.</li>
+        <li><code>search</code>: can be used to search for the given regex(7) term(s) in the list of available packages
+            and display matches. This can e.g. be useful if you are looking for packages having a specific feature. If
+            you are looking for a package including a specific file try apt-file.</li>
+        <li><code>show</code>: information about the given package(s) including its dependencies, installation and
+            download size, sources the package is available from, the description of the packages content and much more
+        </li>
+        <li><code>list</code>: is somewhat similar to dpkg-query --list in that it can display a list of packages
+            satisfying certain criteria. It supports glob patterns for matching package names as well as options to list
+            installed (--installed), upgradeable (--upgradeable) or all available (--all-versions) versions.</li>
+        <li><code>edit-sources</code>: lets you edit your sources.list(5) files in your preferred text editor while also
+            providing basic sanity checks.</li>
+        <li>Also view apt-get, apt-cache, sources.list, apt.conf, apt-config</li>
+    </ul>
+    <h2 id="shell-command-info">Shell command info</h2>
+    <ul>
+        <li>ctrl + \ = Quit (SIGQUIT)
+            <ul>
+                <li>fquit a running instance</li>
+            </ul>
+        </li>
+        <li>open path/to/app.app
+            <ul>
+                <li>open an app from sh</li>
+            </ul>
+        </li>
+        <li>escape special chars:
+            <ul>
+                <li>prepending with \</li>
+                <li>wrapping it in single quotes</li>
+            </ul>
+        </li>
+    </ul>
+    <h2 id="symbolic-rep-of-data">symbolic rep of data</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>abbrev</th>
+                <th>value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>no</strong></td>
+                <td>Global default</td>
+            </tr>
+            <tr>
+                <td>fi</td>
+                <td>Normal file</td>
+            </tr>
+            <tr>
+                <td>di</td>
+                <td>Directory</td>
+            </tr>
+            <tr>
+                <td>ln</td>
+                <td>Symbolic link.</td>
+            </tr>
+            <tr>
+                <td>bd</td>
+                <td>Block device</td>
+            </tr>
+            <tr>
+                <td>cd</td>
+                <td>Character device</td>
+            </tr>
+            <tr>
+                <td>or</td>
+                <td>Symbolic link to a non-existent file</td>
+            </tr>
+            <tr>
+                <td>ex</td>
+                <td>Executable file</td>
+            </tr>
+            <tr>
+                <td>**.extension</td>
+                <td>(ex: *.mp3)</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2 id="linux-permissions">linux permissions</h2>
+    <pre><code class="language-py"><span class="hljs-comment"># permission terms</span>
+r, w, x = read, write, execute | <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>
+u, g, o = user, group, others | first, sec., third (chars.)
+</code></pre>
+    <pre><code class="language-sh"><span class="hljs-built_in">chmod</span> u+x file.txt
+<span class="hljs-built_in">chmod</span> u+r,g+x file.txt
+<span class="hljs-built_in">chmod</span> u-rx file.txt <span class="hljs-comment"># remove permissions</span>
+<span class="hljs-built_in">chmod</span> -R 775 dir_name/ <span class="hljs-comment"># change permissions of all fi in dir</span>
+chmode -R,a-x,u+X *
+<span class="hljs-comment"># recursively remove exec perm from all under dir &amp; add exec for user</span>
+  <span class="hljs-comment"># other solution</span>
+<span class="hljs-keyword">for</span> f <span class="hljs-keyword">in</span> <span class="hljs-string">&#x27;ls -R&#x27;</span>; <span class="hljs-keyword">do</span> [! -d<span class="hljs-string">&quot;<span class="hljs-variable">$f</span>&quot;</span>] &amp;&amp; <span class="hljs-built_in">chmod</span> a-x <span class="hljs-string">&quot;<span class="hljs-variable">$f</span>&quot;</span>; <span class="hljs-keyword">done</span>
+</code></pre>
+    <h2 id="git-colors-for-terminal">git colors for terminal</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>foreground('') k =&gt; int = v =&gt; str</th>
+                <th style="text-align:left">background(bg) {k:'v'}</th>
+                <th>style</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>31 = red</td>
+                <td style="text-align:left">40 = black bg</td>
+                <td>0 = default colour</td>
+            </tr>
+            <tr>
+                <td>32 = green</td>
+                <td style="text-align:left">41 = red bg</td>
+                <td>1 = bold</td>
+            </tr>
+            <tr>
+                <td>33 = orange</td>
+                <td style="text-align:left">42 = green bg</td>
+                <td>4 = underlined</td>
+            </tr>
+            <tr>
+                <td>34 = blue</td>
+                <td style="text-align:left">43 = orange bg</td>
+                <td>5 = flashing text</td>
+            </tr>
+            <tr>
+                <td>35 = purple</td>
+                <td style="text-align:left">44 = blue bg</td>
+                <td>7 = reverse field =&gt; (flip fore/bg color)</td>
+            </tr>
+            <tr>
+                <td>36 = cyan</td>
+                <td style="text-align:left">45 = purple bg</td>
+                <td>8 = concealed (invisible)</td>
+            </tr>
+            <tr>
+                <td>37 = grey</td>
+                <td style="text-align:left">46 = cyan bg</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>90 = dark grey</td>
+                <td style="text-align:left">47 = grey bg</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>91 = light red</td>
+                <td style="text-align:left">100 = dark grey bg</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>92 = light green</td>
+                <td style="text-align:left">101 = light red bg</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>93 = yellow</td>
+                <td style="text-align:left">102 = light green bg</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>94 = light blue</td>
+                <td style="text-align:left">103 = yellow bg</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>95 = light purple</td>
+                <td style="text-align:left">104 = light blue bg</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>96 = turquoise</td>
+                <td style="text-align:left">105 = light purple bg</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>97 = white</td>
+                <td style="text-align:left">106, 107 = turquoise, white bg</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+
+</body>
+
+</html>
