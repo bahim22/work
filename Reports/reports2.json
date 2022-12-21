@@ -74,4 +74,20 @@
     "python_version": "3.10",
     "sys_platform": "linux"
   }
+/*   "version": "0",
+  "pip_version": "22.3.1",
+  "install": [],
+  "environment": {
+    "implementation_name": "cpython",
+    "implementation_version": "3.8.10",
+    "os_name": "posix",
+    "platform_machine": "x86_64",
+    "platform_release": "5.10.16.3-microsoft-standard-WSL2",
+    "platform_system": "Linux",
+    "platform_version": "#1 SMP Fri Apr 2 22:23:49 UTC 2021",
+    "python_full_version": "3.8.10",
+    "platform_python_implementation": "CPython",
+    "python_version": "3.8",
+    "sys_platform": "linux"
+  } */
 }

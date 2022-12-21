@@ -5,28 +5,27 @@
 
 Returns:
     data_to_decode => object: returns an HTTP res with an HTTP \
-# status code
-"""
-# ## API, HTTP
-#
-# ## HTTP Method:
-#   Allows REST api client to manage state of response in web services
-#
-# 1. GET - retrieve existing resource
-# 2. POST - create new sresponse
-# 3. PUT - update existing response
-# 4. PATCH - partial update
-# 5. DELETE - delete response
-#
-# - after the RESTAPI recieves HTTP req it returns an HTTP res with an HTTP \
-# status code
-# - The app that sent the req to the API will perform actions based on the
-# results (also include error handling & success messages)
-#     - 2xx - success; 3xx - redirect; 4xx - client error; 5xx - server error
-# - Endpoints: the URLS the RESTAPI exposes that the Client App can use to \
-# access a web servers resources
-#
+status code
 
+API, HTTP
+
+HTTP Method:
+  Allows REST api client to manage state of response in web services
+
+1. GET - retrieve existing resource
+2. POST - create new sresponse
+3. PUT - update existing response
+4. PATCH - partial update
+5. DELETE - delete response
+
+- after the RESTAPI recieves HTTP req it returns an HTTP res with an HTTP \
+status code
+- The app that sent the req to the API will perform actions based on the
+results (also include error handling & success messages)
+    - 2xx - success; 3xx - redirect; 4xx - client error; 5xx - server error
+- Endpoints: the URLS the RESTAPI exposes that the Client App can use to \
+access a web servers resources
+"""
 
 # %%
 import os
@@ -68,24 +67,28 @@ while True:
 sock1.close()
 
 # %% [markdown]
-# # network protocol HTTP
-#
-# # socket: make network connections and retrieve data over them
-#
-# ## socket connection
-#
-# - socket => connect => send (req) => recv (res)
-# - the program runs the above through port 80 to connect to info from server
+"""
+network protocol HTTP
+
+socket: make network connections and retrieve data over them
+
+socket connection
+
+- socket => connect => send (req) => recv (res)
+- the program runs the above through port 80 to connect to info from server
+"""
 
 # %% [markdown]
-# 1. prog init connection to port 80 on the www.py4e.com server
-# 2. this prog is the web browser, so HTTP protocol requires sending GET cmd \
-# followed by blank line
-#    1. \r\n = EOL (end of line)
-#    2. \r\n\r\n = nothing between 2 EOL sequences (which is == to a blank line)
-# 3. the loop recv the data in 512-chars chunks from socket and prints until recv() returns empty string (there's no more data left to read)
-#
-# ### encode() and decode() methods convert strings into bytes objects and back again
+"""
+1. prog init connection to port 80 on the www.py4e.com server
+2. this prog is the web browser, so HTTP protocol requires sending GET cmd \
+followed by blank line
+   1. \r\n = EOL (end of line)
+   2. \r\n\r\n = nothing between 2 EOL sequences (which is == to a blank line)
+3. the loop recv the data in 512-chars chunks from socket and prints until \
+    recv() returns empty string (there's no more data left to read)
+encode() and decode() methods convert strings into bytes objects and back again
+"""
 
 # %%
 # par_list = "words?sp=Kentucky"
@@ -120,7 +123,10 @@ for i in dataText:
 print(lst)
 
 # %%
-# dataText = [{"word":"kentucky","score":129541},{"word":"kentuck","score":64667}]
+# dataText = [
+# {"word":"kentucky","score":129541},
+# {"word":"kentuck","score":64667}
+# ]
 
 lst = []
 
@@ -138,7 +144,8 @@ type(data)
 print(data)
 
 # %%
-# open and read data from url; only showing output
+# open & read data from url \
+# only showing output
 
 rom_u = 'http://data.pr4e.org/romeo.txt'
 fh = urllib.request.urlopen(rom_u)
@@ -146,7 +153,8 @@ for line in fh:
     print(line.decode().strip())
 
 # %%
-# retrieve data and compute freq of each word in file
+# retrieve data =>
+# compute freq of each word in fi
 
 fha = urllib.request.urlopen(rom_u)
 
@@ -160,8 +168,9 @@ print(counts)
 # %% [markdown]
 # # dict method info
 #
-# - dict() -> new empty dictionary dict(mapping) -> new dictionary initialized from a mapping object's (key, value) pairs
-# - dict(iterable) -> new dictionary initialized as if via:
+# - dict() -> new empty dict dict(mapping) -> new dict initialized from a
+# mapping object's (key, value) pairs
+# - dict(iterable) -> new dictinitialized as if via:
 #   - d = {} for k, v in iterable:
 #   - d[k] = v
 # dict(**kwargs) -> new dictionary initialized with the name=value pairs
@@ -171,31 +180,30 @@ print(counts)
 # # urllib
 #
 # - library for opening URLs using a variety of protocols
-#   - The simplest way to use this module is to call the urlopen function, which accepts a string containing a URL or a Request object
+#   - The simplest way to use this module is to call the urlopen function,
+# which accepts a string containing a URL or a Request object
 #
-# ```py
-# import urllib.request
-#
-# # set up authentication info
-# authinfo = urllib.request.HTTPBasicAuthHandler() authinfo.add_password(realm='PDQ Application',
-#                       uri='https://mahler:8092/site-updates.py', user='klem', passwd='geheim$parole')
-#
-# proxy_support = urllib.request.ProxyHandler({"http" : "http://ahad-haam:3128"})
-#
-# # build a new opener that adds authentication and caching FTP handlers
-# opener = urllib.request.build_opener(proxy_support, authinfo,
-#                                      urllib.request.CacheFTPHandler)
-#
-# # install it
-# urllib.request.install_opener(opener)
-#
-# f = urllib.request.urlopen('https://www.python.org/')
-# ```
-#
+# %%
+import urllib.request
+
+# set up authentication info
+authinfo = urllib.request.HTTPBasicAuthHandler() authinfo.add_password(realm='PDQ Application', uri='https://mahler:8092/site-updates.py', user='klem', passwd='geheim$parole')
+
+proxy_support = urllib.request.ProxyHandler({"http" : "http://ahad-haam:3128"})
+
+# build a new opener that adds authentication and caching FTP handlers
+opener = urllib.request.build_opener(proxy_support, authinfo, urllib.request.CacheFTPHandler)
+
+# install it
+urllib.request.install_opener(opener)
+
+f = urllib.request.urlopen('https://www.python.org/')
+
+# %% [markdown]
+
 # `urlcleanup`: Clean up temporary files from urlretrieve calls.
 # `urlopen`: Open the URL url, which can be either a string or a Request object.
-#
-# >
+
 #     - *data* must be an object specifying additional data to be sent to the server, or None if no such data is needed. See Request for details.
 #     - urllib.request module uses HTTP/1.1 and includes a "Connection:close" header in its HTTP requests.
 #     - The optional *timeout* parameter specifies a timeout in seconds for blocking operations like the connection attempt (if not specified, the global default timeout setting will be used). This only works for HTTP, HTTPS and FTP connections.
@@ -264,46 +272,45 @@ print(r.raw.read(10))
 #
 # ## GET usage:
 #
-# ```py
-# >>> import requests
-# >>> r = requests.get('https://www.python.org')
-# >>> r.status_code
+# %%
+import requests
+
+
+r = requests.get('https://www.python.org')
+r.status_code
 # 200
-# >>> b'Python is a programming language' in r.content
-# True
-# ... or POST:
-#
-# >>> payload = dict(key1='value1', key2='value2')
-# >>> r = requests.post('https://httpbin.org/post', data=payload)
-# >>> print(r.text)
-# {
-#   ...
-#   "form": {
-#     "key1": "value1",
-#     "key2": "value2"
-#   },
-#   ...
-# }
-# ```
-#
+
+print(b'Python is a programming language' in r.content)
+# True or POST:
+
+payload = dict(key1='value1', key2='value2')
+r = requests.post('https://httpbin.org/post', data=payload)
+print(r.text)
+""" {
+  ...
+  "form": {
+    "key1": "value1",
+    "key2": "value2"
+  },
+  ...
+} """
 
 # %%
 
 # %%
-ib_pic = '../ibalde14623.jpg'
-ib_pic2 = '//pointpark.edu/ibalde14623.jpg'
-ib_pic3 = 'file://pointpark.edu/files/Apps/IDPhotos/ibalde14623.jpg'
+ib_pic2 = '//ppu.edu/ib11111.jpg'
+ib_pic3 = 'file://ppu.edu/files/Apps/IDPhotos/ib1111.jpg'
 
 # %%
 # HOST = 'data.pr4e.org'
-HOST = 'http://pointpark.edu/files/Apps/IDPhotos/ibalde14623.jpg'
+HOST = 'http://ppu.edu/files/Apps/IDPhotos/ib11111.jpg'
 PORT = 80
 
 mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 mysock.connect((HOST, PORT))
 mysock.sendall(b'GET http://data.pr4e.org/cover3.jpg HTTP/1.0\r\n\r\n')
 mysock.sendall(
-    b'GET file://pointpark.edu/files/Apps/IDPhotos/ibalde14623.jpg HTTP/1.0\r\n\r\n')
+    b'GET file://ppu.edu/files/Apps/IDPhotos/ib11111.jpg HTTP/1.0\r\n\r\n')
 count = 0
 picture = b""
 
