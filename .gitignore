@@ -2,3 +2,4 @@
 .vscode/*
 .env
 *.deb
+py-prac/dec_prac.ipynb

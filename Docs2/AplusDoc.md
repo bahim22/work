@@ -268,7 +268,8 @@ ___
    5. retransmission has no effect when link is permanently broken, so the n of retransmissions is limited
       1. if the limit is exceeded it's an error
    6. `Information flow`, `Sequence` and `Flow control`
-   7. `MAC`: media access control - sublayer within Data Link (0SI) (Link layer in TCP/IP)
+   7. `MAC`: media access control - sublayer within Data Link (0SI - layer 2) (Link layer 1 TCP/IP) that provides flow control & multiplexing for transmission medium, frame delimiting & recognition,
+      1. Data Link/Link Layer also includes LLC sublayer - logical link control: provides flow control & multiplexing for logical link (ex. EtherType, 802.1Q VLAN tag)
    8. half-duplex links: transmission via one direction at a time
    9. shared medium: transmission via 1 sender at a time
    10. bitstrings are divided into pieces and sent on network individually

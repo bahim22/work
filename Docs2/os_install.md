@@ -4,9 +4,9 @@
 
 1. Download Rufus in  order to create a bootable disk drive
 2. Download the ISO file of the version and style of Ubuntu you want
-   1. <https://ubuntu.com/download/desktop>
+   1. <[Ubuntu]> Link to download Ubuntu Desktop
 3. Run the Rufus execute file and follow the instructions
-   1. verify the SHA256 checksum
+   1. Verify the SHA256 checksum
    2. May need to format HDD to convert to GPT and use UEFI (change in firmware)
       1. Can view in Computer Management & DISKPART
 
@@ -84,3 +84,5 @@ SMTP setting
 Server name: smtp.office365.com
 Port: 587
 Encryption method: STARTTLS
+
+[Ubuntu]: https://ubuntu.com/download/desktop
