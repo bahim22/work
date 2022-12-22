@@ -152,6 +152,9 @@ pip install --use-feature no-binary-enable-wheel-cache truststore fast-deps
 pip cache <dir, info, list, purge, remove>
 pip config
 (debug, edit, get, list, set, unset)
+
+python3 -m pip install --upgrade flake8 autopep8 --upgrade-strategy=eager
+# upgrade pack to latest
 ```
 
 ## Pip commands
