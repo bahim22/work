@@ -1,7 +1,7 @@
 # CompTIA A+ Docs
 
 | Hima Balde | PPU | 06-10 of 2022 |
-| ---------- | --- | ------------- |
+| ---- | --- | ---- |
 
 ## Table of Contents
 
@@ -10,33 +10,30 @@
   - [Troubleshooting Steps](#troubleshooting-steps)
   - [Seconday Skills](#seconday-skills)
   - [Tools and Safety](#tools-and-safety)
-  - [Computer Parts](#computer-parts)
+  - [Computer Components](#computer-components)
     - [Motherboard](#motherboard)
     - [Processor, CPU](#processor-cpu)
     - [Power supplies](#power-supplies)
     - [Adapter Cards](#adapter-cards)
     - [BIOS/CMOS/UEFI](#bioscmosuefi)
-  - [OS Install, Upgrade, Boot](#os-install-upgrade-boot)
-    - [_Boot methods_: user selects how to boot pc \& w/ what media](#boot-methods-user-selects-how-to-boot-pc--w-what-media)
-    - [Misc OS info](#misc-os-info)
   - [`Network`](#network)
-    - [Rules governing the transmission specified by the protocol](#rules-governing-the-transmission-specified-by-the-protocol)
-    - [Common Internet Protocols, Data and File Sharing](#common-internet-protocols-data-and-file-sharing)
-    - [`TCP/IP`](#tcpip)
-    - [TCP/IP Abstraction Layers](#tcpip-abstraction-layers)
-    - [**Ports** and **Protocols**](#ports-and-protocols)
-    - [`UDP`: user datagram protocol - datagram oriented protocol](#udp-user-datagram-protocol---datagram-oriented-protocol)
-    - [OSI model (Open systems interconnection)](#osi-model-open-systems-interconnection)
+    - [**Ports** | **Protocols** | **Hardware**](#ports--protocols--hardware)
+      - [`TCP/IP`](#tcpip)
+      - [`UDP`](#udp)
+      - [`OSI model`](#osi-model)
   - [`Hardware`](#hardware)
     - [Memory](#memory)
+      - [RAM](#ram)
     - [Storage and Peripherals](#storage-and-peripherals)
       - [RAID](#raid)
-  - [`Software`](#software)
+  - [`Software & OS`](#software--os)
     - [Windows Admin Tools](#windows-admin-tools)
     - [Windows Management Framework](#windows-management-framework)
     - [Windows naming](#windows-naming)
-    - [Displays](#displays)
-  - [Mobile Devices](#mobile-devices)
+    - [OS Admin + Operations](#os-admin--operations)
+  - [Displays \& Mobile](#displays--mobile)
+    - [Video Cables](#video-cables)
+    - [Mobile Devices](#mobile-devices)
   - [References](#references)
 
 ## Troubleshooting Steps
@@ -92,7 +89,7 @@ ___
 
 ___
 
-## Computer Parts
+## Computer Components
 
 1. `CPU`(The Central Processing Unit) is the part of the computer that asks, "what's next"
 2. `Main Memory`: stores prog. & data that CPU uses quickly and isn't saved on power off
@@ -167,68 +164,6 @@ ___
   - uses industry-standard network protocols such as _DHCP_ and _TFTP_
 - ACPI: advanced config and power management interface: defines working interfaces between the OS, BIOS, and hardware
   - can allow the OS to control power management
-  -
-
-## OS Install, Upgrade, Boot
-
-### _Boot methods_: user selects how to boot pc & w/ what media
-
-1. optical disc (CD-ROM, DVD, Blu-ray): pc will prob have built-in drive to read them; very common way to install OS on a pc
-2. external/flash drive (interfaces: USB, eSATA): ext optical/hard/flash drives, USB is common
-3. Network boot (PXE): preboot eXecution Env.; boot from network resources; net & remote server hosting the bootable image need config.
-   1. common in corp. env. where net & server resources are availalbe; allows setting up multiple pc's w/ similar images
-4. internal fixed disk (HDD/SSD) & internal Hard Drive (Partition)
-   1. disk can have OS install image or OS already installed. Most common way to boot PC after OS install completed
-   2. simple configs have one bootable par on a disk, but a disk can have > 1 par to multiboot diff OS. One logical par can span multiple physical hard disks
-
-| Install Types           |   |
-| :------------------- | -------------- |
-|  _Type_     |  _Description_ |
-|   💻    | 📕 |
-|    unattended     | pre-config., need special server w/ install image/script & good for many PC's w/ same config |
-|   in-place upgrade  | installs newer OS over older one; may preserve settings, fi, apps  |
-|    clean| disregards previous data; used for PC w/o an OS or to intentionally delete old data |
-| repair | boot w/ same -v OS & select repair; rewrites SF & settings, retains user fi; can repair OS that's unbootable or w/ issues unfixable by other methods |
-|     multiboot             | uses boot mngr that maintains boot config; user sel OS to boot; recommend install OS's to diff HDD or separate logical pars  |
-|   remote net      | PXE net boot using remote server; may require choosing install options or be unattended |
-|         image deployment         | used for PC's w/ == hardware that need == OS/settings/apps. Diff software tools can do this. Steps involve sel one PC => clean install, config, app install => create image from that PC & make available on network or portable media => copy image to other PC's |
-|   recovery par  | create rec par during install that is a bootable par for later or repair install; contains diagnostic/repair tools |
-| |
-| **Partitioning** |
-| |
-| _Type_ | _Description_ |
-|   ---     | --- |
-|  _Info_ | creates >= 1 logical drives; can be formatted separately & have separate FS. W10 allows each par to have diff drive letter |
-|    Dynamic  | more complex config & less limits than basic dsk. Can create pars spanning many physical HDD's (software RAID) |
-| Basic | most common; separated into logical pars  |
-| Primary | can have only one logical drive; W10 only boots from primary par |
-| Extended | enables >= 1 logical drive  |
-| logical | rep by a drive letter in W10; recomm. distinguishing btw dsk, par & logical drive; can be assigned 1:1 but aren't limited to 1   |
-| GPT | GUID Par Table: has info on how dsk is partitioned. supports larger drives & more pars/drive than MBR  |
-| |
-| **File System Types/Formatting** |
-| _Type_ | _Description_ |
-| Info | Fs enables storing/managing/accessing fi on a par. OS's support diff FS & pars are formatted w/ specific FS before use |
-| ExFAT | designed for small flash & SSD drives, good for perf & media fi storage |
-| FAT32 | supported by many OS & provides basic features. pars can be >= 2 TB |
-| NTFS | more advanced & supported by modern W --v. user can set/manage permissions for fi/dir for users/groups. useful for secure net fi sharing. Has indexing, compress., encrypt. on FS level |
-| CDFS | FS for CD/DVD's |
-| NFS | Network File System. mostly in servers where you can have fi access on net btw sys. |
-| ext3, ext4 | used for Linux. 4 is updated -v that enables larger pars, fi & better perf |
-| HFS | used for MacOS |
-| Swap par | Linux par used when physical RAM is maxxed out. The Data flows to swap pars; reducing perf, in place of running more apps simultaneously. |
-| quick vs. full format | quick changes FS records making dsk appear empty. Full rewrites prev fi, detects surface errors on dsk and makes restoring fi harder. |
-
-### Misc OS info
-
-1. 3rd party (unsigned drivers) should have source verified to ensure validity.
-2. signed drivers: W install drivers are tested/approved by MS
-3. workgroup: Can setup printer & fi sharing w/ small group/fam
-   1. ex. a dept in a larger org. or a home user
-4. Domain setup: Companies can use a domain controller instead for more secure, centralized login for large groups, which allows an easier path for managing large net
-5. Time, Date, Region, Lang: config these settings during install (some OS require reinstall to change lang.)
-6. Driver install, Software, Updates: Keep system updated for secuirty reasons. Install proper drivers for the type of system (32-bit => x86 sys && 64-bit on x64 sys). Use 'check for updates' utility in W10 to update OS and other MS software. Other software needs checked separatley.
-7. Know differences in Hardware/Apps/OS compatability
 
 ___
 
@@ -245,7 +180,8 @@ ___
 - `ONT`: optical network terminal - modem that provides connectivity by using a fiber-optic line
 - `DSL`: digital subscriber line - modem that uses telephone line to provide connectivity
 
-### Rules governing the transmission specified by the protocol
+<details><summary>Rules governing the transmission specified by the protocol</summary>
+<p>
 
 1. Data and address formats for data exchange & address mapping
    1. exchange of digital message bitstrings
@@ -279,9 +215,14 @@ ___
    13. Queueing (buffers) - usually FIFO queues that are used to deal with messages in the order it was sent
        1. can use multiple queues with diff priorities
 
-### Common Internet Protocols, Data and File Sharing
+</p></details>
 
-### `TCP/IP`
+### **Ports** | **Protocols** | **Hardware**
+
+#### `TCP/IP`
+
+<details><summary>Common Internet Protocols, Data and File Sharing</summary>
+<p>
 
 - IP is responsible for delivering packets to the right computer
 - Transmission Control Protocol/Internet Protocol model: _standardized process_; data link protocol; Connection Oriented Communication
@@ -304,7 +245,10 @@ ___
    2. packets can travel via diff routes depending on congestion.
    3. Data divided into packets based on 4-layer procedure, going thru each layer in 1 order and reassembled on receiving end
 
-### TCP/IP Abstraction Layers
+</p></details>
+
+<details><summary>TCP/IP Abstraction Layers</summary>
+<p>
 
 - **Network/Link** (network access)
   - operates w/in scope of local network connection that a host is attached to.
@@ -345,7 +289,10 @@ ___
   - Transmits data to Transport Layer when sending and receiving
   - Protocols: DNS, HTTP, FTP, Telnet, RDP, POP3, SSH, SNMP, SMTP, NNTP(network news transport protocol)
 
-### **Ports** and **Protocols**
+</p></details>
+
+<details><summary>Ports & Protocols</summary>
+<p>
 
 1. `FTP`: 21 file-transfer oriented protocol that ensures data delivery; file transfer to/from server
    1. server that hosts files; allowing usrs to browse, transfer, upload files
@@ -363,9 +310,14 @@ ___
 6. `RDP`: 27, reliable data protocol, provides facilities for remote loading, debugging and bulk transfer of images and data
    1. Remote Desktop Protocol: 3389, used for connecting remote PCs
 7. **DNS**: 54, domain name system/service, translates domain names to IP addresses
-8. **HTTP**: 400 hypertext transfer pro; standard for web communication; used for rendering pages in browser.
+8. **HTTP**: 400 (80) hypertext transfer pro; standard for web communication; used for rendering pages in browser.
    1. **HTTPS**: 443 secured communication. on web
 9. **DHCP**: 67/68, dynamic host configuration protocol; dynamically assigns IP addresses to network hosts through leases using UDP as its transport protocol
+   1.  network management protocol used on IP networks
+   2. employs connectionless service model, using UDP (UDP port 67 for server and 68 for client)
+   3. manages IP settings for devices & its local network, (ex. auto & dynamically assigns IP addresss to those devices)
+   4. auto assigns IP addresses and other communication param to devices connected to the net using a client–server architecture
+   5. two network components: a centrally installed network DHCP server and client instances of the protocol stack on each device that periodically requests a set of param. from server
 10. `NetBios`/`NetBT`: 137-139 network basic input output system and NetBIOS over TCP/IP: LAN communication. Works over OSI layer 4 and needs to work w/ a layer 5 protocol (ex. TCP/IP) to work properly.
 11. `SMB`/`CIFS`:445 Server message block (primarily a Microsoft protocol) for shared file access
     1. Common internet file system: enhanced version of SMB; shared access on a network
@@ -377,7 +329,12 @@ ___
 16. `Proxy Server`: features include access control, caching, URL filtering and privacy
 17. `WINS`: Windows Internet name service
 
-- _Network stack_: set of hardware/software that provides the infrastructure for a comp
+</p></details>
+
+<details><summary>Network Hardware | Tools</summary>
+<p>
+
+- _Network stack_: set of hardware/software that provides the infrastructure for a computer
 - _Router_: Layer 3 (network layer) device that connects diff devices and determines best route for traffic between networks (uses a set of rules)
 - _switches_: layer 2 (data link) device that endpoint devices connect to. It interconnects hosts on a LAN using MAC address of each host to make decisions about forwarding traffic
   - managed: configurable w/ features allowing a net admin to optimize/customize the switch. Have better monitoring options than unmanaged
@@ -398,18 +355,32 @@ ___
   - PoE injector is used to add power to a data cable going to a PoE device (IP phone/camera)
   - PoE Switch is a net switch that supplies power to its Ethernet ports to power PoE devices
 - _EoP_: ethernet over power; uses standard electrical wiring to interconnect ethernet devices
-- 1
-- _DHCP_: Dynamic Host Configuration Protocol; is a network management protocol used on IP networks
-  - employs connectionless service model, using UDP (UDP port 67 for server and 68 for client)
-  - manages IP settings for devices on its local network, (ex. auto & dynamically assigns IP addresss to those devices)
-  - auto assigns IP addresses and other communication param to devices connected to the net using a client–server architecture
-  - two network components: a centrally installed network DHCP server and client instances of the protocol stack on each device that periodically requests a set of param. from server
 
-- Physical connection info
-   > Hubs vs Swtiches: Hubs are outdated and connect each pc that's plugged into the repeater, it takes the signal that pc A sends to PC B (a frame: made up of 1500 bits) and repeats it by sending it to every pc connected and then those PC's read their MAC address and the address of the signals MAC and either reads it if it's for them or deletes it if not. Hubs just repeat back on all the ports, whatever's coming out.
-   >> Switches: when the box collects the MAC of every PC connected to it and when it receives a frame  it makes a direct, physical connection between the two PC's. A switch is still a repeater, but it's a smart repeater and only sends the data out to the proper destination based on the MAC address
+1. **Toner probe**: 2-in-1 elec test tool that traces wires thru walls to determine which pair carried the signal induced by the tone generator
+   1. used when you have access to both ends of cable at same time
+   2. Plug `tone generator` at jack end of cable and wave toner probe around suspected area to find other end of cable
+2. **Cable tester**: check a cable to verify intended connections exist and there's no uninteded ones
+   1. missing intended connection: 'open'
+   2. existing unintended connection: ('short')
+   3. connection goes to wrong place: ('miswired)
+   4. connection has 2 faults: open to correct contact & shorted to incorrect one
+3. **repeater** re-sends wireless signal to areas that the access point can't cover.
+4. **crimper** is used to crimp a connector (usually last step in making an ethernet cable) to tighten the wiring to right spots in connector so electrical signals pass thru properly.
+5. **Layer 3 switch** is config to participate in routing decisions
+   1. routing decisions work on Layer 3 of OSI model (network layer)
+   2. standard switches usually refferred at as Layer 2 devices, working as PnP w/o ability to adjust settings (aka unmanaged switch)
 
-### `UDP`: user datagram protocol - datagram oriented protocol
+>
+Hubs vs Swtiches: Hubs are outdated and connect each pc that's plugged into the repeater, it takes the signal that pc A sends to PC B (a frame: made up of 1500 bits) and repeats it by sending it to every pc connected and then those PC's read their MAC address and the address of the signals MAC and either reads it if it's for them or deletes it if not. Hubs just repeat back on all the ports, whatever's coming out.
+>> 
+Switches: when the box collects the MAC of every PC connected to it and when it receives a frame  it makes a direct, physical connection between the two PC's. A switch is still a repeater, but it's a smart repeater and only sends the data out to the proper destination based on the MAC address
+
+</p></details>
+
+#### `UDP`
+
+<details><summary>user datagram protocol - datagram oriented protocol</summary>
+<p>
 
 - used to send messages (transported as datagrams in packets) to other hosts on an Internet Protocol (IP) network
 - doesn't require prior communication to set up communication channels or data paths
@@ -427,9 +398,15 @@ ___
   - UDP can broadcase - sent packets can be addressed to be rec by all devices on the subnet
   - multicast mode of op where a single datagram packet can auto route w/o dupe to a group of subs
 
-> Although UDP provides integrity verification (via checksum) of the header and payload, it provides no guarantees to the upper layer protocol for message delivery and the UDP layer retains no state of UDP messages once sent. For this reason, UDP sometimes is referred to as Unreliable Datagram Protocol. If transmission reliability is desired, it must be implemented in the user's application.
+>
+Although UDP provides integrity verification (via checksum) of the header and payload, it provides no guarantees to the upper layer protocol for message delivery and the UDP layer retains no state of UDP messages once sent. For this reason, UDP sometimes is referred to as Unreliable Datagram Protocol. If transmission reliability is desired, it must be implemented in the user's application.
 
-### OSI model (Open systems interconnection)
+</p></details>
+
+#### `OSI model`
+
+<details><summary>Open systems interconnection</summary>
+<p>
 
 - connection-oriented network
   - communication session or a semi-permanent connection is est. before any useful data can be transferred. The established connection ensures that data is delivered in the correct order to the upper communication layer.
@@ -440,18 +417,18 @@ ___
 - communication between a computing system are split into 7 different abstraction layers:
   - Physical, Data Link, Network, Transport, Session, Presentation, Application
 
-  - The _Application_ layer may provide the following services to the application processes:
-    - identification of the intended communication partners, establishment of the necessary authority to communicate, determination of availability and authentication of the partners, agreement on privacy mechanisms for the communication, agreement on responsibility for error recovery and procedures for ensuring data integrity, synchronization between cooperating application processes, identification of any constraints on syntax (e.g. character sets and data structures), determination of cost and acceptable quality of service, selection of the dialogue discipline, including required logon and logoff procedures
-      - app layer protocols: WWW, SMTP, FTP
-  - The _presentation_ layer: provides services to the application layer:
-    - responsible for presenting the data in standard formats, data compression/decompression & encryption/decryption
-    - presentation layer stadards: JPEG, MPEG, MIDI, PICT, TIFF
-    - a request for the establishment of a session, data transfer, negotiation of the syntax to be used between the application layers, any necessary syntax transformations, formatting and special purpose transformations (e.g. data compression and data encryption).
-  - The _session_ layer may provide the following services to the presentation layer: establishment and release of session connections, normal and expedited data exchange, a quarantine service which allows the sending presentation entity to instruct the receiving session entity not to release data to its presentation entity without permission, interaction management so presentation entities can control whose turn it is to perform certain control functions, resynchronization of a session connection, reporting of unrecoverable exceptions to the presentation entity.
-  - The _transport_ layer provides reliable and transparent data transfer in a cost-effective way as required by the selected quality of service. It may support the multiplexing of several transport connections on to one network connection or split one transport connection into several network connections.
-  - The _network_ layer does the setup, maintenance and release of network paths between transport peer entities. When relays are needed, routing and relay functions are provided by this layer. The quality of service is negotiated between network and transport entities at the time the connection is set up. This layer is also responsible for network congestion control
-  - The _data_ link layer does the setup, maintenance and release of data link connections. Errors occurring in the physical layer are detected and may be corrected. Errors are reported to the network layer. The exchange of data link units (including flow control) is defined by this layer.
-  - The _physical_ layer describes details like the electrical characteristics of the physical connection, the transmission techniques used, and the setup, maintenance and clearing of physical connections
+- The _Application_ layer may provide the following services to the application processes:
+  - identification of the intended communication partners, establishment of the necessary authority to communicate, determination of availability and authentication of the partners, agreement on privacy mechanisms for the communication, agreement on responsibility for error recovery and procedures for ensuring data integrity, synchronization between cooperating application processes, identification of any constraints on syntax (e.g. character sets and data structures), determination of cost and acceptable quality of service, selection of the dialogue discipline, including required logon and logoff procedures
+    - app layer protocols: WWW, SMTP, FTP
+- The _presentation_ layer: provides services to the application layer:
+  - responsible for presenting the data in standard formats, data compression/decompression & encryption/decryption
+  - presentation layer stadards: JPEG, MPEG, MIDI, PICT, TIFF
+  - a request for the establishment of a session, data transfer, negotiation of the syntax to be used between the application layers, any necessary syntax transformations, formatting and special purpose transformations (e.g. data compression and data encryption).
+- The _session_ layer may provide the following services to the presentation layer: establishment and release of session connections, normal and expedited data exchange, a quarantine service which allows the sending presentation entity to instruct the receiving session entity not to release data to its presentation entity without permission, interaction management so presentation entities can control whose turn it is to perform certain control functions, resynchronization of a session connection, reporting of unrecoverable exceptions to the presentation entity.
+- The _transport_ layer provides reliable and transparent data transfer in a cost-effective way as required by the selected quality of service. It may support the multiplexing of several transport connections on to one network connection or split one transport connection into several network connections.
+- The _network_ layer does the setup, maintenance and release of network paths between transport peer entities. When relays are needed, routing and relay functions are provided by this layer. The quality of service is negotiated between network and transport entities at the time the connection is set up. This layer is also responsible for network congestion control
+- The _data_ link layer does the setup, maintenance and release of data link connections. Errors occurring in the physical layer are detected and may be corrected. Errors are reported to the network layer. The exchange of data link units (including flow control) is defined by this layer.
+- The _physical_ layer describes details like the electrical characteristics of the physical connection, the transmission techniques used, and the setup, maintenance and clearing of physical connections
 
    >"Communication protocols enable an entity in one host to interact with a corresponding entity at the same layer in another host. Service definitions, like the OSI Model, abstractly describe the functionality provided to an (N)-layer by an (N-1) layer, where N is one of the seven layers of protocols operating in the local host.
    >>
@@ -472,28 +449,45 @@ ___
 >>
     IEEE 802.11 is a set of protocols within the IEEE 802 WLAN standards that specifies wireless protocols
 
+</p></details>
+
 ___
 
 ## `Hardware`
 
 ### Memory
 
-- DRAM & SRAM are most widely used types of RAM
+#### RAM 
 
-1. `SRAM`  Static random access memory - Uses transistors to store information. Expensive and used for cache memory
+<details>
+<summary>Form Factors & Versions | Speed, Latency & Timing |  Features + Variants
+</summary>
+<p>
+
+1. `SRAM`  Static random access memory - Uses transistors to store information. Expensive and used for cache memory for CPU
 2. `DRAM` Dynamic random access memory - Need to be refreshed to retain data. Usually used for main memory
+   1. most widely used types of RAM
 3. `SDRAM`: new tech, supported by PC's that support 100MHz memory buses.
-4. `EDO`: extended data out memory: type of RAM chip that makes improvemnts on time to read from memory
-5. `ECC`: error checking and correcting memory: data that's read/transmitted is checked for errors and corrected
-6. `ROM` - Read only memory - Data in ROM can not be erased or changed
-7. `PROM` Programmable ROM - Once programmed, data can't be erased or change
-8. `EPROM` - Erasable PROM - Data can be removed from PC curcuit, erased by ultraviolet (UV) light and then reprogrammed
-9. `EEPROM` Electronically erasable PROM - Data can be erased with electrical signals.
-   1. Chip can then be reprogrammed. Transistor uses 5v.
-   2. EEPROMs are frequently used to store BIOS. Used to program dynamically
-10. `SIMM` (installed in pairs & come in 30 and 72 pin formats) & DIMM (can be installed 1 at a time and com in 168 pin config)
-11. `Unbuffered`
-12. `Buffered`
+4. `SIMM` (installed in pairs & come in 30 and 72 pin formats) & DIMM (can be installed 1 at a time and com in 168 pin config)
+5. `Unbuffered`
+6. `Buffered`
+7. `SODIMM`: multiple configurations: 200, 204, 260, or 292-pin
+8. 32 | 64-bit configurations
+9. `EDO`: extended data out memory: type of RAM chip that makes improvemnts on time to read from memory
+10. `ECC`: error checking and correcting memory: data that's read/transmitted is checked for errors and corrected
+11. `ROM` - Read only memory - Data in ROM can not be erased or changed
+12. `PROM` Programmable ROM - Once programmed, data can't be erased or change
+13. `EPROM` - Erasable PROM - Data can be removed from PC curcuit, erased by ultraviolet (UV) light and then reprogrammed
+14. `EEPROM` Electronically erasable PROM - Data can be erased with electrical signals.
+    1. Chip can then be reprogrammed. Transistor uses 5v.
+    2. EEPROMs are frequently used to store BIOS. Used to program dynamically
+
+- ECC: can continue to work even if it has corrupt data
+- Paging: a file that's used as virtual mmemory on the system
+- RAM: short-term memory used to store working data
+- Non-parity: doesn't maintain parity info and can't perform error checking.
+
+</p></details>
 
 ### Storage and Peripherals
 
@@ -554,17 +548,13 @@ ___
 4. `Keyboards/Mice`
     1. keyboards use ither USB or PS/2 connection; while mice almost exclusively USB; game controllers often have proprietary connection that requires a converter piece
     2. keyboard video mouse (KVM) switches give ability for a single keyboard, monitor, mouse to connect multiple PC's
-5. `RAM`
-    1. SODIMM:
-        1. multiple configurations: 200, 204, 260, or 292-pin
-        2. 32 | 64-bit configurations
-6. `Sight/Sound`
-7. `Readers/Scanners`
-8. `Expansion Cards`
+5. `Sight/Sound`
+6. `Readers/Scanners`
+7. `Expansion Cards`
 
 ___
 
-## `Software`
+## `Software & OS`
 
 - `SDK` is a kit that offers tools, code samples, libraries, processes, and guides for creating software applications on specific platforms.
 - `API` is an interface that allows the software to interact with each other
@@ -601,26 +591,107 @@ ___
   - `workgroup` is basic type of networking organiztion used as an organizational tool w/ no security or central admin
   - `domain` is an organizational group (type used today is Active Directory domain) that provides central admin and has ability to disperse security and network info to other PC's at one time
 
+### OS Admin + Operations
+
+<details><summary>Install, Upgrade, Boot</summary>
+<p>
+
+1. optical disc (CD-ROM, DVD, Blu-ray): pc will prob have built-in drive to read them; very common way to install OS on a pc
+2. external/flash drive (interfaces: USB, eSATA): ext optical/hard/flash drives, USB is common
+3. Network boot (PXE): preboot eXecution Env.; boot from network resources; net & remote server hosting the bootable image need config.
+   1. common in corp. env. where net & server resources are availalbe; allows setting up multiple pc's w/ similar images
+4. internal fixed disk (HDD/SSD) & internal Hard Drive (Partition)
+   1. disk can have OS install image or OS already installed. Most common way to boot PC after OS install completed
+   2. simple configs have one bootable par on a disk, but a disk can have > 1 par to multiboot diff OS. One logical par can span multiple physical hard disks
+
+| Install Types           |   |
+| :------------------- | -------------- |
+|  _Type_     |  _Description_ |
+|   💻    | 📕 |
+|    unattended     | pre-config., need special server w/ install image/script & good for many PC's w/ same config |
+|   in-place upgrade  | installs newer OS over older one; may preserve settings, fi, apps  |
+|    clean| disregards previous data; used for PC w/o an OS or to intentionally delete old data |
+| repair | boot w/ same -v OS & select repair; rewrites SF & settings, retains user fi; can repair OS that's unbootable or w/ issues unfixable by other methods |
+|     multiboot             | uses boot mngr that maintains boot config; user sel OS to boot; recommend install OS's to diff HDD or separate logical pars  |
+|   remote net      | PXE net boot using remote server; may require choosing install options or be unattended |
+|         image deployment         | used for PC's w/ == hardware that need == OS/settings/apps. Diff software tools can do this. Steps involve sel one PC => clean install, config, app install => create image from that PC & make available on network or portable media => copy image to other PC's |
+|   recovery par  | create rec par during install that is a bootable par for later or repair install; contains diagnostic/repair tools |
+| |
+| **Partitioning** |
+| |
+| _Type_ | _Description_ |
+|   ---     | --- |
+|  _Info_ | creates >= 1 logical drives; can be formatted separately & have separate FS. W10 allows each par to have diff drive letter |
+|    Dynamic  | more complex config & less limits than basic dsk. Can create pars spanning many physical HDD's (software RAID) |
+| Basic | most common; separated into logical pars  |
+| Primary | can have only one logical drive; W10 only boots from primary par |
+| Extended | enables >= 1 logical drive  |
+| logical | rep by a drive letter in W10; recomm. distinguishing btw dsk, par & logical drive; can be assigned 1:1 but aren't limited to 1   |
+| GPT | GUID Par Table: has info on how dsk is partitioned. supports larger drives & more pars/drive than MBR  |
+| |
+| **File System Types/Formatting** |
+| _Type_ | _Description_ |
+| Info | Fs enables storing/managing/accessing fi on a par. OS's support diff FS & pars are formatted w/ specific FS before use |
+| ExFAT | designed for small flash & SSD drives, good for perf & media fi storage |
+| FAT32 | supported by many OS & provides basic features. pars can be >= 2 TB |
+| NTFS | more advanced & supported by modern W --v. user can set/manage permissions for fi/dir for users/groups. useful for secure net fi sharing. Has indexing, compress., encrypt. on FS level |
+| CDFS | FS for CD/DVD's |
+| NFS | Network File System. mostly in servers where you can have fi access on net btw sys. |
+| ext3, ext4 | used for Linux. 4 is updated -v that enables larger pars, fi & better perf |
+| HFS | used for MacOS |
+| Swap par | Linux par used when physical RAM is maxxed out. The Data flows to swap pars; reducing perf, in place of running more apps simultaneously. |
+| quick vs. full format | quick changes FS records making dsk appear empty. Full rewrites prev fi, detects surface errors on dsk and makes restoring fi harder. |
+
+
+1. 3rd party (unsigned drivers) should have source verified to ensure validity.
+2. signed drivers: W install drivers are tested/approved by MS
+3. workgroup: Can setup printer & fi sharing w/ small group/fam
+   1. ex. a dept in a larger org. or a home user
+4. Domain setup: Companies can use a domain controller instead for more secure, centralized login for large groups, which allows an easier path for managing large net
+5. Time, Date, Region, Lang: config these settings during install (some OS require reinstall to change lang.)
+6. Driver install, Software, Updates: Keep system updated for secuirty reasons. Install proper drivers for the type of system (32-bit => x86 sys && 64-bit on x64 sys). Use 'check for updates' utility in W10 to update OS and other MS software. Other software needs checked separatley.
+7. Know differences in Hardware/Apps/OS compatability
+
+</p></details>
+
 ___
 
-### Displays
+## Displays & Mobile
 
- 1. Types
-    1. backlight systems
-       1. _CCFL_: cold cathode flourescent light - older, uses daylight specter flourescent tube and inverter for power
-       2. _LED_: light emitting diodes - doesn't use inverter and uses strips of LEDs
-          1. LCD blocks areas of backlight to create images
-          2. LEDs generate light themselves and consumes less power
-          3. Plasma: made of small cells of ionized gas (good contrast ratio)
-    2. _CRT_: cathode ray tube
-    3. _LCD_: requires backlight sys; uses liquid crystal displays
-       1. frequent in laptops
-    4. _OLED_: organic light emitting diode - thinner/lighter; made of a layer of organic compound between 2 light-emitting electrods
-       1. common in handheld devices
+1. `backlight systems`
+ 2. _CCFL_: cold cathode flourescent light - older, uses daylight specter flourescent tube and inverter for power
+ 3. _LED_: light emitting diodes - doesn't use inverter and uses strips of LEDs
+    1. LCD blocks areas of backlight to create images
+    2. LEDs generate light themselves and consumes less power
+    3. Plasma: made of small cells of ionized gas (good contrast ratio)
+2. _CRT_: cathode ray tube
+3. _LCD_: requires backlight sys; uses liquid crystal displays (frequent in laptops)
+4. _OLED_: organic light emitting diode - thinner/lighter; made of a layer of organic compound between 2 light-emitting electrods (common in handheld devices)
+
+- **OLED**: structure provides flexibility for curved displays
+  - contain the image producing components and light source in one panel. organic light emitting compound is set between an anode and cathode producing a current. the current runs thru the electroluminescent compund producing light consumes less power than LCD, with higher contrast ratio resulting in sharper images. common in high end monitors and phones.
+- **LCD**: liquid crystal displays: shines a backlight through liquid crystals, creating the image on the screen
+- **IPS** In plan switching, offers the widest viewing angle and the best color reproduction. ideal for vertical mounting and those needing high quality color (graphic/video artists)
+- **twisted nematic**: TN, oldest LCD tech, limited viewing angles and washed out/blended color reproduction. minimal lag time makes them ideal for gamers and are inexpensive options for office use
+- vertical alighnment (VA), offers best contrast ratio of the three technologies and is solid middle ground choice with decent color reproduction w/ slight lag
+- The inverter is located behind the LCD panel and converts DC current into AC current
+  - flickering/dim screen may be due to faulty inverter
+
+### Video Cables
+
+1. **VGA**: video graphics array: legacy cable; only transmits analog signal; blue
+2. **DVI** digital visual interface: addressed analog video transmission issues. Able to transmit digital video signals to display units
+   1. 3 standards: DVI-A analog only, D digital only, I: analog & digital; white
+3. **HDMI**: high-def multimedia interface: higher motion-picture fram rates and digital audio w/ single cable.
+   1. Common connector type: Standard A HDMI (19 pins)
+4. **DisplayPort**: DP: uses less power and is backward compatible w/ VGA & DVI. transmits video & audio signals.
+   1. DP standard features 2 hooks to lock the cable in place
+5. Can use adaptors to convert one type of connection/cable tech to another
+
+
+### Mobile Devices
 
 ___
-
-## Mobile Devices
 
 ## References
 

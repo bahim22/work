@@ -50,7 +50,6 @@ a_l.append('dog')
 a_l.extend()
 ```
 
-
 - `list comprehension`
 A compact way to process all or part of the elements in a sequence and return a list with the results.
 
