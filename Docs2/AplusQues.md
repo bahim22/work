@@ -85,7 +85,6 @@ ___
 - unified threat management (UTM)
 - load balancers
 - proxy servers
--
 
 - Legacy system: systems that haven't been updated, usually due to an important app that can't run on an updated platform
 - Supervisory Control and Data Acquisition (SCADA): high-level management system that controls manufacturing machines, processes, infrastructure settings, and building components.
@@ -141,6 +140,7 @@ ___
 | ax (Wi-Fi 6) 2.4/5GHz| 9.6 Gbps | 140 m |
 
 <details><summary> Wireless range and power </summary><p>
+
 - Long-Range fixed wireless: point to point wireless tech; uses directional antennas to send or receive network signals (10-20 km)
   - `licensed`: use is granted by the FCC
   - `unlicensed`: anyone can use these frequencies (ex. 2.4-5 GHz)
