@@ -7,6 +7,8 @@
 | **Hima Balde** | WORK - ppu | 06 - 10 - 2022 |
 | | | |
 
+<img src='/images/a_plus_obj.jpeg' width=800>
+
 ## Python
 
 - General documentation
