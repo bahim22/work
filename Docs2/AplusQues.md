@@ -8,6 +8,7 @@
 
 - [Comptia A+](#comptia-a)
 <details><summary>Table of contents</summary><p>
+
   - [Table of Contents](#table-of-contents)
   - [Network](#network)
     - [Networked Host Services](#networked-host-services)
@@ -44,6 +45,7 @@
   - [Software Troubleshooting](#software-troubleshooting)
   - [Security](#security)
   - [Sample Ques](#sample-ques)
+
 </p></details>
 
 ___
@@ -56,7 +58,8 @@ ___
 
 #### Server Roles
 
-<details><p>
+<details><summary>Server Info</summary><p>
+
 - Usually a process running in memory on networked system which sends out responses to requests made from a remote client system
   - can also be stand-alone hardware
 - DNS: server that resolves hostnames to IP addresses.
