@@ -18,10 +18,12 @@
   - [Symbolic rep of data](#symbolic-rep-of-data)
   - [Linux permissions](#linux-permissions)
   - [Git Config terminal colors](#git-config-terminal-colors)
+  - [Pwsh](#pwsh)
 
 ## SSH to GitHub
 
 > ssh connects and logs into the specified destination by setting the user, hostname and port
+<!-- /* cspell: enableCompoundWords */ -->
 
 ```bash
 #!/bin/bash
@@ -211,6 +213,7 @@ since v2.43 tag.
 
 ```sh
 # Clone the upstream and work on it. Feed changes to upstream.
+# <!-- cspell: disable  -->
 
 git clone git://git.kernel.org/pub/scm/.../torvalds/linux-2.6
 my2.6
@@ -229,6 +232,7 @@ LL (9)
 git reset --hard ORIG_HEAD (10)
 git gc (11)
 ```
+<!-- cspell: enable  -->
 
 1. checkout a new branch mine from master.
 2. repeat as needed.
@@ -399,7 +403,6 @@ apt [-h] [-o=config_string] [-c=config_file] [-t=target_release] [-a=architectur
 [{=pkg_ver_num | /target_release}]... | remove pkg... | upgrade | full-upgrade | edit-sources | {-v --version} |{-h--help}}
 ```
 <!-- cspell: enable  -->
-<!-- /* cspell: enableCompoundWords */ -->
 
 >
 interface for package management system.
@@ -485,3 +488,17 @@ for f in 'ls -R'; do [! -d"$f"] && chmod a-x "$f"; done
 | 95 = light purple  |104 = light blue bg|
 | 96 = turquoise |  105 = light purple bg|
 | 97 = white | 106, 107 = turquoise, white bg |
+
+## Pwsh
+
+```ps1
+<# Add-WindowsPackage
+Enable-WindowsOptionalFeature
+Get-WindowsPackage #>
+
+enable-windowsOptionalFeature
+get-help Get-WindowsOptionalFeature -detailed
+
+Get-WindowsFeature [[-Name] <String[]>] [-ComputerName <String>] [-Credential <PSCredential>] [-LogPath
+    <String>] [-Vhd <String>] [<CommonParameters>]
+```

@@ -47,16 +47,13 @@ ___
 <summary>Servers, Appliances, Ports</summary><p>
 
 - client apps request services from server apps
-
-<details><summary>Server Info</summary><p>
-
 - Usually a process running in memory on networked system which sends out responses to requests made from a remote client system
   - can also be stand-alone hardware
 - DNS: server that resolves hostnames to IP addresses.
   - 2 are needed for a company to host a website (1 for redundancy).
   - Hostname IP address set records are saved in zone files, and if not, they are requested from the root server (higher-level DNS server)
 - DHCP: provides IP configuration information (address, subnet mast, default gateway, DNS server address) to clients, automatically. The scope determines what info is allowed to be shared with a client.
-- Fileshare: (File Server) - central repo for storage, access and management of entwork files
+- Fileshare: (File Server) - central repo for storage, access and management of network files
   - NAS (network attached storage) can also be used for a file server
 - Print Server: manages print requests and connects to network printers
 - Mail: responsible for sending, receiving, managing emails.
@@ -67,8 +64,6 @@ ___
 - Web Server: listens for incoming requests, which it executes by responding w/ the requested content (text, images, video, running scripts)
   - examples: Microsoft Internet Information Services (IIS), Apache
 - Authentication, Authorization & Accounting (Triple A or AAA)
-
-</p></details>
 
 - Internet Appliances
   - SPAM gateways
@@ -83,6 +78,8 @@ ___
 - IOT devices: internet of things device that connects to network via a central controller/coordinating device (smart devices: security devices, smart thermostats, home automation)
 
 ___
+<!-- cspell: disable  -->
+</p></details>
 
 ### Ports
 
@@ -110,6 +107,7 @@ ___
 | L2TP (layer 2 tunneling protocol) | TCP | 1701 |
 | PPTP (Point to point tunneling protocol) | TCP | 1723 |
 | RDP (Remote Desktop Protocol) | TCP, UDP | 3389|
+<!-- cspell: enable  -->
 
 ### Ethernet | 802.11 wireless | Wi-Fi
 
@@ -121,6 +119,7 @@ ___
 - Wi-Fi spec 802.11 is part of the IEEE 802 wireless networking standards, used for Wi-Fi communications. They use the ethernet protocol and carrier sense multiple access with collision avoidance (CSMA/CA) media access method. The differences in operating frequencies, theoretical maximum data speed, and throughput.
 - `NFC`: near-field communication: very short range, used for contactless comms between devices (ex. contactless pay)
 - `RFID`: radio-frequency identification - sends info from an RFID tag w/ identifying info by using radio signals. (ex. streamlines the inventory of tracking apps)
+- `MIMO` multiple input/multiple output: wireless tech that increases wireless data throughput by using multiple antennas & data streams
 
 | `802.11 spec` | `data speed` | `throughput` |
 | :---: | :---: | :---: |
@@ -131,12 +130,7 @@ ___
 | ac (Wi-Fi 5) 5GHz | 6.5 Gbps | 140 m |
 | ax (Wi-Fi 6) 2.4/5GHz| 9.6 Gbps | 140 m |
 
-<details>
-  <summary> Wireless range and power
-  </summary>
-
-  <p>
-
+- Wireless range and power
 - Long-Range fixed wireless: point to point wireless tech; uses directional antennas to send or receive network signals (10-20 km)
   - `licensed`: use is granted by the FCC
   - `unlicensed`: anyone can use these frequencies (ex. 2.4-5 GHz)
@@ -184,8 +178,8 @@ ___
     1. The DHCP client auto self-configures IP address & subnet mask if DHCP server isn't available by using APIPA (automatic private IP Addressing).
     1. Range from 169.254.0.1 - 169.254.255.254 & default class B subnet mask of 255.255.0.0. It then sends a broadcast to ensure that other PC's aren't using the address it chose.
 4. Avoid low RF signal issues by using non-overlapping channels (1,6,11)
-5. CAT5 trasmits data >= 100 Mbps at distances of 100 meters
-6. Crossover cable can be used to make connection from 2 hubs, 2 swtiches, 2 routers, hub to switch, or computer to router
+5. CAT5 transmits data >= 100 Mbps at distances of 100 meters
+6. Crossover cable can be used to make connection from 2 hubs, 2 switches, 2 routers, hub to switch, or computer to router
 7. Bluetooth: a discovery and authentication process that validates the communication link
 8. wake-on-LAN will allow sleeping computer to power on when job is sent
 9. DHCP (Dynamic Host Config Protocol) server can auto configure parameters needed by NIC when computer first boots & enables central management of IP address allocation
@@ -203,7 +197,7 @@ ___
 17. HTTP uses port 80
 18. The subnet mask that defines a full class C network is 255.255.255.0, while a full class B subnet mask would be 255.255.0.0.
 19. enabling MAC filtering only allows access to devices listed in the routers filtering table
-20. `RJ11/45` are common for phone lines & ethernet & use tristed pair cabling
+20. `RJ11/45` are common for phone lines & ethernet & use twisted pair cabling
 21. `RFC1918` private address sets for IP addresses start with 192.168 (v4)
 22. default gateway address is address that computer would send traffic to
     1. default gateway would be a router for SOHO network & sends traffic out to internet
@@ -216,6 +210,7 @@ ___
 28. `ISDN`: integrated services digital network supports use of bearer (B) channels for sending data & D chan. for signal/control
 
 ## Shell
+<!-- cspell: disable  -->
 
 > Network commands, Windows CMD, Powershell, Bash
 
@@ -233,7 +228,7 @@ ___
 7. `ifconfig` cmd: checks a devices IP address and subnet mask on Linux OS's
 8. `S/MIME` protocol can encrypt and digitally sign e-mails
 
-> Some cmds are only available w/ admin priviledge enabled by elevating or running the CLI as admin
+> Some cmds are only available w/ admin privileged enabled by elevating or running the CLI as admin
 
 ### Cmd/Pwsh
 
@@ -259,7 +254,7 @@ shutdown
 command_name /?
 # param brings up help w/ list of cmd options/param & descriptions
 dism
-# Deployment image servicing & mngmnt tool => mount & service W image files
+# Deployment image servicing & management tool => mount & service W image files
 sfc
 # System File checker tool, checks status/version of system files
 chkdsk
@@ -349,6 +344,7 @@ RD / `RMDIR` | delete dir
 | `XCOPY` |   Copies files and directory trees.|
 
 </p></details>
+<!-- cspell: enable  -->
 
 ## Operating Systems
 
@@ -366,7 +362,7 @@ RD / `RMDIR` | delete dir
 
 - **Thunderbolt cables**: 4 standards
   - 1 & 2 terminate in Mini DisplayPort connector
-  - 3 & 4 termiante in USB-C connector
+  - 3 & 4 terminate in USB-C connector
 
 ### Windows
 
@@ -388,8 +384,8 @@ RD / `RMDIR` | delete dir
 
 1. auth thru NTFS defines res a user can access and what they're able to do
 2. BitLocker Drive Encryption allows you to encrypt entire drive (files, other users dir's)
-3. User Account Control (UAC) uses a consent prompt so standard users can input admin creds to complete various tasks
-4. Take Ownership permission lets an admin change ownership of a file w/o knowing the user's creds
+3. User Account Control (UAC) uses a consent prompt so standard users can input admin credentials to complete various tasks
+4. Take Ownership permission lets an admin change ownership of a file w/o knowing the user's credentials
 5. Copying files from an NTFS HDD to a FAT or FAT32 based partition on a USB drive creates 2 copies of the object, and the copy has no effective permissions at all
 6. chmod cmd lets you change file permissions in Linux
 7. In W8.1 the Settings charm lets you create a new user account based on a global MS account
@@ -448,7 +444,10 @@ RD / `RMDIR` | delete dir
 5. Resource pooling: cloud service provider provides all resources in a resource pool and gives you the option to select specific resources
 6. Hybrid cloud model: has benefits of both public and private clouds
 
+
 ## Hardware
+
+<details><summary>Hardware</summary><p>
 
 1. onboard GPU uses RAM as storage medium
 2. USB hub allows multiple USB devices to be connected to a computer
@@ -536,12 +535,12 @@ RD / `RMDIR` | delete dir
 1. RAID 0 striped across drives to improve performance but w/ no redundancy
 2. RAID 10 combines mirroring for data protection and striping for speed
    1. provides full redundancy via mirroring and stripping all info stored w/in the drives
-   2. requires atleast 4 drives
+   2. requires at least 4 drives
 3. SATA drive uses 15-pin connector
 4. SSDs are non-volatile memory with fast performance and lower power consumption than HDD
 5. `Backup Types`
    1. Full backup: all chosen files are backed up and Archive bit is set to ON afterwards
-   2. Incremental backup: only edited/new files since last bakup are backed up
+   2. Incremental backup: only edited/new files since last backup are backed up
    3. Differential backup: similar to incremental, except archive bit isn't set, which will cause the next diff backup to include files that were backed up during previous backups
 6. `Blu-ray discs` can be single or multiple-use and split into categories based on 3 factors
    1. Functionality: BD-R single use, BD-RE/RW multi-use (RE-recordable erasable is newer)
@@ -555,6 +554,8 @@ RD / `RMDIR` | delete dir
 2. An unset date/time may be due to drained BIOS battery; resolved by CMOS batter replacement
 3. Startup repair can be used to prevent reinstalls and is designed to auto start if W10 detects issues.
 
+</p></details>
+
 ## Operational Procedures
 
 - grounding diverts excess electrical charges from the device and can decrease chance of damage from electrical spike
@@ -563,7 +564,7 @@ RD / `RMDIR` | delete dir
 ## Software Troubleshooting
 
 1. NIC allows for wireless comms between laptop and wireless access points.
-2. physical privacy and sec comp are designed to prevent the loss of info thru physical means such as shoulder sufting/theft
+2. physical privacy and sec comp are designed to prevent the loss of info thru physical means such as shoulder surfing/theft
 
 ## Security
 
@@ -572,7 +573,7 @@ RD / `RMDIR` | delete dir
    1. identify and research malware symptoms
    2. quarantine infected system
    3. disable system restore
-   4. remediate infected ssytems
+   4. remediate infected systems
    5. schedule scans and run updates
    6. enable system restore
    7. educate end-user

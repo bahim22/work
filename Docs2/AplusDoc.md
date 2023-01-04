@@ -8,7 +8,7 @@
 - [CompTIA A+ Docs](#comptia-a-docs)
   - [Table of Contents](#table-of-contents)
   - [Troubleshooting Steps](#troubleshooting-steps)
-  - [Seconday Skills](#seconday-skills)
+  - [Secondary Skills](#secondary-skills)
   - [Tools and Safety](#tools-and-safety)
   - [Computer Components](#computer-components)
     - [Motherboard](#motherboard)
@@ -44,7 +44,7 @@
 4. establish plan to resolve issue
 5. implement solution
 6. verify functionality and implement preventive measures
-7. document resuts and steps
+7. document results and steps
 
 - Identify the problem
   - Question the user and identify user changes to computer and perform backups before making changes
@@ -56,7 +56,7 @@ new theory or escalate
 - Verify full system functionality and, if applicable, implement preventive measures
 - Document findings, actions, and outcomes
 
-## Seconday Skills
+## Secondary Skills
 
 > soft skills, professional communication/attire, layterm usage, keep info on drivers, routers, chips, etc., accessible; always backup client data prior to troubleshooting
 
@@ -64,19 +64,19 @@ ___
 
 ## Tools and Safety
 
-- multihead screwdrivers, tweezers, multimeters (verifies power volts & connection)
-- chip extractors, storage canisters, software toools (on zip & thumb drives)
+- multi-head screwdrivers, tweezers, multimeter (verifies power volts & connection)
+- chip extractors, storage canisters, software tools (on zip & thumb drives)
 - chips get affected @ 200v from electrostatic discharge
 - humidifiers: ~ 50%; too low causes static from dry or corrosion from wet;
-- compressed air cannister; remove jewelry
+- compressed air canister; remove jewelry
 - use antistatic bands when moving PC parts; ESD mats/straps to eliminate static
 - equipment & self grounding: equalize charge; clamp to metal on PC case
-- high volatage safety: 120v => 3.3-5 or 12v conversion (power supply)
-  - 85-110 decibals = start of damage to hearing
+- high voltage safety: 120v => 3.3-5 or 12v conversion (power supply)
+  - 85-110 decibels = start of damage to hearing
 - `Ergonomics`: design to prevent discomfort/injury due to repetitive use
   - eye care, good posture, focus on distant object every 15 min; take breaks; where gloves, mass, eye shields when applicable
-  - dispose of waste appropriately (hazaardeous and environmental)
-    - batteires, CRTs, printer carts/toners
+  - dispose of waste appropriately (hazardous and environmental)
+    - batteries, CRTs, printer carts/toners
 - `Safety rules and regulations`:
   - Environment, Hazards, Prevention, PPE
   - UL: Underwriters lab | CSA Inter'l: safety check organizations
@@ -104,7 +104,7 @@ ___
 - `Processor socket` – It is a central unit present on the motherboard located on the center and the main function of it is to hold the entire processor.
   - CPU is the brain of a computer.
 - `Video card slot` – attaches video card, usually with a PCI-Express slot. Gaming PC's can have multiple slots for video cards.
-- `Memory slots` – Usually in upper right-hand side of MoBo and carry a computer’s memory modules. Slots differ depending on the Mobo and can range from 2 to 8+ slots (on gaming PC's). Industry standard is DDR3 memory. The memory capacity of the motherboard depends on the # of slots.
+- `Memory slots` – Usually in upper right-hand side of motherboard and carry a computer’s memory modules. Slots differ depending on the motherboard and can range from 2 to 8+ slots (on gaming PC's). Industry standard is DDR3 memory. The memory capacity of the motherboard depends on the # of slots.
 - `IDE & SATA ports` – Ports used to allow connectivity for storage devices & optical drives. IDE is outdated and was replaced by SATA interface, which is smaller and faster(speeds up to 600 MB/s)
 - `Expansion slots` – Enables additional hardware to be installed in order to optimize computer performance.
 - `Northbridge & Southbridge` – the bottom right area of motherboard houses a square and metallic component, used for the evacuation of heat produced by the computer, providing thermal protection for the Northbridge.
@@ -124,8 +124,8 @@ ___
   - AMD CPU-to-chipset is HyperTransport
     - AM3, AM3+, FM1, FM2, FM2+ sockets
 
-<!-- ![mobo](/assets/MoBoOld.jpg)
-![moboParts](/assets/moboParts.jpg) -->
+<!-- ![motherboard](/assets/motherboardOld.jpg)
+![motherboardParts](/assets/motherboardParts.jpg) -->
 
 ### Processor, CPU
 
@@ -150,10 +150,10 @@ ___
 1. IDs, test, init compos and boots to drive, optical disk,  USB flash drive or network (PXE)
 2. can update by flashing it w/ new firmware
 
-- _BIOS_: Basic input/ouput system; chip on mobo w/ in ROM or w/in flash memory (aka firmware)
+- _BIOS_: Basic input/output system; chip on motherboard w/ in ROM or w/in flash memory (aka firmware)
 - _CMOS_: stores time/date, passwords, CR2032 lithium battery provides power
-- _POST_: power on self test: mobo ini hardware, runs POST, boots & loads OS (BIOS info found by run msinfo32 -> system summary)
-  - system startup: computer searches nonvolatile data stores device in order defined in boot seq.; then CPU takes control and loads OS into system membory
+- _POST_: power on self test: motherboard ini hardware, runs POST, boots & loads OS (BIOS info found by run msinfo32 -> system summary)
+  - system startup: computer searches nonvolatile data stores device in order defined in boot seq.; then CPU takes control and loads OS into system memory
   - setup utility stored in BIOS flash memory (in battery-backed CMOS RAM)
 - _UEFI_: Unified Extensible Firmware Interface: spec that defines a software interface between OS & platform firmware.
   - Boot process: UEFI -> GPT (EFI boot loader) -> Kernel -> OS
@@ -174,7 +174,7 @@ ___
 - 2 types of communication protocols:
   - binary utilizes all values of a byte; intended for machine reading; more terse and faster
   - text-based/plain text - only uses values corresponding to human-readable characters in ASCII encoding
-- `SDN`: software-defined networking sets up the network through the cloud and uses virutalization to replace functionality of the router in a network
+- `SDN`: software-defined networking sets up the network through the cloud and uses virtualization to replace functionality of the router in a network
 - `Cable Modem`: device that connects to a cable line for connectivity
   - newer versions don't modulate/demodulate analog signals, but are still called modems.
 - `ONT`: optical network terminal - modem that provides connectivity by using a fiber-optic line
@@ -189,17 +189,17 @@ ___
       2. `payload`: where actual message is carried
    2. addresses are used to identify & send to intended receiver
       1. carried in header of bitstrings & identified using an address pair
-   3. address mapping: map addresss of one scheme on addresss of another scheme
+   3. address mapping: map address of one scheme on address of another scheme
       1. ex. translate logical IP specified by app to an ethernet MAC address
 2. Routing: systems that aren't directly connected, using intermediary systems along the route to intended receiver to forward data on behalf of sender, which are connected via routers
-   1. Internetworking: interconnection of networks via routers
+   1. Inter-networking: interconnection of networks via routers
    2. Routing: sending data from source => destination network
       1. It's supported by host addressing & identification using hierarchical IP address system
-3. detection of transmission erros: CRC of data area added to end of packets, allows rec to reject packets on CRC diff and arrange for retransmission
-4. acknowledgement: recievers send acknowledgements of packets received correctly
+3. detection of transmission errors: CRC of data area added to end of packets, allows rec to reject packets on CRC diff and arrange for retransmission
+4. acknowledgement: receivers send acknowledgements of packets received correctly
    1. required for connection-oriented communication
    2. loss of info (timeouts and retries): packets can be lost on the network or delayed in transit
-   3. Sender may expect an acknow. of correct reception from the rec w/in a certain amount of time
+   3. Sender may expect an acknowledgements of correct reception from the rec w/in a certain amount of time
    4. sender may need to retransmit the info on timeouts
    5. retransmission has no effect when link is permanently broken, so the n of retransmissions is limited
       1. if the limit is exceeded it's an error
@@ -211,7 +211,7 @@ ___
    10. bitstrings are divided into pieces and sent on network individually
        1. Can get lost, delayed, or take different routes, resulting in pieces arriving out of sequence or retransmitted, which creates duplicate pieces
    11. The data is marked w/ sequence info at the sender, so receiver can figure out any issues to reassemble message or ask for retransmission
-   12. flow control is needed when sender transmits faster than reciever so intermediate network equipment can process the transmission
+   12. flow control is needed when sender transmits faster than receiver so intermediate network equipment can process the transmission
    13. Queueing (buffers) - usually FIFO queues that are used to deal with messages in the order it was sent
        1. can use multiple queues with diff priorities
 
@@ -255,10 +255,10 @@ ___
   - Link includes all hosts accessible w/o traversing a router.
   - Link size is determined by the networking hardware design.
   - TCP/IP designed to be hardware independent and can be used on top of any link-layer tech
-    - (ex. any hardware, virtual link layers(VPNS & tunnels))
+    - (ex. any hardware, virtual link layers(VPNs & tunnels))
   - includes protocols used for describing local net topology and interfaces needed to affect transmission of internet layer datagrams to other next-neighbor hosts.
   - moves packets between internet layer interfaces of 2 different hosts on same link.
-  - The transmitting/reciving packets link processes are controlled in device driver for network card, firmware and/or chipsets.
+  - The transmitting/receiving packets link processes are controlled in device driver for network card, firmware and/or chipsets.
     - `NIC`: network interface/adapter card: provides physical interface between a PC and the cabling used for connectivity
     - (performing functions like framing- which prepares the internet layer packets for transmissions, and then transmit the frames to the physical layer over a transmission medium).
   - TCP/IP has specifications for translating network address methods used in IP to link-layer addresses,(ex.MAC addresses).
@@ -267,7 +267,7 @@ ___
   - Ethernet, PPP, ADSL
 - **Internet**
   - provides an unreliable datagram transmission facility between hosts located on different IP networks by forwarding datagrams to appropriate next-hop router for further relaying to destination.
-  - Essentially establishes the internet and is responsible for sending packets across multiple networks. Makes internetworking (the interworking of diff IP networks) possible
+  - Essentially establishes the internet and is responsible for sending packets across multiple networks. Makes inter-networking (the inter-working of diff IP networks) possible
   - IP carries data for many upper layer protocols (each w/ unique protocol #s).
   - IP is principal component of internet layer and defines 2 addressing systems to ID network hosts and locate them on the network.
   - protocols include: IP, ICMP, ARP, RARP, IGMP
@@ -300,7 +300,7 @@ ___
 3. `ssh`: 22, remote administration protocol where user can control/modify their remote servers over the internet; replaced unsecure telnet protocol
    1. Secure Shell: cryptographic connection-oriented network protocol for operating network services securely over unsecured net
       1. ex. Access resources of a company branch in a diff area
-   2. uses cryptographic techniques to ensure communication to and from  as well as enrypting data
+   2. uses cryptographic techniques to ensure communication to and from  as well as encrypting data
    3. provides secure communication between 2 untrusted hosts over an unsecured network
 4. `Telnet`: 23, unencrypted remote device access
 5. **E-mail**
@@ -313,9 +313,9 @@ ___
 8. **HTTP**: 400 (80) hypertext transfer pro; standard for web communication; used for rendering pages in browser.
    1. **HTTPS**: 443 secured communication. on web
 9. **DHCP**: 67/68, dynamic host configuration protocol; dynamically assigns IP addresses to network hosts through leases using UDP as its transport protocol
-   1.  network management protocol used on IP networks
+   1. network management protocol used on IP networks
    2. employs connectionless service model, using UDP (UDP port 67 for server and 68 for client)
-   3. manages IP settings for devices & its local network, (ex. auto & dynamically assigns IP addresss to those devices)
+   3. manages IP settings for devices & its local network, (ex. auto & dynamically assigns IP address to those devices)
    4. auto assigns IP addresses and other communication param to devices connected to the net using a client–server architecture
    5. two network components: a centrally installed network DHCP server and client instances of the protocol stack on each device that periodically requests a set of param. from server
 10. `NetBios`/`NetBT`: 137-139 network basic input output system and NetBIOS over TCP/IP: LAN communication. Works over OSI layer 4 and needs to work w/ a layer 5 protocol (ex. TCP/IP) to work properly.
@@ -324,7 +324,7 @@ ___
 12. `SLP`: 427 service location protocol; local service discovery
 13. `AFP`: 548 Apple filling protocol; used for Apple file services
 14. `LDAP`: 389 Lightweight directory access pro; access a directory on network objects
-15. `SNMP`: 161/162, simple net mngmnt pro: send/rec net mngmnt messages
+15. `SNMP`: 161/162, simple net management protocol: send/rec net management messages
     1. used for monitoring/managing other nodes in a TCP/IP network
 16. `Proxy Server`: features include access control, caching, URL filtering and privacy
 17. `WINS`: Windows Internet name service
@@ -339,17 +339,17 @@ ___
 - _switches_: layer 2 (data link) device that endpoint devices connect to. It interconnects hosts on a LAN using MAC address of each host to make decisions about forwarding traffic
   - managed: configurable w/ features allowing a net admin to optimize/customize the switch. Have better monitoring options than unmanaged
   - unmanaged: plug-and-play; can't config. designed to allow hosts to auto connect when plugged into the switch, but coming at the expense of performance
-  - routers and switches provide connectivity and control fraffic on the net.
+  - routers and switches provide connectivity and control traffic on the net.
 - _Access Point_: any device to which a host can connect in order to access a net. Usually referring to a wireless access point that allows WiFi devices to connect to the net.
-  - _Cloud-based network controller_: network appliance that acts as a mngmt console for multiple network access points. also allows connection of AP to the net w/o config of each individual one.
+  - _Cloud-based network controller_: network appliance that acts as a management console for multiple network access points. also allows connection of AP to the net w/o config of each individual one.
 - _Firewall_: A security appliance that filters traffic, permitting/blocking traffic thru it based on a config set of rules and network traffic inspection
 - _NIC_: network interface card, adapter card used to connect a host to the network
 - _repeater_: used to extend a signal being sent to provide add'l coverage
 - _hub_: older tech layer 1 (physical layer) device that connects hosts together.
-  - Don't recognize MAC addresss; Only send traffic coming in on one port out on every other port
+  - Don't recognize MAC address; Only send traffic coming in on one port out on every other port
 - _cable/DSL modem_: used to connect to an ISP
 - _Bridge_: layer 2 (data link) device that connects 2 net segments and controls traffic moving between them
--_patch panel_: physical panel w/ multiple connection points used as a central location to interconnect devies and ports on a net. Allows for an organized cabling strucutrre to manage 10s-100s of interconnections
+-_patch panel_: physical panel w/ multiple connection points used as a central location to interconnect devices and ports on a net. Allows for an organized cabling structure to manage 10s-100s of interconnections
 - _PoE_: Power over Ethernet: tech, usually incorporated into switches, that delivers power to devices over data lines rather than a separate power cord
   - ex. You can power a device thru an ethernet port on a switch
   - PoE injector is used to add power to a data cable going to a PoE device (IP phone/camera)
@@ -359,19 +359,19 @@ ___
 1. **Toner probe**: 2-in-1 elec test tool that traces wires thru walls to determine which pair carried the signal induced by the tone generator
    1. used when you have access to both ends of cable at same time
    2. Plug `tone generator` at jack end of cable and wave toner probe around suspected area to find other end of cable
-2. **Cable tester**: check a cable to verify intended connections exist and there's no uninteded ones
+2. **Cable tester**: check a cable to verify intended connections exist and there's no unintended ones
    1. missing intended connection: 'open'
    2. existing unintended connection: ('short')
-   3. connection goes to wrong place: ('miswired)
+   3. connection goes to wrong place: ('mis-wired')
    4. connection has 2 faults: open to correct contact & shorted to incorrect one
 3. **repeater** re-sends wireless signal to areas that the access point can't cover.
 4. **crimper** is used to crimp a connector (usually last step in making an ethernet cable) to tighten the wiring to right spots in connector so electrical signals pass thru properly.
 5. **Layer 3 switch** is config to participate in routing decisions
    1. routing decisions work on Layer 3 of OSI model (network layer)
-   2. standard switches usually refferred at as Layer 2 devices, working as PnP w/o ability to adjust settings (aka unmanaged switch)
+   2. standard switches usually referred at as Layer 2 devices, working as PnP w/o ability to adjust settings (aka unmanaged switch)
 
 >
-Hubs vs Swtiches: Hubs are outdated and connect each pc that's plugged into the repeater, it takes the signal that pc A sends to PC B (a frame: made up of 1500 bits) and repeats it by sending it to every pc connected and then those PC's read their MAC address and the address of the signals MAC and either reads it if it's for them or deletes it if not. Hubs just repeat back on all the ports, whatever's coming out.
+Hubs vs Switches: Hubs are outdated and connect each pc that's plugged into the repeater, it takes the signal that pc A sends to PC B (a frame: made up of 1500 bits) and repeats it by sending it to every pc connected and then those PC's read their MAC address and the address of the signals MAC and either reads it if it's for them or deletes it if not. Hubs just repeat back on all the ports, whatever's coming out.
 >>
 Switches: when the box collects the MAC of every PC connected to it and when it receives a frame  it makes a direct, physical connection between the two PC's. A switch is still a repeater, but it's a smart repeater and only sends the data out to the proper destination based on the MAC address
 
@@ -395,7 +395,7 @@ Switches: when the box collects the MAC of every PC connected to it and when it 
   - no ordering of messages, no tracking connections
   - packets sent indy and checked for integrity on arrival, packets w/ defined boundaries that're honored upon receipt
   - doesn't avoid congestion; control measures have to be setup at app level or in net
-  - UDP can broadcase - sent packets can be addressed to be rec by all devices on the subnet
+  - UDP can broadcast - sent packets can be addressed to be rec by all devices on the subnet
   - multicast mode of op where a single datagram packet can auto route w/o dupe to a group of subs
 
 >
@@ -422,7 +422,7 @@ Although UDP provides integrity verification (via checksum) of the header and pa
     - app layer protocols: WWW, SMTP, FTP
 - The _presentation_ layer: provides services to the application layer:
   - responsible for presenting the data in standard formats, data compression/decompression & encryption/decryption
-  - presentation layer stadards: JPEG, MPEG, MIDI, PICT, TIFF
+  - presentation layer standards: JPEG, MPEG, MIDI, PICT, TIFF
   - a request for the establishment of a session, data transfer, negotiation of the syntax to be used between the application layers, any necessary syntax transformations, formatting and special purpose transformations (e.g. data compression and data encryption).
 - The _session_ layer may provide the following services to the presentation layer: establishment and release of session connections, normal and expedited data exchange, a quarantine service which allows the sending presentation entity to instruct the receiving session entity not to release data to its presentation entity without permission, interaction management so presentation entities can control whose turn it is to perform certain control functions, resynchronization of a session connection, reporting of unrecoverable exceptions to the presentation entity.
 - The _transport_ layer provides reliable and transparent data transfer in a cost-effective way as required by the selected quality of service. It may support the multiplexing of several transport connections on to one network connection or split one transport connection into several network connections.
@@ -473,17 +473,17 @@ ___
 6. `Buffered`
 7. `SODIMM`: multiple configurations: 200, 204, 260, or 292-pin
 8. 32 | 64-bit configurations
-9. `EDO`: extended data out memory: type of RAM chip that makes improvemnts on time to read from memory
+9. `EDO`: extended data out memory: type of RAM chip that makes improvements on time to read from memory
 10. `ECC`: error checking and correcting memory: data that's read/transmitted is checked for errors and corrected
 11. `ROM` - Read only memory - Data in ROM can not be erased or changed
 12. `PROM` Programmable ROM - Once programmed, data can't be erased or change
-13. `EPROM` - Erasable PROM - Data can be removed from PC curcuit, erased by ultraviolet (UV) light and then reprogrammed
+13. `EPROM` - Erasable PROM - Data can be removed from PC circuit, erased by ultraviolet (UV) light and then reprogrammed
 14. `EEPROM` Electronically erasable PROM - Data can be erased with electrical signals.
     1. Chip can then be reprogrammed. Transistor uses 5v.
-    2. EEPROMs are frequently used to store BIOS. Used to program dynamically
+    2. `EEPROMs` are frequently used to store BIOS. Used to program dynamically
 
 - ECC: can continue to work even if it has corrupt data
-- Paging: a file that's used as virtual mmemory on the system
+- Paging: a file that's used as virtual memory on the system
 - RAM: short-term memory used to store working data
 - Non-parity: doesn't maintain parity info and can't perform error checking.
 
@@ -494,7 +494,7 @@ ___
 1. Hard drives are usually 2.5" form factor (desktops use 3.5")
    1. 2.5: better performance due to larger cache and higher rotation speed
    2. more available/cheaper than 1.8" drives that weigh less, consume less power, but have slower rotation speed & access time
-      1. usually found in 10 inch or ultraportable laptops
+      1. usually found in 10 inch or ultra-portable laptops
 2. drive tech: serial and parallel ATA
 3. don't have separate power connectors
 4. Form factors: 2.5”, 1.8”, or M.2
@@ -510,13 +510,13 @@ ___
 1. `RAID` (Redundant Array of independent disk) Types: Hardware & Software RAID
     1. RAID 0: Striping w/o parity and no fault tolerance
        1. min. 2 disks needed and read/write performance increase
-    2. RAID 1: Mirroring and dubplexing.
+    2. RAID 1: Mirroring and duplexing.
        1. mirroring requires 2 equal sized pars on diff drives.
        2. disk duplexing req. 2 disk and 2 controllers.
        3. provides fault tolerance, w/ slower disk access compared to striping
     3. RAID 2 - striping w/ error correction
     4. RAID 3 - striping w/ error correction code stored as parity
-       1. takes a striped array, then adds prity HDD to the array. The parity info is vital if a drive fails because it can restore blocks broken from data corruption. Parity written to 1 drive
+       1. takes a striped array, then adds parity HDD to the array. The parity info is vital if a drive fails because it can restore blocks broken from data corruption. Parity written to 1 drive
     5. RAID 4: striping w/ large blocks allocation
     6. RAID 5: striping w/ parity. Requires 3 pars on diff drives.
        1. fault tolerant & less expensive than disk mirroring.
@@ -529,9 +529,9 @@ ___
     9. Disk swapping: Hot-swapping (Host plugging): ability to add/remove devices to PC while it's running & OS will auto recognize changes.
        1. cold: device needs powered down prior to replacing parts
        2. warm: The server can remain powered on, but I/O functions corresponding to the part that needs replaced need stopped by the appropriate command
-       3. hot: the faulty part can be replaced w/o interrupting the srver or exec any interruption commands in I/O procedures.
+       3. hot: the faulty part can be replaced w/o interrupting the server or exec any interruption commands in I/O procedures.
 2. `USB`
-       1. universal serial bus 1.1 cocmes in 1.5 MB/s and 12 Mbps; USB 2..0 runs at 480 Mbps
+       1. universal serial bus 1.1 comes in 1.5 MB/s and 12 Mbps; USB 2..0 runs at 480 Mbps
        2. form factors: micro, USB-C, mini
        3. USB 3.0 runs at 5 Gbps; USB 3.1 at 10 Gbps
        4. USB ver. often use coors to show v.
@@ -546,7 +546,7 @@ ___
     2. uses a mini DisplayPort or USB C connector
     3. exclusive to Apple and uses proprietary lightning connector
 4. `Keyboards/Mice`
-    1. keyboards use ither USB or PS/2 connection; while mice almost exclusively USB; game controllers often have proprietary connection that requires a converter piece
+    1. keyboards use either USB or PS/2 connection; while mice almost exclusively USB; game controllers often have proprietary connection that requires a converter piece
     2. keyboard video mouse (KVM) switches give ability for a single keyboard, monitor, mouse to connect multiple PC's
 5. `Sight/Sound`
 6. `Readers/Scanners`
@@ -576,35 +576,29 @@ ___
 1. Manage different version of Window client and servers
 2. DSC - desired state configuration
 3. ISE - integrated script environment
-4. WinRM - windoes remote management
+4. WinRM - Windows remote management
 5. SIL - software inventory logging
 6. Windows Page Manager Service (can use WinGet via CLI)
 7. My analytics Dashboard
 8. System Center Config Manager (SCCM)
-9. Component Services Admin of COM, Apps, distrubted apps that're deployed in a server PC using MMC (Microsoft Management Console)
+9. Component Services Admin of COM, Apps, distributed apps that're deployed in a server PC using MMC (Microsoft Management Console)
 
 ### Windows naming
 
 - Windows naming is designed for LANs and when installed you give the PC a Windows name
 - all Windows systems will be members of a domain or workgroup
 - `homegroups` are more secure and automated organization (still a type of workgroup)
-  - `workgroup` is basic type of networking organiztion used as an organizational tool w/ no security or central admin
+  - `workgroup` is basic type of networking organization used as an organizational tool w/ no security or central admin
   - `domain` is an organizational group (type used today is Active Directory domain) that provides central admin and has ability to disperse security and network info to other PC's at one time
 
 ### OS Admin + Operations
 
-<details>
-
-    <summary> Install, Upgrade, Boot
-
-    </summary>
-
-    <p>
+<details> <summary> Install, Upgrade, Boot</summary><p>
 
 1. optical disc (CD-ROM, DVD, Blu-ray): pc will prob have built-in drive to read them; very common way to install OS on a pc
 2. external/flash drive (interfaces: USB, eSATA): ext optical/hard/flash drives, USB is common
 3. Network boot (PXE): preboot eXecution Env.; boot from network resources; net & remote server hosting the bootable image need config.
-   1. common in corp. env. where net & server resources are availalbe; allows setting up multiple pc's w/ similar images
+   1. common in corp. env. where net & server resources are available; allows setting up multiple pc's w/ similar images
 4. internal fixed disk (HDD/SSD) & internal Hard Drive (Partition)
    1. disk can have OS install image or OS already installed. Most common way to boot PC after OS install completed
    2. simple configs have one bootable par on a disk, but a disk can have > 1 par to multiboot diff OS. One logical par can span multiple physical hard disks
@@ -618,7 +612,7 @@ ___
 |    clean| disregards previous data; used for PC w/o an OS or to intentionally delete old data |
 | repair | boot w/ same -v OS & select repair; rewrites SF & settings, retains user fi; can repair OS that's unbootable or w/ issues unfixable by other methods |
 |     multiboot             | uses boot mngr that maintains boot config; user sel OS to boot; recommend install OS's to diff HDD or separate logical pars  |
-|   remote net      | PXE net boot using remote server; may require choosing install options or be unattended |
+|   remote net  | PXE net boot using remote server; may require choosing install options or be unattended |
 |         image deployment         | used for PC's w/ == hardware that need == OS/settings/apps. Diff software tools can do this. Steps involve sel one PC => clean install, config, app install => create image from that PC & make available on network or portable media => copy image to other PC's |
 |   recovery par  | create rec par during install that is a bootable par for later or repair install; contains diagnostic/repair tools |
 | |
@@ -631,7 +625,7 @@ ___
 | Basic | most common; separated into logical pars  |
 | Primary | can have only one logical drive; W10 only boots from primary par |
 | Extended | enables >= 1 logical drive  |
-| logical | rep by a drive letter in W10; recomm. distinguishing btw dsk, par & logical drive; can be assigned 1:1 but aren't limited to 1   |
+| logical | rep by a drive letter in W10; recommend distinguishing btw dsk, par & logical drive; can be assigned 1:1 but aren't limited to 1   |
 | GPT | GUID Par Table: has info on how dsk is partitioned. supports larger drives & more pars/drive than MBR  |
 | |
 | **File System Types/Formatting** |
@@ -644,9 +638,8 @@ ___
 | NFS | Network File System. mostly in servers where you can have fi access on net btw sys. |
 | ext3, ext4 | used for Linux. 4 is updated -v that enables larger pars, fi & better perf |
 | HFS | used for MacOS |
-| Swap par | Linux par used when physical RAM is maxxed out. The Data flows to swap pars; reducing perf, in place of running more apps simultaneously. |
+| Swap par | Linux par used when physical RAM is maxed out. The Data flows to swap pars; reducing perf, in place of running more apps simultaneously. |
 | quick vs. full format | quick changes FS records making dsk appear empty. Full rewrites prev fi, detects surface errors on dsk and makes restoring fi harder. |
-
 
 1. 3rd party (unsigned drivers) should have source verified to ensure validity.
 2. signed drivers: W install drivers are tested/approved by MS
@@ -654,8 +647,8 @@ ___
    1. ex. a dept in a larger org. or a home user
 4. Domain setup: Companies can use a domain controller instead for more secure, centralized login for large groups, which allows an easier path for managing large net
 5. Time, Date, Region, Lang: config these settings during install (some OS require reinstall to change lang.)
-6. Driver install, Software, Updates: Keep system updated for secuirty reasons. Install proper drivers for the type of system (32-bit => x86 sys && 64-bit on x64 sys). Use 'check for updates' utility in W10 to update OS and other MS software. Other software needs checked separatley.
-7. Know differences in Hardware/Apps/OS compatability
+6. Driver install, Software, Updates: Keep system updated for security reasons. Install proper drivers for the type of system (32-bit => x86 sys && 64-bit on x64 sys). Use 'check for updates' utility in W10 to update OS and other MS software. Other software needs checked separately.
+7. Know differences in Hardware/Apps/OS compatibility
 
 </p></details>
 
@@ -664,21 +657,21 @@ ___
 ## Displays & Mobile
 
 1. `backlight systems`
- 2. _CCFL_: cold cathode flourescent light - older, uses daylight specter flourescent tube and inverter for power
- 3. _LED_: light emitting diodes - doesn't use inverter and uses strips of LEDs
+2. _CCFL_: cold cathode fluorescent light - older, uses daylight specter fluorescent tube and inverter for power
+3. _LED_: light emitting diodes - doesn't use inverter and uses strips of LEDs
     1. LCD blocks areas of backlight to create images
     2. LEDs generate light themselves and consumes less power
     3. Plasma: made of small cells of ionized gas (good contrast ratio)
-2. _CRT_: cathode ray tube
-3. _LCD_: requires backlight sys; uses liquid crystal displays (frequent in laptops)
-4. _OLED_: organic light emitting diode - thinner/lighter; made of a layer of organic compound between 2 light-emitting electrods (common in handheld devices)
+4. _CRT_: cathode ray tube
+5. _LCD_: requires backlight sys; uses liquid crystal displays (frequent in laptops)
+6. _OLED_: organic light emitting diode - thinner/lighter; made of a layer of organic compound between 2 light-emitting electrodes (common in handheld devices)
 
 - **OLED**: structure provides flexibility for curved displays
-  - contain the image producing components and light source in one panel. organic light emitting compound is set between an anode and cathode producing a current. the current runs thru the electroluminescent compund producing light consumes less power than LCD, with higher contrast ratio resulting in sharper images. common in high end monitors and phones.
+  - contain the image producing components and light source in one panel. organic light emitting compound is set between an anode and cathode producing a current. the current runs thru the electroluminescent compound producing light consumes less power than LCD, with higher contrast ratio resulting in sharper images. common in high end monitors and phones.
 - **LCD**: liquid crystal displays: shines a backlight through liquid crystals, creating the image on the screen
 - **IPS** In plan switching, offers the widest viewing angle and the best color reproduction. ideal for vertical mounting and those needing high quality color (graphic/video artists)
 - **twisted nematic**: TN, oldest LCD tech, limited viewing angles and washed out/blended color reproduction. minimal lag time makes them ideal for gamers and are inexpensive options for office use
-- vertical alighnment (VA), offers best contrast ratio of the three technologies and is solid middle ground choice with decent color reproduction w/ slight lag
+- vertical alignment (VA), offers best contrast ratio of the three technologies and is solid middle ground choice with decent color reproduction w/ slight lag
 - The inverter is located behind the LCD panel and converts DC current into AC current
   - flickering/dim screen may be due to faulty inverter
 
@@ -687,7 +680,7 @@ ___
 1. **VGA**: video graphics array: legacy cable; only transmits analog signal; blue
 2. **DVI** digital visual interface: addressed analog video transmission issues. Able to transmit digital video signals to display units
    1. 3 standards: DVI-A analog only, D digital only, I: analog & digital; white
-3. **HDMI**: high-def multimedia interface: higher motion-picture fram rates and digital audio w/ single cable.
+3. **HDMI**: high-def multimedia interface: higher motion-picture frame rates and digital audio w/ single cable.
    1. Common connector type: Standard A HDMI (19 pins)
 4. **DisplayPort**: DP: uses less power and is backward compatible w/ VGA & DVI. transmits video & audio signals.
    1. DP standard features 2 hooks to lock the cable in place
@@ -701,6 +694,7 @@ ___
 
 >>
     Quoted & paraphrased information from personal notes and online resources
+<!-- cspell: disable  -->
 
 > [Quickstart](https://www.quickstart.com/blog/comptia-prep-identifying-motherboard-components-understanding-their-functions/) |
 > [Wikipedia](https://en.wikipedia.org/wiki/User_Datagram_Protocol) |
