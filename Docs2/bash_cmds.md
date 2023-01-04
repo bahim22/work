@@ -125,18 +125,21 @@ git clone ssh://git@ssh.github.com:443/<username>/<repo>.git
 >>
   review: ssh(1), ssh-add(1), ssh-agent(1), sshd(8)
 
-```sh
+```bash
+#!/bin/bash
+
 # generate a user certificate:
-ssh-keygen -s /path/to/ca_key -I key_id /path/to/user_key.pub
+$ ssh-keygen -s /path/to/ca_key -I key_id /path/to/user_key.pub
 
 # generate a host certificate:
-
 ssh-keygen -s /path/to/ca_key -I key_id -h /path/to/host_key.pub
-ssh-copy-id
+
 # copies the local-host’s pub key to the remote-host’s authorized_keys fi
+ssh-copy-id
 ```
 
 ### Git Commands & examples
+<!-- cspell: disable  -->
 
 ```sh
 #  giteveryday --help
@@ -168,6 +171,7 @@ git merge alsa-audio (9)
 git log --since='3 days ago' (10)
 git log v2.43.. curses/ (11)
 ```
+<!-- cspell: enable  -->
 
 1. create a new topic branch.
 2. revert your botched changes in curses/ux_audio_oss.c.
@@ -214,6 +218,7 @@ git gc (11)
 9. fetch from a specific branch ALL from a specific repo & merge
 10. revert the pull.
 11. garbage collect leftover objects from reverted pull.
+<!-- cspell: disable  -->
 
 ```sh
 # Push into another repository.
@@ -236,6 +241,7 @@ cd frotz
 git switch master
 git merge satellite/master (5)
 ```
+<!-- cspell: enable  -->
 
 1. mothership machine has a frotz repository under your home
 directory; clone from it to start a repository on the satellite
@@ -259,7 +265,7 @@ ___
 >>
   generate a gpg key and then c/v to GitHub
   This allows commits to be verified via signature
-
+<!-- cspell: disable  -->
 ```sh
 gpg --full-generate-key
 # choose: key type, size, expire
@@ -369,6 +375,8 @@ ps, top, vmstat, brk, mmap, wget, systemctl, init
 apt [-h] [-o=config_string] [-c=config_file] [-t=target_release] [-a=architecture] {list | search | show | update | install pkg
 [{=pkg_ver_num | /target_release}]... | remove pkg... | upgrade | full-upgrade | edit-sources | {-v --version} |{-h--help}}
 ```
+<!-- cspell: enable  -->
+<!-- /* cspell: enableCompoundWords */ -->
 
 >
 interface for package management system.
@@ -388,6 +396,8 @@ To-Do: apt-get, apt-cache, sources.list, apt.conf, apt-config
 - `show`: information about the given package(s) including its dependencies, installation and download size, sources the package is available from, the description of the packages content and much more
 - `list`: is somewhat similar to dpkg-query --list in that it can display a list of packages satisfying certain criteria. It supports glob patterns for matching package names as well as options to list installed (--installed), upgradeable (--upgradeable) or all available (--all-versions) versions.
 - `edit-sources`: lets you edit your sources.list(5) files in your preferred text editor while also providing basic sanity checks.
+-
+<!-- cspell: disable  -->
 
 ## Shell command info
 

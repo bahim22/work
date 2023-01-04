@@ -1,19 +1,21 @@
+<!-- cspell: disable  -->
+
 # Python Base Info
 
 ## Recap & Typed version of handwritten notes
 
 ## Terms
 
-1. High-level language and program written in C that interprets the source code, parses it (examine/analyze snytactic structure) and processes it
+1. High-level language and program written in C that interprets the source code, parses it (examine/analyze syntactic structure) and processes it
 2. semantic: meaning of a prog.
 3. syntax: rules that define the structure of the lang.
 4. Translator types:
-   1. interpeters: executes prog. in high level lang by translating 1 line at a time
-   2. compilers: get's the prog. file, then runs a process to translate the high-level source code into machine langauge; afterwards it puts it into a file to be executed later in .exe or .dll files (executable and dynamic link library)
+   1. interpreters: executes prog. in high level lang by translating 1 line at a time
+   2. compilers: get's the prog. file, then runs a process to translate the high-level source code into machine language; afterwards it puts it into a file to be executed later in .exe or .dll files (executable and dynamic link library)
    3. machine code/low-level lang/assembly lang: the lowest level lang. for software that's directly executed by CPU
 5. programs (py statements crafted to do a task) are saved to files called scripts and called by running: python <filename.py>
 6. variable: a name that refers to a value. An assignment statement creates new var and gives them values
-7. attribute: a value asso. w/ an object; referenced by using dot expression/notation (candy.sour)
+7. attribute: a value associated w/ an object; referenced by using dot expression/notation (candy.sour)
 8. callback: subroutine func passed as an arg. to be ee in future
 9. class: a temp for making user-defined objects. Contain method def. that operate on instances of the class
 10. coercion: implicit conversion of one type to another that involves 2 args of same type
@@ -25,6 +27,8 @@
 16. immutable: An object with a fixed value. Immutable objects include numbers, strings and tuples. Such an object cannot be altered
 17. Mutable objects can change their value but keep their id().
 18. type: The type of a Python object determines what kind of object it is; every object has a type. An object’s type is accessible as its __class__ attribute or can be retrieved with type(obj).
+
+<!-- /* cspell: enableCompoundWords */ -->
 
 ### To-Do
 
@@ -92,7 +96,8 @@ def f(arg):
 
 - file starts with #!
 - Linux/Unix OS have native support and the py launcher allows use with Py scripts on W10.
-- vitual commands include
+- virtual commands include
+<!-- cspell: disable  -->
 
 > /usr/bin/env python, /usr/bin/python, /usr/local/bin/python, python
 
@@ -120,7 +125,7 @@ source <venv>/bin/activate
 venv\/Scripts\/activate.bat
 venv\/Scripts\/activate.bat
 
-source "c:/Users/Ibalde/OneDrive - Point Park University/Ibrahima @ Point Park University/moons/.venv/Scripts/activate"
+source "c:/Users/uname/OneDrive - Point Park University/uname @ Point Park University/moons/.venv/Scripts/activate"
 ```
 
 - positional args: ENV_DIR: A directory to create the environment in.
@@ -211,6 +216,7 @@ int([x]) -> integer int(x, base=10) -> integer
 ## Sequence types: strings, lists, tuples, bytes sequences, bytes arrays, range() objects
 
 ### Strings
+<!-- cspell: disable  -->
 
 - `'str'.join`
 
