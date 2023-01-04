@@ -372,7 +372,7 @@ ___
 
 >
 Hubs vs Swtiches: Hubs are outdated and connect each pc that's plugged into the repeater, it takes the signal that pc A sends to PC B (a frame: made up of 1500 bits) and repeats it by sending it to every pc connected and then those PC's read their MAC address and the address of the signals MAC and either reads it if it's for them or deletes it if not. Hubs just repeat back on all the ports, whatever's coming out.
->> 
+>>
 Switches: when the box collects the MAC of every PC connected to it and when it receives a frame  it makes a direct, physical connection between the two PC's. A switch is still a repeater, but it's a smart repeater and only sends the data out to the proper destination based on the MAC address
 
 </p></details>
@@ -457,7 +457,7 @@ ___
 
 ### Memory
 
-#### RAM 
+#### RAM
 
 <details>
 <summary>Form Factors & Versions | Speed, Latency & Timing |  Features + Variants
@@ -593,8 +593,13 @@ ___
 
 ### OS Admin + Operations
 
-<details><summary>Install, Upgrade, Boot</summary>
-<p>
+<details>
+
+    <summary> Install, Upgrade, Boot
+
+    </summary>
+
+    <p>
 
 1. optical disc (CD-ROM, DVD, Blu-ray): pc will prob have built-in drive to read them; very common way to install OS on a pc
 2. external/flash drive (interfaces: USB, eSATA): ext optical/hard/flash drives, USB is common
@@ -687,7 +692,6 @@ ___
 4. **DisplayPort**: DP: uses less power and is backward compatible w/ VGA & DVI. transmits video & audio signals.
    1. DP standard features 2 hooks to lock the cable in place
 5. Can use adaptors to convert one type of connection/cable tech to another
-
 
 ### Mobile Devices
 

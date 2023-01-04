@@ -43,7 +43,9 @@ ___
 
 ### Networked Host Services
 
-<details><summary>Servers, Appliances, Ports</summary><p>
+<details>
+
+<summary>Servers, Appliances, Ports</summary><p>
 
 - client apps request services from server apps
 
@@ -64,6 +66,7 @@ ___
 - Web Server: listens for incoming requests, which it executes by responding w/ the requested content (text, images, video, running scripts)
   - examples: Microsoft Internet Information Services (IIS), Apache
 - Authentication, Authorization & Accounting (Triple A or AAA)
+
 </p></details>
 
 - Internet Appliances
@@ -584,3 +587,4 @@ RD / `RMDIR` | delete dir
     1. earlier Windows versions used MSConfig
 14. Disk cleanup utility deletes temp fi from HDD
 15. `WinRE` helps recover a sys that won't boot. It auto starts and can be manually started via Windows Recovery settings in Advanced startup menu
+

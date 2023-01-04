@@ -1,0 +1,15 @@
+{
+    "default": true,
+    "MD013": false,
+    "images": true,
+    "spelling": true,
+    "MD007": false,
+    "no-hard-tabs": false,
+    "no-emphasis-as-header": false,
+    "bullet": true,
+    "commands-show-output": true,
+    "atx": true,
+    "header-increment": false,
+    "no-inline-html": false,
+    "line-length": false
+}

@@ -23,7 +23,8 @@
 
 > ssh connects and logs into the specified destination by setting the user, hostname and port
 
-```sh
+```bash
+#!/bin/bash
 # formats for ssh
 [user@]hostname | ssh://[user@]hostname[:port]
 ssh://[user@]host.xz[:port]/~[user]/path/to/repo.git/
@@ -33,7 +34,7 @@ ssh -l login_name -p port
 ssh-keygen -l -f /etc/ssh/ssh_host_rsa_key
 # determine fingerprints
 ssh-keygen -lv -f ~/.ssh/known_hosts
-# ls fingerpritns and random art for known hosts
+# ls fingerprints and random art for known hosts
 ssh-keygen -r host.example.com.
 # connect client to server
 # Add SSHFP resource records to the zonefile for host 1st
