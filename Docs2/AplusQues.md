@@ -1,46 +1,34 @@
 # Comptia A+
 
-## Table of Contents
-
-1. [Network](#network)
-2. [Shell](#shell)
-3. [Operating Systems](#operating-systems)
-
 - [Comptia A+](#comptia-a)
+
 <details><summary>Table of contents</summary><p>
 
   - [Table of Contents](#table-of-contents)
+  
   - [Network](#network)
     - [Networked Host Services](#networked-host-services)
-      - [Server Roles](#server-roles)
-      - [Internet Appliances](#internet-appliances)
-      - [Ports](#ports)
-    - [Ethernet, 802.11 wireless standards](#ethernet-80211-wireless-standards)
-      - [Wi-Fi](#wi-fi)
-    - [Tools](#tools)
+    - [Ports](#ports)
+    - [Ethernet | 802.11 wireless | Wi-Fi](#ethernet--80211-wireless--wi-fi)
     - [Network Questions](#network-questions)
-    - [Network Commands](#network-commands)
   - [Shell](#shell)
+    - [Network Commands](#network-commands)
     - [Cmd/Pwsh](#cmdpwsh)
     - [Bash cmds](#bash-cmds)
     - [Windows CMD](#windows-cmd)
   - [Operating Systems](#operating-systems)
     - [MacOS X](#macos-x)
-    - [**Windows**](#windows)
-    - [**Users, Groups, Permissions**](#users-groups-permissions)
+    - [Windows](#windows)
+    - [Users, Groups, Permissions](#users-groups-permissions)
     - [OS maintainence, optimization, general info](#os-maintainence-optimization-general-info)
-    - [Mobile](#mobile)
   - [Virtualization](#virtualization)
   - [Hardware](#hardware)
-    - [Memory](#memory)
-    - [Printers: Laser, Thermal, Ink](#printers-laser-thermal-ink)
     - [Cable Types](#cable-types)
       - [Network Cables](#network-cables)
-      - [Display: Video Cables](#display-video-cables)
       - [Connector types](#connector-types)
       - [Hard Drive Cables](#hard-drive-cables)
+    - [RAID](#raid)
     - [Troubleshoot](#troubleshoot)
-    - [Disks](#disks)
   - [Operational Procedures](#operational-procedures)
   - [Software Troubleshooting](#software-troubleshooting)
   - [Security](#security)
@@ -54,9 +42,9 @@ ___
 
 ### Networked Host Services
 
-- client apps request services from server apps
+<details><summary>Servers, Appliances, Ports</summary><p>
 
-#### Server Roles
+- client apps request services from server apps
 
 <details><summary>Server Info</summary><p>
 
@@ -77,14 +65,14 @@ ___
 - Web Server: listens for incoming requests, which it executes by responding w/ the requested content (text, images, video, running scripts)
   - examples: Microsoft Internet Information Services (IIS), Apache
 - Authentication, Authorization & Accounting (Triple A or AAA)
+
 </p></details>
 
-#### Internet Appliances
-
-- SPAM gateways
-- unified threat management (UTM)
-- load balancers
-- proxy servers
+- Internet Appliances
+  - SPAM gateways
+  - unified threat management (UTM)
+  - load balancers
+  - proxy servers
 
 - Legacy system: systems that haven't been updated, usually due to an important app that can't run on an updated platform
 - Supervisory Control and Data Acquisition (SCADA): high-level management system that controls manufacturing machines, processes, infrastructure settings, and building components.
@@ -94,7 +82,7 @@ ___
 
 ___
 
-#### Ports
+### Ports
 
 | Protocol | IP protocol | Port Used |
 | :--- | :---: | --- |
@@ -121,10 +109,12 @@ ___
 | PPTP (Point to point tunneling protocol) | TCP | 1723 |
 | RDP (Remote Desktop Protocol) | TCP, UDP | 3389|
 
-### Ethernet, 802.11 wireless standards
+### Ethernet | 802.11 wireless | Wi-Fi
+
+<details><summary> Types | Specs</summary><p>
 
 - T568A & T568B
-- **Plenum**: shielding used for any network cabling. Usually used where cables are around high heats due to its non-stick material
+- `Plenum`: shielding used for any network cabling. Usually used where cables are around high heats due to its non-stick material
 - IEEE 802.15.1 standard:
 - Wi-Fi spec 802.11 is part of the IEEE 802 wireless networking standards, used for Wi-Fi communications. They use the ethernet protocol and carrier sense multiple access with collision avoidance (CSMA/CA) media access method. The differences in operating frequencies, theoretical maximum data speed, and throughput.
 - `NFC`: near-field communication: very short range, used for contactless comms between devices (ex. contactless pay)
@@ -139,7 +129,11 @@ ___
 | ac (Wi-Fi 5) 5GHz | 6.5 Gbps | 140 m |
 | ax (Wi-Fi 6) 2.4/5GHz| 9.6 Gbps | 140 m |
 
-<details><summary> Wireless range and power </summary><p>
+<details>
+  <summary> Wireless range and power
+  </summary>
+  
+  <p>
 
 - Long-Range fixed wireless: point to point wireless tech; uses directional antennas to send or receive network signals (10-20 km)
   - `licensed`: use is granted by the FCC
@@ -152,7 +146,7 @@ ___
 
 ___
 
-#### Wi-Fi
+<details><summary> Wi-Fi</summary><p>
 
 - frequency of protocol refers to audio range that the tech broadcasts.
   - 2.4 GHz: relatively low, compared to 5, with greater transmission range (able to pass through objects), but has slower throughput and other devices use its open frequency range (ex. microwaves, cordless phones)
@@ -162,38 +156,30 @@ ___
     - 25 defined 20 MHz channels (24 that can be used for Wi-Fi)
 - Bluetooth connects devices in a short(10 m) PAN to enable communication, usually connecting peripherals (ex. headphones => laptop | phone)
 
-### Tools
+- port replicator adds ports for connections to peripheral devices on laptops
+- 3G cellular standards: Global System for Mobile Communication (GSM) (AT&T & T-mobile) and Code-Division Multiple Access (CDMA) (Sprint & Verizon)
+- 4G
+- 5G cellular connections and it's classifications
+  - eMBB: Enhanced mobile broadband  for cell phone and mobile communication
+  - mMTC: massive machine-type communications for sensors supporting IoT devices
+  - URLLC: ultra-reliable low-latency communications for autonomous vehicles and industrial apps
+- Nickel-cadmium (NiCd), lithium-ion (Li-ion), nickel-metal hydride (NiMH), and lithium-polymer (Li-poly) are all chemistry types used in batteries for laptop
+- Bluetooth connection 5 steps
+  - 1 enable Bluetooth, 2 enable pairing, 3 locate the pairing device, 4 enter  PIN, 5 check connection
+- Commonly synchronized data: bookmarks, contacts, documents, applications, location data, email, social media data, pictures, e-books, music, videos, and passwords.
+- Can utilize mobile application management (MAM) and mobile device management (MDM) to ensure mobile device security.
+- Google Workspace (formerly G Suite) is a collection of applications, including Gmail, Hangouts, Docs, Sheet, etc.
+- NFC: Near field Communications: tech used in mobile pay (Apple/Android Pay); short-range (2 inch) tech that enables wireless communication between two portable devices.
 
-1. **Toner probe**: 2-in-1 elec test tool that traces wires thru walls to determine which pair carried the signal induced by the tone generator
-   1. used when you have access to both ends of cable at same time
-   2. Plug `tone generator` at jack end of cable and wave toner probe around suspected area to find other end of cable
-2. **Cable tester**: check a cable to verify intended connections exist and there's no uninteded ones
-   1. missing intended connection: 'open'
-   2. existing unintended connection: ('short')
-   3. connection goes to wrong place: ('miswired)
-   4. connection has 2 faults: open to correct contact & shorted to incorrect one
-3. **repeater** re-sends wireless signal to areas that the access point can't cover.
-4. **crimper** is used to crimp a connector (usually last step in making an ethernet cable) to tighten the wiring to right spots in connector so electrical signals pass thru properly.
-5. **Layer 3 switch** is config to participate in routing decisions
-   1. routing decisions work on Layer 3 of OSI model (network layer)
-   2. standard switches usually refferred at as Layer 2 devices, working as PnP w/o ability to adjust settings (aka unmanaged switch)
-
->
-`Hubs vs Swtiches`:
-
-```md
-    Hubs are outdated and connect each pc that's plugged into the repeater, it takes the signal that pc A sends to PC B (a frame: made up of 1500 bits) and repeats it by sending it to every pc connected and then those PC's read their MAC address and the address of the signals MAC and either reads it if it's for them or deletes it if not. Hubs just repeat back on all the ports, whatever's coming out.
-
-    Switches: when the box collects the MAC of every PC connected to it and when it receives a frame  it makes a direct, physical connection between the two PC's. A switch is still a repeater, but it's a smart repeater and only sends the data out to the proper destination based on the MAC address
-```
+</p></details>
 
 ### Network Questions
 
 1. You need to configure port forwaring on a SOHO router to host gaming server
 2. If a computer can't connect to a wired network due to not receiving IP addresses from DHCP server the cause may be the DHCP IP pool is exhausted
 3. IP addresses beginning w/ 169 are assigned automatically if an IP address can't be received from a DHCP server
-   1. The DHCP client auto self-configures IP address & subnet mask if DHCP server isn't available by using APIPA (automatic private IP Addressing).
-      1. Range from 169.254.0.1 - 169.254.255.254 & default class B subnet mask of 255.255.0.0. It then sends a broadcast to ensure that other PC's aren't using the address it chose.
+    1. The DHCP client auto self-configures IP address & subnet mask if DHCP server isn't available by using APIPA (automatic private IP Addressing).
+    1. Range from 169.254.0.1 - 169.254.255.254 & default class B subnet mask of 255.255.0.0. It then sends a broadcast to ensure that other PC's aren't using the address it chose.
 4. Avoid low RF signal issues by using non-overlapping channels (1,6,11)
 5. CAT5 trasmits data >= 100 Mbps at distances of 100 meters
 6. Crossover cable can be used to make connection from 2 hubs, 2 swtiches, 2 routers, hub to switch, or computer to router
@@ -206,14 +192,14 @@ ___
 13. RDP uses port 3389, which has to be pre-configured on each firewall end to allow access thru that port
     1. Remote that lets you use the GUI the user is using, not just CLI
 14. SSH needs port 22 opened to allow access
-15. The `MAC` (Media Access Control) address: 48-bit # (written as six 2-digit hexadecimal numbers) that uniquely ID's a device on a local area network
-    1. IP address is used to locate the proper network (layer 3)
+15. The `MAC` (Media Access Control) address: 48-bit # (written as six 2-digit hexadecimal numbers) that uniquely ID's a device on a LAN
+    1. IP address used to locate the proper network (layer 3)
     2. MAC address is used to locate the device on the local area network (layer 2)
 16. `socket number` uniquely IDs one end of a communication session running on a network. A socket number shows the IP address & port number of one end of a session.
     1. ex. 66.83.10.24:443 is a socket number that shows a connection est. over HTTPS to the IP address.
 17. HTTP uses port 80
 18. The subnet mask that defines a full class C network is 255.255.255.0, while a full class B subnet mask would be 255.255.0.0.
-19. enabling MAC filtering only allows devices listed in routers filtering table access
+19. enabling MAC filtering only allows access to devices listed in the routers filtering table
 20. `RJ11/45` are common for phone lines & ethernet & use tristed pair cabling
 21. `RFC1918` private address sets for IP addresses start with 192.168 (v4)
 22. default gateway address is address that computer would send traffic to
@@ -226,6 +212,12 @@ ___
 27. `DSL` makes use of phone lines that already exist & are limited by dist. from central office
 28. `ISDN`: integrated services digital network supports use of bearer (B) channels for sending data & D chan. for signal/control
 
+## Shell
+
+> Network commands, Windows CMD, Powershell, Bash
+
+<details><summary>Network, CMD, Bash</summary><p>
+
 ### Network Commands
 
 1. `nslookup` cmd is used to query the DNS server to obtain a domain name or IP address mapping
@@ -237,8 +229,6 @@ ___
 6. `ipconfig` /all cmd can check if computers are getting a correct DNS IP
 7. `ifconfig` cmd: checks a devices IP address and subnet mask on Linux OS's
 8. `S/MIME` protocol can encrypt and digitally sign e-mails
-
-## Shell
 
 > Some cmds are only available w/ admin priviledge enabled by elevating or running the CLI as admin
 
@@ -355,7 +345,11 @@ RD / `RMDIR` | delete dir
 | `VOL` | Displays a disk volume label and serial number.|
 | `XCOPY` |   Copies files and directory trees.|
 
+</p></details>
+
 ## Operating Systems
+
+<details><summary>Mac, Windows, Linux + General Use</summary><p>
 
 ### MacOS X
 
@@ -371,7 +365,7 @@ RD / `RMDIR` | delete dir
   - 1 & 2 terminate in Mini DisplayPort connector
   - 3 & 4 termiante in USB-C connector
 
-### **Windows**
+### Windows
 
 1. bootmgr prog is used to boot the OS in Windows
 2. Tasklist cmd opens CLI v of task mngr
@@ -387,7 +381,7 @@ RD / `RMDIR` | delete dir
 12. NTFS_FILE_SYSTEM error means that the HDD is corrupt. (may cause BSOD)
 13. Win uses SMB to transfer files from one system to another
 
-### **Users, Groups, Permissions**
+### Users, Groups, Permissions
 
 1. auth thru NTFS defines res a user can access and what they're able to do
 2. BitLocker Drive Encryption allows you to encrypt entire drive (files, other users dir's)
@@ -440,30 +434,7 @@ RD / `RMDIR` | delete dir
   - satellite constellation, ground control network, and receiver
 - The reference guide is updated by the preferred roaming list (PRL) updates. These updates ensure mobile devices connect to the correct cell phone tower when roaming
 
-### Mobile
-
-- **OLED**: structure provides flexibility for curved displays
-  - contain the image producing components and light source in one panel. organic light emitting compound is set between an anode and cathode producing a current. the current runs thru the electroluminescent compund producing light consumes less power than LCD, with higher contrast ratio resulting in sharper images. common in high end monitors and phones.
-- **LCD**: liquid crystal displays: shines a backlight through liquid crystals, creating the image on the screen
-- **IPS** In plan switching, offers the widest viewing angle and the best color reproduction. ideal for vertical mounting and those needing high quality color (graphic/video artists)
-- **twisted nematic**: TN, oldest LCD tech, limited viewing angles and washed out/blended color reproduction. minimal lag time makes them ideal for gamers and are inexpensive options for office use
-- vertical alighnment (VA), offers best contrast ratio of the three technologies and is solid middle ground choice with decent color reproduction w/ slight lag
-- The inverter is located behind the LCD panel and converts DC current into AC current
-  - flickering/dim screen may be due to faulty inverter
-- NFC: Near field Comms: tech used in mobile pay (Apple/Android Pay); short-range (2 in) tech wirelessly comm, allowing two portable deives to comm.
-- port replicator adds ports for connections to peripheral devices on laptops
-- 3G cellular standards: Global System for Mobile Communication (GSM) (AT&T & T-mobile) and Code-Division Multiple Access (CDMA) (Sprint & Verizon)
-- 4G
-- 5G cellular connections and it's classifications
-  - eMBB: Enhanced mobile broadband  for cell phone and mobile communication
-  - mMTC: massive machine-type communications for sensors supporting IoT devices
-  - URLLC: ultra-reliable low-latency communications for autonomous vehicles and industrial apps
-- Nickel-cadmium (NiCd), lithium-ion (Li-ion), nickel-metal hydride (NiMH), and lithium-polymer (Li-poly) are all chemistry types used in batteries for laptop
-- Bluetooth connection 5 steps
-  - 1 enable Bluetooth, 2 enable pairing, 3 locate the pairing device, 4 enter  PIN, 5 check connection
-- Commonly synchronized data: bookmarks, contacts, documents, applications, location data, email, social media data, pictures, e-books, music, videos, and passwords.
-- mobile application management (MAM) and mobile device management (MDM) to ensure mobile device security.
-- Google Workspace (formerly G Suite) collection of applications, including Gmail, Hangouts, Docs, Sheet, etc.
+</p></details>
 
 ## Virtualization
 
@@ -482,18 +453,6 @@ RD / `RMDIR` | delete dir
 4. AT style systems use 2 power connectors (P8 & P9) to connect to mobo. ATX uses one P1 connector.
 5. inverter board: converts low volt DC power to high volt AC; lights up back-light bulb. If it's broken, LCD screen won't light up when laptop is powered, but you'll see a very dim image
 
-### Memory
-
-- ECC: can continue to work even if it has corrupt data
-- Paging: a file that's used as virtual mmemory on the system
-- RAM: short-term memory used to store working data
-- Non-parity: doesn't maintain parity info and can't perform error checking.
-
-### Printers: Laser, Thermal, Ink
-
-- Steps for laser printing:
-  - process, clean, charge, expose, dev, tran, fuse
-
 ### Cable Types
 
 #### Network Cables
@@ -510,7 +469,7 @@ RD / `RMDIR` | delete dir
 | 5e | 1000 Mbps (1Gbps) | 100 m |
 | 6 | 10 Gbps | 55 m |
 | 6a | 10 Gbps | 100 m |
-| --- | --- | --- |
+| 7, 8, 9 + | => | => |
 
 1. 5e has less interference due to separation of the four twisted pairs sets & increase in number of twists in each cable pairs
 2. **Coaxial cable**: single copper-cored cable contained in an inner insulation layer, which is contained in a wire mesh conductor, then placed w/in an outer insulation layer. Specification by the RG system (Radio Guide)
@@ -528,17 +487,6 @@ RD / `RMDIR` | delete dir
 7. **Fiber optic cables**: fiber (small strings of flexible glass) is surrounded by rubberized coating w/ transmission speeds of 100 Mbps - 10 Gbps over several miles. (optical data transmission)
    1. immune to electrical interference & wiretapping
    2. Two types: *single-mode*: carries one light path, sourced from a laser (much longer distance than multi) and *multimode*: carries multiple light paths sourced by an LED.
-
-#### Display: Video Cables
-
-1. **VGA**: video graphics array: legacy cable; only transmits analog signal; blue
-2. **DVI** digital visual interface: addressed analog video transmission issues. Able to transmit digital video signals to display units
-   1. 3 standards: DVI-A analog only, D digital only, I: analog & digital; white
-3. **HDMI**: high-def multimedia interface: higher motion-picture fram rates and digital audio w/ single cable.
-   1. Common connector type: Standard A HDMI (19 pins)
-4. **DisplayPort**: DP: uses less power and is backward compatible w/ VGA & DVI. transmits video & audio signals.
-   1. DP standard features 2 hooks to lock the cable in place
-   2. Can use adaptors to convert one type of connection/cable tech to a different one
 
 #### Connector types
 
@@ -580,14 +528,7 @@ RD / `RMDIR` | delete dir
    1. 40-pin flat data cables w/ colored strip on one edge to show the location of pin 1
    2. composed of 3 separate connectors, 2 for drives and 1 for power
 
-### Troubleshoot
-
-1. If pagination error is occuring and causing random **BSOD** crashes, but otherwise computer works then
-   1. check for OS and hardware drivers; run CMDs to check HDD for errors and check system files; in advanced sys settings, disable auto manage paging files for all drives and set custom. Check RAM sticks and possible W10 reinstall.
-2. An unset date/time may be due to drained BIOS battery; resolved by CMOS batter replacement
-3. Startup repair can be used to prevent reinstalls and is designed to auto start if W10 detects issues.
-
-### Disks
+### RAID
 
 1. RAID 0 striped across drives to improve performance but w/ no redundancy
 2. RAID 10 combines mirroring for data protection and striping for speed
@@ -603,6 +544,13 @@ RD / `RMDIR` | delete dir
    1. Functionality: BD-R single use, BD-RE/RW multi-use (RE-recordable erasable is newer)
    2. Capacity: BD-SL(25gb), DL(50gb), BD-XL = TL(100gb) & QL(128gb)
    3. Content quality: regular(1080p high def vid) and ultra HD(4k ultra HD, better colour depth; region-free, but need 4k Blu-R player)
+
+### Troubleshoot
+
+1. If pagination error is occuring and causing random **BSOD** crashes, but otherwise computer works then
+   1. check for OS and hardware drivers; run CMDs to check HDD for errors and check system files; in advanced sys settings, disable auto manage paging files for all drives and set custom. Check RAM sticks and possible W10 reinstall.
+2. An unset date/time may be due to drained BIOS battery; resolved by CMOS batter replacement
+3. Startup repair can be used to prevent reinstalls and is designed to auto start if W10 detects issues.
 
 ## Operational Procedures
 
