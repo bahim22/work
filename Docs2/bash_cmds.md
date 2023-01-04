@@ -42,6 +42,8 @@ dig -t SSHFP host.example.com
 # check that zone is answering fingerprint queries.
 ssh -o "VerifyHostKeyDNS ask" host.example.com
 # client connects
+
+ls -al ~/.ssh
 ```
 
 ### ssh-keygen cmds
@@ -102,6 +104,10 @@ ___
 git config --global user.name <username>
 git config --global user.email <email@mail.com>
 ls -al ~/.ssh # list files in .ssh dir
+
+ssh-keygen -m PEM -t rsa -b 4096
+# generates 4096-bit SSH RSA public and private key files by default in the ~/.ssh directory.
+
 ssh-keygen -t ed25519 -C "email@google.com"
 # creates pub/priv key pair
 # saves to .ssh/id_ed25519 & .ssh/id_ed25519.pub
@@ -113,6 +119,23 @@ ssh -T git@github.com # test connection & clone repo
 git clone git@github.com:<username>/<repo>.git
 code .
 git clone ssh://git@ssh.github.com:443/<username>/<repo>.git
+```
+
+```bash
+ssh-keygen \
+-f ~/.ssh/id_rsa.pub \
+-e \
+-m RFC4716 > ~/.ssh/id_ssh2.pem
+# create RFC4716 formatted key from existing SSH pubkey (multiline format in a 'pem' container)
+
+
+eval "$(ssh-agent -s)"
+# cache private key file passphrase on local sys by verifying/using ssh-agent & ssh-add
+ssh-add ~/.ssh/id_rsa
+# add private key to ssh-agent
+
+ssh-copy-id -i ~/.ssh/id_rsa.pub azureuser@myserver
+#  copy existing public key to an existing remote machine
 ```
 
 - ssh-keygen supports two types of certificates: user and host.
