@@ -125,7 +125,7 @@ source <venv>/bin/activate
 venv\/Scripts\/activate.bat
 venv\/Scripts\/activate.bat
 
-source "c:/Users/uname/OneDrive - Point Park University/uname @ Point Park University/moons/.venv/Scripts/activate"
+source "c:/Users/uname/OneDrive -PPU/uname @PPU/moons/.venv/Scripts/activate"
 ```
 
 - positional args: ENV_DIR: A directory to create the environment in.

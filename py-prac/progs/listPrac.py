@@ -10,6 +10,7 @@ print(a_l1)
 
 
 # %%
+a_l = a_l1
 a_l += ['vet', 'dog']
 
 
@@ -40,9 +41,9 @@ staffTuples = [
 sorted(staffTuples, key=lambda staff: staff[2])
 
 # %% [markdown]
-# # Return a new list containing all items from the iterable in ascending order.
+# Return a new list containing all items \from the iterable in ascending order.
 #
-# # list.sort() method is only for lists, sorted() function accepts any iterable
+# list.sort() method is only for lists, sorted() function accepts any iterable
 
 # %%
 sorted([5, 2, 3, 1, 4])
@@ -157,6 +158,8 @@ def lstr():
     print(lst)
 
     # print(dataText)
+
+
 lstr()
 
 # %%
@@ -175,6 +178,8 @@ def lstr():
     print(lst)
 
     # print(dataText)
+
+
 lstr()
 
 # %%
