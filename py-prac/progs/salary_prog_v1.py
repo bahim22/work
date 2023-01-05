@@ -1,3 +1,4 @@
+#! /home/ib-ub/flow/work/.venv/bin/python3
 # %%
 # salary prog v 1
 
