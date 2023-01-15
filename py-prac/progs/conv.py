@@ -1,12 +1,12 @@
 #! ./work/.venv/bin/python3
 
 """
-"scripts installed into virtualenv have a “shebang” line which
-points to the env Python interpreter, i.e. #!/<path-to-venv>/bin/python"
-
-#! ~/flow/work/.venv/bin/python3
-#! work/.venv/bin/python3
-#! /home/ib-ub/flow/work/.venv/bin/python3
+"scripts installed into venv have a “shebang” line\
+    pointing to the env Python interpreter, i.e. \
+    #! /<path-to-venv>/bin/python"
+    #! ~/flow/work/.venv/bin/python3
+    #! work/.venv/bin/python3
+    #! /home/ib-ub/flow/work/.venv/bin/python3
 """
 
 SUFFIXES = {
