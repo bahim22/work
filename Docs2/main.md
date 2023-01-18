@@ -10,7 +10,7 @@
 ### API
 
 1. Bus info to practice requests [PortAuthority][stop_times]
-2. 
+2.
 
 ## Example cSpell ignore
 
