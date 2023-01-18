@@ -1,5 +1,51 @@
 {
     "python.analysis.typeCheckingMode": "basic",
+      "workbench.colorCustomizations": {
+    "[Community Material Theme Darker]": {
+      // "editor.background": "#0e0d0d",
+      "activityBar.activeBackground": "#ffffff",
+      "activityBar.activeFocusBorder": "#0c0b0b",
+      "activityBar.inactiveForeground": "#00c3ff",
+      "list.activeSelectionBackground": "#ffffff",
+      "list.activeSelectionForeground": "#131212",
+      "tab.activeBackground": "#0c97af",
+      "editorPane.background": "#141212",
+      "editor.foreground": "#fcf8f8",
+      "editorCommentsWidget.rangeBackground": "#ff0000",
+      "keybindingLabel.bottomBorder": "#ff0000",
+      "activityBar.background": "#030808",
+      "activityBar.border": "#d8a602",
+      "activityBar.dropBorder": "#86b5e0",
+      "breadcrumb.background": "#ff0000",
+      "breadcrumb.foreground": "#050505",
+      "sideBar.background": "#0f0f0f",
+      "statusBarItem.compactHoverBackground": "#ff0000",
+      "statusBar.background": "#0c0b0b",
+      "statusBar.border": "#ff0000",
+      "editor.focusedStackFrameHighlightBackground": "#119ba5",
+      "editor.hoverHighlightBackground": "#ff0000",
+      "editor.selectionHighlightBackground": "#08a2ad83",
+      "titleBar.activeBackground": "#007d8d",
+      "titleBar.inactiveBackground": "#fdfdfd",
+      "titleBar.activeForeground": "#080606",
+      "titleBar.inactiveForeground": "#080606",
+      "titleBar.border": "#ff0000",
+      "activityBar.foreground": "#00e6f7",
+      "panel.border": "#ff0000",
+      "editorGutter.background": "#0a8992",
+      "sideBar.foreground": "#ffffff",
+      "sideBar.border": "#ff0000",
+      "sideBar.dropBackground": "#121313",
+      "sideBarSectionHeader.background": "#0f0e0e",
+      "sideBarSectionHeader.border": "#63aeb8",
+      "sideBarTitle.foreground": "#ff0000",
+      "sideBarSectionHeader.foreground": "#ff0000"
+    },
+    "statusBar.noFolderBackground": "#73cfa8",
+    "statusBar.debuggingBackground": "#73cfa8",
+    "statusBar.foreground": "#ffffff",
+    "statusBar.debuggingForeground": "#ffffff"
+  },
     "terminal.integrated.profiles.windows": {
         "Command Prompt": {
             "path": [
@@ -79,5 +125,5 @@
     // "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.wordWrap": "on",
     "git-graph.graph.style": "angular",
-    "git-graph.integratedTerminalShell": "C:\\ProgramFiles\\Git\\bin\\bash.exe",
+    "git-graph.integratedTerminalShell": "C:\\ProgramFiles\\Git\\bin\\bash.exe"
 }

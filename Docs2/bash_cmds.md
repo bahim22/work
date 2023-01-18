@@ -502,3 +502,10 @@ get-help Get-WindowsOptionalFeature -detailed
 Get-WindowsFeature [[-Name] <String[]>] [-ComputerName <String>] [-Credential <PSCredential>] [-LogPath
     <String>] [-Vhd <String>] [<CommonParameters>]
 ```
+
+```ps1
+Copy-Item './images/*' '/home/user/flow/work/Apps/' -Recurse
+
+$Session = New-PSSession -ComputerName "Server04" -Credential "Contoso\User01"
+Copy-Item "D:\Folder003\" -Destination "C:\Folder003_Copy\" -ToSession $Session -Recurse
+```

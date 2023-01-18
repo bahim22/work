@@ -7,6 +7,20 @@
 | **Hima Balde** | WORK - ppu | 06 - 10 - 2022 |
 | | | |
 
+<picture>
+<source
+  srcset="https://github-readme-stats.vercel.app/api?username=bahim22&show_icons=true&theme=dark"
+  media="(prefers-color-scheme: dark)"
+/>
+<source
+  srcset="https://github-readme-stats.vercel.app/api?username=bahim22&show_icons=true"
+  media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+/>
+<img src="https://github-readme-stats.vercel.app/api?username=bahim22&show_icons=true" />
+</picture>
+
+<!-- [![Hima Balde GitHub stats](https://github-readme-stats.vercel.app/api?username=bahim22&show_icons=true&theme=transparent)] -->
+
 ## Python
 
 [Documentation][Python Docs]
