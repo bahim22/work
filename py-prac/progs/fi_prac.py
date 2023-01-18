@@ -56,11 +56,14 @@ def json_open(file=''):
     else:
         file = file
     if os.path.isfile(file):
+        # using the with construct auto closes the fi \
+        #  once it goes out of scope
         with open(file) as data:
             dd = json.load(data)
             pp(dd)
     else:
         print(f'{file} does not exist.')
+    # return json_open(file)
 
 
 # %%
@@ -72,6 +75,8 @@ def json_open(file=''):
             with param during func call
 
 """
+files = "./conv.py"
+json_open(files)
 
 json_open('../Data/sample-return/data/DelveData.jsonc')
 
@@ -79,16 +84,18 @@ json_open('../Data/sample-return/data/DelveData.jsonc')
 pp(d)
 
 # %%
-fOpen = open('conv.py')
+f_open = open('prac.py')
 count = 0
 
-for line in fOpen:
+for line in f_open:
     count = count + 1
 print('Line Count:', count)
+f_open.close()
 
 # %%
-fOpen = open('cleanfiles.py')
-print(len(fOpen.read()))
+f_open2 = open('cleanfiles.py')
+print(len(f_open2.read()))
+f_open2.close()
 # inp = fOpen.read()
 # print(len(inp))
 
@@ -101,6 +108,7 @@ def file_length(file=''):
     # fOpen = open(file)
     from os import path
 
+    # if file:
     if file == '':
         file = str(input('Enter full path to filename: '))
     else:
@@ -111,6 +119,7 @@ def file_length(file=''):
         file_length = len(open(file).read())
         print(f'The specified file is: {file_length} lines long')
         # print(f'The specified file is: {len(inp)} lines long')
+        # file.close()
     else:
         print('File doesn\'t exist')
 # print(len(fOpen.read()))
@@ -133,6 +142,7 @@ def file_open():
     # f_length = len(fOpen.read())
     print(f'Line Count: {count} \
            \n  Character Count: {f_len}')
+    fOpen.close()
 
 
 def char_len():
