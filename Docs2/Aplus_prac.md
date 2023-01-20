@@ -3,14 +3,9 @@
 
 - [A+ sample questions](#a-sample-questions)
   - [Sections 220-1101](#sections-220-1101)
-    - [Cloud](#cloud)
-    - [Devices](#devices)
-    - [Network](#network)
-    - [Hardware](#hardware)
   - [Sections 220-1102](#sections-220-1102)
-    - [OS](#os)
-    - [Security](#security)
-    - [Data \& Remote Info](#data--remote-info)
+    - [Safety and Professionalism](#safety-and-professionalism)
+    - [Hardware: Main overview](#hardware-main-overview)
     - [Wireless Networks](#wireless-networks)
       - [DNS database records](#dns-database-records)
       - [Network =\> IP Address, Types](#network--ip-address-types)
@@ -18,21 +13,18 @@
 
 ## Sections 220-1101
 
-### Cloud
-
+- **Cloud**
 - Cloud computing
 - virtualization
 - troubleshooting methodology
 
-### Devices
-
+- **Devices**
 - Laptop
 - Display devices
 - mobile devices
 - printers
 
-### Network
-
+- **Network**
 - protocols
 - TCP & UDP Ports
 - IP Addressing
@@ -43,8 +35,7 @@
 - types
 - tools
 
-### Hardware
-
+- **Hardware**
 - cabling
 - connectors
 - RAM
@@ -59,8 +50,7 @@
 
 ## Sections 220-1102
 
-### OS
-
+- **OS**
 - Microsoft Windows
   - editions
   - command-line
@@ -77,8 +67,7 @@
     - apps and troubleshooting
 - installation and upgrade
 
-### Security
-
+- **Security**
 - physical
 - logical
 - wireless
@@ -89,12 +78,50 @@
 - SOHO security settings
 - workstation security
 
-### Data & Remote Info
-
+- **Data & Remote Info**
 - data destruction and disposal
 - backup and recovery methods
 - script files
 - remote access tech
+
+----------
+
+### Safety and Professionalism
+
+Troubleshooting Method
+
+1. Identify the problem
+2. establish theory of probable cause
+3. test theory to determin cause
+4. establish a plan of action to resolve the problem and implement solution
+5. verify full system functionality and implement preventive measures
+6. document finding, actions and outcomes
+
+- ESD is type of EMP and can damage PC's. Prevent this by using antistatic tools, disconnecting PC from power
+- EMI - electromagnetic interference
+- RFI: radio frequency interference; prevent by keeping devices away from one another
+
+- Try to implement simple answers/solutions first.
+- toolkit should have atleast a Phillips-head screwdrive.
+- create temporary passwords when working w/ clients, if you need to access their account, then change it afterwards.
+- Follow up with clients after completing ticket
+- antistatic straps keeps you at same electrical potential as the PC
+- Backup data before working on client PC's and document findings
+
+### Hardware: Main overview
+
+1. Metro UI introduced with Windows 8
+2. Charms bar wasn't included in Windows 10
+3. macOS uses the term Spaces for multiple Desktops, Terminal for command-line interface & Finder for File Explorer
+4. KDE desktops use the term Kickoff for Start button
+5. default download location C:\Users\<uname>\Downloads
+6. 32-bit apps install in C:\Program Files(x86)\
+7. Open Admin Tools by right-clicking Start button and selecting Admin Tools
+8. Windows 10 Settings app has multiple utilities in a unified interface
+
+- Computers are composed of the hardware, OS and Applications
+- Computing process stages: Input, processing, output
+  - modern PC's also have stages for Data storage and network connection
 
 ### Wireless Networks
 
@@ -132,8 +159,6 @@
 - `PAN` network with a limited-range, used to transmit data between different types of personal devices
 
 ----------
-
-
 
 ## References and Resources
 
