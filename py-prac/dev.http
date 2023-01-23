@@ -1,1 +1,12 @@
-curl -v -u ibalde@pointpark.freshservice.com: $FS_KEY - X GET'https://pointpark.freshservice.com/api/v2/departments'
+# curl -v -u ibalde@pointpark.freshservice.com: $FS_KEY -X GET 'https://pointpark.freshservice.com/api/v2/departments'
+
+# curl -v -u $FS_KEY -X GET 'https://pointpark.freshservice.com/api/v2/canned_response_folders/Personal'
+# curl -v -u $FS_KEY -X GET 'https://pointpark.freshservice.com/api/v2/tickets/filter?query="status:3%20OR%20status:4"&page=1'
+
+# curl -v -u  -X GET 'https://pointpark.freshservice.com/api/v2/agent_fields'
+# "Content-Type: application/json"
+# curl -v -u  -X GET 'https://pointpark.freshservice.com/api/v2/agents?active=true'
+
+# curl -v -u  -X "Connection: close" "https://pointpark.freshservice.com/api/v2"
+
+

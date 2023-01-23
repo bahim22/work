@@ -6,6 +6,7 @@
   - [Sections 220-1102](#sections-220-1102)
     - [Safety and Professionalism](#safety-and-professionalism)
     - [Hardware: Main overview](#hardware-main-overview)
+      - [Laptops](#laptops)
     - [Wireless Networks](#wireless-networks)
       - [DNS database records](#dns-database-records)
       - [Network =\> IP Address, Types](#network--ip-address-types)
@@ -122,6 +123,10 @@ Troubleshooting Method
 - Computers are composed of the hardware, OS and Applications
 - Computing process stages: Input, processing, output
   - modern PC's also have stages for Data storage and network connection
+
+#### Laptops
+
+- battery usually made of: nickel-cadmium, lithium-ion, nickel-metal hydride, lithium-polymer
 
 ### Wireless Networks
 
