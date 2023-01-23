@@ -2,9 +2,9 @@
 # Work GitHub Repository
 
 |  |  |  |
-| ------ | --- | ------ |
+| :------: | :---: | :------: |
 | Author | Repo | Date |
-| **Hima Balde** | WORK - PPU | 06 - 10 - 2022 |
+|<img src='https://raw.githubusercontent.com/bahim22/rxt-portfo-3/ded/public/logo512.png' width=40 height=40 align=center alt='Hima dev logo 2'>  **Hima Balde** | WORK - PPU | 06/22/2022 |
 | | | |
 
 <picture>
@@ -24,7 +24,7 @@
 ## Python
 
 [Documentation][Python Docs]
-[Practice_Modules][Python Examples]
+[Practice Projects][Python Examples]
 
 - General documentation
 - Jupyter Notebooks
@@ -36,14 +36,11 @@
 
 - Certification prep
 
-<img src='images/a_plus_obj.jpeg' width=800>
+<img src='images/a_plus_obj.jpeg' width=800 alt='comptia a+ objectives' align='center'>
 
 ## Shell
 
 [Bash_PowerShell]
-<!-- [submodule "Bash_PowerShell"]
-    path = bash_rx
-    url = <https://github.com/work/bash_rx> -->
 
 - Bash
 - Pwsh
@@ -55,7 +52,16 @@
 - Maintenance
 - Administration
 
+<!-- <img src='images/rocket.svg'> -->
+
+<aside>
+<div>View my GitHub Profile to view more Projects!
+    <a href='https://github.com/bahim22'>
+    <img src='https://raw.githubusercontent.com/bahim22/rxt-portfo-3/ded/public/rocket.png' width=40 height=40 align=center alt='Hima dev logo' align='center'>
+</div>
+</aside>
+
 [Python Docs]: Docs2/PyDoc.md
 [A+ Main]: Docs2/AplusMain.md
 [Python Examples]: py-prac/cal_qr.ipynb
-[Bash_PowerShell]: bash_rx/copydocs.sh
+[Bash_PowerShell]: Docs2/bash_cmds.md
