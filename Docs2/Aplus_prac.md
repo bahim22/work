@@ -1,3 +1,5 @@
+<!-- /* cspell: enableCompoundWords */ -->
+<!-- cSpell:ignoreRegExp /[^\s]{40,}/  -->
 
 # A+ sample questions
 
@@ -75,7 +77,7 @@
 - malware
 - malware removal
 - social engineering
-- threates & vulnerabilities
+- threats & vulnerabilities
 - SOHO security settings
 - workstation security
 
@@ -103,7 +105,7 @@ Troubleshooting Method
 - RFI: radio frequency interference; prevent by keeping devices away from one another
 
 - Try to implement simple answers/solutions first.
-- toolkit should have atleast a Phillips-head screwdrive.
+- toolkit should have at least a Phillips-head screwdriver.
 - create temporary passwords when working w/ clients, if you need to access their account, then change it afterwards.
 - Follow up with clients after completing ticket
 - antistatic straps keeps you at same electrical potential as the PC
@@ -126,7 +128,25 @@ Troubleshooting Method
 
 #### Laptops
 
-- battery usually made of: nickel-cadmium, lithium-ion, nickel-metal hydride, lithium-polymer
+- battery usually made of: nickel-cadmium, nickel-metal hydride, lithium-ion, lithium-polymer
+  - (Li-ion & LiPo are newer & used in modern devices)
+- Fn key helps overcome small keyboard sizes. Difficult to replace integrated GPU.
+- SO-DIMM is most common memory module form factor
+  - use magnetic disks and SSDs for internal data storage device type
+  - 2.5 inch HDD form factors
+  - 1.8 & 2.5 inch SSD form factors
+  - M.2
+  - located in bottom of clamshell
+  - 200-pin DDr & DDR2, 204-pin DDR3, 260-pin DDR4, 262-pin DDR5
+- Laptop cards:
+  - WLAN expansion card allows communications in 802.11 networks
+  - WPAN: bluetooth module
+  - NFC tech enables data transfer and authentication for laptops and other devices within range
+  - Wi-Fi antenna is located near the top, inside display case
+- LCD display tech is common in modern laptops. LED (backlight display tech) is also common.
+- the inverter convets DC power into AC power and supplies voltage to backlights in older LCD panels
+- docking stations usually work with specific laptop make and models (proprietary design) and offer additional ports & capabilities compared to port replicators
+- A digitizer is a device that takes analog input in the form of written or drawn content, such as by a finger or stylus, and converts it into digital images.  (touchscreen)
 
 ### Wireless Networks
 
