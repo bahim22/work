@@ -146,7 +146,16 @@ Troubleshooting Method
 - LCD display tech is common in modern laptops. LED (backlight display tech) is also common.
 - the inverter convets DC power into AC power and supplies voltage to backlights in older LCD panels
 - docking stations usually work with specific laptop make and models (proprietary design) and offer additional ports & capabilities compared to port replicators
+  - allows conenctin of laptop to an increased bank of expansion capabilities
+  - ex. ports, drive bays, expansion bus slots, memory card slots, optical drives
+- port replicator: peripheral device that connects a laptop to additional ports, ex. ones on mobile devices.
+  - used to connect keyboards, mouse, printers etc.
+  - allows for the continual connection of peripheral devices, that you can use whenever the mobile device is connected
 - A digitizer is a device that takes analog input in the form of written or drawn content, such as by a finger or stylus, and converts it into digital images.  (touchscreen)
+- mobile display units:
+  - liquid crystal display
+    - IPS, TN, VAs
+  - organic light-emitting diode:
 
 ### Wireless Networks
 
