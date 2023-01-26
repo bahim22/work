@@ -30,13 +30,13 @@
                1. USB: Micro, Mini and C
                2. lightning
                3. tethering
-               4. vendor-specific ports (comms/power)
+               4. vendor-specific ports (communication/power)
             2. wireless
                1. NFC
                2. bluetooth
                3. IR
                4. Hotspot
-            3. headsets, spe4akers, game pads, battery packs/chargers, cases/waterproofing, CC readers, memory/MicroSD
+            3. headsets, speakers, game pads, battery packs/chargers, cases/waterproofing, CC readers, memory/MicroSD
    4. network conn and app support
       1. wireless/cell data net
       2. bluetooth
@@ -54,14 +54,14 @@
 2. `Networking`: 20%
    1. ports and protocols
    2. TCP v. UDP
-   3. net hardware devices
+   3. network hardware devices
    4. install/config wired/wireless SOHO network
    5. wireless net protocols
-   6. servies provided by networked hosts
+   6. services provided by networked hosts
       1. server roles
       2. internet appliance
       3. legacy/embedded sys
-   7. net config concepts
+   7. network config concepts
       1. IP addressing: static, dynamic, APIPA, link local
       2. DNS
       3. DHCP
@@ -74,7 +74,7 @@
       2. network types
          1. LAN, WAN, PAN, MAN, WMN
    9. networking tools
-      1. crimper, cablestripper, multimeter, tone generator & probe, cable tester, loopback plug, punchdown tool, wi-fi analyzer
+      1. crimper, cable-stripper, multimeter, tone generator & probe, cable tester, loopback plug, punch-down tool, wi-fi analyzer
 3. `Hardware`: 27%
    1. cable types/features/purpose
       1. network cables
@@ -94,7 +94,7 @@
    10. SOHO multifunction devices/printers and settings
    11. Printer install/maintain
 4. `Virtualization` & `Cloud Computing`: 12%
-   1. client side virutalization
+   1. client side virtualization
       1. VM
          1. purpose
          2. requirements
@@ -115,11 +115,11 @@
       9. measured service
       10. metered
       11. off-site email apps
-      12. cloud file storage servies
+      12. cloud file storage services
       13. virtual app streaming/cloud-based apps
       14. virtual desktop
-5. `Hardware` & `Network` `Troubleshooting`: 27%
-   1. best practice methodology for resolving problems
+5. `Hardware` & `Network Troubleshooting`: 27%
+   1. best practicetice methodology for resolving problems
    2. issues w/ mobos, RAM, CPU, power
    3. HDD and RAID arrays
    4. video, projector, display issues
@@ -164,30 +164,30 @@
    - Network config
    - MacOS/Linux features/tools
 2. `Security`: 24%
-   1. physical sec measures
-   2. logical sec concepts
-   3. wireless sec protocols/auth methods
+   1. physical security measures
+   2. logical security concepts
+   3. wireless security protocols/auth methods
    4. detect/remove/prevent malware w/ tools/methods
    5. social engineering, threats, vulnerabilities
    6. Windows OS security settings
-   7. implement sec best prac for workstation, mobile
+   7. implement security best practice for workstation, mobile
    8. data destruction and disposal methods
-   9. sec config on SOHO wireless/wired networks
+   9. security config on SOHO wireless/wired networks
 3. `Software Troubleshooting`: 26%
    1. troubleshoot and resolve
       1. Windows OS
-      2. PC sec issues
+      2. PC security issues
       3. mobile OS
       4. Apps
-   2. malware removal best prac
+   2. malware removal best practice
 4. `Operational Procedures`: 23%
-   1. documentation best prac
-   2. change mngmnt best prac
-   3. disaster prevent/recov methods
+   1. documentation best practice
+   2. change management best practice
+   3. disaster prevent/recovery methods
    4. safety procedures
    5. env impact and controls
    6. process for addressing prohibited content/activity, privacy, licensing, policy concepts
-   7. comms tech and professionalism
+   7. communication tech and professionalism
    8. scripting basics
       1. file types, env var., comments, script constructs, data types
    9. remote access tech
@@ -275,10 +275,10 @@ ___
 19. LESSON 19: USING `SUPPORT AND SCRIPTING` TOOLS
     1. Topic 19A: Use Remote Access Technologies
     2. Topic 19B: Implement Backup and Recovery
-    3. Topic 19C: Explain Data Handling Best Practices
+    3. Topic 19C: Explain Data Handling Best practicetices
     4. Topic 19D: Identify Basics of Scripting
 20. LESSON 20: IMPLEMENTING `OPERATIONAL` PROCEDURES
-    1. Topic 20A: Implement Best Practice Documentation
+    1. Topic 20A: Implement Best practicetice Documentation
     2. Topic 20B: Use Proper Communication Techniques
     3. Topic 20C: Use Common Safety and Environmental Procedures
 
@@ -342,7 +342,7 @@ _TOOLS_
 • Screw drivers
 • Multimeter
 • Wire cutters
-• Punchdown tool
+• Punch-down tool
 • Crimper
 • Power supply tester
 • Cable stripper
@@ -373,6 +373,6 @@ _SOFTWARE_
 ## References
 
 >
-[Meyes Comptia Exam Guide. McGrawHill](https://www.mheducation.com/highered/product/comptia-certification-all-one-exam-guide-tenth-edition-exams-220-1001-220-1002-meyers/M9781260454031.html) | [Comptia A+](https://www.comptia.org/certifications/a) |
+[Meyers Comptia Exam Guide. McGrawHill](https://www.mheducation.com/highered/product/comptia-certification-all-one-exam-guide-tenth-edition-exams-220-1001-220-1002-meyers/M9781260454031.html) | [Comptia A+](https://www.comptia.org/certifications/a) |
 >>
     Referenced information from Comptia A+ and Mike Meyers Exam Guide

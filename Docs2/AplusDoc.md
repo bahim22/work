@@ -33,7 +33,6 @@
     - [OS Admin + Operations](#os-admin--operations)
   - [Displays \& Mobile](#displays--mobile)
     - [Video Cables](#video-cables)
-    - [Mobile Devices](#mobile-devices)
   - [References](#references)
 
 ## Troubleshooting Steps
@@ -85,7 +84,7 @@ ___
   - CFR - code of federal regulations
   - material safety sheets come w/ any hardware that has chemicals
   - `Check` conditions and grounding prongs; electricity is off and unplugged
-  - `review` lockout/tagout policies
+  - `review` lockout/tag-out policies
 
 ___
 
@@ -656,23 +655,24 @@ ___
 
 ## Displays & Mobile
 
-1. `backlight systems`
-2. _CCFL_: cold cathode fluorescent light - older, uses daylight specter fluorescent tube and inverter for power
-3. _LED_: light emitting diodes - doesn't use inverter and uses strips of LEDs
+`backlight systems`
+
+1. _CCFL_: cold cathode fluorescent light - older, uses daylight specter fluorescent tube and inverter for power
+2. _CRT_: cathode ray tube
+3. _LCD_: requires backlight sys; uses liquid crystal displays (frequent in laptops)
+   1. liquid crystal displays: shines a backlight through liquid crystals, creating the image on the screen
+4. _LED_: light emitting diodes - doesn't use inverter and uses strips of LEDs
     1. LCD blocks areas of backlight to create images
     2. LEDs generate light themselves and consumes less power
     3. Plasma: made of small cells of ionized gas (good contrast ratio)
-4. _CRT_: cathode ray tube
-5. _LCD_: requires backlight sys; uses liquid crystal displays (frequent in laptops)
-6. _OLED_: organic light emitting diode - thinner/lighter; made of a layer of organic compound between 2 light-emitting electrodes (common in handheld devices)
 
+- **In-plane switching** IPS, offers the widest viewing angle and the best color reproduction. ideal for vertical mounting and those needing high quality color (graphic/video artists)
+- **twisted nematic**: TN, oldest LCD tech, limited viewing angles and washed out/blended color reproduction. minimal lag time makes them ideal for gamers and are inexpensive options for office use
+- **vertical alignment** VA, offers best contrast ratio of the 3 technologies and is solid middle ground choice with decent color reproduction w/ slight lag
+- The inverter is located behind the LCD panel and converts DC current into AC current
 - **OLED**: structure provides flexibility for curved displays
   - contain the image producing components and light source in one panel. organic light emitting compound is set between an anode and cathode producing a current. the current runs thru the electroluminescent compound producing light consumes less power than LCD, with higher contrast ratio resulting in sharper images. common in high end monitors and phones.
-- **LCD**: liquid crystal displays: shines a backlight through liquid crystals, creating the image on the screen
-- **IPS** In plan switching, offers the widest viewing angle and the best color reproduction. ideal for vertical mounting and those needing high quality color (graphic/video artists)
-- **twisted nematic**: TN, oldest LCD tech, limited viewing angles and washed out/blended color reproduction. minimal lag time makes them ideal for gamers and are inexpensive options for office use
-- vertical alignment (VA), offers best contrast ratio of the three technologies and is solid middle ground choice with decent color reproduction w/ slight lag
-- The inverter is located behind the LCD panel and converts DC current into AC current
+    - organic light emitting diode - thinner/lighter; made of a layer of organic compound between 2 light-emitting electrodes (common in handheld devices)
   - flickering/dim screen may be due to faulty inverter
 
 ### Video Cables
@@ -685,8 +685,6 @@ ___
 4. **DisplayPort**: DP: uses less power and is backward compatible w/ VGA & DVI. transmits video & audio signals.
    1. DP standard features 2 hooks to lock the cable in place
 5. Can use adaptors to convert one type of connection/cable tech to another
-
-### Mobile Devices
 
 ___
 

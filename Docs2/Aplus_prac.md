@@ -8,7 +8,7 @@
   - [Sections 220-1102](#sections-220-1102)
     - [Safety and Professionalism](#safety-and-professionalism)
     - [Hardware: Main overview](#hardware-main-overview)
-      - [Laptops](#laptops)
+      - [Mobile Devices](#mobile-devices)
     - [Wireless Networks](#wireless-networks)
       - [DNS database records](#dns-database-records)
       - [Network =\> IP Address, Types](#network--ip-address-types)
@@ -126,7 +126,7 @@ Troubleshooting Method
 - Computing process stages: Input, processing, output
   - modern PC's also have stages for Data storage and network connection
 
-#### Laptops
+#### Mobile Devices
 
 - battery usually made of: nickel-cadmium, nickel-metal hydride, lithium-ion, lithium-polymer
   - (Li-ion & LiPo are newer & used in modern devices)
@@ -153,8 +153,10 @@ Troubleshooting Method
   - allows for the continual connection of peripheral devices, that you can use whenever the mobile device is connected
 - A digitizer is a device that takes analog input in the form of written or drawn content, such as by a finger or stylus, and converts it into digital images.  (touchscreen)
 - mobile display units:
-  - liquid crystal display
-    - IPS, TN, VAs
+  - liquid crystal display: uses a current passed through a semi-crystalline liquid to create images. The crystals can't make the light and require the backlight (lightsource) to display images.
+    - IPS: In-plane switching - has widest viewing angle and best color reproduction. Ideal for graphic/video artists and good for vertical mounting.
+    - TN: twisted nematic - oldest LCD tech. color reproduction is washed/blended with limited viewing angles, but has minimal lag time and is a cheap option for offices & gamers.
+    - VAs: Vertical alignment - has best contrast ratio, with decent color repro. & minimal lag.
   - organic light-emitting diode:
 
 ### Wireless Networks
