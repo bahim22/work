@@ -1,17 +1,15 @@
 <!-- /* cspell: enableCompoundWords */ -->
 <!-- cSpell:ignoreRegExp /[^\s]{40,}/  -->
 
-# A+ sample questions
+# A+ Practice & Notes 4
 
-- [A+ sample questions](#a-sample-questions)
+- [A+ Practice \& Notes 4](#a-practice--notes-4)
   - [Sections 220-1101](#sections-220-1101)
   - [Sections 220-1102](#sections-220-1102)
-    - [Safety and Professionalism](#safety-and-professionalism)
-    - [Hardware: Main overview](#hardware-main-overview)
-      - [Mobile Devices](#mobile-devices)
-    - [Wireless Networks](#wireless-networks)
-      - [DNS database records](#dns-database-records)
-      - [Network =\> IP Address, Types](#network--ip-address-types)
+  - [Safety and Professionalism](#safety-and-professionalism)
+  - [Hardware: Main overview](#hardware-main-overview)
+    - [Mobile Devices](#mobile-devices)
+  - [Networks](#networks)
   - [References and Resources](#references-and-resources)
 
 ## Sections 220-1101
@@ -89,7 +87,7 @@
 
 ----------
 
-### Safety and Professionalism
+## Safety and Professionalism
 
 Troubleshooting Method
 
@@ -111,7 +109,7 @@ Troubleshooting Method
 - antistatic straps keeps you at same electrical potential as the PC
 - Backup data before working on client PC's and document findings
 
-### Hardware: Main overview
+## Hardware: Main overview
 
 1. Metro UI introduced with Windows 8
 2. Charms bar wasn't included in Windows 10
@@ -126,7 +124,7 @@ Troubleshooting Method
 - Computing process stages: Input, processing, output
   - modern PC's also have stages for Data storage and network connection
 
-#### Mobile Devices
+### Mobile Devices
 
 - battery usually made of: nickel-cadmium, nickel-metal hydride, lithium-ion, lithium-polymer
   - (Li-ion & LiPo are newer & used in modern devices)
@@ -143,6 +141,7 @@ Troubleshooting Method
   - WPAN: bluetooth module
   - NFC tech enables data transfer and authentication for laptops and other devices within range
   - Wi-Fi antenna is located near the top, inside display case
+- mobile device accessories enable enhanced UI and feature touch pens, headsets, drawing pads, webcams, etc.
 - LCD display tech is common in modern laptops. LED (backlight display tech) is also common.
 - the inverter convets DC power into AC power and supplies voltage to backlights in older LCD panels
 - docking stations usually work with specific laptop make and models (proprietary design) and offer additional ports & capabilities compared to port replicators
@@ -151,17 +150,19 @@ Troubleshooting Method
 - port replicator: peripheral device that connects a laptop to additional ports, ex. ones on mobile devices.
   - used to connect keyboards, mouse, printers etc.
   - allows for the continual connection of peripheral devices, that you can use whenever the mobile device is connected
-- A digitizer is a device that takes analog input in the form of written or drawn content, such as by a finger or stylus, and converts it into digital images.  (touchscreen)
+- `digitizer` is a device that takes analog input in the form of written or drawn content, such as by a finger or stylus, and converts it into digital images (touchscreen)
+- `inverter`: small circuit board behind LCD panel that converts DC current into AC current
+- top part of the clamshell include the backlight, inverter (for LCDs), screen, digitizer, webcam, mic and Wi-Fi antenna (connected to mobo by a wire running through the top to bottom of clamshell)
 - mobile display units:
-  - liquid crystal display: uses a current passed through a semi-crystalline liquid to create images. The crystals can't make the light and require the backlight (lightsource) to display images.
-    - IPS: In-plane switching - has widest viewing angle and best color reproduction. Ideal for graphic/video artists and good for vertical mounting.
-    - TN: twisted nematic - oldest LCD tech. color reproduction is washed/blended with limited viewing angles, but has minimal lag time and is a cheap option for offices & gamers.
-    - VAs: Vertical alignment - has best contrast ratio, with decent color repro. & minimal lag.
-  - organic light-emitting diode:
+  - `LCD`: liquid crystal display: uses a current passed through a semi-crystalline liquid to create images. The crystals can't make the light and require the backlight (lightsource) to display images.
+    - `IPS`: In-plane switching - has widest viewing angle and best color reproduction. Ideal for graphic/video artists and good for vertical mounting.
+    - `TN`: twisted nematic - oldest LCD tech. color reproduction is washed/blended with limited viewing angles, but has minimal lag time and is a cheap option for offices & gamers.
+    - `VAs`: Vertical alignment - has best contrast ratio, with decent color repro. & minimal lag.
+  - `OLED`: organic light-emitting diode: displays with both the image-producing components and light source within a single panel.
 
-### Wireless Networks
+## Networks
 
-#### DNS database records
+_DNS database records_
 
 1. `A` record returns a 32-bit IP address.
 2. `AAAA` record creates a pointer that maps a hostname to an IPv6 address.
@@ -172,7 +173,7 @@ Troubleshooting Method
       2. `DKIM` - allows an email receiver to verify that an email claiming to come from a specific domain was actually authorized by the domain owner. It's an authentication method that allows using digital signature to sign outbound emails
       3. `DMARC` - has instructions for email recipient on how to handle emails that don't meet the sender's mail policies
 
-#### Network => IP Address, Types
+_IP Address & Network Types_
 
 1. `Lease` - the amount of time a DHCP client can use a dynamically assigned IP address from the DHCP server
 2. `Reservation` - permanent IP address assignment from DHCP server
@@ -194,12 +195,38 @@ Troubleshooting Method
 - `WAN` computer network that connects several smaller networks across a large area
 - `PAN` network with a limited-range, used to transmit data between different types of personal devices
 
+**Wireless/Cell Data Network**
+
+1. 2G: max data rate of 64 Kbps and 3G, 200 Kbps, had limited network range and both used traditional telephone circuits
+   1. GSM: global system for mobile communication, AT&T & T-Mobile & CDMA: Code-division multiple Access, Sprint & Verizon were incompatible cell connection standards used in 3G tech.
+2. 4G: uses IP enabling faster download/upload speeds and higher range
+   1. 2 versions: WiMax and Long-term Evolution (LTE)
+3. 5G: separated into 3 classes and setup in 2018
+   1. eMBB: enhanced mobile broadband used for phone & mobile communication
+   2. URLLC: ultra-reliable low-latency comm., used in auto cars and industrial apps
+   3. mMTC: massive machine-type comm: sensors used in tech that support IoT capable devices
+4. Cellular is largest & farthest-reaching method
+5. Hotspot: enables Wi-Fi capable devices to share their cell internet connection wirelessly.
+   1. iOS: Settings -> Personal Hotspot
+   2. Android: Settings -> Connections -> Mobile Hotspot -> Tethering
+6. PRL Updates: preferred roaming list are updates to reference guides used to connect to cell towers during roaming and are updates with phones OS update
+
+----------
+
+1. Bluetooth:
+2. Location Services:
+
+----------
+
+1. Mobile Device management(MDM) and Mobile Application management (MAM)
+2. Mobile Device Synchronization
+
 ----------
 
 ## References and Resources
 
-<!-- !['./prac.py'](https://)
-![alt](https://) -->
+!['./AplusDoc.md'][A+ Documentation 1]
 [ExamCompass][exam_compass]
 
 [exam_compass]: https://www.examcompass.com/comptia-a-plus-220-1101-exam-acronyms-quiz
+[A+ Documentation 1]: https://github.com/bahim22/work/blob/ppu/Docs2/AplusDoc.md

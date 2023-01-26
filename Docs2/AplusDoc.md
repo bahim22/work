@@ -31,7 +31,7 @@
     - [Windows Management Framework](#windows-management-framework)
     - [Windows naming](#windows-naming)
     - [OS Admin + Operations](#os-admin--operations)
-  - [Displays \& Mobile](#displays--mobile)
+  - [Mobile Devices \& Display](#mobile-devices--display)
     - [Video Cables](#video-cables)
   - [References](#references)
 
@@ -507,9 +507,9 @@ ___
 #### RAID
 
 1. `RAID` (Redundant Array of independent disk) Types: Hardware & Software RAID
-    1. RAID 0: Striping w/o parity and no fault tolerance
+    1. `RAID 0`: Striping w/o parity and no fault tolerance
        1. min. 2 disks needed and read/write performance increase
-    2. RAID 1: Mirroring and duplexing.
+    2. `RAID 1`: Mirroring and duplexing.
        1. mirroring requires 2 equal sized pars on diff drives.
        2. disk duplexing req. 2 disk and 2 controllers.
        3. provides fault tolerance, w/ slower disk access compared to striping
@@ -521,35 +521,43 @@ ___
        1. fault tolerant & less expensive than disk mirroring.
        2. data can't be recovered if >= 1 disk fails, so tape backups need to be used.
        3. spreading the parity info across all drives allows all the drives to rebuild the array if another fails.
-    7. Mirroring has more overhead due to the entire drive being copied to another drive.
-    8. RAID 10: mirrored stripping. Mode 0 array + mode 1 array, striped.
+    7. RAID 6:
+    8. RAID 0 + 1:
+    9. Mirroring has more overhead due to the entire drive being copied to another drive.
+    10. `RAID 10`: mirrored stripping. Mode 0 array + mode 1 array, striped.
        1. ex. You striped data into 2 drives, then each drive is mirrored
        2. requires a total of 4 drives
-    9. Disk swapping: Hot-swapping (Host plugging): ability to add/remove devices to PC while it's running & OS will auto recognize changes.
+    11. Disk swapping: Hot-swapping (Host plugging): ability to add/remove devices to PC while it's running & OS will auto recognize changes.
        1. cold: device needs powered down prior to replacing parts
        2. warm: The server can remain powered on, but I/O functions corresponding to the part that needs replaced need stopped by the appropriate command
        3. hot: the faulty part can be replaced w/o interrupting the server or exec any interruption commands in I/O procedures.
-2. `USB`
-       1. universal serial bus 1.1 comes in 1.5 MB/s and 12 Mbps; USB 2..0 runs at 480 Mbps
-       2. form factors: micro, USB-C, mini
-       3. USB 3.0 runs at 5 Gbps; USB 3.1 at 10 Gbps
-       4. USB ver. often use coors to show v.
-       5. USB connectors come in many types:
-          1. Type-A, B, C, standard, mini, micro
-       6. all USB devices connect to USB controllers built into the otherboard of the system; the USB controller is in charge of all connect USB devices
-       7. this creates n upstream/downstream concept
-       8. USB-A connectors connect downstream; B connectors connect upstream (with some exceptions)
-       9. must have a device driver; OS's come w/ thousands of built-in device drivers; may need to manually download from internet
-3. `Thunder and Lightning`
+
+`USB`
+
+1. universal serial bus 1.1 comes in 1.5 MB/s and 12 Mbps; USB 2.0 runs at 480 Mbps
+2. form factors: USB-A, USB-C, micro, mini
+3. serial interfaces are peripheral devices put between devices to transfer data serially.
+   1. Serial Interfaces include USBs, Thunderbolt, HDMI.
+   2. Serial connection accessories include external HDDs, I/O devices, displays
+4. form factors: micro, USB-C, mini
+5. USB 3.0 runs at 5 Gbps; USB 3.1 at 10 Gbps
+6. USB ver. often use coors to show v.
+7. USB connectors come in many types:
+   1. Type-A, B, C, standard, mini, micro
+8. all USB devices connect to USB controllers built into the motherboard of the system; the USB controller is in charge of all connect USB devices
+9. this creates n upstream/downstream concept
+10. USB-A connectors connect downstream; B connectors connect upstream (with some exceptions)
+11. must have a device driver; OS's come w/ thousands of built-in device drivers; may need to manually download from internet
+12. `Thunder and Lightning`
     1. general purpose I/O port that runs at 10 Gbs up to 40 Gbps
     2. uses a mini DisplayPort or USB C connector
     3. exclusive to Apple and uses proprietary lightning connector
-4. `Keyboards/Mice`
+13. `Keyboards/Mice`
     1. keyboards use either USB or PS/2 connection; while mice almost exclusively USB; game controllers often have proprietary connection that requires a converter piece
     2. keyboard video mouse (KVM) switches give ability for a single keyboard, monitor, mouse to connect multiple PC's
-5. `Sight/Sound`
-6. `Readers/Scanners`
-7. `Expansion Cards`
+14. `Sight/Sound`
+15. `Readers/Scanners`
+16. `Expansion Cards`
 
 ___
 
@@ -653,7 +661,7 @@ ___
 
 ___
 
-## Displays & Mobile
+## Mobile Devices & Display
 
 `backlight systems`
 
@@ -671,8 +679,10 @@ ___
 - **vertical alignment** VA, offers best contrast ratio of the 3 technologies and is solid middle ground choice with decent color reproduction w/ slight lag
 - The inverter is located behind the LCD panel and converts DC current into AC current
 - **OLED**: structure provides flexibility for curved displays
-  - contain the image producing components and light source in one panel. organic light emitting compound is set between an anode and cathode producing a current. the current runs thru the electroluminescent compound producing light consumes less power than LCD, with higher contrast ratio resulting in sharper images. common in high end monitors and phones.
-    - organic light emitting diode - thinner/lighter; made of a layer of organic compound between 2 light-emitting electrodes (common in handheld devices)
+  - contain the image producing components and light source in one panel
+  - organic light emitting compound is set between an anode and cathode producing a current. the current runs thru the electroluminescent compound producing light
+  - consumes less power than LCD, with higher contrast ratio resulting in sharper images. common in high end monitors, phones and handheld devices
+    - organic light emitting diode - thinner/lighter; made of a layer of organic compound between 2 light-emitting electrodes
   - flickering/dim screen may be due to faulty inverter
 
 ### Video Cables

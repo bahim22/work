@@ -1,6 +1,6 @@
 # Comptia A+
 
-- [Comptia A+](#comptia-a)
+<!-- - [Comptia A+](#comptia-a) -->
 
 <details><summary>Table of contents</summary><p>
 
@@ -27,11 +27,11 @@
       - [Connector types](#connector-types)
       - [Hard Drive Cables](#hard-drive-cables)
     - [RAID](#raid)
-    - [Troubleshoot](#troubleshoot)
+  - [Troubleshoot](#troubleshoot)
   - [Operational Procedures](#operational-procedures)
   - [Software Troubleshooting](#software-troubleshooting)
   - [Security](#security)
-  - [Sample Ques](#sample-ques)
+  - [Sample Questions](#sample-questions)
 
 </p></details>
 <!-- /* cspell: enableCompoundWords */ -->
@@ -117,7 +117,7 @@ ___
 - `Plenum`: shielding used for any network cabling. Usually used where cables are around high heats due to its non-stick material
 - IEEE 802.15.1 standard:
 - Wi-Fi spec 802.11 is part of the IEEE 802 wireless networking standards, used for Wi-Fi communications. They use the ethernet protocol and carrier sense multiple access with collision avoidance (CSMA/CA) media access method. The differences in operating frequencies, theoretical maximum data speed, and throughput.
-- `NFC`: near-field communication: very short range, used for contactless comms between devices (ex. contactless pay)
+- `NFC`: near-field communication: very short range, used for contactless communications between devices (ex. contactless pay)
 - `RFID`: radio-frequency identification - sends info from an RFID tag w/ identifying info by using radio signals. (ex. streamlines the inventory of tracking apps)
 - `MIMO` multiple input/multiple output: wireless tech that increases wireless data throughput by using multiple antennas & data streams
 
@@ -444,7 +444,6 @@ RD / `RMDIR` | delete dir
 5. Resource pooling: cloud service provider provides all resources in a resource pool and gives you the option to select specific resources
 6. Hybrid cloud model: has benefits of both public and private clouds
 
-
 ## Hardware
 
 <details><summary>Hardware</summary><p>
@@ -510,7 +509,7 @@ RD / `RMDIR` | delete dir
 7. Molex: older interconnection type for drive connections that used a two-piece pin & socket
 8. Lightning Port: Apple proprietary connector featuring 8 pins and reversible orientation
 9. DB9: Used for serial connections to network device consoles & management ports. 9 pins (2 rows of 4 & 5 pins),trapezoid shaped connector
-   1. serial cable used for serial comms w/ a matching serial connector at the end
+   1. serial cable used for serial communications w/ a matching serial connector at the end
 
 #### Hard Drive Cables
 
@@ -547,7 +546,7 @@ RD / `RMDIR` | delete dir
    2. Capacity: BD-SL(25gb), DL(50gb), BD-XL = TL(100gb) & QL(128gb)
    3. Content quality: regular(1080p high def vid) and ultra HD(4k ultra HD, better colour depth; region-free, but need 4k Blu-R player)
 
-### Troubleshoot
+## Troubleshoot
 
 1. If pagination error is occuring and causing random **BSOD** crashes, but otherwise computer works then
    1. check for OS and hardware drivers; run CMDs to check HDD for errors and check system files; in advanced sys settings, disable auto manage paging files for all drives and set custom. Check RAM sticks and possible W10 reinstall.
@@ -563,7 +562,7 @@ RD / `RMDIR` | delete dir
 
 ## Software Troubleshooting
 
-1. NIC allows for wireless comms between laptop and wireless access points.
+1. NIC allows for wireless communications between laptop and wireless access points.
 2. physical privacy and sec comp are designed to prevent the loss of info thru physical means such as shoulder surfing/theft
 
 ## Security
@@ -578,7 +577,7 @@ RD / `RMDIR` | delete dir
    6. enable system restore
    7. educate end-user
 
-## Sample Ques
+## Sample Questions
 
 1. QoS = quality of service. In a SOHO env, QoS set at router level. If you want to enforce it's policies on your network, you need to use a router equipped w/ QoS software
 2. Consult manual docs before doing preventive maintenance, or cleaning operations to get proper methods and solvents

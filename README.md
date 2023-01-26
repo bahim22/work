@@ -1,11 +1,11 @@
 
 # Work GitHub Repository
 
-|  |  |  |
-| :------: | :---: | :------: |
-| Author | Repo | Date |
-|<img src='https://raw.githubusercontent.com/bahim22/rxt-portfo-3/ded/public/logo512.png' width=40 height=40 align=center alt='Hima dev logo 2'>  **Hima Balde** | WORK - PPU | 06/22/2022 |
-| | | |
+|  |  |  | |
+| :------: | :---: | :------: | --- |
+| Author | Repo | Date | Profile |
+|<img src='https://raw.githubusercontent.com/bahim22/rxt-portfo-3/ded/public/logo512.png' width=40 height=40 align=center alt='Hima dev logo 2'>  **Hima Balde** | WORK_PPU | 06/22/2022 | [GitHub Profile](https://tinyurl.com/Hima-GitHub) |
+| | | | |
 
 <picture>
 <source
@@ -58,8 +58,19 @@
 <div>View my GitHub Profile to view more Projects!
     <a href='https://github.com/bahim22'>
     <img src='https://raw.githubusercontent.com/bahim22/rxt-portfo-3/ded/public/rocket.png' width=40 height=40 align=center alt='Hima dev logo' align='center'>
-</div>
+    </a>
+<p>
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=bahim22&layout=compact&hide=css)](https://github.com/bahim22/)
+</p>
+<a href="https://github.com/bahim22/rxt-portfo-3">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=bahim22&repo=rxt-portfo-3" />
+</a>
+<a href="https://github.com/bahim22/work">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=bahim22&repo=work" />
+</a>
 </aside>
+</div>
 
 [Python Docs]: Docs2/PyDoc.md
 [A+ Main]: Docs2/AplusMain.md
