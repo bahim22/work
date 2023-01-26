@@ -151,6 +151,7 @@ Troubleshooting Method
   - used to connect keyboards, mouse, printers etc.
   - allows for the continual connection of peripheral devices, that you can use whenever the mobile device is connected
 - `digitizer` is a device that takes analog input in the form of written or drawn content, such as by a finger or stylus, and converts it into digital images (touchscreen)
+  - input device that translates analog data into format that a pc can process. It's part of a mobile devices screen that enables controlling the device w/ stylus, touchpen, finger
 - `inverter`: small circuit board behind LCD panel that converts DC current into AC current
 - top part of the clamshell include the backlight, inverter (for LCDs), screen, digitizer, webcam, mic and Wi-Fi antenna (connected to mobo by a wire running through the top to bottom of clamshell)
 - mobile display units:
@@ -158,7 +159,15 @@ Troubleshooting Method
     - `IPS`: In-plane switching - has widest viewing angle and best color reproduction. Ideal for graphic/video artists and good for vertical mounting.
     - `TN`: twisted nematic - oldest LCD tech. color reproduction is washed/blended with limited viewing angles, but has minimal lag time and is a cheap option for offices & gamers.
     - `VAs`: Vertical alignment - has best contrast ratio, with decent color repro. & minimal lag.
+    - IPS = high color quality, wide viewing angles, slow response time
+    - TN = low color quality, low viewing angles, fast response time
+    - Va = high contrast ratios, good color and viewing angles
+    - OLED = no backlight, lowerlight output (brightness), better contrast and color than LCD
   - `OLED`: organic light-emitting diode: displays with both the image-producing components and light source within a single panel.
+- burn-in occurs when a screen shows discoloration from displaying the same image for long periods of time
+- dead pixels are small spots on LCD monitors that remain black
+- dim displays can signify issues with LCD backlight or inverter.
+-
 
 ## Networks
 
@@ -213,12 +222,16 @@ _IP Address & Network Types_
 
 ----------
 
-1. Bluetooth:
-2. Location Services:
+1. Bluetooth: Enable bluetooh -> enable pairing -> locate device for pairing -> enter PIN code -> test connection
+   1. based on IEEE 802.15 standards for WPAN using bluetooth for data-link transport
+   2. Windows: setting -> devices, Android -> Setting -> connections, Setting -> Bluetooth
+2. Location Services: iOS: settings -> Privacy -> Location Services, Android: Settings -> Location
+   1. GPS: global positioning system services: satellite-based nav system that shows locale and tracking on devices by using triangulation between receivers and satellites. Uses 3 components: satellite, ground control network, receiver.
+   2. cell location services: Carrier-based with limited ranges based on the cell towers it uses.
 
 ----------
 
-1. Mobile Device management(MDM) and Mobile Application management (MAM)
+1. Mobile Device management(MDM) and Mobile Application management (MAM): allows businesses to secure mobile devices by using the MDM software
 2. Mobile Device Synchronization
 
 ----------
