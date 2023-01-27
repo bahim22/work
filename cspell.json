@@ -19,6 +19,7 @@
         "SATA",
         "UEFI",
         "URLLC",
+        "venv",
         "VM's",
         "WLAN",
         "WPAN"

@@ -5,13 +5,18 @@
 
 - [A+ Practice \& Notes 4](#a-practice--notes-4)
   - [Sections 220-1101](#sections-220-1101)
-  - [Sections 220-1102](#sections-220-1102)
   - [Safety and Professionalism](#safety-and-professionalism)
   - [Hardware 1101: Main overview](#hardware-1101-main-overview)
-    - [Mobile Devices 1101](#mobile-devices-1101)
-  - [Virtualization and Cloud Computing](#virtualization-and-cloud-computing)
-    - [Backup and Recovery](#backup-and-recovery)
-  - [Networks](#networks)
+  - [Mobile Devices 1101](#mobile-devices-1101)
+  - [Hardware \& Network Troubleshooting 1101](#hardware--network-troubleshooting-1101)
+  - [Virtualization \& Cloud Computing 1101](#virtualization--cloud-computing-1101)
+  - [Backup and Recovery](#backup-and-recovery)
+  - [Networking 1101](#networking-1101)
+  - [Sections 220-1102](#sections-220-1102)
+  - [Operational Procedures 1102](#operational-procedures-1102)
+  - [Security 1102](#security-1102)
+  - [Operating System 1102](#operating-system-1102)
+  - [Software Troubleshooting 1102](#software-troubleshooting-1102)
   - [References and Resources](#references-and-resources)
 
 ## Sections 220-1101
@@ -48,44 +53,6 @@
 - CPU
 - PSU
 - printer
-
-----------
-
-## Sections 220-1102
-
-- **OS**
-- Microsoft Windows
-  - editions
-  - command-line
-  - features and tools
-  - control panel utilities
-  - settings app
-  - security settings
-  - networking features
-  - troubleshooting
-- common OS types
-  - MacOS
-  - Linux
-  - mobile
-    - apps and troubleshooting
-- installation and upgrade
-
-- **Security**
-- physical
-- logical
-- wireless
-- malware
-- malware removal
-- social engineering
-- threats & vulnerabilities
-- SOHO security settings
-- workstation security
-
-- **Data & Remote Info**
-- data destruction and disposal
-- backup and recovery methods
-- script files
-- remote access tech
 
 ----------
 
@@ -126,7 +93,7 @@ Troubleshooting Method
 - Computing process stages: Input, processing, output
   - modern PC's also have stages for Data storage and network connection
 
-### Mobile Devices 1101
+## Mobile Devices 1101
 
 - battery usually made of: nickel-cadmium, nickel-metal hydride, lithium-ion, lithium-polymer
   - (Li-ion & LiPo are newer & used in modern devices)
@@ -177,7 +144,9 @@ Troubleshooting Method
    3. iCloud: Settings -> Apple ID, iCloud
    4. Can sync mail, photos, calendars, contacts, as well as apps, videos, bookmarks, docs, location & social media data, e-books, passwords
 
-## Virtualization and Cloud Computing
+## Hardware & Network Troubleshooting 1101
+
+## Virtualization & Cloud Computing 1101
 
 **Cloud Models and features**
 
@@ -222,8 +191,17 @@ Cloud structures and services available in cloud environment
   - Cloud: VM is located in a cloud environment, run through the provider, thus taking responsibility of the hardware running the VDI away from the user, and to the cloud provider.
 - Client-side virtualization: running the virtual env. on a device located on premise, and running the software on client machine, instead of the cloud. Client device hosts the hypervisor and must consider CPU, RAM, HDD's and network capabilities.
 - VM's maximize resources by removing hardware & software barriers. They can run multiple OS's on one device, or pool resources from multiple servers to create one powerful system.
+  - Also used to protect the host system by separating the VM's from one another
+- Sandbox - A temporary, isolated venv used for testing & quarantining. This prevents the host from becoming contaminated because the env. is virtually separated, the data isn't saved to the host, and data is removed when the sandbox is terminated.
+- Venv's & OS's can be made to test and develop apps
+- App virtualization: can be used with legacy software & OS, and cross-platform functionality.
+  - Process of making virtual OS of one platform on another platform.
+    - An app designed for Windows can be tested for macOS devices by creating a macOS VM on the Windows device.
+  - Legacy Software/OS: outdated software/OS that're incompatible with current systems.
+- VDI's must implement security controls similar to physical ones
+  - strong passwords, account lockout policies, MFA's
 
-### Backup and Recovery
+## Backup and Recovery
 
 1. Restoring data from incremental backups require:
    1. All copies of incremental backups made since last full backup
@@ -240,7 +218,7 @@ Cloud structures and services available in cloud environment
    2. Create 1 primary backup file, then 2 copies of the primary backup file
    3. Save backups to 2 different storage media types
 
-## Networks
+## Networking 1101
 
 _DNS database records_
 
@@ -301,6 +279,50 @@ _IP Address & Network Types_
    2. cell location services: Carrier-based with limited ranges based on the cell towers it uses.
 
 ----------
+
+## Sections 220-1102
+
+- **OS**
+- Microsoft Windows
+  - editions
+  - command-line
+  - features and tools
+  - control panel utilities
+  - settings app
+  - security settings
+  - networking features
+  - troubleshooting
+- common OS types
+  - MacOS
+  - Linux
+  - mobile
+    - apps and troubleshooting
+- installation and upgrade
+
+- **Security**
+- physical
+- logical
+- wireless
+- malware
+- malware removal
+- social engineering
+- threats & vulnerabilities
+- SOHO security settings
+- workstation security
+
+- **Data & Remote Info**
+- data destruction and disposal
+- backup and recovery methods
+- script files
+- remote access tech
+
+## Operational Procedures 1102
+
+## Security 1102
+
+## Operating System 1102
+
+## Software Troubleshooting 1102
 
 ## References and Resources
 
