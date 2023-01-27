@@ -7,8 +7,10 @@
   - [Sections 220-1101](#sections-220-1101)
   - [Sections 220-1102](#sections-220-1102)
   - [Safety and Professionalism](#safety-and-professionalism)
-  - [Hardware: Main overview](#hardware-main-overview)
-    - [Mobile Devices](#mobile-devices)
+  - [Hardware 1101: Main overview](#hardware-1101-main-overview)
+    - [Mobile Devices 1101](#mobile-devices-1101)
+  - [Virtualization and Cloud Computing](#virtualization-and-cloud-computing)
+    - [Backup and Recovery](#backup-and-recovery)
   - [Networks](#networks)
   - [References and Resources](#references-and-resources)
 
@@ -109,7 +111,7 @@ Troubleshooting Method
 - antistatic straps keeps you at same electrical potential as the PC
 - Backup data before working on client PC's and document findings
 
-## Hardware: Main overview
+## Hardware 1101: Main overview
 
 1. Metro UI introduced with Windows 8
 2. Charms bar wasn't included in Windows 10
@@ -124,7 +126,7 @@ Troubleshooting Method
 - Computing process stages: Input, processing, output
   - modern PC's also have stages for Data storage and network connection
 
-### Mobile Devices
+### Mobile Devices 1101
 
 - battery usually made of: nickel-cadmium, nickel-metal hydride, lithium-ion, lithium-polymer
   - (Li-ion & LiPo are newer & used in modern devices)
@@ -167,7 +169,76 @@ Troubleshooting Method
 - burn-in occurs when a screen shows discoloration from displaying the same image for long periods of time
 - dead pixels are small spots on LCD monitors that remain black
 - dim displays can signify issues with LCD backlight or inverter.
--
+
+1. Mobile Device management(MDM) and Mobile Application management (MAM): allows businesses to secure mobile devices by using the MDM software
+2. Mobile Device Synchronization: mirroring changes from all devices to enable the mobile device to be an extension of one's main device.
+   1. Microsoft 365 sync via Start -> Settings -> Accounts -> Sync
+   2. Android uses Google Drive and Workspace via Settings -> Accounts & Backup -> Backup Data
+   3. iCloud: Settings -> Apple ID, iCloud
+   4. Can sync mail, photos, calendars, contacts, as well as apps, videos, bookmarks, docs, location & social media data, e-books, passwords
+
+## Virtualization and Cloud Computing
+
+**Cloud Models and features**
+
+Cloud structures and services available in cloud environment
+
+1. Private: Virtualization resources are less flexible and more costly, but are highly secure. Purchased and used only by a single organization (user).
+2. Public: cloud resources that are shared across the open internet and provisioned for open use by general public.
+   1. All user data is housed in same server, which is less secure. (ex. iCloud, Dropbox)
+3. Hybrid: Delivery models composed of two or more interlinked cloud infrastructures
+4. Community: cloud shared by specific set of users, increased security. (ex. group of orgs sharing common interests)
+5. `IaaS`: Infrastructure - virtual data center that allows clients to house all resources in the cloud. The client is responsible for OS & app patching, management, maintenance. Resources can include servers, firewalls, routers, switches, etc.
+6. `PaaS`: Platform - allows developers to focus on creating, managing and building their own apps. The provider handles back-end (servers, OS, dev tools).
+7. `SaaS`: web-based programs accessed on the web, whereever an internet connection is, instead of locally.
+8. Cloud Features and Characteristics
+   1. `shared resources` (resource pooling): The provider divides resources among clients by sharing the resources of one physical host machine between multiple VM's.
+   2. `metered utilization` (measured/metered service): the auto control and optimization of resources by tracking client's usage and only charging for services used, thus providing transparency for the provider and client.
+   3. `rapid elasticity` enables organizations to increase virtual resources automatically, as needed, based on growth and demand.
+   4. `high availability` is a service that's highly responsive and uninterrupted, with uptime measured in nines (ex. 99.99% (4 nines))
+   5. File synchronization enables the most recent data to be available both locally and in the cloud.
+
+-----
+
+**Virtualization**
+
+1. A local server hosting a virtualized OS is example of `on-premise VDI` solution
+2. `Persistent VDI` features users running their own virtual desktop copy, and their data being saved when the session ends.
+   1. non-persistent VDI sessions revert back to original state and are shared between many users.
+3. `PaaS`: complete software and/or VDI service that's fully cloud based
+4. `Saas`: cloud service that includes the platform, infrastructure, and managed software & deployment
+5. `Virtualization` allows multiple OS to work simultaneously on one hardware device.
+   1. Disadvantages include: degrading performance due to the VM's sharing the resources of one host's hardware, which also becomes a single point of failure
+   2. Workstations used for virtualization should have maxed out RAM and CPU cores, and large/fast HDD's.
+6. `Hypervisor` is a program for manageing multiple OS's and/or instances of an OS on one computer.
+7. `CPU HAV` enhancements: VT-x for Intel and AMD-V for AMD
+8. `VM sprawl`: multiple VM's that're deployed don't have proper admin controls.
+   1. Security measures that can prevent VM sprawl: running usage audits and documenting assets
+9. `VM escape`: Accessing primary hypervisor running on the host machine controlling the VM's, by breaking out the boundaries of the guest OS installation
+   1. Sandboxing and patch management can guard against VM escape.
+
+- VDI manage virtual desktops via on premise or cloud versions.
+  - On premise: VM that's running the VD is at same location as user. It removes the physical hardware used for networking and replaces them with virtual hardware contained on one on-site machine.
+  - Cloud: VM is located in a cloud environment, run through the provider, thus taking responsibility of the hardware running the VDI away from the user, and to the cloud provider.
+- Client-side virtualization: running the virtual env. on a device located on premise, and running the software on client machine, instead of the cloud. Client device hosts the hypervisor and must consider CPU, RAM, HDD's and network capabilities.
+- VM's maximize resources by removing hardware & software barriers. They can run multiple OS's on one device, or pool resources from multiple servers to create one powerful system.
+
+### Backup and Recovery
+
+1. Restoring data from incremental backups require:
+   1. All copies of incremental backups made since last full backup
+   2. Copy of the last full back up
+2. Synthetic Full back up copy: up-to-date full backup copy composed of the last full back up and subsequent incremental, and/or differential back ups
+3. On site backups are advantageous due to:
+   1. No subscription fee, Control over backup media and process, and faster data access
+4. Off site backups are better due to:
+   1. Improved security, Scalability, and Geo redundancy
+5. Grandfather-father-son: back up rotations scheme
+   1. backups are perform daily to create weekly back ups and back ups created at the end of each week are used to create a monthly back up
+6. 3-2-1 backup strategy
+   1. Keep at least 1 backup copy offsite
+   2. Create 1 primary backup file, then 2 copies of the primary backup file
+   3. Save backups to 2 different storage media types
 
 ## Networks
 
@@ -228,11 +299,6 @@ _IP Address & Network Types_
 2. Location Services: iOS: settings -> Privacy -> Location Services, Android: Settings -> Location
    1. GPS: global positioning system services: satellite-based nav system that shows locale and tracking on devices by using triangulation between receivers and satellites. Uses 3 components: satellite, ground control network, receiver.
    2. cell location services: Carrier-based with limited ranges based on the cell towers it uses.
-
-----------
-
-1. Mobile Device management(MDM) and Mobile Application management (MAM): allows businesses to secure mobile devices by using the MDM software
-2. Mobile Device Synchronization
 
 ----------
 

@@ -437,8 +437,8 @@ RD / `RMDIR` | delete dir
 
 ## Virtualization
 
-1. **PaaS** is a complete cloud-based software dev. env.
-2. **SaaS** is a cloud service that handles manage software, deployment and includes the platform and infrastructure
+1. **PaaS** is a complete cloud-based software development environment
+2. **SaaS** is a cloud service that handles managed software, deployment and includes the platform and infrastructure
 3. Measured service based on monitored use of resources like storage, network bandwidth, CPU utilization.
 4. Rapid elasticity allows computing resources to be auto allocated in response to demand
 5. Resource pooling: cloud service provider provides all resources in a resource pool and gives you the option to select specific resources
