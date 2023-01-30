@@ -568,7 +568,7 @@ ___
 
 ### Windows Admin Tools
 
-- Data usage - DusmSvc: net data use; limit and metered network; disable background data
+- Data usage - Dusm-Svc: net data use; limit and metered network; disable background data
 - DNScache - DnsClient
 - netman - network connections: manages objects in network folder for viewing LAN & remote connections
 - UAC virtualization
@@ -594,7 +594,7 @@ ___
 
 - Windows naming is designed for LANs and when installed you give the PC a Windows name
 - all Windows systems will be members of a domain or workgroup
-- `homegroups` are more secure and automated organization (still a type of workgroup)
+- `home-groups` are more secure and automated organization (still a type of workgroup)
   - `workgroup` is basic type of networking organization used as an organizational tool w/ no security or central admin
   - `domain` is an organizational group (type used today is Active Directory domain) that provides central admin and has ability to disperse security and network info to other PC's at one time
 
@@ -608,7 +608,7 @@ ___
    1. common in corp. env. where net & server resources are available; allows setting up multiple pc's w/ similar images
 4. internal fixed disk (HDD/SSD) & internal Hard Drive (Partition)
    1. disk can have OS install image or OS already installed. Most common way to boot PC after OS install completed
-   2. simple configs have one bootable par on a disk, but a disk can have > 1 par to multiboot diff OS. One logical par can span multiple physical hard disks
+   2. simple configs have one bootable par on a disk, but a disk can have > 1 par to multi-boot diff OS. One logical par can span multiple physical hard disks
 
 | Install Types           |   |
 | :------------------- | -------------- |

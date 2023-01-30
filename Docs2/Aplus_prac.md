@@ -19,7 +19,7 @@
   - [Operating System 1102](#operating-system-1102)
     - [OS Install, maintenance, overall information](#os-install-maintenance-overall-information)
     - [Windows](#windows)
-    - [macOS, Linux, mobile](#macos-linux-mobile)
+    - [macOS, Linux, Mobile](#macos-linux-mobile)
   - [Software Troubleshooting 1102](#software-troubleshooting-1102)
   - [Operational Procedures 1102](#operational-procedures-1102)
     - [Safety and Professionalism 1102](#safety-and-professionalism-1102)
@@ -317,25 +317,24 @@ _IP Address & Network Types_
 
 ### Windows
 
-1. Windows Home edition:
+1. Windows `Home` edition:
    1. Does not allow: Assigned Access, Remote Desktop server component, local group policy editor (gpedit.msc)
-   2. f
-2. Pro
+   2. k
+2. `Pro`
    1. 2 TB memory limit
    2. joining a domain
    3. BitLocker Drive Encryption
-3. Pro for Workstations
+3. `Pro for Workstations`
    1. 6 TB RAM limit
    2. joining a domain
    3. BitLocker Drive Encryption
-4. Enterprise
+4. `Enterprise`
    1. 6 TB RAM limit
    2. allow joining a domain
    3. BitLocker Drive Encryption
 5. 32-bit (x86) has 4GB physical memory limit, while the 64-bit (x64) version supports 128GB or RAM.
-6. third
 
-### macOS, Linux, mobile
+### macOS, Linux, Mobile
 
 ## Software Troubleshooting 1102
 
