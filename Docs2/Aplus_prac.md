@@ -5,8 +5,8 @@
 
 - [A+ Practice \& Notes 4](#a-practice--notes-4)
   - [Sections 220-1101](#sections-220-1101)
-  - [Safety and Professionalism](#safety-and-professionalism)
-  - [Hardware 1101: Main overview](#hardware-1101-main-overview)
+  - [Safety and Professionalism 1101](#safety-and-professionalism-1101)
+  - [Hardware 1101](#hardware-1101)
   - [Mobile Devices 1101](#mobile-devices-1101)
   - [Hardware \& Network Troubleshooting 1101](#hardware--network-troubleshooting-1101)
   - [Virtualization \& Cloud Computing 1101](#virtualization--cloud-computing-1101)
@@ -22,41 +22,41 @@
 ## Sections 220-1101
 
 - **Cloud**
-- Cloud computing
-- virtualization
-- troubleshooting methodology
+  - Cloud computing
+  - virtualization
+  - troubleshooting methodology
 
 - **Devices**
-- Laptop
-- Display devices
-- mobile devices
-- printers
+  - Laptop
+  - Display devices
+  - mobile devices
+  - printers
 
 - **Network**
-- protocols
-- TCP & UDP Ports
-- IP Addressing
-- internet connection types
-- services
-- wireless
-- hardware
-- types
-- tools
+  - protocols
+  - TCP & UDP Ports
+  - IP Addressing
+  - internet connection types
+  - services
+  - wireless
+  - hardware
+  - types
+  - tools
 
 - **Hardware**
-- cabling
-- connectors
-- RAM
-- storage devices
-- motherboard
-- BIOS
-- CPU
-- PSU
-- printer
+  - cabling
+  - connectors
+  - RAM
+  - storage devices
+  - motherboard
+  - BIOS
+  - CPU
+  - PSU
+  - printer
 
 ----------
 
-## Safety and Professionalism
+## Safety and Professionalism 1101
 
 Troubleshooting Method
 
@@ -78,7 +78,7 @@ Troubleshooting Method
 - antistatic straps keeps you at same electrical potential as the PC
 - Backup data before working on client PC's and document findings
 
-## Hardware 1101: Main overview
+## Hardware 1101
 
 1. Metro UI introduced with Windows 8
 2. Charms bar wasn't included in Windows 10
@@ -137,7 +137,11 @@ Troubleshooting Method
 - dead pixels are small spots on LCD monitors that remain black
 - dim displays can signify issues with LCD backlight or inverter.
 
-1. Mobile Device management(MDM) and Mobile Application management (MAM): allows businesses to secure mobile devices by using the MDM software
+1. Mobile Device management (`MDM`) and Mobile Application management (`MAM`): allows businesses to secure mobile devices
+   1. uses the MDM software to enroll corp devices into security policies and allow remote tracking, locking, encryption and wiping of mobile devices.
+   2. MAM software ensures that software that's remotely installed, deleted, encrypted and wiped are secure and enables wiping of corp. apps and data.
+   3. iOS: Settings -> Mail -> Accounts -> Add Accounts: Choose or add a provider, provide credentials, choose IMAP or POP, configure incoming & outgoing mail server names, and verify uname and passwd.
+   4. Android: Settings -> Accounts & Backup -> Manage Accounts -> Add Account: Choose account type (IMAP, SMTP, POP3), enter email and passwd, and validate setup.
 2. Mobile Device Synchronization: mirroring changes from all devices to enable the mobile device to be an extension of one's main device.
    1. Microsoft 365 sync via Start -> Settings -> Accounts -> Sync
    2. Android uses Google Drive and Workspace via Settings -> Accounts & Backup -> Backup Data
@@ -283,7 +287,7 @@ _IP Address & Network Types_
 ## Sections 220-1102
 
 - **OS**
-- Microsoft Windows
+- `Microsoft Windows`
   - editions
   - command-line
   - features and tools
@@ -292,7 +296,7 @@ _IP Address & Network Types_
   - security settings
   - networking features
   - troubleshooting
-- common OS types
+- `common OS types`
   - MacOS
   - Linux
   - mobile
@@ -326,8 +330,29 @@ _IP Address & Network Types_
 
 ## References and Resources
 
-!['./AplusDoc.md'][A+ Documentation 1]
-[ExamCompass][exam_compass]
+<ul>
+<li>
 
+ [A+ Docs 2][A+ Documentation 1]
+</li>
+<li>
+
+[ExamCompass][exam_compass]
+</li>
+<li>
+
+[Union Test Prep][Union_test_prep]
+</li>
+</ul>
+
+<a href='https://github.com/bahim22'>
+<h3>Hima Portfolio</h3>
+<img src='https://raw.githubusercontent.com/bahim22/work/ppu/py-prac/QRCodes/qr_blue.png' width=50 height=50 align=center alt='qr_code for profile'>
+</a>
+
+<!-- ![QR_Code](https://github.com/bahim22/work/blob/ppu/py-prac/QRCodes/qr_blue.png) -->
+
+<!-- <img src='https://raw.githubusercontent.com/bahim22/work/ppu/py-prac/QRCodes/qr_blue.png' width=100 alt='qr_code for profile' align='center'> -->
 [exam_compass]: https://www.examcompass.com/comptia-a-plus-220-1101-exam-acronyms-quiz
 [A+ Documentation 1]: https://github.com/bahim22/work/blob/ppu/Docs2/AplusDoc.md
+[Union_test_prep]: https://uniontestprep.com/comptia-a-core-series-exam/study-guide

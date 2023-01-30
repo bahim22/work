@@ -52,24 +52,30 @@
 - Maintenance
 - Administration
 
+----------
+
 <!-- <img src='images/rocket.svg'> -->
 
-<aside>
-<div>View my GitHub Profile to view more Projects!
-    <a href='https://github.com/bahim22'>
-    <img src='https://raw.githubusercontent.com/bahim22/rxt-portfo-3/ded/public/rocket.png' width=40 height=40 align=center alt='Hima dev logo' align='center'>
-    </a>
-<p>
+<div>
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=bahim22&layout=compact&hide=css)](https://github.com/bahim22/)
-</p>
+<h3>GitHub Profile</h3>
+<a href='https://github.com/bahim22'>
+<img src='https://raw.githubusercontent.com/bahim22/rxt-portfo-3/ded/public/rocket.png' width=50 height=50 align=center alt='Hima dev logo'>
+</a>
+</div>
+<!-- <p>
+ [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=bahim22&layout=compact&hide=css)](https://github.com/bahim22/)
+</p> -->
+<div>
+<a href="https://github.com/bahim22/">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=bahim22&hide=css&layout=compact" />
+</a>
 <a href="https://github.com/bahim22/rxt-portfo-3">
   <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=bahim22&repo=rxt-portfo-3" />
 </a>
 <a href="https://github.com/bahim22/work">
   <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=bahim22&repo=work" />
 </a>
-</aside>
 </div>
 
 [Python Docs]: Docs2/PyDoc.md
