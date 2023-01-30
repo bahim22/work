@@ -3,45 +3,29 @@
 
 # A+ Practice & Notes 4
 
+# Table of Contents
+
 - [A+ Practice \& Notes 4](#a-practice--notes-4)
+- [Table of Contents](#table-of-contents)
   - [Sections 220-1101](#sections-220-1101)
-  - [Safety and Professionalism 1101](#safety-and-professionalism-1101)
   - [Hardware 1101](#hardware-1101)
   - [Mobile Devices 1101](#mobile-devices-1101)
   - [Hardware \& Network Troubleshooting 1101](#hardware--network-troubleshooting-1101)
-  - [Virtualization \& Cloud Computing 1101](#virtualization--cloud-computing-1101)
   - [Backup and Recovery](#backup-and-recovery)
+  - [Virtualization \& Cloud Computing 1101](#virtualization--cloud-computing-1101)
   - [Networking 1101](#networking-1101)
   - [Sections 220-1102](#sections-220-1102)
-  - [Operational Procedures 1102](#operational-procedures-1102)
   - [Security 1102](#security-1102)
   - [Operating System 1102](#operating-system-1102)
+    - [OS Install, maintenance, overall information](#os-install-maintenance-overall-information)
+    - [Windows](#windows)
+    - [macOS, Linux, mobile](#macos-linux-mobile)
   - [Software Troubleshooting 1102](#software-troubleshooting-1102)
+  - [Operational Procedures 1102](#operational-procedures-1102)
+    - [Safety and Professionalism 1102](#safety-and-professionalism-1102)
   - [References and Resources](#references-and-resources)
 
 ## Sections 220-1101
-
-- **Cloud**
-  - Cloud computing
-  - virtualization
-  - troubleshooting methodology
-
-- **Devices**
-  - Laptop
-  - Display devices
-  - mobile devices
-  - printers
-
-- **Network**
-  - protocols
-  - TCP & UDP Ports
-  - IP Addressing
-  - internet connection types
-  - services
-  - wireless
-  - hardware
-  - types
-  - tools
 
 - **Hardware**
   - cabling
@@ -54,29 +38,29 @@
   - PSU
   - printer
 
+- **Devices**
+  - Laptop
+  - Display devices
+  - mobile devices
+  - printers
+
+- **Cloud**
+  - Cloud computing
+  - virtualization
+  - troubleshooting methodology
+
+- **Network**
+  - protocols
+  - TCP & UDP Ports
+  - IP Addressing
+  - internet connection types
+  - services
+  - wireless
+  - hardware
+  - types
+  - tools
+
 ----------
-
-## Safety and Professionalism 1101
-
-Troubleshooting Method
-
-1. Identify the problem
-2. establish theory of probable cause
-3. test theory to determin cause
-4. establish a plan of action to resolve the problem and implement solution
-5. verify full system functionality and implement preventive measures
-6. document finding, actions and outcomes
-
-- ESD is type of EMP and can damage PC's. Prevent this by using antistatic tools, disconnecting PC from power
-- EMI - electromagnetic interference
-- RFI: radio frequency interference; prevent by keeping devices away from one another
-
-- Try to implement simple answers/solutions first.
-- toolkit should have at least a Phillips-head screwdriver.
-- create temporary passwords when working w/ clients, if you need to access their account, then change it afterwards.
-- Follow up with clients after completing ticket
-- antistatic straps keeps you at same electrical potential as the PC
-- Backup data before working on client PC's and document findings
 
 ## Hardware 1101
 
@@ -150,6 +134,23 @@ Troubleshooting Method
 
 ## Hardware & Network Troubleshooting 1101
 
+## Backup and Recovery
+
+1. Restoring data from incremental backups require:
+   1. All copies of incremental backups made since last full backup
+   2. Copy of the last full back up
+2. Synthetic Full back up copy: up-to-date full backup copy composed of the last full back up and subsequent incremental, and/or differential back ups
+3. On site backups are advantageous due to:
+   1. No subscription fee, Control over backup media and process, and faster data access
+4. Off site backups are better due to:
+   1. Improved security, Scalability, and Geo redundancy
+5. Grandfather-father-son: back up rotations scheme
+   1. backups are perform daily to create weekly back ups and back ups created at the end of each week are used to create a monthly back up
+6. 3-2-1 backup strategy
+   1. Keep at least 1 backup copy offsite
+   2. Create 1 primary backup file, then 2 copies of the primary backup file
+   3. Save backups to 2 different storage media types
+
 ## Virtualization & Cloud Computing 1101
 
 **Cloud Models and features**
@@ -205,22 +206,7 @@ Cloud structures and services available in cloud environment
 - VDI's must implement security controls similar to physical ones
   - strong passwords, account lockout policies, MFA's
 
-## Backup and Recovery
 
-1. Restoring data from incremental backups require:
-   1. All copies of incremental backups made since last full backup
-   2. Copy of the last full back up
-2. Synthetic Full back up copy: up-to-date full backup copy composed of the last full back up and subsequent incremental, and/or differential back ups
-3. On site backups are advantageous due to:
-   1. No subscription fee, Control over backup media and process, and faster data access
-4. Off site backups are better due to:
-   1. Improved security, Scalability, and Geo redundancy
-5. Grandfather-father-son: back up rotations scheme
-   1. backups are perform daily to create weekly back ups and back ups created at the end of each week are used to create a monthly back up
-6. 3-2-1 backup strategy
-   1. Keep at least 1 backup copy offsite
-   2. Create 1 primary backup file, then 2 copies of the primary backup file
-   3. Save backups to 2 different storage media types
 
 ## Networking 1101
 
@@ -320,13 +306,64 @@ _IP Address & Network Types_
 - script files
 - remote access tech
 
-## Operational Procedures 1102
-
 ## Security 1102
 
 ## Operating System 1102
 
+### OS Install, maintenance, overall information
+
+- in-place upgrade: install type that keeps system settings, personal files, and apps from the older OS version
+  - available in Windows 7 and 8.1
+
+### Windows
+
+1. Windows Home edition:
+   1. Does not allow: Assigned Access, Remote Desktop server component, local group policy editor (gpedit.msc)
+   2. f
+2. Pro
+   1. 2 TB memory limit
+   2. joining a domain
+   3. BitLocker Drive Encryption
+3. Pro for Workstations
+   1. 6 TB RAM limit
+   2. joining a domain
+   3. BitLocker Drive Encryption
+4. Enterprise
+   1. 6 TB RAM limit
+   2. allow joining a domain
+   3. BitLocker Drive Encryption
+5. 32-bit (x86) has 4GB physical memory limit, while the 64-bit (x64) version supports 128GB or RAM.
+6. third
+
+### macOS, Linux, mobile
+
 ## Software Troubleshooting 1102
+
+## Operational Procedures 1102
+
+### Safety and Professionalism 1102
+
+Troubleshooting Method
+
+1. Identify the problem
+2. establish theory of probable cause
+3. test theory to determin cause
+4. establish a plan of action to resolve the problem and implement solution
+5. verify full system functionality and implement preventive measures
+6. document finding, actions and outcomes
+
+- ESD is type of EMP and can damage PC's. Prevent this by using antistatic tools, disconnecting PC from power
+- EMI - electromagnetic interference
+- RFI: radio frequency interference; prevent by keeping devices away from one another
+
+- Try to implement simple answers/solutions first.
+- toolkit should have at least a Phillips-head screwdriver.
+- create temporary passwords when working w/ clients, if you need to access their account, then change it afterwards.
+- Follow up with clients after completing ticket
+- antistatic straps keeps you at same electrical potential as the PC
+- Backup data before working on client PC's and document findings
+
+----------
 
 ## References and Resources
 
