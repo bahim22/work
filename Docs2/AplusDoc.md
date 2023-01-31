@@ -157,7 +157,7 @@ ___
 - _UEFI_: Unified Extensible Firmware Interface: spec that defines a software interface between OS & platform firmware.
   - Boot process: UEFI -> GPT (EFI boot loader) -> Kernel -> OS
 - _CSM_: Compatibility support module: EFI support of booting in legacy BIOS mode from MBR-part disks
-- _PXE_: Preboot execution env: standardized client–server env. that boots a software assembly, retrieved from a network, on PXE-enabled clients.
+- _PXE_: Pre-boot execution env: standardized client–server env. that boots a software assembly, retrieved from a network, on PXE-enabled clients.
   - forms part of the UEFI standard
   - PXE-capable network interface controller (NIC) required on client side
   - uses industry-standard network protocols such as _DHCP_ and _TFTP_

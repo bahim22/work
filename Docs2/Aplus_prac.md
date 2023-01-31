@@ -9,6 +9,7 @@
 - [Table of Contents](#table-of-contents)
   - [Sections 220-1101](#sections-220-1101)
   - [Hardware 1101](#hardware-1101)
+    - [Network hardware](#network-hardware)
   - [Mobile Devices 1101](#mobile-devices-1101)
   - [Hardware \& Network Troubleshooting 1101](#hardware--network-troubleshooting-1101)
   - [Backup and Recovery](#backup-and-recovery)
@@ -64,14 +65,39 @@
 
 ## Hardware 1101
 
-1. Metro UI introduced with Windows 8
-2. Charms bar wasn't included in Windows 10
-3. macOS uses the term Spaces for multiple Desktops, Terminal for command-line interface & Finder for File Explorer
-4. KDE desktops use the term Kickoff for Start button
-5. default download location C:\Users\<uname>\Downloads
-6. 32-bit apps install in C:\Program Files(x86)\
-7. Open Admin Tools by right-clicking Start button and selecting Admin Tools
-8. Windows 10 Settings app has multiple utilities in a unified interface
+### Network hardware
+
+**Cable Types**
+
+1. Three primary types include _coaxial_, _twisted pair_, and _fiber_
+   1. Network cables connect devices to networking equipment and the cable is the medium used to transfer data between devices.
+2. twisted pair copper cabling: balanced pair operations: the twist keeps a single wire moving away from the interfeence and the opposite signals are compared on the other end. Each pair in same cable also have different twist rates
+   1. two wires with equal and opposite signals
+      1. transmit+, transmit- / receive+, receive-
+3. Ethernet standards:
+   1. 1000BASE-T: min of CAT-5 at max distance of 100 m and max of CAT 5E at 100 m
+   2. 10GBASE-T: min of CAT 6 at 55 m (unshielded) and 100 m (shielded). Max of CAT 6A at max distance of 100 meters
+4. Coaxial calbes: 2 or more forms share common axis. RG-6 used in TV/digital cable, and high-speed internet over cable
+   1. wire conductor surroundef by dielectric insulator, then metal shielding and plastic jacket on outside.
+5. Drop ceilings have ducts that suppply cold air and remove warm air, that's pushed to the air conditioner (with non-circulating air between the ducts). Alternatively, it can have a plenum that forces cold air in, and the pushed warm air (forced-air return) into a shared area where network cables are.
+   1. Plenums cables need coated with special material (making them less flexible with a different bend radius) due to concerns of smoke and toxic fumes during a fire.
+   2. Traditional cable jackets are PVC polyvinyl chloride, while fire-rated use flourinated ethylene polymer (FEP), or low-smoke polyvinyl chloride (PVC).
+6. Most calbes use UTP, unshielded twisted pari with no additional shielding and most common. STP have more shielding which helps against interference. They can shield each pair or the whole cable, and requires the cable to be grounded. U unshieleded, S braided, F foil shielding
+   1. ex. abbrev. overall cable / individual pairs S/FTP.
+7. Direct burial (STP) are designed to be outside, undrground, waterproof, and possibly filled with gel to repel water. Usually are STP which adds strength, provides grounding and strength. May not need to be incased in a conduit.
+8. Fiber communication is data transmitted via light and are hard to mointor/tap due to having no RF signa and being immune to radio interference. The signal can go long distances and are slow to degrade.
+9. LED sends light ray to receiver, and are surrounded by a high reflective index Core, covered by low reflective index cladding, with an outer edge of mechnical protection buffer coating.
+10. Fiber core surrounded by a Ferrule (large ceramic protector at the end of cable).
+11. multimode fiber used for short-range comms (up to 2 km), cheaper light source. multiple reflections are bounced through the core and collected on other end.
+12. single-mode can go longer ranges (100km) and uses expensive light source such as lasers, and has a more narrow reflection.
+
+- d
+- d
+- d
+- d
+- g
+
+----------
 
 - Computers are composed of the hardware, OS and Applications
 - Computing process stages: Input, processing, output
@@ -206,8 +232,6 @@ Cloud structures and services available in cloud environment
 - VDI's must implement security controls similar to physical ones
   - strong passwords, account lockout policies, MFA's
 
-
-
 ## Networking 1101
 
 _DNS database records_
@@ -309,6 +333,15 @@ _IP Address & Network Types_
 ## Security 1102
 
 ## Operating System 1102
+
+1. Metro UI introduced with Windows 8
+2. Charms bar wasn't included in Windows 10
+3. macOS uses the term Spaces for multiple Desktops, Terminal for command-line interface & Finder for File Explorer
+4. KDE desktops use the term Kickoff for Start button
+5. default download location C:\Users\<uname>\Downloads
+6. 32-bit apps install in C:\Program Files(x86)\
+7. Open Admin Tools by right-clicking Start button and selecting Admin Tools
+8. Windows 10 Settings app has multiple utilities in a unified interface
 
 ### OS Install, maintenance, overall information
 

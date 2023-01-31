@@ -1,7 +1,5 @@
 # Comptia A+
 
-<!-- - [Comptia A+](#comptia-a) -->
-
 <details><summary>Table of contents</summary><p>
 
 - [Comptia A+](#comptia-a)
@@ -461,7 +459,7 @@ RD / `RMDIR` | delete dir
 - 3 primary types: **coaxial**, **twisted pair**, **fiber**
 - used for connecting devices to networking equipment
 - cable: medium (usually copper) where the data is transferred from devices
-  - composed of four pairs of twisted-pairs (8 total) individual cables in one sheath
+  - composed of four pairs of twisted-pairs (8 total) of individual cables in one sheath
 
 | Cat Cables | | |
 | :---: | --- | --- |
