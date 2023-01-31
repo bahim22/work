@@ -19,6 +19,7 @@
   - [Linux permissions](#linux-permissions)
   - [Git Config terminal colors](#git-config-terminal-colors)
   - [Pwsh](#pwsh)
+    - [Pwsh Commands to review](#pwsh-commands-to-review)
 
 ## SSH to GitHub
 
@@ -489,23 +490,40 @@ for f in 'ls -R'; do [! -d"$f"] && chmod a-x "$f"; done
 | 96 = turquoise |  105 = light purple bg|
 | 97 = white | 106, 107 = turquoise, white bg |
 
+----------
+
 ## Pwsh
 
 ```ps1
-<# Add-WindowsPackage
-Enable-WindowsOptionalFeature
-Get-WindowsPackage #>
+get-help [command] -detailed
+# get more info of a command
 
-enable-windowsOptionalFeature
-get-help Get-WindowsOptionalFeature -detailed
+Get-WindowsFeature -ComputerName "Server1" -Credential "contoso.com\user1"
 
 Get-WindowsFeature [[-Name] <String[]>] [-ComputerName <String>] [-Credential <PSCredential>] [-LogPath
     <String>] [-Vhd <String>] [<CommonParameters>]
-```
 
-```ps1
 Copy-Item './images/*' '/home/user/flow/work/Apps/' -Recurse
 
 $Session = New-PSSession -ComputerName "Server04" -Credential "Contoso\User01"
 Copy-Item "D:\Folder003\" -Destination "C:\Folder003_Copy\" -ToSession $Session -Recurse
+
+Get-Service | Where-Object {$_.Status -eq "Running"}
+# get active services
+Get-Service "s*" | Sort-Object status
+# sort by prop value
+
+Get-Service "WinRM" -RequiredServices
+#  get services that depend on this service
 ```
+
+### Pwsh Commands to review
+
+- Add-WindowsPackage
+- Enable-WindowsOptionalFeature
+- Get-WindowsFeature
+- Get-WindowsPackage
+- Install-WindowsFeature {Uninstall}
+- Enable-ServerManagerStandardUserRemoting {Disable}
+- New-Service
+  - {Restart | Resume | Set | Start | Stop | Suspend | Remove}
