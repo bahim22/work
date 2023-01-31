@@ -10,6 +10,7 @@
   - [Sections 220-1101](#sections-220-1101)
   - [Hardware 1101](#hardware-1101)
     - [Network hardware](#network-hardware)
+    - [Peripheral Cables](#peripheral-cables)
   - [Mobile Devices 1101](#mobile-devices-1101)
   - [Hardware \& Network Troubleshooting 1101](#hardware--network-troubleshooting-1101)
   - [Backup and Recovery](#backup-and-recovery)
@@ -90,6 +91,21 @@
 10. Fiber core surrounded by a Ferrule (large ceramic protector at the end of cable).
 11. multimode fiber used for short-range comms (up to 2 km), cheaper light source. multiple reflections are bounced through the core and collected on other end.
 12. single-mode can go longer ranges (100km) and uses expensive light source such as lasers, and has a more narrow reflection.
+
+- 568A
+- 568B
+
+### Peripheral Cables
+
+1. g
+2. f
+3. f
+
+**Memory**
+
+**Storage**
+
+**Motherboard**
 
 - d
 - d
