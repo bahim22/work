@@ -7,25 +7,23 @@
 
 - [CompTIA A+ Docs](#comptia-a-docs)
   - [Table of Contents](#table-of-contents)
-  - [Troubleshooting Steps](#troubleshooting-steps)
-  - [Secondary Skills](#secondary-skills)
-  - [Tools and Safety](#tools-and-safety)
-  - [Computer Components](#computer-components)
-    - [Motherboard](#motherboard)
-    - [Processor, CPU](#processor-cpu)
-    - [Power supplies](#power-supplies)
-    - [Adapter Cards](#adapter-cards)
-    - [BIOS/CMOS/UEFI](#bioscmosuefi)
+  - [Operational Procedures](#operational-procedures)
   - [`Network`](#network)
     - [**Ports** | **Protocols** | **Hardware**](#ports--protocols--hardware)
       - [`TCP/IP`](#tcpip)
       - [`UDP`](#udp)
       - [`OSI model`](#osi-model)
-  - [`Hardware`](#hardware)
+  - [**Hardware**](#hardware)
     - [Memory](#memory)
       - [RAM](#ram)
     - [Storage and Peripherals](#storage-and-peripherals)
       - [RAID](#raid)
+    - [Computer Components](#computer-components)
+      - [Motherboard](#motherboard)
+      - [Processor | CPU](#processor--cpu)
+      - [Power supplies](#power-supplies)
+      - [BIOS/CMOS/UEFI](#bioscmosuefi)
+      - [Adapter Cards](#adapter-cards)
   - [`Software & OS`](#software--os)
     - [Windows Admin Tools](#windows-admin-tools)
     - [Windows Management Framework](#windows-management-framework)
@@ -35,7 +33,9 @@
     - [Video Cables](#video-cables)
   - [References](#references)
 
-## Troubleshooting Steps
+## Operational Procedures
+
+**Troubleshooting Steps**
 
 1. Identify the problem
 2. establish a probable cause
@@ -55,13 +55,13 @@ new theory or escalate
 - Verify full system functionality and, if applicable, implement preventive measures
 - Document findings, actions, and outcomes
 
-## Secondary Skills
+**Secondary Skills**
 
 > soft skills, professional communication/attire, layman's term usage, keep info on drivers, routers, chips, etc., accessible; always backup client data prior to troubleshooting
 
 ___
 
-## Tools and Safety
+**Tools and Safety**
 
 - multi-head screwdrivers, tweezers, multimeter (verifies power volts & connection)
 - chip extractors, storage canisters, software tools (on zip & thumb drives)
@@ -85,84 +85,6 @@ ___
   - material safety sheets come w/ any hardware that has chemicals
   - `Check` conditions and grounding prongs; electricity is off and unplugged
   - `review` lockout/tag-out policies
-
-___
-
-## Computer Components
-
-1. `CPU`(The Central Processing Unit) is the part of the computer that asks, "what's next"
-2. `Main Memory`: stores prog. & data that CPU uses quickly and isn't saved on power off
-3. `Secondary Memory`: also stores info; but is slower; keeps info even if PC has no power
-   1. (ex. disk drives, flash memory - USBs)
-4. `I/O devices`: input and output devices used to interact w/ the computer
-5. `network connection`: get info over network; store/retrieve data (similar to secondary mem.)
-
-### Motherboard
-
-- `Power connectors` – Any component cannot operate without power and the same goes for a motherboard. The power connector is a 20/24-pin connector that sits near to the processor socket on some hardware while is present beside the right edge in others. It’s the area where the main connector attaches and thus, supplies power to all components.
-- `Processor socket` – It is a central unit present on the motherboard located on the center and the main function of it is to hold the entire processor.
-  - CPU is the brain of a computer.
-- `Video card slot` – attaches video card, usually with a PCI-Express slot. Gaming PC's can have multiple slots for video cards.
-- `Memory slots` – Usually in upper right-hand side of motherboard and carry a computer’s memory modules. Slots differ depending on the motherboard and can range from 2 to 8+ slots (on gaming PC's). Industry standard is DDR3 memory. The memory capacity of the motherboard depends on the # of slots.
-- `IDE & SATA ports` – Ports used to allow connectivity for storage devices & optical drives. IDE is outdated and was replaced by SATA interface, which is smaller and faster(speeds up to 600 MB/s)
-- `Expansion slots` – Enables additional hardware to be installed in order to optimize computer performance.
-- `Northbridge & Southbridge` – the bottom right area of motherboard houses a square and metallic component, used for the evacuation of heat produced by the computer, providing thermal protection for the Northbridge.
-  - `Northbridge`: coordinates data flow between video card, memory, and the processor.
-  - `Southbridge`: coordinates data flow between soundcards and processor.
-- `BIOS Chip & Battery` – The BIOS chip is a component which consists of a basic code required to carry out the boot process on a computer.
-  - Chip component with code that's responsible for carrying out the computer's boot process, until the OS takes control.
-  - Housed on a memory chip that requires steady power supply to execute its function.
-  - Battery supplies power when the power supply is unplugged, to keep it running.
-- `Front Panel Connectors`, USB & Audio Headers – Front Panel connectors is a place where all the elements on the front are connected. It comprises of USB connectors, power button, power LED, audio connectors, and the reset buttons.
-- `Rear Panel Connectors` – Rear Panel Connectors act as a bridge between the inside and outside of a computer. These connectors are situated on the left edge of a motherboard, so it is pretty confusion what the name suggests. However, these connectors can be accessed from the outside, so their name simply tells where they can be accessed from. These connectors power all external hardware which include a mouse, keyboard, speakers, monitor, etc.
-- form factors: ATX, microATX, ITX
-- expansion buses: PCIe and PCI
-- CPU info
-  - intel chipsets connect to CPU via DMI or QPI
-    - LGA775, 1150, 1155, 1156, 1366, 2011 sockets
-  - AMD CPU-to-chipset is HyperTransport
-    - AM3, AM3+, FM1, FM2, FM2+ sockets
-
-<!-- ![motherboard](/assets/motherboardOld.jpg)
-![motherboardParts](/assets/motherboardParts.jpg) -->
-
-### Processor, CPU
-
-- brains of the computer
-- processor performs calculations based on requests from the OS
-- controls the access to system memory
-- proc. speed measures how fast it can handle tasks
-  - Mhz, Ghz
-  - millions of interactions/s
-- OS & Processor
-  - data input: from input device such as keyboard, mouse, card reader => processing input => data output (to output drivers {monitors, printers}) => storage via storage devices {hard drive {HDD, SSD}, RAM}
-
-### Power supplies
-
-- take 120v of alternating current (AC) and convert to the volt required by the PC (usually 12v || 3.3v, 5v)
-  - different volts for HDD or PCIe cards
-
-### Adapter Cards
-
-### BIOS/CMOS/UEFI
-
-1. IDs, test, init compos and boots to drive, optical disk,  USB flash drive or network (PXE)
-2. can update by flashing it w/ new firmware
-
-- _BIOS_: Basic input/output system; chip on motherboard w/ in ROM or w/in flash memory (aka firmware)
-- _CMOS_: stores time/date, passwords, CR2032 lithium battery provides power
-- _POST_: power on self test: motherboard ini hardware, runs POST, boots & loads OS (BIOS info found by run msinfo32 -> system summary)
-  - system startup: computer searches nonvolatile data stores device in order defined in boot seq.; then CPU takes control and loads OS into system memory
-  - setup utility stored in BIOS flash memory (in battery-backed CMOS RAM)
-- _UEFI_: Unified Extensible Firmware Interface: spec that defines a software interface between OS & platform firmware.
-  - Boot process: UEFI -> GPT (EFI boot loader) -> Kernel -> OS
-- _CSM_: Compatibility support module: EFI support of booting in legacy BIOS mode from MBR-part disks
-- _PXE_: Pre-boot execution env: standardized client–server env. that boots a software assembly, retrieved from a network, on PXE-enabled clients.
-  - forms part of the UEFI standard
-  - PXE-capable network interface controller (NIC) required on client side
-  - uses industry-standard network protocols such as _DHCP_ and _TFTP_
-- ACPI: advanced config and power management interface: defines working interfaces between the OS, BIOS, and hardware
-  - can allow the OS to control power management
 
 ___
 
@@ -452,7 +374,7 @@ Although UDP provides integrity verification (via checksum) of the header and pa
 
 ___
 
-## `Hardware`
+## **Hardware**
 
 ### Memory
 
@@ -479,7 +401,7 @@ ___
 13. `EPROM` - Erasable PROM - Data can be removed from PC circuit, erased by ultraviolet (UV) light and then reprogrammed
 14. `EEPROM` Electronically erasable PROM - Data can be erased with electrical signals.
     1. Chip can then be reprogrammed. Transistor uses 5v.
-    2. `EEPROMs` are frequently used to store BIOS. Used to program dynamically
+    2. `EEPROM` are frequently used to store BIOS. Used to program dynamically
 
 - ECC: can continue to work even if it has corrupt data
 - Paging: a file that's used as virtual memory on the system
@@ -558,6 +480,82 @@ ___
 14. `Sight/Sound`
 15. `Readers/Scanners`
 16. `Expansion Cards`
+
+### Computer Components
+
+1. `CPU`(The Central Processing Unit) is the part of the computer that asks, "what's next"
+2. `Main Memory`: stores prog. & data that CPU uses quickly and isn't saved on power off
+3. `Secondary Memory`: also stores info; but is slower; keeps info even if PC has no power
+   1. (ex. disk drives, flash memory - USBs)
+4. `I/O devices`: input and output devices used to interact w/ the computer
+5. `network connection`: get info over network; store/retrieve data (similar to secondary mem.)
+
+#### Motherboard
+
+- `Power connectors` – Any component cannot operate without power and the same goes for a motherboard. The power connector is a 20/24-pin connector that sits near to the processor socket on some hardware while is present beside the right edge in others. It’s the area where the main connector attaches and thus, supplies power to all components.
+- `Processor socket` – It is a central unit present on the motherboard located on the center and the main function of it is to hold the entire processor.
+  - CPU is the brain of a computer.
+- `Video card slot` – attaches video card, usually with a PCI-Express slot. Gaming PC's can have multiple slots for video cards.
+- `Memory slots` – Usually in upper right-hand side of motherboard and carry a computer’s memory modules. Slots differ depending on the motherboard and can range from 2 to 8+ slots (on gaming PC's). Industry standard is DDR3 memory. The memory capacity of the motherboard depends on the # of slots.
+- `IDE & SATA ports` – Ports used to allow connectivity for storage devices & optical drives. IDE is outdated and was replaced by SATA interface, which is smaller and faster(speeds up to 600 MB/s)
+- `Expansion slots` – Enables additional hardware to be installed in order to optimize computer performance.
+- `Northbridge & Southbridge` – the bottom right area of motherboard houses a square and metallic component, used for the evacuation of heat produced by the computer, providing thermal protection for the Northbridge.
+  - `Northbridge`: coordinates data flow between video card, memory, and the processor.
+  - `Southbridge`: coordinates data flow between soundcards and processor.
+- `BIOS Chip & Battery` – The BIOS chip is a component which consists of a basic code required to carry out the boot process on a computer.
+  - Chip component with code that's responsible for carrying out the computer's boot process, until the OS takes control.
+  - Housed on a memory chip that requires steady power supply to execute its function.
+  - Battery supplies power when the power supply is unplugged, to keep it running.
+- `Front Panel Connectors`, USB & Audio Headers – Front Panel connectors is a place where all the elements on the front are connected. It comprises of USB connectors, power button, power LED, audio connectors, and the reset buttons.
+- `Rear Panel Connectors` – Rear Panel Connectors act as a bridge between the inside and outside of a computer. These connectors are situated on the left edge of a motherboard, so it is pretty confusion what the name suggests. However, these connectors can be accessed from the outside, so their name simply tells where they can be accessed from. These connectors power all external hardware which include a mouse, keyboard, speakers, monitor, etc.
+- form factors: ATX, microATX, ITX
+- expansion buses: PCIe and PCI
+- CPU info
+  - intel chipsets connect to CPU via DMI or QPI
+    - LGA775, 1150, 1155, 1156, 1366, 2011 sockets
+  - AMD CPU-to-chipset is HyperTransport
+    - AM3, AM3+, FM1, FM2, FM2+ sockets
+
+<!-- ![motherboard](/assets/motherboardOld.jpg)
+![motherboardParts](/assets/motherboardParts.jpg) -->
+
+#### Processor | CPU
+
+- brains of the computer
+- processor performs calculations based on requests from the OS
+- controls the access to system memory
+- proc. speed measures how fast it can handle tasks
+  - Mhz, Ghz
+  - millions of interactions/s
+- OS & Processor
+  - data input: from input device such as keyboard, mouse, card reader => processing input => data output (to output drivers {monitors, printers}) => storage via storage devices {hard drive {HDD, SSD}, RAM}
+
+#### Power supplies
+
+- take 120v of alternating current (AC) and convert to the volt required by the PC (usually 12v || 3.3v, 5v)
+  - different volts for HDD or PCIe cards
+
+#### BIOS/CMOS/UEFI
+
+1. IDs, test, init compos and boots to drive, optical disk,  USB flash drive or network (PXE)
+2. can update by flashing it w/ new firmware
+
+- _BIOS_: Basic input/output system; chip on motherboard w/ in ROM or w/in flash memory (aka firmware)
+- _CMOS_: stores time/date, passwords, CR2032 lithium battery provides power
+- _POST_: power on self test: motherboard ini hardware, runs POST, boots & loads OS (BIOS info found by run msinfo32 -> system summary)
+  - system startup: computer searches nonvolatile data stores device in order defined in boot seq.; then CPU takes control and loads OS into system memory
+  - setup utility stored in BIOS flash memory (in battery-backed CMOS RAM)
+- _UEFI_: Unified Extensible Firmware Interface: spec that defines a software interface between OS & platform firmware.
+  - Boot process: UEFI -> GPT (EFI boot loader) -> Kernel -> OS
+- _CSM_: Compatibility support module: EFI support of booting in legacy BIOS mode from MBR-part disks
+- _PXE_: Pre-boot execution env: standardized client–server env. that boots a software assembly, retrieved from a network, on PXE-enabled clients.
+  - forms part of the UEFI standard
+  - PXE-capable network interface controller (NIC) required on client side
+  - uses industry-standard network protocols such as _DHCP_ and _TFTP_
+- ACPI: advanced config and power management interface: defines working interfaces between the OS, BIOS, and hardware
+  - can allow the OS to control power management
+
+#### Adapter Cards
 
 ___
 

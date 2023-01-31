@@ -108,9 +108,6 @@
 **Motherboard**
 
 - d
-- d
-- d
-- d
 - g
 
 ----------
@@ -382,6 +379,28 @@ _IP Address & Network Types_
    2. allow joining a domain
    3. BitLocker Drive Encryption
 5. 32-bit (x86) has 4GB physical memory limit, while the 64-bit (x64) version supports 128GB or RAM.
+
+----------
+
+**MS Windows 10 Features & Tools**
+
+1. `Task manager` (taskmgr.exe): Close non-responsive apps; show info of running programs, processes and services
+   1. management of logged-in users by a System Admin; usage reports of system resources (RAM/CPU/GPU/Disk/Network)
+   2. Launch Task manager:
+      1. `Ctrl+Alt+Del` | `Ctrl+Shift+Esc` | `Right-click`: TaskBar || Start button
+      2. CMD prompt ||  Windows + R key (Run Window) ➡ type taskmgr.exe
+   3. `Services` tab used for managing background processes
+   4. `Startup` tab let's user adjust apps that auto launch on sign in
+   5. `Performance` tab provides access to graphs detailing resource usage (CPU, memory, disk, network, GPU)
+   6. `Processes` tab: info on system resources that running apps and background processes are using
+   7. Close non-responsive apps in Processes tab by right-clicking the app, then end task or left-click the app and select End task button in bottom right corner.
+2. Microsoft Management Consol (MMC): customizable system utilities framework composed of snap-ins to manage networks, PC's, services and other components.
+3. Event Viewer (`eventvwr.msc`): Windows admin utility for monitoring system health and troubleshooting apps, OS, and hardware issues.
+   1. can view event logs: Apps, System, and Security (audits) that're categorized as either Info, Warn, Error events.
+4. `diskmgmt.msc`: system utility for managing storage media
+5. `taskschd.msc`: admin tool for scheduling program launches, and scripts set to run at specific times or intervals.
+6. `devmgmt.msc`: componet for viewing/managing hardware components and device drivers
+7. Windows Certificate Manager snap-in (`certmgr.msc`): manage (view/export/import/delete) current user's digital certificates
 
 ### macOS, Linux, Mobile
 

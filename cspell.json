@@ -4,20 +4,23 @@
     "allowCompoundWords": true,
     "numSuggestions": 5,
     "ignorePaths": [
-        "node_modules",        // this will ignore anything the node_modules directory
-        "**/node_modules",     // the same for this one
-        "**/node_modules/**",  // the same for this one
-        "vscode-extension",    //
-        ".git",                // Ignore the .git directory
-        "**/*.dll"             // Ignore all .dll files
+        "node_modules",// ignores anything w/in dir
+        // the same for this one"**/node_modules", | "**/node_modules/**",
+        "vscode-extension",
+        ".git",
+        // Ignore the .git directory
+        "**/*.dll"
+        // Ignore all .dll files
     ],
     "suggestionsTimeout": 250,
     "caseSensitive": false,
     "maxDuplicateProblems":2,
     "useGitignore": true,
     "enableFiletypes": ["!env","!py"],
-    "ignoreRegExpList": [ "/^[^a-z]*$/", "/^[A-Z][a-z0-9_-]{3,19}$/", "/0x[0-9A-F]+/g", "\b[A-Z]{3,}\b", "(?:(?<!^)[A-Z]\b|(?<!^[A-Z0-9 ]*)\b[A-Z0-9]+\b(?![A-Z0-9 ]$))"],
-/*     "ignoreRegExpList": ["[A-F]{3,}", "/^[^a-z]*$/", "/^[A-Z][a-z0-9_-]{3,19}$/", "/0x[0-9A-F]+/g", "\b[A-Z]{3,}\b", "(?:(?<!^)[A-Z]\b|(?<!^[A-Z0-9 ]*)\b[A-Z0-9]+\b(?![A-Z0-9 ]$))", "/[^\s]{40,}/"], */
+    "ignoreRegExpList": [ "/^[A-Z][a-z0-9_-]{3,19}$/" , "/^[^a-z]*$/"],
+    /*
+        ["ignoreRegExpList": ["[A-F]{3,}", "/^[A-Z][a-z0-9_-]{3,19}$/", "/0x[0-9A-F]+/g", "\b[A-Z]{3,}\b", "(?:(?<!^)[A-Z]\b|(?<!^[A-Z0-9 ]*)\b[A-Z0-9]+\b(?![A-Z0-9 ]$))", "/[^\s]{40,}/"],]
+    */
     "cache":{},
     "dictionaryDefinitions": [],
     "dictionaries": [],
