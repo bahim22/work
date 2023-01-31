@@ -57,7 +57,7 @@ new theory or escalate
 
 ## Secondary Skills
 
-> soft skills, professional communication/attire, layterm usage, keep info on drivers, routers, chips, etc., accessible; always backup client data prior to troubleshooting
+> soft skills, professional communication/attire, layman's term usage, keep info on drivers, routers, chips, etc., accessible; always backup client data prior to troubleshooting
 
 ___
 
@@ -135,7 +135,7 @@ ___
   - Mhz, Ghz
   - millions of interactions/s
 - OS & Processor
-  - data input: from input device such as keyboard, mouse, card reader => processing input => data output (to ouput drivers {monitors, printers}) => storage via storage devices {hard drive {HDD, SSD}, RAM}
+  - data input: from input device such as keyboard, mouse, card reader => processing input => data output (to output drivers {monitors, printers}) => storage via storage devices {hard drive {HDD, SSD}, RAM}
 
 ### Power supplies
 
@@ -294,7 +294,7 @@ ___
 <p>
 
 1. `FTP`: 21 file-transfer oriented protocol that ensures data delivery; file transfer to/from server
-   1. server that hosts files; allowing usrs to browse, transfer, upload files
+   1. server that hosts files; allowing users to browse, transfer, upload files
 2. `TFTP`: 69, trivial file transfer protocol - faster version of FTP that uses UDP
 3. `ssh`: 22, remote administration protocol where user can control/modify their remote servers over the internet; replaced unsecure telnet protocol
    1. Secure Shell: cryptographic connection-oriented network protocol for operating network services securely over unsecured net
@@ -355,7 +355,7 @@ ___
   - PoE Switch is a net switch that supplies power to its Ethernet ports to power PoE devices
 - _EoP_: ethernet over power; uses standard electrical wiring to interconnect ethernet devices
 
-1. **Toner probe**: 2-in-1 elec test tool that traces wires thru walls to determine which pair carried the signal induced by the tone generator
+1. **Toner probe**: 2-in-1 electrical test tool that traces wires thru walls to determine which pair carried the signal induced by the tone generator
    1. used when you have access to both ends of cable at same time
    2. Plug `tone generator` at jack end of cable and wave toner probe around suspected area to find other end of cable
 2. **Cable tester**: check a cable to verify intended connections exist and there's no unintended ones
@@ -618,7 +618,7 @@ ___
 |   in-place upgrade  | installs newer OS over older one; may preserve settings, fi, apps  |
 |    clean| disregards previous data; used for PC w/o an OS or to intentionally delete old data |
 | repair | boot w/ same -v OS & select repair; rewrites SF & settings, retains user fi; can repair OS that's unbootable or w/ issues unfixable by other methods |
-|     multiboot             | uses boot mngr that maintains boot config; user sel OS to boot; recommend install OS's to diff HDD or separate logical pars  |
+|     multiboot             | uses boot manager that maintains boot config; user selects OS to boot; recommend install OS's to diff HDD or separate logical pars  |
 |   remote net  | PXE net boot using remote server; may require choosing install options or be unattended |
 |         image deployment         | used for PC's w/ == hardware that need == OS/settings/apps. Diff software tools can do this. Steps involve sel one PC => clean install, config, app install => create image from that PC & make available on network or portable media => copy image to other PC's |
 |   recovery par  | create rec par during install that is a bootable par for later or repair install; contains diagnostic/repair tools |

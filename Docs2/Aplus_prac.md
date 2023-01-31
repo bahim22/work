@@ -72,28 +72,28 @@
 
 1. Three primary types include _coaxial_, _twisted pair_, and _fiber_
    1. Network cables connect devices to networking equipment and the cable is the medium used to transfer data between devices.
-2. twisted pair copper cabling: balanced pair operations: the twist keeps a single wire moving away from the interfeence and the opposite signals are compared on the other end. Each pair in same cable also have different twist rates
+2. twisted pair copper cabling: balanced pair operations: the twist keeps a single wire moving away from the interference and the opposite signals are compared on the other end. Each pair in same cable also have different twist rates
    1. two wires with equal and opposite signals
       1. transmit+, transmit- / receive+, receive-
 3. Ethernet standards:
    1. 1000BASE-T: min of CAT-5 at max distance of 100 m and max of CAT 5E at 100 m
    2. 10GBASE-T: min of CAT 6 at 55 m (unshielded) and 100 m (shielded). Max of CAT 6A at max distance of 100 meters
 4. Coaxial calbes: 2 or more forms share common axis. RG-6 used in TV/digital cable, and high-speed internet over cable
-   1. wire conductor surroundef by dielectric insulator, then metal shielding and plastic jacket on outside.
+   1. wire conductor surrounded by dielectric insulator, then metal shielding and plastic jacket on outside.
 5. Drop ceilings have ducts that suppply cold air and remove warm air, that's pushed to the air conditioner (with non-circulating air between the ducts). Alternatively, it can have a plenum that forces cold air in, and the pushed warm air (forced-air return) into a shared area where network cables are.
    1. Plenums cables need coated with special material (making them less flexible with a different bend radius) due to concerns of smoke and toxic fumes during a fire.
    2. Traditional cable jackets are PVC polyvinyl chloride, while fire-rated use flourinated ethylene polymer (FEP), or low-smoke polyvinyl chloride (PVC).
-6. Most calbes use UTP, unshielded twisted pari with no additional shielding and most common. STP have more shielding which helps against interference. They can shield each pair or the whole cable, and requires the cable to be grounded. U unshieleded, S braided, F foil shielding
+6. Most calbes use UTP, unshielded twisted pair with no additional shielding and most common. STP have more shielding which helps against interference. They can shield each pair or the whole cable, and requires the cable to be grounded. U unshielded, S braided, F foil shielding
    1. ex. abbrev. overall cable / individual pairs S/FTP.
-7. Direct burial (STP) are designed to be outside, undrground, waterproof, and possibly filled with gel to repel water. Usually are STP which adds strength, provides grounding and strength. May not need to be incased in a conduit.
-8. Fiber communication is data transmitted via light and are hard to mointor/tap due to having no RF signa and being immune to radio interference. The signal can go long distances and are slow to degrade.
-9. LED sends light ray to receiver, and are surrounded by a high reflective index Core, covered by low reflective index cladding, with an outer edge of mechnical protection buffer coating.
+7. Direct burial (STP) are designed to be outside, underground, waterproof, and possibly filled with gel to repel water. Usually are STP which adds strength, provides grounding and strength. May not need to be incased in a conduit.
+8. Fiber communication is data transmitted via light and are hard to monitor/tap due to having no RF signal and being immune to radio interference. The signal can go long distances and are slow to degrade.
+9. LED sends light ray to receiver, and are surrounded by a high reflective index Core, covered by low reflective index cladding, with an outer edge of mechanical protection buffer coating.
 10. Fiber core surrounded by a Ferrule (large ceramic protector at the end of cable).
-11. multimode fiber used for short-range comms (up to 2 km), cheaper light source. multiple reflections are bounced through the core and collected on other end.
-12. single-mode can go longer ranges (100km) and uses expensive light source such as lasers, and has a more narrow reflection.
-
-- 568A
-- 568B
+11. multimode fiber used for short-range communication (up to 2 km), cheaper light source. multiple reflections are bounced through the core and collected on other end.
+12. Single-mode can go longer ranges (100km) and uses expensive light source such as lasers, and has a more narrow reflection.
+13. Twisted pair wires use color coding as standards to ensure proper referencing. It's used with RJ-45 wiring connectors.
+    1. T568A: green/white, green, orange/white, blue, blue/white, orange, brown/white, and brown
+    2. T568B: orange/white, orange, green/white, blue, blue/white, green, brown/white, and brown
 
 ### Peripheral Cables
 

@@ -400,7 +400,7 @@ RD / `RMDIR` | delete dir
   - max memory supported by W10 workstation OS is 2 TB
 
 - **Windows** is most used workstation OS for personal & corp.
-  - *W7*: file mngmt via Windows Explorer, libraries showed files of specific type, even if stored in diff locations, default libs(docs, pictures, videos, music) => default location for Windows Explorer on Windows 7, Aero provided visual enhancements to desktop/GUI exp & required video card
+  - *W7*: file management via Windows Explorer, libraries showed files of specific type, even if stored in diff locations, default libs(docs, pictures, videos, music) => default location for Windows Explorer on Windows 7, Aero provided visual enhancements to desktop/GUI exp & required video card
   - *W8*: start screen (tiles for apps & sys menus) replaced start menu, Windows Store for download & purchasing software, sign-in w/ local & MS online accounts (enabled transfer appearance, sys settings btw computer's), Settings menu contained most-used user settings, Control Panel allowed more sys config, MS recommend. multi-touch display for advanced GUI interaction on tablets, (Docs, Pics, Vids, Music) become normal folders and libraries aren't enabled by default
   - *W8.1*: more refined & enhanced user interface, esp. on non-touch display computer's
   - *W10*: intro Cortana, Start menu is combo of W7 and panel similar to W8 start screen & doesn't obstruct entire screen & desktop.
@@ -491,7 +491,7 @@ RD / `RMDIR` | delete dir
 
 - installed at terminating pt. of cable; allows components & peripherals to connect; type used depends on the cable and what receptable it needs connected to.
 
-1. RJ11: registered jack; telecomm net interface standard for voice/data equipment connection to service providers/carriers.
+1. RJ11: registered jack; telecommunication network interface standard for voice/data equipment connection to service providers/carriers.
    1. used w/ twisted pair cables & connects 4-6 wires to phone lines or modems
 2. RJ45: ethernet cable
 3. F-type: F connector; used w/ coaxial cables for cable/satellite data connections
@@ -499,7 +499,7 @@ RD / `RMDIR` | delete dir
    1. ST: straight tip; bayonet style
    2. SC:subscriber connector; push/pull style
    3. LC: lucent connector; push/pull; half the size of the SC; good fit for office/data center usage
-5. Punchdown block: elec connection device that inserts multiple copper wires into a slot for added insulation and electrical connection to attached wires.
+5. Punchdown block: electric connection device that inserts multiple copper wires into a slot for added insulation and electrical connection to attached wires.
 6. USB: universal serial bus (attach peripheral devices to computing devices) (Peripheral cable)
    1. 2.0 standard has max speed of 480 Mbps (hi-speed) & 3.0 has max speed of 5 Gbps (Supper Speed)
    2. `Micro` (smallest) & `Mini` (2nd smallest) direction dependent connectors containing 5 pins

@@ -1,6 +1,24 @@
 {
     "version": "0.2",
-    "ignorePaths": [],
+    "language": "en",
+    "allowCompoundWords": true,
+    "numSuggestions": 5,
+    "ignorePaths": [
+        "node_modules",        // this will ignore anything the node_modules directory
+        "**/node_modules",     // the same for this one
+        "**/node_modules/**",  // the same for this one
+        "vscode-extension",    //
+        ".git",                // Ignore the .git directory
+        "**/*.dll"             // Ignore all .dll files
+    ],
+    "suggestionsTimeout": 250,
+    "caseSensitive": false,
+    "maxDuplicateProblems":2,
+    "useGitignore": true,
+    "enableFiletypes": ["!env","!py"],
+    "ignoreRegExpList": [ "/^[^a-z]*$/", "/^[A-Z][a-z0-9_-]{3,19}$/", "/0x[0-9A-F]+/g", "\b[A-Z]{3,}\b", "(?:(?<!^)[A-Z]\b|(?<!^[A-Z0-9 ]*)\b[A-Z0-9]+\b(?![A-Z0-9 ]$))"],
+/*     "ignoreRegExpList": ["[A-F]{3,}", "/^[^a-z]*$/", "/^[A-Z][a-z0-9_-]{3,19}$/", "/0x[0-9A-F]+/g", "\b[A-Z]{3,}\b", "(?:(?<!^)[A-Z]\b|(?<!^[A-Z0-9 ]*)\b[A-Z0-9]+\b(?![A-Z0-9 ]$))", "/[^\s]{40,}/"], */
+    "cache":{},
     "dictionaryDefinitions": [],
     "dictionaries": [],
     "words": [
@@ -31,12 +49,15 @@
         "venv",
         "VM's",
         "WLAN",
+        "DIMM",
         "WPAN"
-    ],
+    ]
+}
+/*
+"showStatus": "true",\b/[a-z\s]+/\b"
     "ignoreWords": [
-        "DIMM"
-    ],
-    "import": []
+    "patterns": [],
+    "import": [] */
     /*
    cSpell:ignoreRegExp 0x[0-9a-f]+     -- will ignore c style hex numbers
    cSpell:ignoreRegExp /0x[0-9A-F]+/g  -- will ignore upper case c style hex numbers.
@@ -47,5 +68,8 @@
    cSpell:ignoreRegExp /[^\s]{40,}/    -- will ignore long strings with no spaces.
    cSpell:ignoreRegExp Email           -- this will ignore email like patterns -- see Predefined RegExp expressions
    var encodedImage = 'HR+cPzr7XGAOJNurPL0G8I2kU0UhKcqFssoKvFTR7z0T3VJfK37vS025uKroHfJ9nA6WWbHZ/ASn...';
+
+patterns: Defines a list of patterns that can be used with the `ignoreRegExpList` and `includeRegExpList` options.
+```javascript "ignoreRegExpList": ["comments"], "patterns": [   {     "name": "comment-single-line",     "pattern": "/#.*​/g"   },   {     "name": "comment-multi-line",     "pattern": "/(?:\\/\\*[\\s\\S]*?\\*\\/)/g"   },   // You can also combine multiple named patterns into one single named pattern   {     "name": "comments",     "pattern": ["comment-single-line", "comment-multi-line"]   } ] ```
+
 */
-}
