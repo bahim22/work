@@ -357,21 +357,30 @@ ___
 
 ### Storage and Peripherals
 
-1. Hard drives are usually 2.5" form factor (desktops use 3.5")
+1. `Hard Drives`: Non-volatile storage device that're also called Magnetic disk drives, conventional drive or HDD's with speeds of 5400, 7200, 10k, and 15k rpm
+2. Hard drives are usually 2.5" form factor (desktops use 3.5")
    1. 2.5: better performance due to larger cache and higher rotation speed
-   2. more available/cheaper than 1.8" drives that weigh less, consume less power, but have slower rotation speed & access time
+   2. 2.5: more available/cheaper than 1.8" drives that weigh less, consume less power, but have slower rotation speed & access time
       1. usually found in 10 inch or ultra-portable laptops
-2. drive tech: serial and parallel ATA
-3. don't have separate power connectors
-4. Form factors: 2.5”, 1.8”, or M.2
-5. Magnetic disk drives
-6. SSD
-7. SCSI (Small Computer System Interface)
-8. Sectors usually contain 512 bytes.
-9. L1 is generally found in the processor chip and it's the smallest & fastest for the CPU to read. It ranges from 8-64KB.
-   1. L2 and L3 are larger than L1 but take longer to access.
+3. drive tech: serial and parallel ATA
+4. don't have separate power connectors
+5. Form factors: 2.5”, 1.8”, or M.2
+6. `SSD` solid-state drive: flash memory (non-volatile) tech with no moving parts that uses flash to erase data in blocks and stores memory in HAND chips.
+7. Communications interfaces include:
+   1. NVMe (non-volatile memory express) with optimized data transfer with speeds of 3.5 Gbps
+   2. SATA is slowest and PCIe is medium speed
+   3. Forms factors come in M.2 (22 mm wide, length vary 60-80mm and plug into M.2 slot) and mSATA (20 mm wide, 52-pin connector)
+8. SCSI (Small Computer System Interface)
+9. Sectors usually contain 512 bytes.
+10. L1 is generally found in the processor chip and it's the smallest & fastest for the CPU to read. It ranges from 8-64KB.
+    1. L2 and L3 are larger than L1 but take longer to access.
 
 #### RAID
+
+- 0 strips data and offers no redundancy but has good performance
+- 1 mirrors data and uses more storage space to store full copies of data
+- 5 offers striping with parity; minimum 3 drives, can calculate missing data rebuild
+- 10 striping and mirroring for full redundancy, min. 4 drives
 
 1. `RAID` (Redundant Array of independent disk) Types: Hardware & Software RAID
     1. `RAID 0`: Striping w/o parity and no fault tolerance
@@ -388,13 +397,11 @@ ___
        1. fault tolerant & less expensive than disk mirroring.
        2. data can't be recovered if >= 1 disk fails, so tape backups need to be used.
        3. spreading the parity info across all drives allows all the drives to rebuild the array if another fails.
-    7. RAID 6:
-    8. RAID 0 + 1:
-    9. Mirroring has more overhead due to the entire drive being copied to another drive.
-    10. `RAID 10`: mirrored stripping. Mode 0 array + mode 1 array, striped.
+    7. Mirroring has more overhead due to the entire drive being copied to another drive.
+    8. `RAID 10`: mirrored stripping. Mode 0 array + mode 1 array, striped.
        1. ex. You striped data into 2 drives, then each drive is mirrored
        2. requires a total of 4 drives
-    11. Disk swapping: Hot-swapping (Host plugging): ability to add/remove devices to PC while it's running & OS will auto recognize changes.
+    9. Disk swapping: Hot-swapping (Host plugging): ability to add/remove devices to PC while it's running & OS will auto recognize changes.
        1. cold: device needs powered down prior to replacing parts
        2. warm: The server can remain powered on, but I/O functions corresponding to the part that needs replaced need stopped by the appropriate command
        3. hot: the faulty part can be replaced w/o interrupting the server or exec any interruption commands in I/O procedures.
@@ -417,14 +424,21 @@ ___
 11. must have a device driver; OS's come w/ thousands of built-in device drivers; may need to manually download from internet
 12. `Thunder and Lightning`
     1. general purpose I/O port that runs at 10 Gbs up to 40 Gbps
-    2. uses a mini DisplayPort or USB C connector
-    3. exclusive to Apple and uses proprietary lightning connector
+    2. terminated in a Mini-DisplayPort (Thunderbolt standard 1-2) or USB-C (3-4) connector
+    3. Combo of PCIe 2.0 x4 and DP 1.x tech
+    4. exclusive to Apple and uses proprietary lightning connector
 13. `Keyboards/Mice`
     1. keyboards use either USB or PS/2 connection; while mice almost exclusively USB; game controllers often have proprietary connection that requires a converter piece
     2. keyboard video mouse (KVM) switches give ability for a single keyboard, monitor, mouse to connect multiple PC's
 14. `Sight/Sound`
 15. `Readers/Scanners`
 16. `Expansion Cards`
+
+**Removable Storage**
+
+1. Flash Drives: non-volatile, small and portable removable storage such as SD cards, USB flash drives, optical cards
+2. Memory Cards: form factors include SD, CF, micro-SD, mini-SD, and xD
+3. Optical Cards: store data through the use of lasers on spinning discs (DC, DVD, BDs)
 
 ### Motherboard
 

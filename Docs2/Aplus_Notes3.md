@@ -10,7 +10,6 @@
   - [Sections 220-1101](#sections-220-1101)
   - [Hardware 1101](#hardware-1101)
     - [Network hardware](#network-hardware)
-    - [Peripheral Cables](#peripheral-cables)
   - [Mobile Devices 1101](#mobile-devices-1101)
   - [Hardware \& Network Troubleshooting 1101](#hardware--network-troubleshooting-1101)
   - [Backup and Recovery](#backup-and-recovery)
@@ -40,17 +39,6 @@
   - PSU
   - printer
 
-- **Devices**
-  - Laptop
-  - Display devices
-  - mobile devices
-  - printers
-
-- **Cloud**
-  - Cloud computing
-  - virtualization
-  - troubleshooting methodology
-
 - **Network**
   - protocols
   - TCP & UDP Ports
@@ -61,6 +49,20 @@
   - hardware
   - types
   - tools
+
+- **Network and Hardware Troubleshooting**
+  - f
+
+- **Mobile Devices**
+  - Laptop
+  - Display devices
+  - mobile devices
+  - printers
+
+- **Virtualization & Cloud**
+  - Cloud computing
+  - virtualization
+  - troubleshooting methodology
 
 ----------
 
@@ -94,21 +96,13 @@
 13. Twisted pair wires use color coding as standards to ensure proper referencing. It's used with RJ-45 wiring connectors.
     1. T568A: green/white, green, orange/white, blue, blue/white, orange, brown/white, and brown
     2. T568B: orange/white, orange, green/white, blue, blue/white, green, brown/white, and brown
-
-### Peripheral Cables
-
-1. g
-2. f
-3. f
+14. Hard drive cables and connectors connect internal comopenets to the motherboard. Connections are called drive interfaces (on or off board) and have attachments composed of circuitry and a header (port)
 
 **Memory**
 
 **Storage**
 
 **Motherboard**
-
-- d
-- g
 
 ----------
 
@@ -337,7 +331,10 @@ _IP Address & Network Types_
 - SOHO security settings
 - workstation security
 
-- **Data & Remote Info**
+**Software Troubleshooting**
+
+- **Operational Procedures**
+- Data & Remote Info
 - data destruction and disposal
 - backup and recovery methods
 - script files
@@ -365,7 +362,6 @@ _IP Address & Network Types_
 
 1. Windows `Home` edition:
    1. Does not allow: Assigned Access, Remote Desktop server component, local group policy editor (gpedit.msc)
-   2. k
 2. `Pro`
    1. 2 TB memory limit
    2. joining a domain
@@ -399,8 +395,20 @@ _IP Address & Network Types_
    1. can view event logs: Apps, System, and Security (audits) that're categorized as either Info, Warn, Error events.
 4. `diskmgmt.msc`: system utility for managing storage media
 5. `taskschd.msc`: admin tool for scheduling program launches, and scripts set to run at specific times or intervals.
-6. `devmgmt.msc`: componet for viewing/managing hardware components and device drivers
+6. `devmgmt.msc`: component for viewing/managing hardware components and device drivers
 7. Windows Certificate Manager snap-in (`certmgr.msc`): manage (view/export/import/delete) current user's digital certificates
+8. `perfmon.exe`: admin tool to examine programs affect on computer's performance
+   1. provides logs and real-time info of hardware and system resources that're being used by OS, running apps, and services.
+9. `gpedit.msc`: admin tool for modifying settings which get applied to computers and users
+10. `msinfo32.exe`: app utility that shows computer's components, hardware resources, and software environment.
+11. `msconfig.exe`: tool to troubleshoot system startup issues
+12. In `System Configuration utility`, the `Boot Tab` is used to disable certain, nonessential apps, services and drivers from initiating during system startup
+    1. Can also manage boot order, safe boot options, boot logging and hardware resources (max RAM) that the chosen default OS can use (when in a multiboot env.)
+    2. `Services Tab`: manage background apps that launch at system start
+    3. `Startup Tab`: is managed through `Task Manager`
+    4. `Tools Tab`: lists MMC snap-ins available to launch
+13. `dfrgui.exe`: disk optimization (defrag) to increase performance
+14. `regedit.exe`: system utility to access database of system configuration info
 
 ### macOS, Linux, Mobile
 
@@ -432,6 +440,8 @@ Troubleshooting Method
 
 ----------
 
+<div>
+
 ## References and Resources
 
 <ul>
@@ -451,8 +461,9 @@ Troubleshooting Method
 
 <a href='https://github.com/bahim22'>
 <h3>Hima Portfolio</h3>
-<img src='https://raw.githubusercontent.com/bahim22/work/ppu/py-prac/QRCodes/qr_blue.png' width=50 height=50 align=center alt='qr_code for profile'>
 </a>
+<img src='https://raw.githubusercontent.com/bahim22/work/ppu/py-prac/QRCodes/qr_blue.png' width=50 height=50 align=center alt='qr_code for profile'>
+</div>
 
 <!-- ![QR_Code](https://github.com/bahim22/work/blob/ppu/py-prac/QRCodes/qr_blue.png) -->
 
