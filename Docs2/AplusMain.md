@@ -4,54 +4,15 @@
 
 - [CompTIA A+ Certification](#comptia-a-certification)
   - [Table of Contents](#table-of-contents)
-  - [_CORE 1_ (220-1001)](#core-1-220-1001)
-    - [Exam: Core 1 Objectives](#exam-core-1-objectives)
-  - [**CORE 2** (220-1002)](#core-2-220-1002)
-    - [Exam: Core 2 Objectives: EXAM NUMBER: CORE 2 (220-1002)](#exam-core-2-objectives-exam-number-core-2-220-1002)
+  - [**CORE 1** Objectives (220-1101)](#core-1-objectives-220-1101)
+  - [**CORE 2** Objectives: (220-1102)](#core-2-objectives-220-1102)
   - [Overall: Core 1-2](#overall-core-1-2)
-  - [Hardware/Software List](#hardwaresoftware-list)
+  - [Hardware \& Software List](#hardware--software-list)
   - [References](#references)
 
-## _CORE 1_ (220-1001)
+## **CORE 1** Objectives (220-1101)
 
-### Exam: Core 1 Objectives
-
-1. `Mobile Devices`:14%
-   1. install/config laptop hardware/components
-      1. hardware and device replacement
-   2. install compo w/in laptop display
-      2. wi-fi antenna connector/placement, webcam, mic, inverter, digitizer/touchscreen
-      3. laptop features: special func (fn) keys, docking station, port replicator, laptop/cable lock, rotating/removable screens
-   3. Other types of mobile devices
-      1. tablets, smartphones, wearables (watches, fitness monitors, VR/AR headsets), e-readers, GPS
-      2. connect/config accessories/ports
-         1. connection types and accessories
-            1. wired:
-               1. USB: Micro, Mini and C
-               2. lightning
-               3. tethering
-               4. vendor-specific ports (communication/power)
-            2. wireless
-               1. NFC
-               2. bluetooth
-               3. IR
-               4. Hotspot
-            3. headsets, speakers, game pads, battery packs/chargers, cases/waterproofing, CC readers, memory/MicroSD
-   4. network conn and app support
-      1. wireless/cell data net
-      2. bluetooth
-      3. Corp & ISP email config
-      4. Integrated commercial provider email config
-      5. PRI/PRL/baseband updates
-      6. radio firmware
-      7. IMEI v. IMSI
-      8. VPN
-   5. mobile device synch methods
-      1. cloud, desktop, car
-      2. data & connection types that can & enable synch
-      3. mutual auth for multiple services (SSO)
-      4. software requirements to install app on PC
-2. `Networking`: 20%
+1. `Networking`: 20%
    1. ports and protocols
    2. TCP v. UDP
    3. network hardware devices
@@ -68,14 +29,12 @@
       4. IPv4 and IPv6
       5. Subnet mask
       6. Gateway, VPN, VLAN, NAT
-   8. internet connection & network types
-      1. internet conn types
-         1. cable, DSL, dial-up, fiber, satellite, ISDN, cell (tethering, hotspot)
-      2. network types
-         1. LAN, WAN, PAN, MAN, WMN
-   9. networking tools
-      1. crimper, cable-stripper, multimeter, tone generator & probe, cable tester, loopback plug, punch-down tool, wi-fi analyzer
-3. `Hardware`: 27%
+   8. internet connection: cable, DSL, dial-up, fiber, satellite, ISDN, cell (tethering, hotspot)
+   9. network types: LAN, WAN, PAN, MAN, WMN
+   10. networking tools
+       1. crimper, cable-stripper, multimeter, tone generator & probe, cable tester
+       2. loopback plug, punch-down tool, wi-fi analyzer
+2. `Hardware`: 27%
    1. cable types/features/purpose
       1. network cables
       2. video
@@ -93,43 +52,63 @@
    9. install common devices
    10. SOHO multifunction devices/printers and settings
    11. Printer install/maintain
-4. `Virtualization` & `Cloud Computing`: 12%
-   1. client side virtualization
-      1. VM
-         1. purpose
-         2. requirements
-            1. resource
-            2. emulator
-            3. security
-            4. network
-         3. hypervisor
-   2. cloud models
-      1. IaaS
-      2. SaaS
-      3. PaaS
-      4. public/private/hybrid/community
-      5. shared resources
-      6. rapid elasticity
-      7. on-demand
-      8. resource pooling
-      9. measured service
-      10. metered
-      11. off-site email apps
-      12. cloud file storage services
-      13. virtual app streaming/cloud-based apps
-      14. virtual desktop
-5. `Hardware` & `Network Troubleshooting`: 27%
-   1. best practicetice methodology for resolving problems
+3. `Hardware` & `Network Troubleshooting`: 27%
+   1. best practices methodology for resolving problems
    2. issues w/ mobos, RAM, CPU, power
    3. HDD and RAID arrays
    4. video, projector, display issues
    5. mobile device issues
    6. printers
    7. wired/wireless network
+4. `Mobile Devices`:14%
+   1. install/config laptop hardware/components
+      1. hardware and device replacement
+   2. install compo w/in laptop display
+      1. wi-fi antenna connector/placement, webcam, mic, inverter, digitizer/touchscreen
+      2. laptop features: special func (fn) keys, docking station, port replicator, laptop/cable lock, rotating/removable screens
+   3. Other types of mobile devices
+      1. tablets, smartphones, wearables (watches, fitness monitors, VR/AR headsets), e-readers, GPS
+      2. connection + configuration types, and accessories
+         1. wired: USB: Micro, Mini and C, lightning, tethering, vendor-specific ports (communication/power)
+         2. wireless: NFC, bluetooth, Infrared, Hotspot
+         3. headsets, speakers, game pads, battery packs/chargers, cases/waterproofing, CC readers, memory/MicroSD
+   4. Network connection and app support
+      1. wireless/cell data net
+      2. bluetooth
+      3. Corp & ISP email config
+      4. Integrated commercial provider email config
+      5. PRI/PRL/baseband updates
+      6. radio firmware
+      7. IMEI v. IMSI
+      8. VPN
+   5. mobile device synch methods
+      1. cloud, desktop, car
+      2. data & connection types that can & enable synch
+      3. mutual auth for multiple services (SSO)
+      4. software requirements to install app on PC
+5. `Virtualization` & `Cloud Computing`: 12%
+   1. Client side virtualization
+      1. Virtual Machine info
+         1. resource
+         2. emulator
+         3. security
+         4. network
+         5. hypervisor
+   2. Cloud models
+      1. IaaS, SaaS, PaaS
+      2. public, private, hybrid, community
+      3. shared resources
+      4. resource pooling
+      5. measured service
+      6. metered
+      7. rapid elasticity
+      8. on-demand
+      9. off-site email apps
+      10. cloud file storage services
+      11. virtual app streaming/cloud-based apps
+      12. virtual desktop
 
-## **CORE 2** (220-1002)
-
-### Exam: Core 2 Objectives: EXAM NUMBER: CORE 2 (220-1002)
+## **CORE 2** Objectives: (220-1102)
 
 - Assemble components based on customer requirements
 - Install, configure, and maintain PCs, mobile devices, and software for end users
@@ -189,10 +168,10 @@
    6. process for addressing prohibited content/activity, privacy, licensing, policy concepts
    7. communication tech and professionalism
    8. scripting basics
-      1. file types, env var., comments, script constructs, data types
+      1. file types, env variables, comments, script constructs, data types
    9. remote access tech
       1. RDP, Telnet, SSH, 3rd party tools (screen share, Fileshare)
-      2. security info of each methods
+      2. security info of each method
 
 ___
 
@@ -275,16 +254,16 @@ ___
 19. LESSON 19: USING `SUPPORT AND SCRIPTING` TOOLS
     1. Topic 19A: Use Remote Access Technologies
     2. Topic 19B: Implement Backup and Recovery
-    3. Topic 19C: Explain Data Handling Best practicetices
+    3. Topic 19C: Explain Data Handling Best practices
     4. Topic 19D: Identify Basics of Scripting
 20. LESSON 20: IMPLEMENTING `OPERATIONAL` PROCEDURES
-    1. Topic 20A: Implement Best practicetice Documentation
+    1. Topic 20A: Implement Best practices Documentation
     2. Topic 20B: Use Proper Communication Techniques
     3. Topic 20C: Use Common Safety and Environmental Procedures
 
 ___
 
-## Hardware/Software List
+## Hardware & Software List
 
 _EQUIPMENT_
 • Apple tablet/smartphone

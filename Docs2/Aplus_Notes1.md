@@ -1,94 +1,41 @@
-# CompTIA A+ Docs
+# CompTIA A+ 1101: Network, Hardware, Mobile + 1102: OS, Operational Process
 
 | Hima Balde | PPU | 06-10 of 2022 |
 | ---- | --- | ---- |
 
 ## Table of Contents
 
-- [CompTIA A+ Docs](#comptia-a-docs)
+- [CompTIA A+ 1101: Network, Hardware, Mobile + 1102: OS, Operational Process](#comptia-a-1101-network-hardware-mobile--1102-os-operational-process)
   - [Table of Contents](#table-of-contents)
-  - [Operational Procedures](#operational-procedures)
-  - [`Network`](#network)
+  - [`Network 1101`](#network-1101)
     - [**Ports** | **Protocols** | **Hardware**](#ports--protocols--hardware)
       - [`TCP/IP`](#tcpip)
       - [`UDP`](#udp)
       - [`OSI model`](#osi-model)
-  - [**Hardware**](#hardware)
+  - [**Hardware 1101**](#hardware-1101)
     - [Memory](#memory)
-      - [RAM](#ram)
     - [Storage and Peripherals](#storage-and-peripherals)
       - [RAID](#raid)
-    - [Computer Components](#computer-components)
-      - [Motherboard](#motherboard)
-      - [Processor | CPU](#processor--cpu)
-      - [Power supplies](#power-supplies)
-      - [BIOS/CMOS/UEFI](#bioscmosuefi)
-      - [Adapter Cards](#adapter-cards)
-  - [`Software & OS`](#software--os)
+    - [Motherboard](#motherboard)
+    - [Processor | CPU](#processor--cpu)
+    - [Power supplies](#power-supplies)
+    - [BIOS/CMOS/UEFI](#bioscmosuefi)
+  - [Mobile Devices 1101](#mobile-devices-1101)
+    - [Displays](#displays)
+    - [Video Cables](#video-cables)
+  - [`Operating Systems 1102`](#operating-systems-1102)
     - [Windows Admin Tools](#windows-admin-tools)
     - [Windows Management Framework](#windows-management-framework)
     - [Windows naming](#windows-naming)
-    - [OS Admin + Operations](#os-admin--operations)
-  - [Mobile Devices \& Display](#mobile-devices--display)
-    - [Video Cables](#video-cables)
+    - [OS Install, Upgrade \& Boot](#os-install-upgrade--boot)
+  - [Operational Procedures 1102](#operational-procedures-1102)
+    - [**Troubleshooting Steps**](#troubleshooting-steps)
+    - [Tools and Safety](#tools-and-safety)
   - [References](#references)
 
-## Operational Procedures
-
-**Troubleshooting Steps**
-
-1. Identify the problem
-2. establish a probable cause
-3. testing to determine cause
-4. establish plan to resolve issue
-5. implement solution
-6. verify functionality and implement preventive measures
-7. document results and steps
-
-- Identify the problem
-  - Question the user and identify user changes to computer and perform backups before making changes
-  - Inquire regarding environmental or infrastructure changesReview system and application logs
-- Establish a theory of probable cause (question the obvious)If necessary, conduct external or internal research based on symptoms
-- Test the theory to determine causeOnce the theory is confirmed, determine the next steps to resolve problemIf theory is not confirmed reestablish
-new theory or escalate
-- Establish a plan of action to resolve the problem and implement the solution
-- Verify full system functionality and, if applicable, implement preventive measures
-- Document findings, actions, and outcomes
-
-**Secondary Skills**
-
-> soft skills, professional communication/attire, layman's term usage, keep info on drivers, routers, chips, etc., accessible; always backup client data prior to troubleshooting
-
 ___
 
-**Tools and Safety**
-
-- multi-head screwdrivers, tweezers, multimeter (verifies power volts & connection)
-- chip extractors, storage canisters, software tools (on zip & thumb drives)
-- chips get affected @ 200v from electrostatic discharge
-- humidifiers: ~ 50%; too low causes static from dry or corrosion from wet;
-- compressed air canister; remove jewelry
-- use antistatic bands when moving PC parts; ESD mats/straps to eliminate static
-- equipment & self grounding: equalize charge; clamp to metal on PC case
-- high voltage safety: 120v => 3.3-5 or 12v conversion (power supply)
-  - 85-110 decibels = start of damage to hearing
-- `Ergonomics`: design to prevent discomfort/injury due to repetitive use
-  - eye care, good posture, focus on distant object every 15 min; take breaks; where gloves, mass, eye shields when applicable
-  - dispose of waste appropriately (hazardous and environmental)
-    - batteries, CRTs, printer carts/toners
-- `Safety rules and regulations`:
-  - Environment, Hazards, Prevention, PPE
-  - UL: Underwriters lab | CSA Inter'l: safety check organizations
-  - OSHA (occupation safety and health org.)
-  - NEC - nat'l electric code
-  - CFR - code of federal regulations
-  - material safety sheets come w/ any hardware that has chemicals
-  - `Check` conditions and grounding prongs; electricity is off and unplugged
-  - `review` lockout/tag-out policies
-
-___
-
-## `Network`
+## `Network 1101`
 
 - IEEE (Institute of Electrical & Electronics Engineers) handles wired and wireless networking
 - ISO (International Organization for Standardization) handles other types of networks
@@ -374,14 +321,12 @@ Although UDP provides integrity verification (via checksum) of the header and pa
 
 ___
 
-## **Hardware**
+## **Hardware 1101**
 
 ### Memory
 
-#### RAM
-
 <details>
-<summary>Form Factors & Versions | Speed, Latency & Timing |  Features + Variants
+<summary> `RAM` Form Factors & Versions | Speed, Latency & Timing |  Features + Variants
 </summary>
 <p>
 
@@ -481,16 +426,16 @@ ___
 15. `Readers/Scanners`
 16. `Expansion Cards`
 
-### Computer Components
+### Motherboard
+
+**Main Parts of a Computer**
 
 1. `CPU`(The Central Processing Unit) is the part of the computer that asks, "what's next"
 2. `Main Memory`: stores prog. & data that CPU uses quickly and isn't saved on power off
 3. `Secondary Memory`: also stores info; but is slower; keeps info even if PC has no power
    1. (ex. disk drives, flash memory - USBs)
-4. `I/O devices`: input and output devices used to interact w/ the computer
-5. `network connection`: get info over network; store/retrieve data (similar to secondary mem.)
-
-#### Motherboard
+4. `I/O devices`: input and output devices used to interact with the computer
+5. `network connection`: get info over network; store/retrieve data (similar to secondary memory)
 
 - `Power connectors` – Any component cannot operate without power and the same goes for a motherboard. The power connector is a 20/24-pin connector that sits near to the processor socket on some hardware while is present beside the right edge in others. It’s the area where the main connector attaches and thus, supplies power to all components.
 - `Processor socket` – It is a central unit present on the motherboard located on the center and the main function of it is to hold the entire processor.
@@ -510,16 +455,15 @@ ___
 - `Rear Panel Connectors` – Rear Panel Connectors act as a bridge between the inside and outside of a computer. These connectors are situated on the left edge of a motherboard, so it is pretty confusion what the name suggests. However, these connectors can be accessed from the outside, so their name simply tells where they can be accessed from. These connectors power all external hardware which include a mouse, keyboard, speakers, monitor, etc.
 - form factors: ATX, microATX, ITX
 - expansion buses: PCIe and PCI
-- CPU info
-  - intel chipsets connect to CPU via DMI or QPI
-    - LGA775, 1150, 1155, 1156, 1366, 2011 sockets
-  - AMD CPU-to-chipset is HyperTransport
-    - AM3, AM3+, FM1, FM2, FM2+ sockets
+- `Intel` chipsets connect to CPU via DMI or QPI
+  - Socket Types: LGA775, 1150, 1155, 1156, 1366, 2011
+- `AMD`: CPU-to-chipset is HyperTransport
+  - Socket Types: AM3, AM3+, FM1, FM2, FM2+
 
 <!-- ![motherboard](/assets/motherboardOld.jpg)
 ![motherboardParts](/assets/motherboardParts.jpg) -->
 
-#### Processor | CPU
+### Processor | CPU
 
 - brains of the computer
 - processor performs calculations based on requests from the OS
@@ -530,15 +474,15 @@ ___
 - OS & Processor
   - data input: from input device such as keyboard, mouse, card reader => processing input => data output (to output drivers {monitors, printers}) => storage via storage devices {hard drive {HDD, SSD}, RAM}
 
-#### Power supplies
+### Power supplies
 
 - take 120v of alternating current (AC) and convert to the volt required by the PC (usually 12v || 3.3v, 5v)
   - different volts for HDD or PCIe cards
 
-#### BIOS/CMOS/UEFI
+### BIOS/CMOS/UEFI
 
-1. IDs, test, init compos and boots to drive, optical disk,  USB flash drive or network (PXE)
-2. can update by flashing it w/ new firmware
+1. Identifies, tests,and initializes hardware components, then boots to a drive, optical disk, USB flash drive or network (PXE)
+2. can update by flashing with new firmware
 
 - _BIOS_: Basic input/output system; chip on motherboard w/ in ROM or w/in flash memory (aka firmware)
 - _CMOS_: stores time/date, passwords, CR2032 lithium battery provides power
@@ -552,17 +496,51 @@ ___
   - forms part of the UEFI standard
   - PXE-capable network interface controller (NIC) required on client side
   - uses industry-standard network protocols such as _DHCP_ and _TFTP_
-- ACPI: advanced config and power management interface: defines working interfaces between the OS, BIOS, and hardware
+- _ACPI_: advanced config and power management interface: defines working interfaces between the OS, BIOS, and hardware
   - can allow the OS to control power management
-
-#### Adapter Cards
 
 ___
 
-## `Software & OS`
+## Mobile Devices 1101
 
-- `SDK` is a kit that offers tools, code samples, libraries, processes, and guides for creating software applications on specific platforms.
-- `API` is an interface that allows the software to interact with each other
+### Displays
+
+`backlight systems`
+
+1. _CCFL_: cold cathode fluorescent light - older, uses daylight specter fluorescent tube and inverter for power
+2. _CRT_: cathode ray tube
+3. _LCD_: requires backlight sys; uses liquid crystal displays (frequent in laptops)
+   1. liquid crystal displays: shines a backlight through liquid crystals, creating the image on the screen
+4. _LED_: light emitting diodes - doesn't use inverter and uses strips of LEDs
+    1. LCD blocks areas of backlight to create images
+    2. LEDs generate light themselves and consumes less power
+    3. Plasma: made of small cells of ionized gas (good contrast ratio)
+
+- **In-plane switching** IPS, offers the widest viewing angle and the best color reproduction. ideal for vertical mounting and those needing high quality color (graphic/video artists)
+- **twisted nematic**: TN, oldest LCD tech, limited viewing angles and washed out/blended color reproduction. minimal lag time makes them ideal for gamers and are inexpensive options for office use
+- **vertical alignment** VA, offers best contrast ratio of the 3 technologies and is solid middle ground choice with decent color reproduction w/ slight lag
+- The `inverter` is located behind the LCD panel and converts DC current into AC current
+- **OLED**: structure provides flexibility for curved displays
+  - contain the image producing components and light source in one panel
+  - organic light emitting compound is set between an anode and cathode producing a current. the current runs thru the electroluminescent compound producing light
+  - consumes less power than LCD, with higher contrast ratio resulting in sharper images. common in high end monitors, phones and handheld devices
+    - organic light emitting diode - thinner/lighter; made of a layer of organic compound between 2 light-emitting electrodes
+  - flickering/dim screen may be due to faulty inverter
+
+### Video Cables
+
+1. **VGA**: video graphics array: legacy cable; only transmits analog signal; blue
+2. **DVI** digital visual interface: addressed analog video transmission issues. Able to transmit digital video signals to display units
+   1. 3 standards: DVI-A analog only, D digital only, I: analog & digital; white
+3. **HDMI**: high-def multimedia interface: higher motion-picture frame rates and digital audio w/ single cable.
+   1. Common connector type: Standard A HDMI (19 pins)
+4. **DisplayPort**: DP: uses less power and is backward compatible w/ VGA & DVI. transmits video & audio signals.
+   1. DP standard features 2 hooks to lock the cable in place
+5. Can use adaptors to convert one type of connection/cable tech to another
+
+___
+
+## `Operating Systems 1102`
 
 ### Windows Admin Tools
 
@@ -596,9 +574,9 @@ ___
   - `workgroup` is basic type of networking organization used as an organizational tool w/ no security or central admin
   - `domain` is an organizational group (type used today is Active Directory domain) that provides central admin and has ability to disperse security and network info to other PC's at one time
 
-### OS Admin + Operations
+### OS Install, Upgrade & Boot
 
-<details> <summary> Install, Upgrade, Boot</summary><p>
+<details> <summary> Boot options, file systems, and disk partitioning</summary><p>
 
 1. optical disc (CD-ROM, DVD, Blu-ray): pc will prob have built-in drive to read them; very common way to install OS on a pc
 2. external/flash drive (interfaces: USB, eSATA): ext optical/hard/flash drives, USB is common
@@ -608,8 +586,8 @@ ___
    1. disk can have OS install image or OS already installed. Most common way to boot PC after OS install completed
    2. simple configs have one bootable par on a disk, but a disk can have > 1 par to multi-boot diff OS. One logical par can span multiple physical hard disks
 
-| Install Types           |   |
-| :------------------- | -------------- |
+| Install Types   |   |
+| :---------- | --------- |
 |  _Type_     |  _Description_ |
 |   💻    | 📕 |
 |    unattended     | pre-config., need special server w/ install image/script & good for many PC's w/ same config |
@@ -647,54 +625,70 @@ ___
 | quick vs. full format | quick changes FS records making dsk appear empty. Full rewrites prev fi, detects surface errors on dsk and makes restoring fi harder. |
 
 1. 3rd party (unsigned drivers) should have source verified to ensure validity.
-2. signed drivers: W install drivers are tested/approved by MS
-3. workgroup: Can setup printer & fi sharing w/ small group/fam
+2. signed drivers: Windows installed drivers are tested/approved by Microsoft
+3. `workgroup`: Can setup printer & file sharing w/ small group or family
    1. ex. a dept in a larger org. or a home user
-4. Domain setup: Companies can use a domain controller instead for more secure, centralized login for large groups, which allows an easier path for managing large net
-5. Time, Date, Region, Lang: config these settings during install (some OS require reinstall to change lang.)
+4. `Domain` setup: Companies can use a domain controller instead for more secure, centralized login for large groups, which allows an easier path for managing large networks
+5. Time, Date, Region, Lang: config these settings during install (some OS require reinstall to change language)
 6. Driver install, Software, Updates: Keep system updated for security reasons. Install proper drivers for the type of system (32-bit => x86 sys && 64-bit on x64 sys). Use 'check for updates' utility in W10 to update OS and other MS software. Other software needs checked separately.
-7. Know differences in Hardware/Apps/OS compatibility
+7. Differences in Hardware/Apps/OS compatibility
 
 </p></details>
 
 ___
 
-## Mobile Devices & Display
+## Operational Procedures 1102
 
-`backlight systems`
+### **Troubleshooting Steps**
 
-1. _CCFL_: cold cathode fluorescent light - older, uses daylight specter fluorescent tube and inverter for power
-2. _CRT_: cathode ray tube
-3. _LCD_: requires backlight sys; uses liquid crystal displays (frequent in laptops)
-   1. liquid crystal displays: shines a backlight through liquid crystals, creating the image on the screen
-4. _LED_: light emitting diodes - doesn't use inverter and uses strips of LEDs
-    1. LCD blocks areas of backlight to create images
-    2. LEDs generate light themselves and consumes less power
-    3. Plasma: made of small cells of ionized gas (good contrast ratio)
+1. Identify the problem
+2. establish a probable cause
+3. testing to determine cause
+4. establish plan to resolve issue
+5. implement solution
+6. verify functionality and implement preventive measures
+7. document results and steps
 
-- **In-plane switching** IPS, offers the widest viewing angle and the best color reproduction. ideal for vertical mounting and those needing high quality color (graphic/video artists)
-- **twisted nematic**: TN, oldest LCD tech, limited viewing angles and washed out/blended color reproduction. minimal lag time makes them ideal for gamers and are inexpensive options for office use
-- **vertical alignment** VA, offers best contrast ratio of the 3 technologies and is solid middle ground choice with decent color reproduction w/ slight lag
-- The inverter is located behind the LCD panel and converts DC current into AC current
-- **OLED**: structure provides flexibility for curved displays
-  - contain the image producing components and light source in one panel
-  - organic light emitting compound is set between an anode and cathode producing a current. the current runs thru the electroluminescent compound producing light
-  - consumes less power than LCD, with higher contrast ratio resulting in sharper images. common in high end monitors, phones and handheld devices
-    - organic light emitting diode - thinner/lighter; made of a layer of organic compound between 2 light-emitting electrodes
-  - flickering/dim screen may be due to faulty inverter
+- Identify the problem
+  - Question the user and identify user changes to computer and perform backups before making changes
+  - Inquire regarding environmental or infrastructure changesReview system and application logs
+- Establish a theory of probable cause (question the obvious)If necessary, conduct external or internal research based on symptoms
+- Test the theory to determine causeOnce the theory is confirmed, determine the next steps to resolve problemIf theory is not confirmed reestablish
+new theory or escalate
+- Establish a plan of action to resolve the problem and implement the solution
+- Verify full system functionality and, if applicable, implement preventive measures
+- Document findings, actions, and outcomes
 
-### Video Cables
+**Secondary Skills**
 
-1. **VGA**: video graphics array: legacy cable; only transmits analog signal; blue
-2. **DVI** digital visual interface: addressed analog video transmission issues. Able to transmit digital video signals to display units
-   1. 3 standards: DVI-A analog only, D digital only, I: analog & digital; white
-3. **HDMI**: high-def multimedia interface: higher motion-picture frame rates and digital audio w/ single cable.
-   1. Common connector type: Standard A HDMI (19 pins)
-4. **DisplayPort**: DP: uses less power and is backward compatible w/ VGA & DVI. transmits video & audio signals.
-   1. DP standard features 2 hooks to lock the cable in place
-5. Can use adaptors to convert one type of connection/cable tech to another
+> soft skills, professional communication/attire, layman's term usage, keep info on drivers, routers, chips, etc., accessible; always backup client data prior to troubleshooting
 
 ___
+
+### Tools and Safety
+
+- multi-head screwdrivers, tweezers, multimeter (verifies power volts & connection)
+- chip extractors, storage canisters, software tools (on zip & thumb drives)
+- chips get affected @ 200v from electrostatic discharge
+- humidifiers: ~ 50%; too low causes static from dry or corrosion from wet;
+- compressed air canister; remove jewelry
+- use antistatic bands when moving PC parts; ESD mats/straps to eliminate static
+- equipment & self grounding: equalize charge; clamp to metal on PC case
+- high voltage safety: 120v => 3.3-5 or 12v conversion (power supply)
+  - 85-110 decibels = start of damage to hearing
+- `Ergonomics`: design to prevent discomfort/injury due to repetitive use
+  - eye care, good posture, focus on distant object every 15 min; take breaks; where gloves, mass, eye shields when applicable
+  - dispose of waste appropriately (hazardous and environmental)
+    - batteries, CRTs, printer carts/toners
+- `Safety rules and regulations`:
+  - Environment, Hazards, Prevention, PPE
+  - UL: Underwriters lab | CSA Inter'l: safety check organizations
+  - OSHA (occupation safety and health org.)
+  - NEC - nat'l electric code
+  - CFR - code of federal regulations
+  - material safety sheets come w/ any hardware that has chemicals
+  - `Check` conditions and grounding prongs; electricity is off and unplugged
+  - `review` lockout/tag-out policies
 
 ## References
 

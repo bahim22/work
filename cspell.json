@@ -4,7 +4,7 @@
     "allowCompoundWords": true,
     "numSuggestions": 5,
     "ignorePaths": [
-        "node_modules",// ignores anything w/in dir
+        "node_modules", // ignores anything w/in dir
         // the same for this one"**/node_modules", | "**/node_modules/**",
         "vscode-extension",
         ".git",
@@ -14,24 +14,33 @@
     ],
     "suggestionsTimeout": 250,
     "caseSensitive": false,
-    "maxDuplicateProblems":2,
+    "maxDuplicateProblems": 2,
     "useGitignore": true,
-    "enableFiletypes": ["!env","!py"],
-    "ignoreRegExpList": [ "/^[A-Z][a-z0-9_-]{3,19}$/" , "/^[^a-z]*$/"],
+    "enableFiletypes": [
+        "!env",
+        "!py"
+    ],
+    "ignoreRegExpList": [
+        "/^[A-Z][a-z0-9_-]{3,19}$/",
+        "/^[^a-z]*$/"
+    ],
     /*
         ["ignoreRegExpList": ["[A-F]{3,}", "/^[A-Z][a-z0-9_-]{3,19}$/", "/0x[0-9A-F]+/g", "\b[A-Z]{3,}\b", "(?:(?<!^)[A-Z]\b|(?<!^[A-Z0-9 ]*)\b[A-Z0-9]+\b(?![A-Z0-9 ]$))", "/[^\s]{40,}/"],]
     */
-    "cache":{},
+    "cache": {},
     "dictionaryDefinitions": [],
     "dictionaries": [],
     "words": [
         "ACPI",
+        "APIPA",
         "Aplus",
+        "Bahim",
         "bootable",
         "CDMA",
         "chipsets",
         "CMOS",
         "connectionless",
+        "DIMM",
         "Fileshare",
         "Gbps",
         "gpedit",
@@ -52,7 +61,6 @@
         "venv",
         "VM's",
         "WLAN",
-        "DIMM",
         "WPAN"
     ]
 }
@@ -61,7 +69,7 @@
     "ignoreWords": [
     "patterns": [],
     "import": [] */
-    /*
+/*
    cSpell:ignoreRegExp 0x[0-9a-f]+     -- will ignore c style hex numbers
    cSpell:ignoreRegExp /0x[0-9A-F]+/g  -- will ignore upper case c style hex numbers.
    cSpell:ignoreRegExp g{5} h{5}       -- will only match ggggg, but not hhhhh or 'ggggg hhhhh'
