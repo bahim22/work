@@ -1,11 +1,11 @@
 <!-- /* cspell: enableCompoundWords */ -->
 <!-- cSpell:ignoreRegExp /[^\s]{40,}/  -->
 
-# A+ Practice & Notes 4
+# A+ Notes 1101 & 1102
 
 # Table of Contents
 
-- [A+ Practice \& Notes 4](#a-practice--notes-4)
+- [A+ Notes 1101 \& 1102](#a-notes-1101--1102)
 - [Table of Contents](#table-of-contents)
   - [Sections 220-1101](#sections-220-1101)
   - [Hardware 1101](#hardware-1101)

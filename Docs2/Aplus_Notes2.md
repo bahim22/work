@@ -1,34 +1,32 @@
-# Comptia A+
+# Comptia A+ Network, Hardware, Scripting, OS
 
 <details><summary>Table of contents</summary><p>
 
-- [Comptia A+](#comptia-a)
-  - [Network](#network)
+- [Comptia A+ Network, Hardware, Scripting, OS](#comptia-a-network-hardware-scripting-os)
+  - [Network 1101](#network-1101)
     - [Networked Host Services](#networked-host-services)
     - [Ports](#ports)
     - [Ethernet | 802.11 wireless | Wi-Fi](#ethernet--80211-wireless--wi-fi)
     - [Network Questions](#network-questions)
-  - [Shell](#shell)
+  - [Scripting 1102](#scripting-1102)
     - [Network Commands](#network-commands)
     - [Cmd/Pwsh](#cmdpwsh)
     - [Bash cmds](#bash-cmds)
     - [Windows CMD](#windows-cmd)
-  - [Operating Systems](#operating-systems)
+  - [Operating Systems 1102](#operating-systems-1102)
     - [MacOS X](#macos-x)
     - [Windows](#windows)
     - [Users, Groups, Permissions](#users-groups-permissions)
     - [OS maintenance, optimization, general info](#os-maintenance-optimization-general-info)
-  - [Virtualization](#virtualization)
-  - [Hardware](#hardware)
-    - [Cable Types](#cable-types)
-      - [Network Cables](#network-cables)
-      - [Connector types](#connector-types)
-      - [Hard Drive Cables](#hard-drive-cables)
+  - [Virtualization 1101](#virtualization-1101)
+  - [Hardware 1101](#hardware-1101)
+    - [Network Cables](#network-cables)
+    - [Connector types](#connector-types)
+    - [Hard Drive Cables](#hard-drive-cables)
     - [RAID](#raid)
-  - [Troubleshoot](#troubleshoot)
-  - [Operational Procedures](#operational-procedures)
-  - [Software Troubleshooting](#software-troubleshooting)
-  - [Security](#security)
+  - [Operational Procedures 1102](#operational-procedures-1102)
+  - [Software Troubleshooting 1102](#software-troubleshooting-1102)
+  - [Security 1102](#security-1102)
   - [Sample Questions](#sample-questions)
 
 </p></details>
@@ -36,7 +34,7 @@
 
 ___
 
-## Network
+## Network 1101
 
 ### Networked Host Services
 
@@ -207,7 +205,7 @@ ___
 27. `DSL` makes use of phone lines that already exist & are limited by dist. from central office
 28. `ISDN`: integrated services digital network supports use of bearer (B) channels for sending data & D chan. for signal/control
 
-## Shell
+## Scripting 1102
 <!-- cspell: disable  -->
 
 > Network commands, Windows CMD, Powershell, Bash
@@ -344,7 +342,7 @@ RD / `RMDIR` | delete dir
 </p></details>
 <!-- cspell: enable  -->
 
-## Operating Systems
+## Operating Systems 1102
 
 <details><summary>Mac, Windows, Linux + General Use</summary><p>
 
@@ -433,7 +431,7 @@ RD / `RMDIR` | delete dir
 
 </p></details>
 
-## Virtualization
+## Virtualization 1101
 
 1. **PaaS** is a complete cloud-based software development environment
 2. **SaaS** is a cloud service that handles managed software, deployment and includes the platform and infrastructure
@@ -442,7 +440,7 @@ RD / `RMDIR` | delete dir
 5. Resource pooling: cloud service provider provides all resources in a resource pool and gives you the option to select specific resources
 6. Hybrid cloud model: has benefits of both public and private clouds
 
-## Hardware
+## Hardware 1101
 
 <details><summary>Hardware</summary><p>
 
@@ -452,9 +450,7 @@ RD / `RMDIR` | delete dir
 4. AT style systems use 2 power connectors (P8 & P9) to connect to mobo. ATX uses one P1 connector.
 5. inverter board: converts low volt DC power to high volt AC; lights up back-light bulb. If it's broken, LCD screen won't light up when laptop is powered, but you'll see a very dim image
 
-### Cable Types
-
-#### Network Cables
+### Network Cables
 
 - 3 primary types: **coaxial**, **twisted pair**, **fiber**
 - used for connecting devices to networking equipment
@@ -487,7 +483,7 @@ RD / `RMDIR` | delete dir
    1. immune to electrical interference & wiretapping
    2. Two types: *single-mode*: carries one light path, sourced from a laser (much longer distance than multi) and *multimode*: carries multiple light paths sourced by an LED.
 
-#### Connector types
+### Connector types
 
 - installed at terminating pt. of cable; allows components & peripherals to connect; type used depends on the cable and what receptable it needs connected to.
 
@@ -509,7 +505,7 @@ RD / `RMDIR` | delete dir
 9. DB9: Used for serial connections to network device consoles & management ports. 9 pins (2 rows of 4 & 5 pins),trapezoid shaped connector
    1. serial cable used for serial communications w/ a matching serial connector at the end
 
-#### Hard Drive Cables
+### Hard Drive Cables
 
 - Connections (drive interfaces), can be on or off-board and are used to connect internal components to mobo
 - attachment standard depends on HDD requirements and features circuitry and a header (port)
@@ -544,26 +540,30 @@ RD / `RMDIR` | delete dir
    2. Capacity: BD-SL(25gb), DL(50gb), BD-XL = TL(100gb) & QL(128gb)
    3. Content quality: regular(1080p high def vid) and ultra HD(4k ultra HD, better colour depth; region-free, but need 4k Blu-R player)
 
-## Troubleshoot
+</p></details>
+
+___
+
+## Operational Procedures 1102
+
+- grounding diverts excess electrical charges from the device and can decrease chance of damage from electrical spike
+- ESD mats/straps lower risk of ESD by balancing the static electricity between the tech and device/component
+
+## Software Troubleshooting 1102
+
+1. NIC allows for wireless communications between laptop and wireless access points.
+2. physical privacy and sec comp are designed to prevent the loss of info thru physical means such as shoulder surfing/theft
+
+___
 
 1. If pagination error is occuring and causing random **BSOD** crashes, but otherwise computer works then
    1. check for OS and hardware drivers; run CMDs to check HDD for errors and check system files; in advanced sys settings, disable auto manage paging files for all drives and set custom. Check RAM sticks and possible W10 reinstall.
 2. An unset date/time may be due to drained BIOS battery; resolved by CMOS batter replacement
 3. Startup repair can be used to prevent reinstalls and is designed to auto start if W10 detects issues.
 
-</p></details>
+___
 
-## Operational Procedures
-
-- grounding diverts excess electrical charges from the device and can decrease chance of damage from electrical spike
-- ESD mats/straps lower risk of ESD by balancing the static electricity between the tech and device/component
-
-## Software Troubleshooting
-
-1. NIC allows for wireless communications between laptop and wireless access points.
-2. physical privacy and sec comp are designed to prevent the loss of info thru physical means such as shoulder surfing/theft
-
-## Security
+## Security 1102
 
 1. Adware: malicious software that displays advertising banners when run
 2. Malware removal
