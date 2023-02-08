@@ -11,6 +11,7 @@
   - [Hardware 1101](#hardware-1101)
     - [Network hardware](#network-hardware)
   - [Mobile Devices 1101](#mobile-devices-1101)
+    - [Multifunction Devices and Printers](#multifunction-devices-and-printers)
   - [Hardware \& Network Troubleshooting 1101](#hardware--network-troubleshooting-1101)
   - [Backup and Recovery](#backup-and-recovery)
   - [Virtualization \& Cloud Computing 1101](#virtualization--cloud-computing-1101)
@@ -51,7 +52,6 @@
   - tools
 
 - **Network and Hardware Troubleshooting**
-  - f
 
 - **Mobile Devices**
   - Laptop
@@ -160,10 +160,30 @@
    3. iOS: Settings -> Mail -> Accounts -> Add Accounts: Choose or add a provider, provide credentials, choose IMAP or POP, configure incoming & outgoing mail server names, and verify uname and passwd.
    4. Android: Settings -> Accounts & Backup -> Manage Accounts -> Add Account: Choose account type (IMAP, SMTP, POP3), enter email and passwd, and validate setup.
 2. Mobile Device Synchronization: mirroring changes from all devices to enable the mobile device to be an extension of one's main device.
-   1. Microsoft 365 sync via Start -> Settings -> Accounts -> Sync
+   1. Microsoft 365 sync via `Start -> Settings -> Accounts -> Sync`
    2. Android uses Google Drive and Workspace via Settings -> Accounts & Backup -> Backup Data
    3. iCloud: Settings -> Apple ID, iCloud
-   4. Can sync mail, photos, calendars, contacts, as well as apps, videos, bookmarks, docs, location & social media data, e-books, passwords
+   4. Can sync mail, photos, calendars, contacts, as well as apps, videos, bookmarks, docs, location & social media data, e-books, passwords.
+
+### Multifunction Devices and Printers
+
+1. Computer languages used to describe printer page appearance include:
+2. Printer categories: impact, inkjet, dye-sublimation, thermal, laser, 3-D, virtual
+3. Printer config include paper orientation settings (switch between portrait or landscape mode).
+4. Duplex assemblies enable auto two-sided printing.
+5. security measures can be implemented on a MFP can include user auth on the device via system software, restricting physical access, review of audit logs, or PIN printing.
+6. Printer replacement parts are called a maintenance kit.
+7. **Impact** printers physically strike an ink ribbon against paper's surface. dot-matrix printers are used in business settings, (POS machines).
+   1. `Printwires` are pins held by the `printhead`. (9 (draft) or 24 (letter quality or NLQ) pins).
+   2. Tractor-feed paper: continuous-feed paper with holes on its side, engaged by metal sprockets to pull paper through
+8. **Inkjet** `ink-dispersion`: uses printhead connected to carriage that contains ink, and is moved by a belt and motor, then a roller gets the paper from the tray or feeder and pushes it through the printer.
+   1. the ink is moved via heat or mechanical method and is stored in ink cartridges.
+   2. Usually come in four cartridges, one for each CMYK colors and another for black.
+9. **Laser**
+10. **Thermal**
+11. Components:
+
+----------
 
 ## Hardware & Network Troubleshooting 1101
 
