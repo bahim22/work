@@ -167,21 +167,49 @@
 
 ### Multifunction Devices and Printers
 
-1. Computer languages used to describe printer page appearance include:
+1. Computer languages used to describe printer page appearance include: PS and PCL
 2. Printer categories: impact, inkjet, dye-sublimation, thermal, laser, 3-D, virtual
 3. Printer config include paper orientation settings (switch between portrait or landscape mode).
-4. Duplex assemblies enable auto two-sided printing.
-5. security measures can be implemented on a MFP can include user auth on the device via system software, restricting physical access, review of audit logs, or PIN printing.
-6. Printer replacement parts are called a maintenance kit.
-7. **Impact** printers physically strike an ink ribbon against paper's surface. dot-matrix printers are used in business settings, (POS machines).
+4. `Duplex assemblies` enable auto two-sided (duplex) printing.
+5. ADF feature of MFP optimizes multi-page doc processing.
+6.
+7. security measures can be implemented on a MFP can include user auth on the device via system software, restricting physical access, review of audit logs, or PIN printing.
+8. Printer replacement parts are called a maintenance kit.
+9. **Impact** printers physically strike an ink ribbon against paper's surface. dot-matrix printers are used in business settings, (POS machines).
    1. `Printwires` are pins held by the `printhead`. (9 (draft) or 24 (letter quality or NLQ) pins).
-   2. Tractor-feed paper: continuous-feed paper with holes on its side, engaged by metal sprockets to pull paper through
-8. **Inkjet** `ink-dispersion`: uses printhead connected to carriage that contains ink, and is moved by a belt and motor, then a roller gets the paper from the tray or feeder and pushes it through the printer.
-   1. the ink is moved via heat or mechanical method and is stored in ink cartridges.
-   2. Usually come in four cartridges, one for each CMYK colors and another for black.
-9. **Laser**
-10. **Thermal**
-11. Components:
+   2. Dot-matrix and impact printers are capable of creating duplicate pages (multipart forms) during print process.
+   3. Dot-matrix uses inked ribbon to create imprint on the paper
+   4. Tractor-feed paper: continuous-feed paper with holes on its side, engaged by metal sprockets to pull paper through.
+10. **Inkjet** `ink-dispersion`: uses printhead connected to carriage that contains ink, and is moved by a belt and motor, then a roller gets the paper from the tray or feeder and pushes it through the printer.
+    1. the ink is moved via heat or mechanical method and is stored in ink cartridges.
+    2. Inexpensive and common in SOHO environments, but the ink cart is most expensive component to replace.
+    3. Usually come in four cartridges, one for each `CMYK` colors and another for black.
+11. **Laser**: Steps - Processing, charging, exposing, developing, transferring, fusing, cleaning
+    1. Imaging drum holds the rep of the output image drawn on its surface by laser printer's laser.
+    2. Fuser assembly applies high temps & pressure to bond toner to the paper
+    3. Transfer belt picks up the colors layers of an image from the imaging drum and passes the finished image onto the paper
+    4. Transfer roller applies electrical charge to the paper to move the rep of an image/text from imaging drum to paper
+    5. Cleaning can be done with a toner vacuum, magnetic cleaning brush and isopropyl alcohol
+12. **Thermal**
+    1. commonly used as PoS terminal component.
+13. Separation pad and pickup roller prevent multiple sheets of paper from getting fed into printer at same time.
+14. Printer calibration test is process of adjusting the output to match the image displayed on the PC.
+15. 3-D printers use plastic filament or resin to create output.
+
+- Vertical lines on pages printed from laser printer is indicative of a problem with the imaging drum.
+- Vertical lines on an inkjet printed paper can be resolved by cleaning the printheads and replacing the ink carts.
+- Unknown, garbled chars on a paper are a result of printer driver issues.
+- Toner falling off pages printed via laser printing indicate issues with the fuser assembly.
+- Faded and/or blank printouts are caused by an issue with depleted toner carts.
+  - When inkjet printers produce faded printouts, it's an issue with depleted ink cart and dried out ink on printhead nozzles.
+- Paper failing to feed and multipage misfeeds are caused by malfunctioning pickup rollers.
+- Can restart print spooler by running services.msc and selecting restart or modifying it's settings in the recovery tab.
+  - helps resolve nonresponsive printers that have multiple print jobs pending in queue.
+- speckling (small dots) are caused by leaky carts and build-up of foreign material inside printer case.
+- Troubleshoot the cleaning step in laser printers if the printout has double/echo, ghost images
+- Incorrect color settings can be troubleshot by using the correct printing paper, calibrating the display and printer.
+- Finishing issues deals with post-printing problems related to extra functions such as stapling and hole-punching printouts.
+  - Must remove jammed staples, empty hole-punch waste container and use printer's software to troubleshoot location of staples and holes.
 
 ----------
 
