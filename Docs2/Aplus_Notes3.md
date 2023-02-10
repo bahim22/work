@@ -9,9 +9,10 @@
 - [Table of Contents](#table-of-contents)
   - [Sections 220-1101](#sections-220-1101)
   - [Hardware 1101](#hardware-1101)
+    - [PSU](#psu)
     - [Network hardware](#network-hardware)
   - [Mobile Devices 1101](#mobile-devices-1101)
-    - [Multifunction Devices and Printers](#multifunction-devices-and-printers)
+  - [Multifunction Devices and Printers](#multifunction-devices-and-printers)
   - [Hardware \& Network Troubleshooting 1101](#hardware--network-troubleshooting-1101)
   - [Backup and Recovery](#backup-and-recovery)
   - [Virtualization \& Cloud Computing 1101](#virtualization--cloud-computing-1101)
@@ -67,6 +68,19 @@
 ----------
 
 ## Hardware 1101
+
+### PSU
+
+- accepts voltage of 110-120 VAC or 220-240 Volts of Alternating Current
+  - voltage adjustments can be done via switch on fixed-input PSU or auto on auto-switching versions
+- internal components are supplied with DC currents
+- modern PSU generate +3.3, +5, and +/- 12 V
+- modern mobos use 24-pin power connectors. Some may have 20-pin connectors with separate 4-pin to power PCIe slots for older mobos.
+  - There's also 20+4 connector options
+- UPS (uninterruptible power supply) provides short-term emergency power when main power source has an outage.
+- Redundant PSU is a server load balancing setup that splits the supplied power between multiple PSUs
+- Modular power supply are PSUs with detachable cables.
+- Watt: unit of measurement for the power output rating of a PSU
 
 ### Network hardware
 
@@ -165,7 +179,7 @@
    3. iCloud: Settings -> Apple ID, iCloud
    4. Can sync mail, photos, calendars, contacts, as well as apps, videos, bookmarks, docs, location & social media data, e-books, passwords.
 
-### Multifunction Devices and Printers
+## Multifunction Devices and Printers
 
 1. Computer languages used to describe printer page appearance include: PS and PCL
 2. Printer categories: impact, inkjet, dye-sublimation, thermal, laser, 3-D, virtual
@@ -457,6 +471,8 @@ _IP Address & Network Types_
     4. `Tools Tab`: lists MMC snap-ins available to launch
 13. `dfrgui.exe`: disk optimization (defrag) to increase performance
 14. `regedit.exe`: system utility to access database of system configuration info
+
+- f
 
 ### macOS, Linux, Mobile
 

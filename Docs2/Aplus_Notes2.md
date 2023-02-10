@@ -473,9 +473,10 @@ RD / `RMDIR` | delete dir
 3. **Twisted copper pair**: pairs of individual wires twisted into pairs and then twisted together, contained w/in an insulated jacket
    1. unshielded twisted pair (UTP): 2-4 pairs of twisted wires, where the pairs are twisted in direct contact w/ each other and contained w/in an insulating layer so the copper doesn't directly touch the other copper wire
    2. shielded twisted pair (STP): 2-4 twisted wires, and each pair is contained in a braided foil sheathing layer, prior to being twisted w/ the other cable pairs, which reduces electrical interference. (used in Cat 7-8 cables)
-   3. Color coded for reference:
-      1. T568A (green/white, green, orange/white, blue, blue/white, orange, brown/white, brown) & T568B (orange/white, orange, green/white, blue, blue/white, brown)
-         1. standards for RJ-45 wiring connectors
+         1.
+   3. Color coded for reference 
+      1. T568A (green/white, green, orange/white, blue, blue/white, orange, brown/white, brown)
+      2. T568B (orange/white, orange, green/white, blue, blue/white, brown)
 4. Direct burial is where the cables are buried underground and should contain STP cables w/ add'l waterproof sheathing. Should be 6-8 inch underground in protective PVC piping and away from other lines that have electrical currents
 5. Plenum: teflon type covering used in cables exposed to heat or that may release gasses into vent system.
 6. Optical is a transmission method that uses light pulses to transfer data
