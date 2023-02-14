@@ -1,4 +1,5 @@
 # Info of methods and functions used
+<!-- cspell: disable  -->
 
 ## Data practice
 

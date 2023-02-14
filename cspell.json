@@ -4,13 +4,10 @@
     "allowCompoundWords": true,
     "numSuggestions": 5,
     "ignorePaths": [
-        "node_modules", // ignores anything w/in dir
-        // the same for this one"**/node_modules", | "**/node_modules/**",
+        "node_modules", // ignores anything w/in dir == "**/node_modules" | "**/node_modules/**"
         "vscode-extension",
         ".git",
-        // Ignore the .git directory
-        "**/*.dll"
-        // Ignore all .dll files
+        "**/*.dll" // Ignore the .git dir, all .dll & .py files
     ],
     "suggestionsTimeout": 250,
     "caseSensitive": false,
@@ -18,7 +15,8 @@
     "useGitignore": true,
     "enableFiletypes": [
         "!env",
-        "!py"
+        "!py",
+        "!ipynb"
     ],
     "ignoreRegExpList": [
         "/^[A-Z][a-z0-9_-]{3,19}$/",
@@ -48,6 +46,7 @@
         "Hotspot",
         "ICANN",
         "inkjet",
+        "ipynb",
         "Kbps",
         "misfeeds",
         "mobo",
