@@ -1,10 +1,10 @@
-<!-- cspell: disable  -->
 
 # Python Base Info
 
 ## Recap & Typed version of handwritten notes
 
 ## Terms
+<!-- cspell: disable  -->
 
 1. High-level language and program written in C that interprets the source code, parses it (examine/analyze syntactic structure) and processes it
 2. semantic: meaning of a prog.
@@ -43,12 +43,13 @@ A key function or collation function is a callable that returns a value used for
 
 a.list
 
-- A built-in Python sequence. Despite its name it is more akin to an array in other languages than to a linked list since access to elements is O(1)
+- A built-in Python sequence. Despite its name it is more akin to an array in other languages than to a linked list
+  - since access to elements is O(1)
 - an ordered set of items
 
 ```py
 a_list = ['a']
-a_list[:] #creates copy of the list
+a_list[:] # creates copy of the list
 a_l = a_l + [2.0, 3]
 a_l.append('dog')
 a_l.extend()
@@ -60,7 +61,8 @@ A compact way to process all or part of the elements in a sequence and return a 
 ```py
  result = ['{:#04x}'.format(x) for x in range(256) if x % 2 == 0]
 """
- generates a list of strings containing even hex numbers (0x..) in the range from 0 to 255. The if clause is optional. If omitted, all elements in range(256) are processed.
+ generates a list of strings containing even hex numbers (0x..) in the range  0 - 255.
+ The if clause is optional. If omitted, all elements in range(256) are processed.
 """
 ```
 
@@ -126,6 +128,7 @@ venv\/Scripts\/activate.bat
 venv\/Scripts\/activate.bat
 
 source "c:/Users/uname/OneDrive -PPU/uname @PPU/moons/.venv/Scripts/activate"
+source /home/ib-ub/flow/work/.venv/bin/activate
 ```
 
 - positional args: ENV_DIR: A directory to create the environment in.
@@ -140,25 +143,30 @@ source "c:/Users/uname/OneDrive -PPU/uname @PPU/moons/.venv/Scripts/activate"
 - --prompt PROMPT (set an alt prompt prefix for the env)
 
 ```sh
-pip install --upgrade-strategy eager --report ./PipRep.json --cache-dir ./.venv/PipCache -r ./requirements.txt
-
-pip install --upgrade-strategy eager --report ./PipRep.json --cache-dir ./.venv/PipCache -r ./requirements.txt
+pip install --upgrade-strategy eager --report ./PipRep.json --cache-dir ./.venv/pip_cache -r ./requirements.txt
 
 pip install --require-virtualenv --python-version "3.10.0" --pre --upgrade
 # only install in venv, use py -v, use pre-release -v, upgrade packages (-u), isolated mode ignores env var and user config
 # --user Install to the Python user install dir Linux: ~/.local/, or W10:%APPDATA%\Python
+
+# ERROR: When restricting platform and interpreter constraints using --python-version, --platform, --abi, or --implementation,
+    # either --no-deps must be set, or --only-binary=:all: must be set and --no-binary must not be set (or must be set to :none:).
 pip install --python "3.8"
 #  run w/ specified python interpreter
 pip install --dry-run --ignore-installed
-# don't install and resolve the requirements
+# don't install and resolve the requirements, can use --report <file_name> to check what pip did to install req
 pip install -r requirements.txt
 pip install --use-feature no-binary-enable-wheel-cache truststore fast-deps
 pip cache <dir, info, list, purge, remove>
-pip config
-(debug, edit, get, list, set, unset)
-
+pip config # (debug, edit, get, list, set, unset)
 python3 -m pip install --upgrade flake8 autopep8 --upgrade-strategy=eager
 # upgrade pack to latest
+--no-binary <format_control> ":all:" # don't use legacy binary packs
+--no-deps # don't install deps
+--use-pep517  # Use PEP 517 for building source distributions
+--compile # compile/don't compile Py source fi to bytecode
+--check-build-dependencies  # Check the build dependencies when PEP517 is used.
+--config-settings <KEY=VALUE>
 ```
 
 ## Pip commands
