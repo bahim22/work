@@ -393,8 +393,44 @@ dd # make boot images & copy/backup HDDs
 makeswap && swapon # (add | manage) swap space
 dpkg # install/remove deb packages
 
+curl -o word-file-test.doc https://file-examples.com/wp-content/uploads/2017/02/file-sample_100kB.doc
+
+curl -o test.png -u demo:password ftp://test.rebex.net/pub/example/KeyGenerator.png
+https://github.com/gto76/python-cheatsheet/blob/main/README.md
+file://pointpark.edu/files/Apps/
+--compressed
+redirect the response output to a file, using shell redirect (>), -o, --output
+-#, --progress-bar is
+curl --interface eth0 https://example.com
+curl --dns-servers 1.1.1.1,1.0.0.1 -6 # use those dns servers and ipv6
+curl -u name:password --digest https://example.com # prevents passwd from being sent as cleartext
+curl --config file.txt https://example.com
+curl -K or --config file ex.
+url = "https://curl.se/docs/"
+--rate, -Y, --speed-limit and -y, --speed-time.
+measured in bytes/second, unless suffix is appended, (k, M, G ex. 1k is 1024)
+```
+
+```sh
+curl --happy-eyeballs-timeout-ms 500 https://example.com # give ipv6 a headstart
+<!-- look up curl -F, --form -->
+ curl -F '=(;type=multipart/alternative' \
+      -F '=plain text message' \
+      -F '= <body>HTML message</body>;type=text/html' \
+      -F '=)' -F '=@textfile.txt' ...  smtp://example.com
+ # --- Example file ---
+ # this is a comment
+ url = "example.com"
+ output = "curlhere.html"
+ user-agent = "superagent/1.0"
+ # and fetch another URL too
+ url = "example.com/docs/manpage.html"
+ -O
+ referer = "http://nowhereatall.example.com/"
+ # --- End of example file ---
+
 # To-Do:
-ps, top, vmstat, brk, mmap, wget, systemctl, init
+ps, top, vmstat, brk, mmap, systemctl, init
 ```
 
 ## Apt Info

@@ -9,9 +9,10 @@ backcall==0.2.0
 backports.zoneinfo==0.2.1
 beautifulsoup4==4.11.1
 bleach==5.0.1
+build==0.10.0
 certifi==2022.12.7
 cffi==1.15.1
-charset-normalizer==2.1.1
+charset-normalizer==3.0.1
 colorama==0.4.5
 comm==0.1.0
 debugpy==1.6.3
@@ -72,6 +73,7 @@ pycparser==2.21
 pyflakes==3.0.1
 Pygments==2.13.0
 pyparsing==3.0.9
+pyproject_hooks==1.0.0
 pyrsistent==0.19.2
 python-dateutil==2.8.2
 python-dotenv==0.21.0
@@ -80,7 +82,7 @@ pyttsx3==2.90
 pytz==2022.4
 PyYAML==6.0
 pyzmq==24.0.1
-requests==2.28.1
+requests==2.28.2
 rfc3339-validator==0.1.4
 rfc3986-validator==0.1.1
 Send2Trash==1.8.0
@@ -95,7 +97,7 @@ tomli==2.0.1
 tornado==6.2
 traitlets==5.7.1
 uri-template==1.2.0
-urllib3==1.26.12
+urllib3==1.26.14
 wcwidth==0.2.5
 webcolors==1.12
 webencodings==0.5.1

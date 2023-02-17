@@ -165,6 +165,12 @@ python3 -m pip install --upgrade flake8 autopep8 --upgrade-strategy=eager
 --compile # compile/don't compile Py source fi to bytecode
 --check-build-dependencies  # Check the build dependencies when PEP517 is used.
 --config-settings <KEY=VALUE>
+pushd "$(mktemp -d)"
+time python -m pip install \
+      --no-cache-dir \
+      --force-reinstall \
+      --only-binary=cryptography \
+      cryptography
 ```
 
 ## Pip commands
