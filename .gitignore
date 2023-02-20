@@ -3,3 +3,5 @@
 .env
 *.deb
 py-prac/dec_prac.ipynb
+py-prac/fs_actv.xlsx
+Docs_Py/pyinfo.html
