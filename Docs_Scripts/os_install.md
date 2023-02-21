@@ -76,11 +76,11 @@ ___
 Server name: outlook.office365.com
 Port: 995
 Encryption method: TLS
-IMAP setting
+- IMAP setting
 Server name: outlook.office365.com
 Port: 993
 Encryption method: TLS
-SMTP setting
+- SMTP setting
 Server name: smtp.office365.com
 Port: 587
 Encryption method: STARTTLS

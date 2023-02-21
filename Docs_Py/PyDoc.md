@@ -102,7 +102,7 @@ def f(arg):
 > /usr/bin/env python, /usr/bin/python, /usr/local/bin/python, python
 
 ```py
-#! /usr/bin/python || usr/bin/python -v || ./myvenv/Scripts/python.exe
+#! /usr/bin/python || usr/bin/python -v || ./.myvenv/Scripts/python.exe
 ```
 
 ## virtual env creation
@@ -129,7 +129,7 @@ source "c:/Users/uname/OneDrive -PPU/uname @PPU/moons/.venv/Scripts/activate"
 source /home/ib-ub/flow/work/.venv/bin/activate
 ```
 
-- positional args: ENV_DIR: A directory to create the environment in.
+- positional args: ENV_DIR: a dir to create the environment in.
 - optional args
 - -h || --help
 - --system-site-packages (give access to system site-pack dir.)
@@ -171,6 +171,8 @@ time python -m pip install \
       --force-reinstall \
       --only-binary=cryptography \
       cryptography
+# curl
+curl --dns-servers 1.1.1.1,1.0.0.1 --compressed -o $file -# $url
 ```
 
 ## Pip commands
