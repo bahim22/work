@@ -13,13 +13,18 @@
     - [Git Commands \& examples](#git-commands--examples)
   - [GPG key](#gpg-key)
   - [Bash commands](#bash-commands)
+    - [curl](#curl)
+  - [Bash Scripting](#bash-scripting)
   - [Apt Info](#apt-info)
   - [Shell command info](#shell-command-info)
   - [Symbolic rep of data](#symbolic-rep-of-data)
   - [Linux permissions](#linux-permissions)
   - [Git Config terminal colors](#git-config-terminal-colors)
-  - [Pwsh](#pwsh)
+  - [PowerShell](#powershell)
+    - [Pwsh Paths](#pwsh-paths)
     - [Pwsh Commands to review](#pwsh-commands-to-review)
+    - [Excel](#excel)
+    - [Vim](#vim)
 
 ## SSH to GitHub
 
@@ -312,10 +317,7 @@ ___
 ```sh
 echo $BASH # => /usr/bin/bash
 init $PATH
-
-. # current working dir
-.. # parent dir
-~ $HOME # home dir of user
+., .., ~, $HOME # current working dir, parent dir, home dir of user
 ls -a -@ -l
 ls -C -l
 
@@ -396,9 +398,9 @@ dpkg # install/remove deb packages
 ps, top, vmstat, brk, mmap, systemctl, init
 ```
 
-```sh
-# curl
+### curl
 
+```sh
 curl -o word-test.doc https://file-examples.com/wp-content/uploads/2017/02/file-sample_100kB.doc
 
 curl -o test.png -u demo:password ftp://test.rebex.net/pub/example/KeyGenerator.png --compressed -# # or --progress-bar
@@ -426,6 +428,52 @@ curl --happy-eyeballs-timeout-ms 500 https://example.com # give ipv6 a headstart
  -O
  referer = "http://nowhereatall.example.com/"
  # --- End of example file ---
+```
+
+## Bash Scripting
+
+```sh
+folder_to_count=$1
+# $1, $2...$9 are used as general vars that enable providing parameters when calling the rx
+
+file_count=$(ls $folder_to_count | wc -l)
+file_count=$(ls $1 | wc -l) # or use w/o dir var
+
+echo $file_count files in $folder_to_count
+
+chmod +x fi.sh
+# must make script fi exe.
+
+./fnct2.sh /dev # run script with a paramater
+
+# env vars
+$#: How many command line parameters were passed to the script.
+$@: All the command line parameters passed to the script.
+$?: The exit status of the last process to run.
+$$: The Process ID (PID) of the current script.
+$USER: The username of the user executing the script.
+$HOSTNAME: The hostname of the computer running the script.
+$SECONDS: The number of seconds the script has been running for.
+$RANDOM: Returns a random number.
+$LINENO: Returns the current line number of the script
+```
+
+```ps1
+# install powershell on Ubuntu
+# Update the list of packages
+sudo apt-get update
+# Install pre-requisite packages.
+sudo apt-get install -y wget apt-transport-https software-properties-common
+# Download the Microsoft repository GPG keys
+wget -q "https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/packages-microsoft-prod.deb"
+# Register the Microsoft repository GPG keys
+sudo dpkg -i packages-microsoft-prod.deb
+# Update the list of packages after we added packages.microsoft.com
+sudo apt-get update
+# Install PowerShell
+sudo apt-get install -y powershell
+# Start PowerShell
+pwsh
 ```
 
 ## Apt Info
@@ -523,7 +571,17 @@ for f in 'ls -R'; do [! -d"$f"] && chmod a-x "$f"; done
 
 ----------
 
-## Pwsh
+## PowerShell
+
+### Pwsh Paths
+
+- $PSHOME is /opt/microsoft/powershell/7/
+- User profiles are read from ~/.config/powershell/profile.ps1
+- Default profiles are read from $PSHOME/profile.ps1
+- User modules are read from ~/.local/share/powershell/Modules
+- Shared modules are read from /usr/local/share/powershell/Modules
+- Default modules are read from $PSHOME/Modules
+- PSReadLine history is recorded to ~/.local/share/powershell/PSReadLine/ConsoleHost_history.txt
 
 ```ps1
 get-help [command] -detailed
@@ -558,3 +616,27 @@ Get-Service "WinRM" -RequiredServices
 - Enable-ServerManagerStandardUserRemoting {Disable}
 - New-Service
   - {Restart | Resume | Set | Start | Stop | Suspend | Remove}
+
+### Excel
+
+```ps1
+# purge accounts
+Import-Csv '.\SP 23 Declines.csv' | foreach {
+  $UPN = $_."PPU Email"
+  $username = $UPN.Substring(0, $UPN.IndexOf('@'))
+  get-aduser $Username | Remove-ADUser
+}
+
+
+Import-Csv '.\CancelDeclines F22 for IT.csv' | foreach {
+  $UPN = $_."PPU Email"
+  $username = $UPN.Substring(0, $UPN.IndexOf('@'))
+  get-aduser $Username | Remove-ADUser
+}
+```
+
+### Vim
+
+- use `vimtutor` for tutorial on using vim
+- to-do: swap file and get info on nano
+  - created temp swap file by running `vim tutor`
