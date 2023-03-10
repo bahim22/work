@@ -1,4 +1,4 @@
-# MacOS X and Linux Info
+# MacOS, W10 and Linux Info
 
 ## Install Ubuntu 22 from a bootable usb drive => ISO file
 
@@ -38,6 +38,25 @@ sudo apt install $driver_name
 sudo reboot
 # apps
 sudo apt install $app_name
+```
+
+## Convert disks in W10 cmd
+
+```ps1
+# convert disk to mbr
+Diskpart
+list disk
+sel disk $disk_num
+clean
+convert gpt
+
+# create pars on dsk
+Diskpart
+Create partition EFI size=1000`
+offset=64
+ #size = int in MB; offset = int in kb
+
+mbr2gpt.exe /convert /allowFullOS # change an already booted MBR disk to GPT
 ```
 
 ___
@@ -86,3 +105,4 @@ Port: 587
 Encryption method: STARTTLS
 
 [Ubuntu]: https://ubuntu.com/download/desktop
+

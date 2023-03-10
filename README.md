@@ -1,9 +1,7 @@
 
-# Work MonoRepo
+# Work
 
 ## Dev | ➡ Docs ➕ Practice | IT
-
-<!-- <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="ec61b361-c7e7-46c1-a6d9-ff86657fa4e3" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>-->
 
 |  |  |  | |
 | :------: | :---: | :------: | :---: |
@@ -42,6 +40,8 @@
 - Certification prep
 
 <!-- <img src='images/a_plus_obj.jpeg' width=800 alt='comptia a+ objectives' align='center'> -->
+
+<div data-iframe-width="250" data-iframe-height="370" data-share-badge-id="ec61b361-c7e7-46c1-a6d9-ff86657fa4e3" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
 ## Shell
 

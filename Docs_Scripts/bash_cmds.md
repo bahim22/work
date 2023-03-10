@@ -7,14 +7,15 @@
 
 - [Encryption, Security, Linux](#encryption-security-linux)
   - [SSH to GitHub](#ssh-to-github)
+    - [initial ssh example](#initial-ssh-example)
     - [ssh-keygen cmds](#ssh-keygen-cmds)
     - [Example ssh connect](#example-ssh-connect)
-    - [initial ssh example](#initial-ssh-example)
-    - [Git Commands \& examples](#git-commands--examples)
-  - [GPG key](#gpg-key)
-  - [Bash commands](#bash-commands)
+    - [GPG key](#gpg-key)
+  - [Git Commands \& examples](#git-commands--examples)
+  - [Bash Script Info](#bash-script-info)
+    - [Bash commands](#bash-commands)
     - [curl](#curl)
-  - [Bash Scripting](#bash-scripting)
+    - [Bash Scripting](#bash-scripting)
   - [Apt Info](#apt-info)
   - [Shell command info](#shell-command-info)
   - [Symbolic rep of data](#symbolic-rep-of-data)
@@ -52,6 +53,69 @@ ssh -o "VerifyHostKeyDNS ask" host.example.com
 # client connects
 
 ls -al ~/.ssh
+```
+
+### initial ssh example
+
+```bash
+# edit git config f
+git config --global user.name <username>
+git config --global user.email <email@mail.com>
+ls -al ~/.ssh # list files in .ssh dir
+
+ssh-keygen -m PEM -t rsa -b 4096
+# generates 4096-bit SSH RSA public and private key files by default in the ~/.ssh directory.
+
+ssh-keygen -t ed25519 -C "email@google.com"
+# creates pub/priv key pair
+# saves to .ssh/id_ed25519 & .ssh/id_ed25519.pub
+  # generates key fingerprint & randomart image
+eval "$(ssh-agent -s)" #check if agent is running
+ssh-add ~/.ssh/id_ed25519 #add id to ~
+cat ~/.ssh/id_ed25519.pub # display pub key then c/v to github acct
+ssh -T git@github.com # test connection & clone repo
+git clone git@github.com:<username>/<repo>.git
+code .
+git clone ssh://git@ssh.github.com:443/<username>/<repo>.git
+```
+
+```bash
+ssh-keygen \
+-f ~/.ssh/id_rsa.pub \
+-e \
+-m RFC4716 > ~/.ssh/id_ssh2.pem
+# create RFC4716 formatted key from existing SSH pubkey (multiline format in a 'pem' container)
+
+eval "$(ssh-agent -s)"
+# cache private key file passphrase on local sys by verifying/using ssh-agent & ssh-add
+ssh-add ~/.ssh/id_rsa
+# add private key to ssh-agent
+
+ssh-copy-id -i ~/.ssh/id_rsa.pub azureuser@myserver
+#  copy existing public key to an existing remote machine
+```
+
+- ssh-keygen supports two types of certificates: user and host.
+  - User certificates authenticate users to servers
+    - placed in /path/to/user_key-cert.pub.
+  - Host certificates authenticate server hosts to users
+    - requires the -h option
+    - host certificate will be output to /path/to/host_key-cert.pub.
+
+>>
+  review: ssh(1), ssh-add(1), ssh-agent(1), sshd(8)
+
+```bash
+#!/bin/bash
+
+# generate a user certificate:
+$ ssh-keygen -s /path/to/ca_key -I key_id /path/to/user_key.pub
+
+# generate a host certificate:
+ssh-keygen -s /path/to/ca_key -I key_id -h /path/to/host_key.pub
+
+# copies the local-host’s pub key to the remote-host’s authorized_keys fi
+ssh-copy-id
 ```
 
 ### ssh-keygen cmds
@@ -103,73 +167,25 @@ tunnel="2",command="sh /etc/netstart tun2" ssh-rsa ... john
     # if PermitRootLogin == “forced-commands-only”
 ```
 
-___
-
-### initial ssh example
-
-```bash
-# edit git config f
-git config --global user.name <username>
-git config --global user.email <email@mail.com>
-ls -al ~/.ssh # list files in .ssh dir
-
-ssh-keygen -m PEM -t rsa -b 4096
-# generates 4096-bit SSH RSA public and private key files by default in the ~/.ssh directory.
-
-ssh-keygen -t ed25519 -C "email@google.com"
-# creates pub/priv key pair
-# saves to .ssh/id_ed25519 & .ssh/id_ed25519.pub
-  # generates key fingerprint & randomart image
-eval "$(ssh-agent -s)" #check if agent is running
-ssh-add ~/.ssh/id_ed25519 #add id to ~
-cat ~/.ssh/id_ed25519.pub # display pub key then c/v to github acct
-ssh -T git@github.com # test connection & clone repo
-git clone git@github.com:<username>/<repo>.git
-code .
-git clone ssh://git@ssh.github.com:443/<username>/<repo>.git
-```
-
-```bash
-ssh-keygen \
--f ~/.ssh/id_rsa.pub \
--e \
--m RFC4716 > ~/.ssh/id_ssh2.pem
-# create RFC4716 formatted key from existing SSH pubkey (multiline format in a 'pem' container)
-
-
-eval "$(ssh-agent -s)"
-# cache private key file passphrase on local sys by verifying/using ssh-agent & ssh-add
-ssh-add ~/.ssh/id_rsa
-# add private key to ssh-agent
-
-ssh-copy-id -i ~/.ssh/id_rsa.pub azureuser@myserver
-#  copy existing public key to an existing remote machine
-```
-
-- ssh-keygen supports two types of certificates: user and host.
-  - User certificates authenticate users to servers
-    - placed in /path/to/user_key-cert.pub.
-  - Host certificates authenticate server hosts to users
-    - requires the -h option
-    - host certificate will be output to /path/to/host_key-cert.pub.
+### GPG key
 
 >>
-  review: ssh(1), ssh-add(1), ssh-agent(1), sshd(8)
-
-```bash
-#!/bin/bash
-
-# generate a user certificate:
-$ ssh-keygen -s /path/to/ca_key -I key_id /path/to/user_key.pub
-
-# generate a host certificate:
-ssh-keygen -s /path/to/ca_key -I key_id -h /path/to/host_key.pub
-
-# copies the local-host’s pub key to the remote-host’s authorized_keys fi
-ssh-copy-id
+  generate a gpg key and then c/v to GitHub
+  This allows commits to be verified via signature
+<!-- cspell: disable  -->
+```sh
+gpg --full-generate-key
+# choose: key type, size, expire
+#   user id[name, pass, comment], passphrase
+gpg --list-keys --keyid-format LONG
+# list long form pub/priv keys & copy sec/pub key after encryption standard
+gpg --armor --export aaa123aaa123
+# print gpg key id in ASCII armor format
 ```
 
-### Git Commands & examples
+___
+
+## Git Commands & examples
 <!-- cspell: disable  -->
 
 ```sh
@@ -255,7 +271,6 @@ git gc (11)
 
 ```sh
 # Push into another repository.
-
 # from satellite machine
 git clone mothership:frotz frotz (1)
 cd frotz
@@ -291,28 +306,58 @@ mothership "fetched" from you (useful when access is one sided).
 1. on mothership machine, merge the work done on the satellite
 machine into the master branch.
 
-___
+## Bash Script Info
 
-## GPG key
-
->>
-  generate a gpg key and then c/v to GitHub
-  This allows commits to be verified via signature
-<!-- cspell: disable  -->
 ```sh
-gpg --full-generate-key
-# choose: key type, size, expire
-#   user id[name, pass, comment], passphrase
-gpg --list-keys --keyid-format LONG
-# list long form pub/priv keys & copy sec/pub key after encryption standard
-gpg --armor --export aaa123aaa123
-# print gpg key id in ASCII armor format
+url=$1 # or just use $1 in place where you'd insert the param.
+branchname='name'
+message=$2
+git clone $url # git clone $1; then replace $1 w/ url when calling script
+git status # what's changed since last commit
+git checkout -b $branch_name
+git add . # add all edited files to repo
+git commit -m $message || $2
+git push -u origin || git push ssh://git@ssh.github.com:443/($uname)/$repo.git
+```
 
+- You can do a compare & pull request to see changes that're done
+- merge pull requests & del old branch
+
+```sh
+# conditionals
+if [ "$fname" = "a.txt" ] || [ "$fname" = "c.txt" ]
+if [[ "$fname" == "a.txt" || "$fname" == "c.txt" ]]; then
+if test "$fname" = "a.txt" || test "$fname" = "c.txt"
+
+#!/bin/bash
+
+for fname in "a.txt" "b.txt" "c.txt"
+do
+  echo $fname
+  if [ "$fname" = "a.txt" ] | [ "$fname" = "c.txt" ]; then
+    echo "yes!"
+  else
+    echo "no!"
+  fi
+done
+
+for i in {0..22..2}
+do
+    echo "Loop spin:" $i
+done
+
+for file in word_ls.sh num-rng.sh fi_name.sh # for file in *.sh
+do
+    ls -lh "$file"
+done
+
+chmod +x $fname # make fi exe
+source || . $fname # exe a script file
 ```
 
 ___
 
-## Bash commands
+### Bash commands
 
 ```sh
 echo $BASH # => /usr/bin/bash
@@ -402,7 +447,6 @@ ps, top, vmstat, brk, mmap, systemctl, init
 
 ```sh
 curl -o word-test.doc https://file-examples.com/wp-content/uploads/2017/02/file-sample_100kB.doc
-
 curl -o test.png -u demo:password ftp://test.rebex.net/pub/example/KeyGenerator.png --compressed -# # or --progress-bar
 redirect the response output to a file, using shell redirect (>), -o, --output
 curl --dns-servers 1.1.1.1,1.0.0.1 --compressed -o $file -# $url
@@ -430,7 +474,7 @@ curl --happy-eyeballs-timeout-ms 500 https://example.com # give ipv6 a headstart
  # --- End of example file ---
 ```
 
-## Bash Scripting
+### Bash Scripting
 
 ```sh
 folder_to_count=$1
@@ -458,7 +502,7 @@ $RANDOM: Returns a random number.
 $LINENO: Returns the current line number of the script
 ```
 
-```ps1
+```sh
 # install powershell on Ubuntu
 # Update the list of packages
 sudo apt-get update
