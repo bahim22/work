@@ -41,7 +41,9 @@
 
 <!-- <img src='images/a_plus_obj.jpeg' width=800 alt='comptia a+ objectives' align='center'> -->
 
-<div data-iframe-width="250" data-iframe-height="370" data-share-badge-id="ec61b361-c7e7-46c1-a6d9-ff86657fa4e3" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+<!-- # Aplus cert badge -->
+<!-- <div data-iframe-width="250" data-iframe-height="370" data-share-badge-id="ec61b361-c7e7-46c1-a6d9-ff86657fa4e3" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script> -->
 
 ## Shell
 
@@ -68,15 +70,15 @@
 <a href="https://github.com/bahim22/">
   <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=bahim22&hide=css&layout=compact" alt='languages used' />
 </a>
-<a href="https://github.com/bahim22/work">
+<!-- <a href="https://github.com/bahim22/work">
   <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=bahim22&repo=work" alt='Work repo card' />
-</a>
+</a>-->
 </div>
  <!--<a href="https://github.com/bahim22/rxt-portfo-3">
   <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=bahim22&repo=rxt-portfo-3" alt='portfolio card' />
 </a>-->
 
-[Python Docs]: Docs2/PyDoc.md
-[A+ Main]: Docs2/AplusMain.md
+[Python Docs]: Docs_Py/PyDoc.md
+[A+ Main]: Docs_Aplus/AplusMain.md
 [Python Examples]: py-prac/cal_qr.ipynb
-[Bash_PowerShell]: Docs2/bash_cmds.md
+[Bash_PowerShell]: Docs_Scripts/bash_cmds.md
