@@ -1,0 +1,76 @@
+Name: flake8
+Version: 6.0.0
+Summary: the modular source code checker: pep8 pyflakes and co
+Home-page: https://github.com/pycqa/flake8
+Author: Tarek Ziade
+Author-email: tarek@ziade.org
+License: MIT
+Location: /home/its-02/main/work/.venv/lib/python3.10/site-packages
+Requires: mccabe, pycodestyle, pyflakes
+Required-by: 
+---
+Name: pyflakes
+Version: 3.0.1
+Summary: passive checker of Python programs
+Home-page: https://github.com/PyCQA/pyflakes
+Author: A lot of people
+Author-email: code-quality@python.org
+License: MIT
+Location: /home/its-02/main/work/.venv/lib/python3.10/site-packages
+Requires: 
+Required-by: flake8
+---
+Name: pycodestyle
+Version: 2.10.0
+Summary: Python style guide checker
+Home-page: https://pycodestyle.pycqa.org/
+Author: Johann C. Rocholl
+Author-email: johann@rocholl.net
+License: Expat license
+Location: /home/its-02/main/work/.venv/lib/python3.10/site-packages
+Requires: 
+Required-by: flake8
+---
+Name: mccabe
+Version: 0.7.0
+Summary: McCabe checker, plugin for flake8
+Home-page: https://github.com/pycqa/mccabe
+Author: Tarek Ziade
+Author-email: tarek@ziade.org
+License: Expat license
+Location: /home/its-02/main/work/.venv/lib/python3.10/site-packages
+Requires: 
+Required-by: flake8
+---
+Name: setuptools
+Version: 59.6.0
+Summary: Easily download, build, install, upgrade, and uninstall Python packages
+Home-page: https://github.com/pypa/setuptools
+Author: Python Packaging Authority
+Author-email: distutils-sig@python.org
+License: UNKNOWN
+Location: /home/its-02/main/work/.venv/lib/python3.10/site-packages
+Requires: 
+Required-by: 
+---
+Name: wheel
+Version: 0.38.4
+Summary: A built-package format for Python
+Home-page: https://github.com/pypa/wheel
+Author: Daniel Holth
+Author-email: dholth@fastmail.fm
+License: MIT
+Location: /home/its-02/main/work/.venv/lib/python3.10/site-packages
+Requires: 
+Required-by: 
+---
+Name: pip
+Version: 23.0.1
+Summary: The PyPA recommended tool for installing Python packages.
+Home-page: https://pip.pypa.io/
+Author: The pip developers
+Author-email: distutils-sig@python.org
+License: MIT
+Location: /home/its-02/main/work/.venv/lib/python3.10/site-packages
+Requires: 
+Required-by: 

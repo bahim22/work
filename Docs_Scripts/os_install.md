@@ -57,7 +57,20 @@ offset=64
  #size = int in MB; offset = int in kb
 
 mbr2gpt.exe /convert /allowFullOS # change an already booted MBR disk to GPT
+
+list disk
+choose disk * # the target dsk or par's num is indicated by *
+list division
+choose a partition
+format fs=ntfs unit=64k # 4096 bytes = 4.096 kb, 4096 KB = 4 MB
 ```
+
+# cluster size (allocation unit size)
+
+- Cluster size represents the smallest amount of disk space that can be used to hold a file. When file sizes do not come out to an even multiple of the cluster size, additional space must be used to hold the file (up to the next multiple of the cluster size). On the typical hard disk partition, the average amount of space that is lost in this manner can be calculated by using the equation (cluster size)/2 * (number of files).
+- The size of your allocation unit will be equal to the size of an empty file. If you have several small files but a large allocation size, every file on your drive will need to be at least this huge, which could consume a lot of space on your hard drive
+- When you keep your allocation unit size small, a higher allocation time will be required, leading to a slower PC. However, it will take maximum disk space if it's too big.
+- When you have different small files, it would be an amazing idea to maintain a minimum allocation size so that your hard drive space will stay manageable. On the other hand, when you possess several larger files, keeping the allocation size higher will boost the system's performance because there will be fewer blocks to aim for. However, if the allocation size is extremely big, it will consume the maximum of your PC's disk space.
 
 ___
 
@@ -106,3 +119,10 @@ Encryption method: STARTTLS
 
 [Ubuntu]: https://ubuntu.com/download/desktop
 
+## VM
+
+1. create VM in AZ
+2. choose image
+3. select connection type and create key
+4. save private key on local system and chmod 400 keyname.pem
+5. 

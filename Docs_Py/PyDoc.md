@@ -126,7 +126,7 @@ venv\/Scripts\/activate.bat
 venv\/Scripts\/activate.bat
 
 source "c:/Users/uname/OneDrive -PPU/uname @PPU/moons/.venv/Scripts/activate"
-source /home/ib-ub/flow/work/.venv/bin/activate
+source /home/uname/flow/work/.venv/bin/activate
 ```
 
 - positional args: ENV_DIR: a dir to create the environment in.
@@ -141,7 +141,16 @@ source /home/ib-ub/flow/work/.venv/bin/activate
 - --prompt PROMPT (set an alt prompt prefix for the env)
 
 ```sh
-pip install --upgrade-strategy eager --report ./PipRep.json --cache-dir ./.venv/pip_cache -r ./requirements.txt
+python -m pip install wheel
+python -m pip wheel --wheel-dir=/local/wheels -r requirements.txt
+# build wheels for your requirements and all their dependencies to a local directory:
+python -m pip install --no-index --find-links=/local/wheels -r requirements.txt
+# install those requirements just using your local directory of wheels
+python -m pip wheel --wheel-dir=/tmp/wheelhouse SomePackage
+python -m pip install --no-index --find-links=/tmp/wheelhouse SomePackage
+# Build wheels for a requirement (and all its dependencies), and then **install**
+pip install --upgrade --upgrade-strategy eager --report ./PipRep.json --cache-dir ./.venv/pip_cache -r ./requirements.txt
+pip install --require-virtualenv --upgrade --upgrade-strategy=eager --no-binary=:all: --dry-run --ignore-installed -r ./requirements.txt
 
 pip install --require-virtualenv --python-version "3.10.0" --pre --upgrade
 # only install in venv, use py -v, use pre-release -v, upgrade packages (-u), isolated mode ignores env var and user config
@@ -158,6 +167,7 @@ pip install --use-feature no-binary-enable-wheel-cache truststore fast-deps
 pip cache <dir, info, list, purge, remove>
 pip config # (debug, edit, get, list, set, unset)
 python3 -m pip install --upgrade flake8 autopep8 --upgrade-strategy=eager
+pip install --upgrade SomePackage --upgrade-strategy=eager
 # upgrade pack to latest
 --no-binary <format_control> ":all:" # don't use legacy binary packs
 --no-deps # don't install deps

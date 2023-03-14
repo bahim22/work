@@ -620,11 +620,11 @@ for f in 'ls -R'; do [! -d"$f"] && chmod a-x "$f"; done
 ### Pwsh Paths
 
 - $PSHOME is /opt/microsoft/powershell/7/
-- User profiles are read from ~/.config/powershell/profile.ps1
-- Default profiles are read from $PSHOME/profile.ps1
-- User modules are read from ~/.local/share/powershell/Modules
-- Shared modules are read from /usr/local/share/powershell/Modules
-- Default modules are read from $PSHOME/Modules
+- User profiles are read from  ~/.config/powershell/profile.ps1
+- Default profiles  $PSHOME/profile.ps1
+- User modules  ~/.local/share/powershell/Modules
+- Shared modules  /usr/local/share/powershell/Modules
+- Default modules  $PSHOME/Modules
 - PSReadLine history is recorded to ~/.local/share/powershell/PSReadLine/ConsoleHost_history.txt
 
 ```ps1
