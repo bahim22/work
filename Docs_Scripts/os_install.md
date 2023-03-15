@@ -118,11 +118,3 @@ Port: 587
 Encryption method: STARTTLS
 
 [Ubuntu]: https://ubuntu.com/download/desktop
-
-## VM
-
-1. create VM in AZ
-2. choose image
-3. select connection type and create key
-4. save private key on local system and chmod 400 keyname.pem
-5. 
